@@ -1,0 +1,18 @@
+{
+  "note": "Indicative chapter weightage from recent CBSE Class 10 Science papers (out of 80). Approximate - CBSE does not publish fixed per-chapter marks.",
+  "chapters": [
+    { "id": "ch1", "name": "Chemical Reactions and Equations", "weight": 5 },
+    { "id": "ch2", "name": "Acids, Bases and Salts", "weight": 6 },
+    { "id": "ch3", "name": "Metals and Non-metals", "weight": 7 },
+    { "id": "ch4", "name": "Carbon and its Compounds", "weight": 6 },
+    { "id": "ch5", "name": "Life Processes", "weight": 8 },
+    { "id": "ch6", "name": "Control and Coordination", "weight": 6 },
+    { "id": "ch7", "name": "How do Organisms Reproduce?", "weight": 7 },
+    { "id": "ch8", "name": "Heredity", "weight": 6 },
+    { "id": "ch9", "name": "Light - Reflection and Refraction", "weight": 8 },
+    { "id": "ch10", "name": "Human Eye and the Colourful World", "weight": 4 },
+    { "id": "ch11", "name": "Electricity", "weight": 8 },
+    { "id": "ch12", "name": "Magnetic Effects of Electric Current", "weight": 6 },
+    { "id": "ch13", "name": "Our Environment", "weight": 3 }
+  ]
+}

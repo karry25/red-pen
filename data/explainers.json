@@ -1,0 +1,118 @@
+{
+  "explainers": [
+    {
+      "id": "x-balancing",
+      "title": "Why your equation is 'wrong' even when it's right",
+      "hook": "You wrote Mg + O2 -> MgO in the exam. Correct reaction, na? Still zero. The examiner's red pen didn't even blink.",
+      "concept": "Atoms can't appear or vanish mid-reaction - that's the law of conservation of mass (NCERT Ch.1, \u00a71.1.2). Mg + O2 -> MgO has 2 oxygens entering and only 1 leaving. An unbalanced equation claims matter vanished, so it's not an approximation, it's wrong. Balance with coefficients only: 2Mg + O2 -> 2MgO. Never touch the formula itself.",
+      "hack": "Write the unbalanced equation first, then balance it as a separate visible step. Examiners award the balancing mark when they SEE the step. Doing it in your head hides your own mark.",
+      "hackSource": "Visible step-by-step answers work like self-explanation - Make It Stick (Brown, Roediger & McDaniel, 2014).",
+      "card": "balancing-steps.png",
+      "learnMore": [
+        {
+          "label": "NCERT official chapter PDF (Ch.1)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc101.pdf"
+        },
+        {
+          "label": "Khan Academy: balancing chemical equations (video)",
+          "url": "https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/balancing-chemical-equations/v/balancing-more-complex-chemical-equation"
+        }
+      ]
+    },
+    {
+      "id": "x-four-types",
+      "title": "The 4 reaction types are 4 dance moves",
+      "hook": "Combination = two people become one couple. Decomposition = couple splits, both dance solo. Displacement = someone cuts in. Double displacement = everyone swaps partners.",
+      "concept": "NCERT Ch.1 defines them by pattern: A+B->AB (combination, Eq. 1.13), AB->A+B (decomposition, Eq. 1.19-1.22), A+BC->AC+B (displacement, Activity 1.9), AB+CD->AD+CB (double displacement, Activity 1.10). Identify the PATTERN first, name the reaction second - never the other way round.",
+      "hack": "Before the exam, take 10 random equations and sort them into the 4 patterns out loud. Sorting mixed types beats studying one type at a time - that's interleaving.",
+      "hackSource": "Interleaving mixed practice improves discrimination between problem types - Make It Stick (Brown, Roediger & McDaniel, 2014).",
+      "card": "reaction-types.png",
+      "learnMore": [
+        {
+          "label": "NCERT official chapter PDF (Ch.1)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc101.pdf"
+        },
+        {
+          "label": "Khan Academy: types of chemical reactions",
+          "url": "https://www.khanacademy.org/science/chemistry/chemical-reactions/types-of-reactions/a/types-of-chemical-reactions"
+        }
+      ]
+    },
+    {
+      "id": "x-exo-endo",
+      "title": "Your body's heating bill: exo vs endo",
+      "hook": "Ever touched a beaker when quicklime met water in the lab? It burns. That beaker was paying out heat like a heater with the window open.",
+      "concept": "Exothermic = heat released along with products (NCERT Ch.1, after Eq. 1.17): burning, respiration (Eq. 1.18: glucose + oxygen -> CO2 + water + energy), CaO + water. Endothermic = heat absorbed: thermal decomposition of CaCO3, photosynthesis. Respiration is the classic trap - it FEELS like nothing is burning, but it releases energy, so it's exothermic.",
+      "hack": "When a 'which is exothermic?' MCQ appears, physically recall the warm-beaker feeling for 5 seconds, then answer. Tying facts to a sensory memory makes them stickier.",
+      "hackSource": "Linking new facts to concrete memories aids retrieval - Make It Stick (2014); retrieval itself strengthens memory (Roediger & Karpicke, Psychological Science, 2006).",
+      "card": "exo-endo.png",
+      "learnMore": [
+        {
+          "label": "NCERT official chapter PDF (Ch.1)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc101.pdf"
+        },
+        {
+          "label": "Khan Academy: endothermic vs exothermic reactions",
+          "url": "https://www.khanacademy.org/science/chemistry/thermochemistry-chemistry/enthalpy/a/endothermic-vs-exothermic-reactions"
+        }
+      ]
+    },
+    {
+      "id": "x-corrosion",
+      "title": "The brown powder eating your cycle",
+      "hook": "That reddish-brown powder on an old cycle isn't dirt. It's the iron literally reacting away into the air, molecule by molecule.",
+      "concept": "Corrosion: a metal is attacked by substances around it - moisture, acids (NCERT Ch.1, \u00a71.3.1). Rusting is iron's corrosion; silver blackens and copper turns green too. Rancidity is the food version: fats and oils get oxidised, smell and taste change (\u00a71.3.2). Prevention from the same chapter: antioxidants, airtight containers, nitrogen-flushed chip bags.",
+      "hack": "Rancidity's three preventions come as a 2-marker nearly every cycle. Recite them from memory right now without looking - if you can't, that's the one to revise tonight.",
+      "hackSource": "Self-testing beats re-reading for long-term retention - Roediger & Karpicke, Psychological Science (2006); spacing over days - Ebbinghaus (1885).",
+      "card": "corrosion-rusting.png",
+      "learnMore": [
+        {
+          "label": "NCERT official chapter PDF (Ch.1)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc101.pdf"
+        },
+        {
+          "label": "Khan Academy (Class 10 Science): corrosion and its prevention",
+          "url": "https://www.khanacademy.org/science/up-class-10th-science/x5d08d26681869997:metals-and-non-metals/x5d08d26681869997:untitled-136/e/corrosion"
+        }
+      ]
+    },
+    {
+      "id": "x-electrolysis",
+      "title": "Water splits, but only if you add a pinch of chemistry",
+      "hook": "A student connects a battery to plain distilled water. Nothing happens. Bulb stays dark. The exam asks WHY - and 'no electricity' is not the answer.",
+      "concept": "Distilled water is a poor conductor; a few drops of dilute H2SO4 make it conduct (NCERT Ch.1, Activity 1.7). Then: 2H2O -> 2H2 + O2, hydrogen at the cathode at DOUBLE the volume of oxygen at the anode. This was CBSE Sample Paper 2025-26 Q27, all three parts.",
+      "hack": "Remember 'cathode = H2 = double'. One anchor fact, and the anode answer falls out free. Anchor facts beat re-reading whole paragraphs.",
+      "hackSource": "Small retrieval anchors strengthen recall of linked facts - Roediger & Karpicke (2006).",
+      "card": "electrolysis-water.png",
+      "learnMore": [
+        {
+          "label": "NCERT official chapter PDF (Ch.1)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc101.pdf"
+        },
+        {
+          "label": "Khan Academy: introduction to electrolysis (video)",
+          "url": "https://www.khanacademy.org/science/ap-chemistry/redox-reactions-and-electrochemistry-ap/electrolytic-cells-and-electrolysis-tutorial-ap/v/introduction-to-electrolysis"
+        }
+      ]
+    },
+    {
+      "id": "x-decomposition",
+      "title": "One breaks into many, three different ways",
+      "hook": "Limestone in a kiln, water under current, a photograph fading in sunlight - three unrelated scenes, one reaction type.",
+      "concept": "Decomposition = one reactant breaks into two or more products (NCERT Ch.1, Eq. 1.19-1.22). The three triggers: HEAT (thermal: CaCO3 -> CaO + CO2; 2FeSO4 -> Fe2O3 + SO2 + SO3), ELECTRICITY (electrolytic: 2H2O -> 2H2 + O2), LIGHT (photolytic: 2AgCl -> 2Ag + Cl2, why photo films hate sunlight).",
+      "hack": "Teach this to a friend (or our Junior) without notes. Explaining the three triggers with one example each is the fastest way to find out which one you actually don't know.",
+      "hackSource": "Learning by teaching - Kobayashi meta-analysis (Japanese Psychological Research, 2019); the Feynman technique.",
+      "card": "decomposition-types.png",
+      "learnMore": [
+        {
+          "label": "NCERT official chapter PDF (Ch.1)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc101.pdf"
+        },
+        {
+          "label": "Khan Academy: types of chemical reactions",
+          "url": "https://www.khanacademy.org/science/chemistry/chemical-reactions/types-of-reactions/a/types-of-chemical-reactions"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red Pen - practise like the examiner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,400&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo"><span class="logo-icon" id="logo-icon"></span> Red Pen</div>
+  <div class="tagline">Practise like the examiner</div>
+  <div class="chapter" id="chapter"></div>
+</header>
+
+<main>
+  <!-- Study Kit: focus timer, daily goals, spaced revision -->
+  <section class="card" id="study-kit">
+    <div class="step-label"><span data-icon="timer"></span> Study kit</div>
+
+    <div id="timer-card">
+      <div class="timer-row">
+        <div>
+          <div id="timer-display">25:00</div>
+          <div id="timer-mode">focus time</div>
+          <div id="timer-cycles"></div>
+        </div>
+        <div class="timer-btns">
+          <button class="btn primary small" id="timer-start"></button>
+          <button class="btn ghost small" id="timer-reset">Reset</button>
+        </div>
+      </div>
+      <div class="why">Why: short timed sprints with real breaks protect focus - Pomodoro Technique (Francesco Cirillo, 1980s); focused/rest modes in Oakley, <i>A Mind for Numbers</i> (2014).</div>
+    </div>
+
+    <div id="fun-streak" style="font-size:12.5px;font-weight:800;color:var(--pen);margin:8px 0"></div>
+    <div class="kit-block">
+      <div class="kit-title">Today's small goals <span id="goals-progress"></span></div>
+      <div id="goals-list"></div>
+      <div class="why">Why: specific small goals beat vague intentions - Locke &amp; Latham goal-setting research (<i>American Psychologist</i>, 2002).</div>
+    </div>
+
+    <div class="kit-block">
+      <div class="kit-title">Revision queue</div>
+      <div id="revision-list"></div>
+      <div class="why">Why: re-checking just before you forget rebuilds memory - Ebbinghaus forgetting curve (1885); spacing in <i>Make It Stick</i> (Brown, Roediger &amp; McDaniel, 2014).</div>
+    </div>
+    <div class="engine">Session only - nothing is saved or sent anywhere.</div>
+  </section>
+  <!-- 2-min explainers -->
+  <section class="card" id="explainers">
+    <div class="step-label">2-minute reads · samajhne ke liye</div>
+    <div id="explainer-list"></div>
+  </section>
+
+  <!-- Most-asked PYQs -->
+  <section class="card" id="most-asked">
+    <div class="step-label">Most-asked in CBSE papers</div>
+    <div id="most-asked-list"></div>
+    <div class="why" id="most-asked-note"></div>
+  </section>
+
+  <!-- Step 1: pick a question -->
+  <section class="card" id="step-question">
+    <div class="step-label">1 · Pick a question</div>
+    <div class="why" style="margin:-4px 0 10px">Why testing yourself works: practice tests beat re-reading - Roediger &amp; Karpicke, <i>Psychological Science</i> (2006).</div>
+    <div id="question-list"></div>
+  </section>
+
+  <!-- Step 2: write the answer -->
+  <section class="card" id="step-answer">
+    <div class="step-label">2 · Write your answer</div>
+    <div class="q-chosen" id="chosen-question"></div>
+    <textarea id="answer" rows="7" placeholder="Type your answer here, like you would in the exam..."></textarea>
+    <div class="row">
+      <button class="btn primary" id="grade-btn"><span data-icon="check"></span> Check it like an examiner</button>
+      <button class="btn ghost" id="photo-btn" disabled title="Coming after AI key approval"><span data-icon="camera"></span> Photo (soon)</button>
+    </div>
+    <div class="hint">Photo checking of handwritten answers is being added. Typing works fully today.</div>
+  </section>
+
+  <!-- Step 3: result -->
+  <section class="card hidden" id="step-result">
+    <div class="step-label">3 · Examiner's report</div>
+    <div class="score-row">
+      <div class="score-big"><span id="score">-</span><span class="score-max" id="score-max"></span></div>
+      <div class="score-delta" id="score-delta"></div>
+    </div>
+    <div id="point-list"></div>
+    <div id="notes"></div>
+    <details class="agent-trace">
+      <summary><span data-icon="robot"></span> Agent activity</summary>
+      <div id="agent-trace"></div>
+    </details>
+    <details class="model-answer">
+      <summary>See the full-mark answer</summary>
+      <p id="model-answer"></p>
+    </details>
+    <div id="fun-challenge" class="fun-challenge"></div>
+    <button class="btn primary" id="retry-btn"><span data-icon="retry"></span> Fix my answer and retry</button>
+    <div class="engine" id="engine"></div>
+  </section>
+  <!-- Module 2: Shy-Doubt Companion -->
+  <section class="card" id="step-doubt">
+    <div class="step-label">Shy-Doubt Companion · ask without your name</div>
+    <div class="hint" style="margin-top:0;margin-bottom:8px">No name. No judgement. Sirf doubt poocho - Hinglish mein jawab milega.</div>
+    <textarea id="doubt" rows="3" placeholder="e.g. exothermic matlab kya hota hai?"></textarea>
+    <div class="row">
+      <button class="btn primary" id="doubt-btn"><span data-icon="whisper"></span> Ask anonymously</button>
+      <button class="btn ghost" id="digest-btn"><span data-icon="teacher"></span> Teacher view</button>
+    </div>
+    <div id="doubt-result" class="hidden">
+      <div class="doubt-answer" id="doubt-answer"></div>
+      <div class="engine" id="doubt-engine"></div>
+    </div>
+    <div id="digest-result" class="hidden"></div>
+  </section>
+  <!-- Module 3: Teach-the-Junior -->
+  <section class="card" id="step-teach">
+    <div class="step-label">Teach-the-Junior · samjhao aur khud seekho</div>
+    <div class="why" style="margin:-4px 0 10px">Why teaching works: explaining to someone else deepens your own learning - Kobayashi meta-analysis (<i>Japanese Psychological Research</i>, 2019); the Feynman technique.</div>
+    <div id="topic-list"></div>
+    <div class="junior-say hidden" id="junior-opening"></div>
+    <div id="teach-input-area" class="hidden">
+      <textarea id="explanation" rows="4" placeholder="Explain it to the junior, in your own words (Hinglish chalega)..."></textarea>
+      <div class="row"><button class="btn primary" id="teach-btn"><span data-icon="megaphone"></span> Teach!</button></div>
+    </div>
+    <div id="teach-result" class="hidden">
+      <div class="meter-label">Junior's understanding <span id="meter-pct"></span></div>
+      <div class="meter"><div class="meter-fill" id="meter-fill"></div></div>
+      <div class="junior-say" id="junior-reply"></div>
+      <div id="teach-points"></div>
+      <div class="engine" id="teach-engine"></div>
+    </div>
+  </section>
+
+  <!-- Module 4: 7-Days-Left Triage -->
+  <section class="card" id="step-triage">
+    <div class="step-label">7-Days-Left Triage · kya padhe, kya chhode</div>
+    <div class="row" style="align-items:center">
+      <label style="font-size:14px;white-space:nowrap">Days left: <input type="number" id="days-left" value="7" min="1" max="30" style="width:56px;font-size:15px;padding:6px;border:1px solid var(--line);border-radius:8px"></label>
+      <button class="btn primary" id="triage-btn"><span data-icon="calendar"></span> Build my plan</button>
+    </div>
+    <div class="hint" style="margin:8px 0">Rate each chapter honestly - blank / shaky / strong:</div>
+    <div id="triage-chapters"></div>
+    <div id="triage-result" class="hidden"></div>
+    <div class="engine" id="triage-note"></div>
+  </section>
+</main>
+
+<footer>
+  <div>CBSE Class 10 Science · Ch. 1 Chemical Reactions and Equations</div>
+  <div>No login · answers are checked and forgotten, never stored</div>
+  <div class="kind">
+    Kind by design: missing a day costs nothing here - no dying streaks, no guilt, no dark patterns.
+    Why it stays engaging: you choose what to practise (autonomy), honest meters show real growth (competence),
+    the Junior and teacher view connect you to people (relatedness) - self-determination theory, Deci &amp; Ryan
+    (<i>Psychological Inquiry</i>, 2000). Small daily wins - <i>The Progress Principle</i> (Amabile &amp; Kramer, 2011).
+    Habit loops (cue, response, reward) - <i>Atomic Habits</i> (Clear, 2018).
+  </div>
+</footer>
+
+<script src="icons.js"></script>
+<script src="app.js"></script>
+<script src="fun.js"></script>
+<script src="study.js"></script>
+</body>
+</html>

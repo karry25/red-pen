@@ -1,0 +1,541 @@
+{
+  "chapter": "CBSE Class 10 Science - Ch.1 Chemical Reactions and Equations",
+  "questions": [
+    {
+      "id": "ch1-q1",
+      "marks": 3,
+      "text": "Why should a magnesium ribbon be cleaned before burning in air? Write the balanced chemical equation for the reaction that takes place.",
+      "points": [
+        {
+          "text": "A layer of magnesium oxide (or basic magnesium carbonate) forms on the ribbon's surface.",
+          "marks": 1,
+          "keywords": [
+            [
+              "magnesium oxide",
+              "basic magnesium carbonate",
+              "oxide layer",
+              "layer of oxide"
+            ],
+            [
+              "surface",
+              "ribbon",
+              "layer"
+            ]
+          ]
+        },
+        {
+          "text": "Cleaning removes this layer so the magnesium is exposed and burns properly.",
+          "marks": 1,
+          "keywords": [
+            [
+              "remove",
+              "removed",
+              "removing",
+              "clean"
+            ],
+            [
+              "exposed",
+              "pure magnesium",
+              "burns properly",
+              "reactive",
+              "react with oxygen"
+            ]
+          ]
+        },
+        {
+          "text": "Balanced equation: 2Mg + O2 -> 2MgO.",
+          "marks": 1,
+          "keywords": [
+            [
+              "mgo"
+            ],
+            [
+              "2mg",
+              "2 mg"
+            ],
+            [
+              "o2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q2",
+      "marks": 3,
+      "text": "What is a combination reaction? Give one example with a balanced chemical equation.",
+      "points": [
+        {
+          "text": "Two or more reactants combine to form a single product.",
+          "marks": 1,
+          "keywords": [
+            [
+              "two or more",
+              "more than one",
+              "combine",
+              "combination"
+            ],
+            [
+              "single product",
+              "one product",
+              "a single",
+              "only one product"
+            ]
+          ]
+        },
+        {
+          "text": "Correct example named (e.g. burning of magnesium, formation of water, calcium oxide with water).",
+          "marks": 1,
+          "keywords": [
+            [
+              "magnesium",
+              "water",
+              "calcium oxide",
+              "quicklime",
+              "hydrogen",
+              "iron",
+              "sulphide",
+              "example"
+            ]
+          ]
+        },
+        {
+          "text": "Balanced equation for the example, e.g. CaO + H2O -> Ca(OH)2 or 2H2 + O2 -> 2H2O.",
+          "marks": 1,
+          "keywords": [
+            [
+              "ca(oh)2",
+              "ca(oh)",
+              "2h2o",
+              "2 h2o",
+              "mgo",
+              "fes"
+            ],
+            [
+              "->",
+              "=",
+              "gives",
+              "+"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q3",
+      "marks": 5,
+      "text": "What is a decomposition reaction? Name and explain its types, giving one balanced equation for each.",
+      "points": [
+        {
+          "text": "Definition: a single reactant breaks down into two or more products.",
+          "marks": 1,
+          "keywords": [
+            [
+              "single reactant",
+              "one reactant",
+              "a compound",
+              "single substance"
+            ],
+            [
+              "breaks",
+              "splits",
+              "decomposes",
+              "break down"
+            ],
+            [
+              "two or more",
+              "simpler substances",
+              "more than one product",
+              "two or more products"
+            ]
+          ]
+        },
+        {
+          "text": "Thermal decomposition: caused by heat. Example: CaCO3 -> CaO + CO2 (or similar).",
+          "marks": 1,
+          "keywords": [
+            [
+              "thermal",
+              "heat"
+            ],
+            [
+              "caco3",
+              "limestone",
+              "calcium carbonate",
+              "ferrous sulphate",
+              "feso4"
+            ]
+          ]
+        },
+        {
+          "text": "Electrolytic decomposition: caused by electricity. Example: 2H2O -> 2H2 + O2.",
+          "marks": 1,
+          "keywords": [
+            [
+              "electric",
+              "electroly"
+            ],
+            [
+              "h2o",
+              "water",
+              "acidified water"
+            ]
+          ]
+        },
+        {
+          "text": "Photolytic decomposition: caused by light. Example: 2AgCl -> 2Ag + Cl2 (or AgBr).",
+          "marks": 1,
+          "keywords": [
+            [
+              "light",
+              "photo",
+              "sunlight"
+            ],
+            [
+              "agcl",
+              "agbr",
+              "silver chloride",
+              "silver bromide"
+            ]
+          ]
+        },
+        {
+          "text": "Balanced equations written correctly for the examples given.",
+          "marks": 1,
+          "keywords": [
+            [
+              "cao",
+              "co2",
+              "h2",
+              "o2",
+              "ag",
+              "cl2"
+            ],
+            [
+              "->",
+              "=",
+              "gives"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q4",
+      "marks": 3,
+      "text": "Why is respiration considered an exothermic reaction? Explain.",
+      "points": [
+        {
+          "text": "Exothermic means a reaction that releases heat/energy.",
+          "marks": 1,
+          "keywords": [
+            [
+              "exothermic"
+            ],
+            [
+              "release",
+              "releases",
+              "given out",
+              "evolved",
+              "produced"
+            ],
+            [
+              "heat",
+              "energy"
+            ]
+          ]
+        },
+        {
+          "text": "During digestion, food (carbohydrates/glucose) is broken down.",
+          "marks": 1,
+          "keywords": [
+            [
+              "glucose",
+              "carbohydrate",
+              "food",
+              "starch"
+            ],
+            [
+              "broken down",
+              "digested",
+              "breaks down",
+              "oxidised",
+              "oxidized"
+            ]
+          ]
+        },
+        {
+          "text": "Glucose combines with oxygen to give carbon dioxide, water and energy, so respiration is exothermic.",
+          "marks": 1,
+          "keywords": [
+            [
+              "oxygen"
+            ],
+            [
+              "carbon dioxide",
+              "co2"
+            ],
+            [
+              "energy",
+              "heat",
+              "atp"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q5",
+      "marks": 2,
+      "text": "What is a displacement reaction? Give one example with a balanced equation.",
+      "points": [
+        {
+          "text": "A more reactive element displaces a less reactive element from its compound/solution.",
+          "marks": 1,
+          "keywords": [
+            [
+              "more reactive"
+            ],
+            [
+              "displace"
+            ],
+            [
+              "less reactive",
+              "compound",
+              "solution",
+              "salt"
+            ]
+          ]
+        },
+        {
+          "text": "Example with balanced equation, e.g. Fe + CuSO4 -> FeSO4 + Cu.",
+          "marks": 1,
+          "keywords": [
+            [
+              "cuso4",
+              "copper sulphate",
+              "copper sulfate",
+              "feso4",
+              "zn",
+              "iron nail",
+              "fe"
+            ],
+            [
+              "->",
+              "=",
+              "gives",
+              "+"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q6",
+      "marks": 3,
+      "text": "What is corrosion? Explain rusting of iron and write two methods to prevent it.",
+      "points": [
+        {
+          "text": "Corrosion: slow eating away of a metal by air/moisture/chemicals around it.",
+          "marks": 1,
+          "keywords": [
+            [
+              "corrosion",
+              "eating away",
+              "slow"
+            ],
+            [
+              "air",
+              "moisture",
+              "oxygen",
+              "water",
+              "environment"
+            ]
+          ]
+        },
+        {
+          "text": "Rusting: iron reacts with oxygen and moisture to form hydrated iron oxide (rust, Fe2O3.xH2O).",
+          "marks": 1,
+          "keywords": [
+            [
+              "iron"
+            ],
+            [
+              "oxygen",
+              "moisture",
+              "water"
+            ],
+            [
+              "rust",
+              "iron oxide",
+              "fe2o3",
+              "hydrated"
+            ]
+          ]
+        },
+        {
+          "text": "Prevention: painting/oiling/greasing or galvanisation (zinc coating).",
+          "marks": 1,
+          "keywords": [
+            [
+              "paint",
+              "oil",
+              "grease"
+            ],
+            [
+              "galvani",
+              "zinc"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q7",
+      "marks": 3,
+      "text": "What is rancidity? Give two methods to prevent it.",
+      "points": [
+        {
+          "text": "Rancidity: oxidation of oils/fats in food, giving bad smell and taste.",
+          "marks": 1,
+          "keywords": [
+            [
+              "rancid"
+            ],
+            [
+              "oil",
+              "fat"
+            ],
+            [
+              "oxidation",
+              "oxygen",
+              "air"
+            ],
+            [
+              "smell",
+              "taste"
+            ]
+          ]
+        },
+        {
+          "text": "Prevention: airtight containers / refrigeration.",
+          "marks": 1,
+          "keywords": [
+            [
+              "airtight",
+              "air-tight",
+              "air tight",
+              "refrigerat",
+              "fridge",
+              "air tight container"
+            ]
+          ]
+        },
+        {
+          "text": "Prevention: adding antioxidants (BHA/BHT) or flushing packets with nitrogen.",
+          "marks": 1,
+          "keywords": [
+            [
+              "antioxidant",
+              "bha",
+              "bht",
+              "nitrogen"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q8",
+      "marks": 3,
+      "text": "In the reaction CuO + H2 -> Cu + H2O, which substance is oxidised and which is reduced? Define both terms.",
+      "points": [
+        {
+          "text": "Oxidation = gain of oxygen (or loss of hydrogen).",
+          "marks": 1,
+          "keywords": [
+            [
+              "oxidation"
+            ],
+            [
+              "gain of oxygen",
+              "oxygen add",
+              "loss of hydrogen",
+              "hydrogen remov"
+            ]
+          ]
+        },
+        {
+          "text": "Reduction = loss of oxygen (or gain of hydrogen).",
+          "marks": 1,
+          "keywords": [
+            [
+              "reduction"
+            ],
+            [
+              "loss of oxygen",
+              "oxygen remov",
+              "gain of hydrogen",
+              "hydrogen add"
+            ]
+          ]
+        },
+        {
+          "text": "H2 is oxidised to H2O; CuO is reduced to Cu. It is a redox reaction.",
+          "marks": 1,
+          "keywords": [
+            [
+              "h2",
+              "hydrogen"
+            ],
+            [
+              "oxidised",
+              "oxidized"
+            ],
+            [
+              "cuo",
+              "copper oxide"
+            ],
+            [
+              "reduced"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q9",
+      "marks": 2,
+      "text": "Balance: Fe + H2O -> Fe3O4 + H2. Name the type of reaction.",
+      "points": [
+        {
+          "text": "Balanced: 3Fe + 4H2O -> Fe3O4 + 4H2.",
+          "marks": 1,
+          "keywords": [
+            [
+              "3fe",
+              "3 fe"
+            ],
+            [
+              "4h2o",
+              "4 h2o"
+            ],
+            [
+              "4h2",
+              "4 h2"
+            ]
+          ]
+        },
+        {
+          "text": "It is a displacement reaction (iron displaces hydrogen from water/steam).",
+          "marks": 1,
+          "keywords": [
+            [
+              "displacement"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

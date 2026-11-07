@@ -1,0 +1,228 @@
+{
+  "note": "From official CBSE Sample Question Papers (cbseacademic.nic.in) with their official marking schemes. 'Repeated' = the same question pattern appeared in BOTH the 2024-25 and 2025-26 sample papers.",
+  "questions": [
+    {
+      "id": "pyq-2425-q21",
+      "marks": 2,
+      "repeated": true,
+      "repeatNote": "Reaction-type identification appeared in both 2024-25 (Q21) and 2025-26 (Q27 variant) papers.",
+      "source": "CBSE Sample Paper 2024-25, Q21 (official marking scheme)",
+      "text": "Identify the type of each reaction, stating the reason: A. Fe2O3 + 2Al -> Al2O3 + 2Fe + heat   B. Pb(NO3)2 + 2KI -> PbI2 + 2KNO3",
+      "points": [
+        {
+          "text": "A is an exothermic displacement / redox reaction.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "exothermic",
+              "displacement",
+              "redox"
+            ]
+          ]
+        },
+        {
+          "text": "Reason: heat is evolved / Al (more reactive) displaces Fe / aluminium reduces iron oxide.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "heat",
+              "more reactive",
+              "displace",
+              "reduces"
+            ]
+          ]
+        },
+        {
+          "text": "B is a double displacement / precipitation reaction.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "double displacement",
+              "precipitation"
+            ]
+          ]
+        },
+        {
+          "text": "Reason: exchange of ions / yellow precipitate of lead iodide (PbI2) forms.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "exchange of ions",
+              "precipitate",
+              "pbi2",
+              "lead iodide"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2526-q27",
+      "marks": 3,
+      "repeated": false,
+      "repeatNote": "Electrolysis of water appears in 2025-26 (Q27); not in the 2024-25 paper, so not tagged repeated.",
+      "source": "CBSE Sample Paper 2025-26, Q27 (official marking scheme)",
+      "text": "Amrita passed electricity through distilled water but the bulb did not glow. She then added a substance for electrolysis. A. Which gas forms at the anode and which at the cathode? B. Why did the bulb not glow with distilled water? C. Which substance did she add?",
+      "points": [
+        {
+          "text": "Oxygen at the anode, hydrogen at the cathode.",
+          "marks": 1,
+          "keywords": [
+            [
+              "oxygen",
+              "o2"
+            ],
+            [
+              "anode"
+            ],
+            [
+              "hydrogen",
+              "h2"
+            ],
+            [
+              "cathode"
+            ]
+          ]
+        },
+        {
+          "text": "Distilled water is a poor conductor of electricity.",
+          "marks": 1,
+          "keywords": [
+            [
+              "distilled"
+            ],
+            [
+              "poor conductor",
+              "does not conduct",
+              "no ions"
+            ]
+          ]
+        },
+        {
+          "text": "She added a few drops of H2SO4 (or NaCl / any strong electrolyte).",
+          "marks": 1,
+          "keywords": [
+            [
+              "h2so4",
+              "sulphuric acid",
+              "nacl",
+              "electrolyte",
+              "salt",
+              "acid"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2526-q19",
+      "marks": 1,
+      "repeated": true,
+      "repeatNote": "Metal-salt displacement with CuSO4 appeared in both 2024-25 (Q5, lead) and 2025-26 (Q19, iron nail).",
+      "source": "CBSE Sample Paper 2025-26, Q19 (MCQ, official marking scheme)",
+      "text": "An iron nail is added to test tube P (aqueous copper(II) sulphate) and Q (aqueous silver nitrate). The correct observation is: (official answer: brown coating in P, silver coating in Q - explain WHY both reactions happen)",
+      "points": [
+        {
+          "text": "Iron is more reactive than copper and silver, so it displaces both from their salt solutions.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "more reactive"
+            ],
+            [
+              "displace"
+            ]
+          ]
+        },
+        {
+          "text": "Fe + CuSO4 -> FeSO4 + Cu (brown copper coating); Fe + 2AgNO3 -> Fe(NO3)2 + 2Ag (silver coating).",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "cuso4",
+              "feso4",
+              "brown",
+              "copper"
+            ],
+            [
+              "agno3",
+              "silver"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2425-q5",
+      "marks": 1,
+      "repeated": true,
+      "repeatNote": "Metal-salt displacement with CuSO4 appeared in both 2024-25 (Q5, lead) and 2025-26 (Q19, iron nail).",
+      "source": "CBSE Sample Paper 2024-25, Q5 (MCQ, official marking scheme)",
+      "text": "When lead powder is added to blue copper sulphate solution, after a few hours the solution becomes colourless. What type of reaction is this, and why does the colour disappear? (official answer: displacement)",
+      "points": [
+        {
+          "text": "It is a displacement reaction.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "displacement"
+            ]
+          ]
+        },
+        {
+          "text": "Lead (more reactive) displaces copper: Pb + CuSO4 -> PbSO4 + Cu, so blue CuSO4 is used up and the colour disappears.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "lead",
+              "pb",
+              "more reactive"
+            ],
+            [
+              "cuso4",
+              "pbso4",
+              "copper displaced",
+              "colour",
+              "color"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2425-q7",
+      "marks": 1,
+      "repeated": true,
+      "repeatNote": "Exo/endothermic identification appeared in both years (2024-25 Q7; 2025-26 Q27 variant tags 2Mg+O2 as exothermic and ZnCO3 as endothermic).",
+      "source": "CBSE Sample Paper 2024-25, Q7 (MCQ, official marking scheme)",
+      "text": "Which of these is an endothermic reaction - burning a candle, cooking food, decomposition of vegetable matter, or sodium reacting with air? Explain what makes it endothermic. (official answer: cooking of food)",
+      "points": [
+        {
+          "text": "Cooking of food is endothermic.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "cooking",
+              "endothermic"
+            ]
+          ]
+        },
+        {
+          "text": "It absorbs heat from outside (heat must be supplied continuously); the others release heat, so they are exothermic.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "absorb",
+              "takes in",
+              "supplied"
+            ],
+            [
+              "heat",
+              "energy"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
