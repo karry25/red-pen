@@ -1,0 +1,523 @@
+{
+  "id": "ch3",
+  "number": 3,
+  "title": "Metals and Non-metals",
+  "source": "NCERT Class 10 Science, Ch.3 (ncert.nic.in jesc103, Reprint 2026-27)",
+  "questions": [
+    {
+      "id": "ch3-q1",
+      "marks": 2,
+      "text": "Why are sodium and potassium kept immersed in kerosene oil? (NCERT in-text question)",
+      "points": [
+        {
+          "text": "Sodium and potassium react so vigorously with oxygen (and moisture) in air that they catch fire if kept in the open.",
+          "marks": 1,
+          "keywords": [["vigorous", "violent", "very reactive"], ["oxygen", "air", "moisture"], ["catch fire", "fire", "burn"]]
+        },
+        {
+          "text": "Kerosene cuts off contact with air/moisture, protecting them and preventing accidental fires.",
+          "marks": 1,
+          "keywords": [["kerosene"], ["protect", "prevent", "cuts off", "contact", "immersed", "accidental"]]
+        }
+      ]
+    },
+    {
+      "id": "ch3-q2",
+      "marks": 3,
+      "text": "What are amphoteric oxides? Give an example with one equation each showing its reaction with an acid and with a base.",
+      "points": [
+        {
+          "text": "Metal oxides which react with BOTH acids and bases to produce salt and water are called amphoteric oxides (e.g. aluminium oxide, zinc oxide).",
+          "marks": 1,
+          "keywords": [["both", "acid", "base"], ["salt", "water"], ["aluminium oxide", "al2o3", "zinc oxide", "zno"]]
+        },
+        {
+          "text": "With acid: Al2O3 + 6HCl -> 2AlCl3 + 3H2O.",
+          "marks": 1,
+          "keywords": [["al2o3"], ["hcl"], ["alcl3"], ["h2o", "water"]]
+        },
+        {
+          "text": "With base: Al2O3 + 2NaOH -> 2NaAlO2 (sodium aluminate) + H2O.",
+          "marks": 1,
+          "keywords": [["naoh"], ["naalo2", "sodium aluminate"], ["h2o", "water"]]
+        }
+      ]
+    },
+    {
+      "id": "ch3-q3",
+      "marks": 3,
+      "text": "Hydrogen gas is usually not evolved when a metal reacts with nitric acid. Give reason. Name two metals which DO evolve hydrogen with very dilute HNO3.",
+      "points": [
+        {
+          "text": "HNO3 is a strong oxidising agent; it oxidises the hydrogen produced to water.",
+          "marks": 1,
+          "keywords": [["oxidising agent", "oxidizing agent", "strong oxidising"], ["oxidises", "oxidizes"], ["water", "h2o"]]
+        },
+        {
+          "text": "The nitric acid itself gets reduced to nitrogen oxides (N2O, NO or NO2).",
+          "marks": 1,
+          "keywords": [["reduced"], ["nitrogen oxide", "n2o", "no", "no2", "oxides of nitrogen"]]
+        },
+        {
+          "text": "Magnesium (Mg) and manganese (Mn) react with very dilute HNO3 to evolve H2 gas.",
+          "marks": 1,
+          "keywords": [["magnesium", "mg"], ["manganese", "mn"], ["very dilute", "dilute"]]
+        }
+      ]
+    },
+    {
+      "id": "ch3-q4",
+      "marks": 3,
+      "text": "Ionic compounds have high melting points, conduct electricity in molten/aqueous state but not in solid state, and are soluble in water but not in kerosene. Explain any TWO of these properties.",
+      "points": [
+        {
+          "text": "High melting point: a large amount of energy is needed to break the strong inter-ionic attraction between oppositely charged ions.",
+          "marks": 1.5,
+          "keywords": [["strong", "large amount of energy", "more energy"], ["inter-ionic", "interionic", "attraction", "ionic bond", "oppositely charged"]]
+        },
+        {
+          "text": "Conduction: solid ionic compounds do not conduct because ions are locked in a rigid structure; in molten state or aqueous solution the ions are free to move and carry current.",
+          "marks": 1.5,
+          "keywords": [["ions"], ["free to move", "move", "mobile"], ["rigid", "solid", "locked"], ["molten", "aqueous", "solution"]]
+        },
+        {
+          "text": "Solubility: ionic compounds are generally soluble in water and insoluble in organic solvents like kerosene/petrol.",
+          "marks": 0,
+          "keywords": [["soluble in water", "water soluble"], ["insoluble", "kerosene", "petrol"]]
+        }
+      ]
+    },
+    {
+      "id": "ch3-q5",
+      "marks": 3,
+      "text": "Describe the electrolytic refining of copper: what are the anode, cathode and electrolyte? Where does the pure metal collect and what is anode mud?",
+      "points": [
+        {
+          "text": "Anode = impure copper, cathode = thin strip of pure copper, electrolyte = acidified copper sulphate solution.",
+          "marks": 1,
+          "keywords": [["impure"], ["pure"], ["copper sulphate", "cuso4", "acidified"]]
+        },
+        {
+          "text": "On passing current, pure copper from the anode dissolves into the electrolyte and an equivalent amount of pure copper is deposited on the cathode.",
+          "marks": 1,
+          "keywords": [["dissolves", "dissolve"], ["deposited", "deposit"], ["cathode"]]
+        },
+        {
+          "text": "Insoluble impurities settle at the bottom of the anode as anode mud (soluble impurities go into the solution).",
+          "marks": 1,
+          "keywords": [["anode mud"], ["insoluble impurities", "impurities settle", "bottom"]]
+        }
+      ]
+    },
+    {
+      "id": "ch3-q6",
+      "marks": 2,
+      "text": "What is the thermit reaction? Write its chemical equation and give its use.",
+      "points": [
+        {
+          "text": "Fe2O3(s) + 2Al(s) -> 2Fe(l) + Al2O3(s) + Heat - a highly exothermic displacement reaction where aluminium reduces iron(III) oxide, producing molten iron.",
+          "marks": 1,
+          "keywords": [["fe2o3", "iron oxide"], ["al", "aluminium", "aluminum"], ["fe", "iron"], ["heat", "exothermic", "molten"]]
+        },
+        {
+          "text": "Used to join railway tracks or cracked machine parts.",
+          "marks": 1,
+          "keywords": [["railway", "rail"], ["join", "weld", "machine parts", "tracks"]]
+        }
+      ]
+    },
+    {
+      "id": "ch3-q7",
+      "marks": 3,
+      "text": "Compare how potassium/sodium, calcium, and magnesium react with water. Write one equation. Which metals do not react with water at all?",
+      "points": [
+        {
+          "text": "Potassium and sodium react violently with cold water (the reaction is so exothermic that the hydrogen evolved catches fire): 2Na + 2H2O -> 2NaOH + H2 + heat.",
+          "marks": 1,
+          "keywords": [["violent", "vigorous"], ["cold water"], ["catch fire", "fire", "heat"], ["2na", "na", "2k", "koh", "naoh"]]
+        },
+        {
+          "text": "Calcium reacts less violently and starts floating because hydrogen bubbles stick to its surface; magnesium does not react with cold water but reacts with hot water (forms Mg(OH)2 + H2).",
+          "marks": 1,
+          "keywords": [["calcium", "ca", "magnesium", "mg"], ["float"], ["bubbles"], ["hot water", "cold water"]]
+        },
+        {
+          "text": "Lead, copper, silver and gold do not react with water at all (Al, Zn, Fe react only with steam).",
+          "marks": 1,
+          "keywords": [["copper", "silver", "gold", "lead"], ["do not react", "no reaction"], ["steam", "at all"]]
+        }
+      ]
+    },
+    {
+      "id": "ch3-q8",
+      "marks": 3,
+      "text": "Explain these corrosion cases with the substance formed: (a) silver articles turn black, (b) copper articles get a green coat, (c) iron rusts. Name any two prevention methods.",
+      "points": [
+        {
+          "text": "Silver reacts with sulphur in the air to form a black coating of silver sulphide (Ag2S).",
+          "marks": 1,
+          "keywords": [["sulphur", "sulfur"], ["silver sulphide", "ag2s"], ["black"]]
+        },
+        {
+          "text": "Copper reacts with moist carbon dioxide in air, gaining a green coat of basic copper carbonate; iron acquires brown flaky rust (hydrated iron oxide).",
+          "marks": 1,
+          "keywords": [["moist carbon dioxide", "co2", "carbon dioxide"], ["basic copper carbonate", "green"], ["rust", "brown", "flaky"]]
+        },
+        {
+          "text": "Prevention: painting, oiling, greasing, galvanising (zinc coating), chrome plating, anodising, or making alloys (any two).",
+          "marks": 1,
+          "keywords": [["painting", "oiling", "greasing", "galvanis", "galvaniz", "chrome plating", "anodis", "alloy"], ["zinc", "coating", "layer", "stainless"]]
+        }
+      ]
+    },
+    {
+      "id": "ch3-q9",
+      "marks": 2,
+      "text": "What is an alloy? Give the composition of brass, bronze, solder and stainless steel.",
+      "points": [
+        {
+          "text": "An alloy is a homogeneous mixture of two or more metals, or a metal and a non-metal (made by melting the primary metal and dissolving the other elements in definite proportions).",
+          "marks": 1,
+          "keywords": [["homogeneous mixture", "homogenous mixture"], ["two or more metals", "metal and a non-metal", "metals"]]
+        },
+        {
+          "text": "Brass = copper + zinc; bronze = copper + tin; solder = lead + tin; stainless steel = iron + nickel + chromium.",
+          "marks": 1,
+          "keywords": [["brass", "bronze", "solder", "stainless"], ["copper", "cu", "iron", "lead"], ["zinc", "zn", "tin", "sn", "nickel", "chromium"]]
+        }
+      ]
+    }
+  ],
+  "pyqs": [
+    {
+      "id": "pyq-2526-q18",
+      "marks": 1,
+      "repeated": true,
+      "repeatNote": "Amphoteric oxides appeared in both years: 2024-25 Q27A (identify the amphoteric oxide) and 2025-26 Q18 (which oxides react with both HCl and NaOH).",
+      "source": "CBSE Sample Paper 2025-26, Q18 (official marking scheme: B - I and III)",
+      "text": "Four statements about oxides: I. Aluminium oxide reacts with both dilute HCl and aqueous NaOH. II. Calcium oxide reacts with dilute HCl and aqueous NaOH. III. Zinc oxide reacts with both dilute HCl and aqueous NaOH. IV. Sulphur dioxide reacts with neither. Which are correct, and WHY do those two oxides behave this way?",
+      "points": [
+        {
+          "text": "Statements I and III are correct - aluminium oxide and zinc oxide.",
+          "marks": 0.5,
+          "keywords": [["aluminium oxide", "al2o3", "i and iii", "i & iii", "1 and 3"], ["zinc oxide", "zno"]]
+        },
+        {
+          "text": "They are amphoteric oxides: they react with both acids and bases to produce salt and water (CaO is basic only, SO2 is an acidic non-metal oxide).",
+          "marks": 0.5,
+          "keywords": [["amphoteric"], ["acids", "bases", "both"], ["salt", "water"]]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2425-q27a",
+      "marks": 3,
+      "repeated": true,
+      "repeatNote": "Amphoteric oxides appeared in both years: 2024-25 Q27A and 2025-26 Q18.",
+      "source": "CBSE Sample Paper 2024-25, Q27A (official marking scheme)",
+      "text": "Anirudh has two unlabelled metal oxides: aluminium oxide and magnesium oxide. Describe TWO ways (with reasoning) to identify which is which.",
+      "points": [
+        {
+          "text": "Aqueous solution of magnesium oxide turns red litmus blue (it is basic and dissolves to form a hydroxide).",
+          "marks": 1,
+          "keywords": [["magnesium oxide", "mgo"], ["red litmus", "litmus"], ["blue"], ["basic"]]
+        },
+        {
+          "text": "Aluminium oxide is insoluble in water and amphoteric, so it does not change the colour of either red or blue litmus.",
+          "marks": 1,
+          "keywords": [["aluminium oxide", "al2o3"], ["insoluble"], ["amphoteric"], ["no change", "does not change", "either"]]
+        },
+        {
+          "text": "Alternatively: MgO reacts with acid only, while Al2O3 reacts with both acids and bases (amphoteric).",
+          "marks": 1,
+          "keywords": [["acid", "acids"], ["base", "bases", "both"], ["reacts"]]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2526-q29b",
+      "marks": 3,
+      "repeated": false,
+      "repeatNote": "Ionic-bond case study appeared only in 2025-26 (Q29B) - not tagged as repeated.",
+      "source": "CBSE Sample Paper 2025-26, Q29B case study (official marking scheme)",
+      "text": "Case: atom Q loses 1 electron and atom P gains 2 electrons when they combine. (a) What type of bond forms between P and Q? (b) Write the formula of the compound. (c) The compound is dissolved in water - is the solution acidic or basic? Justify.",
+      "points": [
+        {
+          "text": "(a) Ionic bond (complete transfer of electrons from metal Q to non-metal P).",
+          "marks": 1,
+          "keywords": [["ionic"], ["transfer", "loses", "gains"]]
+        },
+        {
+          "text": "(b) Q2P - two Q+ ions balance one P2- ion.",
+          "marks": 1,
+          "keywords": [["q2p"], ["two q", "2q", "balance", "charge"]]
+        },
+        {
+          "text": "(c) Basic - it is a metallic oxide, and metallic oxides are basic in nature.",
+          "marks": 1,
+          "keywords": [["basic"], ["metallic oxide", "metal oxide"], ["basic in nature"]]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2425-q27v",
+      "marks": 3,
+      "repeated": false,
+      "repeatNote": "Metals properties reasoning appeared only in 2024-25 (visually-impaired variant of Q27) - not tagged as repeated.",
+      "source": "CBSE Sample Paper 2024-25, Q27 visually-impaired variant (official marking scheme)",
+      "text": "Give reasons: (i) Certain metals are used for making cooking utensils. (ii) Hydrogen gas does not evolve when metals (except Mg and Mn) react with nitric acid.",
+      "points": [
+        {
+          "text": "(i) Those metals (like aluminium/copper) are good conductors of heat AND have high melting points.",
+          "marks": 1,
+          "keywords": [["good conductor", "conductors of heat", "conduct heat"], ["high melting point", "melting points"]]
+        },
+        {
+          "text": "(ii) HNO3 is a strong oxidising agent; it oxidises the H2 produced to water.",
+          "marks": 1,
+          "keywords": [["oxidising agent", "oxidizing"], ["oxidises", "oxidizes"], ["water"]]
+        },
+        {
+          "text": "The acid itself gets reduced to nitrogen oxides (N2O, NO, NO2); only Mg and Mn with very dilute HNO3 evolve hydrogen.",
+          "marks": 1,
+          "keywords": [["reduced"], ["nitrogen oxide", "n2o", "no2", "no"], ["magnesium", "manganese", "mg", "mn"]]
+        }
+      ]
+    }
+  ],
+  "kb": [
+    {
+      "keywords": ["reactivity series", "activity series", "order of reactivity", "most reactive metal"],
+      "question": "What is the reactivity series?",
+      "answer": "Metals arranged in order of DECREASING activity: K > Na > Ca > Mg > Al > Zn > Fe > Pb > [H] > Cu > Hg > Ag > Au. Yaad karne ka trick: upar wale metals neeche walon ko unke salt solutions se displace kar dete hain. H iska reference point hai - H se upar wale dilute acids se H2 nikaalte hain.",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.2.5, Table 3.2",
+      "card": "reactivity-series.png"
+    },
+    {
+      "keywords": ["amphoteric", "aluminium oxide", "zinc oxide", "al2o3", "zno"],
+      "question": "What are amphoteric oxides?",
+      "answer": "Aise metal oxides jo ACID se bhi aur BASE se bhi react karke salt + water dete hain. Star examples: Al2O3 aur ZnO. Al2O3 + 6HCl -> 2AlCl3 + 3H2O (base ki tarah) aur Al2O3 + 2NaOH -> 2NaAlO2 + H2O (acid ki tarah). Dono saal ke papers mein aaya hai - pakka tyar karo.",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.2.1",
+      "card": null
+    },
+    {
+      "keywords": ["ionic bond", "ionic compound", "electrovalent", "electron transfer", "mgcl2", "nacl formation"],
+      "question": "How are ionic compounds formed?",
+      "answer": "Metal apne electrons non-metal ko TRANSFER karta hai - metal banta hai cation (+), non-metal banta hai anion (-). Jaise Mg (2,8,2) -> Mg2+ (2,8) + 2 electrons; har Cl (2,8,7) + 1 electron -> Cl- (2,8,8). Isliye MgCl2 banta hai (2 Cl chahiye). Aise compounds ko ionic ya electrovalent compounds kehte hain.",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.3, Fig 3.6",
+      "card": "ionic-transfer.png"
+    },
+    {
+      "keywords": ["ionic properties", "high melting point", "conduct electricity molten", "solid ionic conduct"],
+      "question": "Why do ionic compounds have high melting points and conduct only when molten/dissolved?",
+      "answer": "High m.p.: opposite ions ki strong attraction todne mein bahut energy lagti hai. Conduction: SOLID mein ions rigid structure mein locked hain - move nahi kar sakte, isliye no conduction. Molten ya solution mein ions FREE ho jaate hain - current flow. Aur haan: paani mein soluble, kerosene/petrol mein insoluble.",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.3.1",
+      "card": null
+    },
+    {
+      "keywords": ["aqua regia", "royal water", "dissolve gold"],
+      "question": "What is aqua regia?",
+      "answer": "'Royal water' - freshly prepared mixture of concentrated HCl + concentrated HNO3 in ratio 3:1. Ye GOLD aur platinum ko bhi dissolve kar leta hai, jabki dono acids akele nahi kar sakte. Highly corrosive, fuming liquid hota hai.",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.2.3",
+      "card": null
+    },
+    {
+      "keywords": ["nitric acid", "hno3", "hydrogen not evolved", "no hydrogen nitric"],
+      "question": "Why don't metals evolve H2 with nitric acid?",
+      "answer": "HNO3 ek strong oxidising agent hai - jo H2 banta hai usko turant oxidise karke WATER bana deta hai, aur khud nitrogen oxides (N2O, NO, NO2) mein reduce ho jaata hai. Exceptions: sirf Mg aur Mn, woh bhi sirf VERY dilute HNO3 ke saath H2 dete hain.",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.2.3",
+      "card": null
+    },
+    {
+      "keywords": ["electrolytic refining", "refining copper", "anode mud", "pure copper"],
+      "question": "How is copper refined electrolytically?",
+      "answer": "Setup: ANODE = impure copper, CATHODE = pure copper ki thin strip, ELECTROLYTE = acidified copper sulphate solution. Current chalao: anode ka pure copper dissolve hota hai aur cathode pe deposit hota jaata hai. Insoluble impurities neeche anode ke 'anode mud' banati hain; soluble impurities solution mein chali jaati hain.",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.4.6, Fig 3.12",
+      "card": "electro-refining.png"
+    },
+    {
+      "keywords": ["thermit", "railway track", "fe2o3 aluminium", "aluminothermy"],
+      "question": "What is the thermit reaction?",
+      "answer": "Fe2O3 + 2Al -> 2Fe (molten!) + Al2O3 + bahut saari HEAT. Itna exothermic ki iron molten state mein banta hai - isliye railway tracks aur cracked machine parts join karne mein use hota hai. Basically ek displacement reaction: Al ne Fe2O3 se iron ko displace kiya.",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.4.4",
+      "card": null
+    },
+    {
+      "keywords": ["roasting", "calcination", "difference roasting", "zinc ore"],
+      "question": "What is the difference between roasting and calcination?",
+      "answer": "Dono mein ore ko heat karte hain - farak HAWA mein hai. Roasting: sulphide ore ko EXCESS AIR mein heat: 2ZnS + 3O2 -> 2ZnO + 2SO2. Calcination: carbonate ore ko LIMITED/NO air mein heat: ZnCO3 -> ZnO + CO2. Dono ka goal: metal oxide banana, phir usse carbon se reduce karke metal nikaalna.",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.4.3",
+      "card": null
+    },
+    {
+      "keywords": ["corrosion", "rusting", "silver black", "copper green", "tarnish"],
+      "question": "What is corrosion? Why do silver, copper and iron spoil?",
+      "answer": "Corrosion = metal ka dheere dheere kharab hona air/moisture se. Silver: air ke sulphur se react karke BLACK silver sulphide (Ag2S). Copper: moist CO2 se GREEN basic copper carbonate. Iron: moist air se brown flaky RUST (hydrated iron oxide). Bachao: painting, oiling, greasing, galvanisation (zinc coating), chrome plating, anodising, alloying.",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.5",
+      "card": "corrosion-rusting.png"
+    },
+    {
+      "keywords": ["galvanisation", "galvanization", "galvanised", "zinc coating"],
+      "question": "What is galvanisation?",
+      "answer": "Iron/steel ko ZINC ki thin layer se coat karna = galvanisation. Special baat: zinc coating toot jaaye toh bhi article rust se protected rehta hai (zinc zyada reactive hai, woh pehle react karta hai - khud qurban).",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.5",
+      "card": null
+    },
+    {
+      "keywords": ["alloy", "brass", "bronze", "solder", "stainless steel", "amalgam"],
+      "question": "What is an alloy? Common alloys?",
+      "answer": "Alloy = 2+ metals (ya metal + non-metal) ka HOMOGENEOUS mixture - primary metal ko melt karke dusre elements definite proportions mein dissolve karte hain. Stainless steel = iron + nickel + chromium (rust nahi karta!). Brass = Cu + Zn, bronze = Cu + Sn, solder = Pb + Sn (low melting - electrical wires jodne mein), amalgam = mercury wala alloy. Alloys ki conductivity pure metal se KAM hoti hai.",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.5",
+      "card": null
+    },
+    {
+      "keywords": ["sodium water", "potassium water", "calcium water", "metal react water", "floats on water"],
+      "question": "How do metals react with water?",
+      "answer": "K/Na: COLD water se violent reaction - itni heat ki H2 mein aag lag jaati hai (2Na + 2H2O -> 2NaOH + H2 + heat). Ca: kam violent, but H2 bubbles chipakne se FLOAT karta hai. Mg: cold water nahi, HOT water se. Al/Zn/Fe: sirf STEAM se (metal oxide + H2). Pb/Cu/Ag/Au: bilkul nahi! Reactivity series ka direct proof hai ye.",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.2.2, Activity 3.8",
+      "card": null
+    },
+    {
+      "keywords": ["anodising", "anodizing", "anodised", "aluminium oxide layer"],
+      "question": "What is anodising?",
+      "answer": "Aluminium ko air mein chhodne pe thin protective oxide layer ban jaati hai. Anodising mein us layer ko AUR thick karte hain: clean Al article ko ANODE banakar dilute H2SO4 mein electrolyse karte hain - anode pe nikli oxygen Al se react karke thick protective layer banati hai. Bonus: ye layer dye kar sakte hain - colourful finish!",
+      "source": "NCERT Class 10 Science, Ch.3, Section 3.2.1 (anodising)",
+      "card": null
+    }
+  ],
+  "teachTopics": [
+    {
+      "id": "ch3-t1",
+      "name": "The reactivity series & displacement",
+      "juniorOpening": "Didi, ye reactivity series rat-ti hai par samajh nahi aati - upar neeche ka kya funda hai?",
+      "points": [
+        { "text": "Reactivity series lists metals in order of decreasing activity: K Na Ca Mg Al Zn Fe Pb [H] Cu Hg Ag Au.", "keywords": [["decreasing"], ["k", "na", "ca", "mg", "al"], ["cu", "hg", "ag", "au"]] },
+        { "text": "A more reactive metal displaces a less reactive metal from its salt solution.", "keywords": [["more reactive", "zyada reactive", "upar"], ["displace"], ["salt solution"]] },
+        { "text": "Example: iron nail in copper sulphate solution - Fe displaces Cu (blue colour fades, brown copper deposits).", "keywords": [["iron", "fe"], ["copper sulphate", "cuso4"], ["copper", "cu"]] },
+        { "text": "Metals above hydrogen in the series can displace H2 from dilute acids; copper cannot (no bubbles with dilute HCl).", "keywords": [["hydrogen", "h"], ["acid"], ["copper", "cu", "cannot", "no reaction"]] }
+      ],
+      "followUps": [
+        "Series ka matlab hi kya hai? Kis order mein arranged hain metals?",
+        "Toh upar wala metal neeche wale ke saath kya karta hai?",
+        "Ek example do na - kisi metal ko dusre ke solution mein daal ke!",
+        "Acid se hydrogen kaun nikaal sakta hai? Copper kyun nahi kar sakta?"
+      ],
+      "gotIt": "Ohh! Toh ye ek 'power ranking' hai - upar wala strong, neeche wale ko dhakka de deta hai. Iron ne copper ko bhagaya, samajh aa gaya!"
+    },
+    {
+      "id": "ch3-t2",
+      "name": "Metals vs water: who reacts, who doesn't",
+      "juniorOpening": "Bhaiya, sodium paani mein daala toh aag?? Aur meri steel ki kadhai roz paani mein hai, usko kuch kyun nahi hota?",
+      "points": [
+        { "text": "K and Na react violently with COLD water; the heat evolved makes the hydrogen catch fire (2Na + 2H2O -> 2NaOH + H2 + heat).", "keywords": [["violent", "vigorous"], ["cold water"], ["fire", "heat"], ["naoh", "2na", "koh"]] },
+        { "text": "Calcium is less violent; it floats because hydrogen bubbles stick to its surface.", "keywords": [["calcium", "ca"], ["float"], ["bubbles"]] },
+        { "text": "Magnesium needs hot water; aluminium, zinc and iron react only with steam (metal oxide + hydrogen).", "keywords": [["magnesium", "mg", "hot water"], ["steam"], ["aluminium", "al", "zinc", "zn", "iron", "fe"]] },
+        { "text": "Lead, copper, silver and gold do not react with water at all.", "keywords": [["copper", "silver", "gold", "lead"], ["do not react", "not react", "no reaction"]] }
+      ],
+      "followUps": [
+        "Sabse zyada violent kaun hai? Cold water se hi?",
+        "Calcium float kyun karta hai paani pe?",
+        "Magnesium aur iron ka kya? Unko bhi cold water chalta hai kya?",
+        "Kaunse metals hain jo paani se BILKUL nahi react karte?"
+      ],
+      "gotIt": "Clear hai! Jitna upar reactivity series mein, utna zyada hungama paani ke saath. Gold-silver bilkul cool dudes hain. Kadhai safe hai!"
+    },
+    {
+      "id": "ch3-t3",
+      "name": "Ionic bonds: the electron handover",
+      "juniorOpening": "Ionic bond mein electrons 'transfer' hote hain? Share nahi hote? Kaun deta hai kaun leta hai?",
+      "points": [
+        { "text": "Metal loses electrons to form a cation; non-metal gains them to form an anion - this transfer makes an ionic (electrovalent) compound.", "keywords": [["transfer"], ["loses", "lose", "gives"], ["gains", "gain", "takes"], ["cation", "anion"]] },
+        { "text": "Example: Mg (2,8,2) gives 2 electrons to become Mg2+ (2,8); each Cl (2,8,7) takes 1 to become Cl- (2,8,8) - so MgCl2 needs two chlorines.", "keywords": [["mg", "magnesium"], ["cl", "chlorine"], ["mgcl2", "mg2+", "cl-"]] },
+        { "text": "Ionic compounds have high melting points (strong inter-ionic attraction needs lots of energy to break).", "keywords": [["high melting"], ["strong", "attraction"], ["energy"]] },
+        { "text": "They conduct electricity when molten or dissolved (ions free to move) but not as solids (rigid structure); soluble in water, insoluble in kerosene.", "keywords": [["molten", "aqueous", "dissolved", "solution"], ["solid", "rigid"], ["ions"] ] }
+      ],
+      "followUps": [
+        "Toh electron kaun deta hai aur kaun leta hai? Metal ya non-metal?",
+        "MgCl2 mein 2 chlorine kyun? 1 kyun nahi?",
+        "Inko pighalne mein itni garmi kyun chahiye?",
+        "Bijli kab conduct karte hain ye? Solid mein kyun nahi?"
+      ],
+      "gotIt": "Ahaa - metal ne donate kiya, non-metal ne accept kiya, dono ke octet poore! Aur 2 Cl isliye kyunki Mg 2 electrons deta hai. Solid mein ions locked, isliye no current. Full clear!"
+    },
+    {
+      "id": "ch3-t4",
+      "name": "Extraction: roasting, calcination, thermit",
+      "juniorOpening": "Ore se metal kaise nikaalte hain? Roasting-calcination dono same lagte hain mujhe toh.",
+      "points": [
+        { "text": "Roasting: sulphide ore heated in EXCESS air: 2ZnS + 3O2 -> 2ZnO + 2SO2.", "keywords": [["roasting"], ["excess air", "excess of air", "air"], ["zns", "sulphide"], ["zno", "so2"]] },
+        { "text": "Calcination: carbonate ore heated in LIMITED/no air: ZnCO3 -> ZnO + CO2.", "keywords": [["calcination"], ["limited", "no air", "absence"], ["znco3", "carbonate"], ["co2"]] },
+        { "text": "The metal oxide is then reduced to the metal (e.g. with carbon).", "keywords": [["reduce", "reduced", "reduction"], ["carbon", "coke", "c"]] },
+        { "text": "Thermit: Fe2O3 + 2Al -> 2Fe (molten) + Al2O3 + heat - so exothermic it joins railway tracks.", "keywords": [["thermit"], ["fe2o3", "aluminium", "al"], ["molten", "heat"], ["railway", "tracks"]] }
+      ],
+      "followUps": [
+        "Roasting mein hawa kitni chahiye? Kaunsi ore pe hoti hai?",
+        "Calcination mein? Wahan kaunsi ore hoti hai?",
+        "Oxide ban gaya, ab metal kaise milega usse?",
+        "Thermit reaction kya hai? Railway tracks ka kya connection?"
+      ],
+      "gotIt": "Samjha! Roasting = zyada hawa + sulphide ore, calcination = kam hawa + carbonate ore. Aur thermit ka heat hi railway tracks jodta hai. Sorted!"
+    },
+    {
+      "id": "ch3-t5",
+      "name": "Corrosion & how we beat it",
+      "juniorOpening": "Meri cycle ke handle pe brown-brown kyun ho jaata hai? Aur dadi ke silver ke bartan kale kyun pad jaate hain?",
+      "points": [
+        { "text": "Corrosion: metals slowly get eaten away by air/moisture; iron forms brown flaky rust (hydrated iron oxide).", "keywords": [["corrosion", "rust"], ["moist", "air", "water"], ["brown", "flaky"]] },
+        { "text": "Silver turns black from silver sulphide (sulphur in air); copper gets a green coat of basic copper carbonate (moist CO2).", "keywords": [["silver"], ["sulphide", "sulphur", "black"], ["copper", "green", "basic copper carbonate"]] },
+        { "text": "Prevention: painting, oiling, greasing, galvanising, chrome plating, anodising, alloying.", "keywords": [["painting", "oiling", "greasing"], ["galvanis", "galvaniz", "chrome", "anodis", "alloy"]] },
+        { "text": "Galvanisation = zinc coating on iron/steel; it protects even when the coating breaks because zinc is more reactive.", "keywords": [["zinc"], ["coating", "layer"], ["more reactive", "zyada reactive"]] },
+        { "text": "Alloying example: iron + nickel + chromium = stainless steel (hard, does not rust).", "keywords": [["stainless steel"], ["nickel", "chromium"], ["iron"]] }
+      ],
+      "followUps": [
+        "Rust hota kya hai exactly? Kaise banta hai?",
+        "Silver ka black hona aur copper ka green - woh bhi corrosion hai?",
+        "Rokne ke tareeke batao kuch!",
+        "Galvanisation kya hai? Zinc ka coating toot gaya toh?",
+        "Stainless steel 'stainless' kyun hai?"
+      ],
+      "gotIt": "Toh rust, silver ka kaalapna, copper ka green - sab corrosion ke alag roop hain! Aur zinc wala trick toh genius hai - chhota bhai pehle ladta hai. Cycle sambhal ke rakhunga!"
+    }
+  ],
+  "explainers": [
+    {
+      "id": "x-ch3-series",
+      "title": "The reactivity series is just a power ranking",
+      "hook": "KBC ki ranking list jaisi cheez hai ye - sabse powerful metal upar, sabse shaant neeche. Aur is ek list se chapter ke aadhe sawaal solve hote hain.",
+      "concept": "K > Na > Ca > Mg > Al > Zn > Fe > Pb > [H] > Cu > Hg > Ag > Au - decreasing activity. Teen rules: (1) upar wala metal neeche wale ko uske salt solution se displace karta hai (iron nail + copper sulphate yaad hai?); (2) H ke upar wale dilute acids se H2 nikaalte hain; (3) top ke metals (K/Na/Ca) itne reactive ki cold water se bhi react karte hain, bottom ke (Cu/Ag/Au) paani ko bhaav bhi nahi dete.",
+      "hack": "Exam hack: series ko 3 zones mein todo - TOP (K-Ca: paani se react, electrolysis se extract), MIDDLE (Zn-Pb: steam/acids, carbon reduction), BOTTOM (Cu-Au: free state mein milte hain). Zone pata = reaction pata. Explaining the zones aloud (even to your wall) beats re-reading the list (Kobayashi 2019, Japanese Psychological Research).",
+      "hackSource": "Kobayashi (2019), Japanese Psychological Research, doi 10.1111/jpr.12221",
+      "card": "reactivity-series.png",
+      "learnMore": [
+        { "label": "NCERT Class 10 Science Ch.3 (official PDF)", "url": "https://ncert.nic.in/textbook/pdf/jesc103.pdf" },
+        { "label": "Khan Academy: Reactivity series", "url": "https://www.khanacademy.org/science/class-10-chemistry/x7d4ebb5bb7a7bb2e:metals-and-non-metals" }
+      ]
+    },
+    {
+      "id": "x-ch3-railway",
+      "title": "The reaction that welds railway tracks",
+      "hook": "Railway track jodne ke liye welding machine nahi - ek chemistry reaction use hoti hai jo itni garam hai ki iron pighal jaata hai. Naam: thermit.",
+      "concept": "Fe2O3 + 2Al -> 2Fe + Al2O3 + HEAT. Aluminium reactivity series mein iron se UPAR hai, toh Fe2O3 se oxygen chheen leta hai (displacement/reduction). Itna exothermic ki iron MOLTEN banta hai - wahi molten iron tracks ke gap mein daal diya jaata hai. Yehi logic extraction mein bhi: jo metal zyada reactive, woh dusre ke oxide se metal nikaal sakta hai.",
+      "hack": "Exam hack: thermit dekhte hi 4 points - equation, displacement/reduction, exothermic (molten metal), use (railway tracks/cracked parts). Ek equation = 4 marking points. Practising retrieval like this (writing it out cold) is what actually builds memory (Roediger & Karpicke 2006, Psychological Science).",
+      "hackSource": "Roediger & Karpicke (2006), Psychological Science 17(3), PMID 16507066",
+      "card": null,
+      "learnMore": [
+        { "label": "NCERT Class 10 Science Ch.3 (official PDF)", "url": "https://ncert.nic.in/textbook/pdf/jesc103.pdf" },
+        { "label": "Khan Academy: Metals and non-metals", "url": "https://www.khanacademy.org/science/class-10-chemistry/x7d4ebb5bb7a7bb2e:metals-and-non-metals" }
+      ]
+    },
+    {
+      "id": "x-ch3-anodemud",
+      "title": "Why jewellers care about 'anode mud'",
+      "hook": "Copper purify karne ke baad jo ganda sa 'mud' bachta hai, usme kabhi kabhar GOLD hota hai. Science is wild.",
+      "concept": "Electrolytic refining: impure copper = ANODE, pure copper strip = CATHODE, acidified copper sulphate = electrolyte. Current on: anode ka copper dissolve hokar cathode pe pure deposit hota hai. Jo impurities dissolve nahi hoti woh anode ke neeche 'anode mud' mein settle hoti hain - aur usme silver/gold jaisi valuable cheezein mil sakti hain. Isliye impure metal ko chhota mota nuksaan nahi, hidden treasure ke saath refine karte hain.",
+      "hack": "Exam hack: refining ka 3-part answer template - (anode, cathode, electrolyte) + 'pure metal cathode pe deposit' + 'anode mud = insoluble impurities'. 2024-25 mein ye topic aaya hai. Small wins like nailing one template at a time build real momentum (Amabile & Kramer, The Progress Principle, 2011).",
+      "hackSource": "Amabile & Kramer (2011), The Progress Principle, Harvard Business Review Press",
+      "card": "electro-refining.png",
+      "learnMore": [
+        { "label": "NCERT Class 10 Science Ch.3 (official PDF)", "url": "https://ncert.nic.in/textbook/pdf/jesc103.pdf" },
+        { "label": "Khan Academy: Metals and non-metals", "url": "https://www.khanacademy.org/science/class-10-chemistry/x7d4ebb5bb7a7bb2e:metals-and-non-metals" }
+      ]
+    }
+  ]
+}

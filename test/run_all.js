@@ -64,7 +64,7 @@ async function post(p, body) {
 
   // Chapter agents (Ch.2)
   const chs = await (await fetch(base + '/api/chapters')).json();
-  check('2 chapters with their own agents', chs.chapters.length === 2 && chs.chapters[1].agent === 'Ch.2 Guide');
+  check('3 chapters with their own agents', chs.chapters.length === 3 && chs.chapters[1].agent === 'Ch.2 Guide' && chs.chapters[2].agent === 'Ch.3 Guide');
   const q2 = await (await fetch(base + '/api/questions?chapter=ch2')).json();
   check('ch2: 9 bank + 5 PYQ questions', q2.questions.length === 9 && q2.mostAsked.length === 5 && q2.chapterAgent === 'Ch.2 Guide');
   const g2w = await post('/api/grade', { questionId: 'ch2-q3', answer: 'because it is safer' });
@@ -82,6 +82,20 @@ async function post(p, body) {
   check('ch2 explainers with verified links', x2.explainers.length === 3 && x2.explainers.every((x) => x.hackSource && x.learnMore.length >= 2));
   const pyq2 = await post('/api/grade', { questionId: 'pyq-2526-q21', answer: 'Sodium hydroxide NaOH, because it is a strong base giving the most OH- ions; Mg(OH)2 is weak and the other two are acids.' });
   check('ch2 PYQ graded from official scheme', pyq2.score === 1);
+
+  // Chapter agents (Ch.3)
+  const q3 = await (await fetch(base + '/api/questions?chapter=ch3')).json();
+  check('ch3: 9 bank + 4 PYQ questions', q3.questions.length === 9 && q3.mostAsked.length === 4 && q3.chapterAgent === 'Ch.3 Guide');
+  const g3s = await post('/api/grade', { questionId: 'ch3-q2', answer: 'Amphoteric oxides react with both acids and bases to produce salt and water, e.g. aluminium oxide Al2O3. With acid: Al2O3 + 6HCl -> 2AlCl3 + 3H2O. With base: Al2O3 + 2NaOH -> 2NaAlO2 sodium aluminate + H2O.' });
+  check('ch3 strong amphoteric answer full marks', g3s.score === g3s.maxScore && g3s.chapterAgent === 'Ch.3 Guide');
+  const g3w = await post('/api/grade', { questionId: 'ch3-q2', answer: 'they are special oxides' });
+  check('ch3 weak answer scores low', g3w.score <= 1);
+  const d3 = await post('/api/doubt', { doubt: 'thermit reaction kya hai?' });
+  check('thermit doubt routed to Ch.3', d3.chapter === 'ch3' && d3.chapterAgent === 'Ch.3 Guide');
+  const pyq3 = await post('/api/grade', { questionId: 'pyq-2526-q18', answer: 'I and III: aluminium oxide and zinc oxide, they are amphoteric so they react with both acids and bases to form salt and water.' });
+  check('ch3 PYQ graded from official scheme', pyq3.score === 1);
+  const t3 = await (await fetch(base + '/api/teach/topics?chapter=ch3')).json();
+  check('ch3 teach topics listed', t3.topics.length === 5 && t3.topics.every((t) => t.chapter === 'ch3'));
 
   // security
   const trav = await fetch(base + '/../../etc/passwd');

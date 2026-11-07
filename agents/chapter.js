@@ -67,6 +67,7 @@ function findQuestion(questionId) {
 // caller's explicit chapter choice always wins over this guess).
 const CHAPTER_HINTS = [
   { id: 'ch2', hints: ['acid', 'base', 'salt', 'ph', 'indicator', 'litmus', 'neutralis', 'neutraliz', 'antacid', 'baking', 'washing soda', 'plaster', 'gypsum', 'bleaching', 'chlor-alkali', 'brine', 'tooth', 'sting', 'hydronium', 'crystallis', 'crystalliz', 'lime water', 'limewater'] },
+  { id: 'ch3', hints: ['metal', 'non-metal', 'nonmetal', 'reactivity', 'amphoteric', 'ionic', 'alloy', 'corrosion', 'rusting', 'galvani', 'thermit', 'roasting', 'calcination', 'refining', 'anode mud', 'aqua regia', 'ore', 'extraction', 'tarnish', 'anodis', 'kerosene'] },
   { id: 'ch1', hints: ['balance', 'balancing', 'equation', 'rust', 'corrosion', 'rancidity', 'decomposition', 'combination', 'displacement', 'exothermic', 'endothermic', 'oxidation', 'reduction', 'redox', 'magnesium', 'electrolysis of water'] },
 ];
 

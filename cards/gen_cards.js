@@ -253,6 +253,75 @@ cards['pop-cycle'] = frame('Gypsum ↔ Plaster of Paris', 'water of crystallisat
   txt(400, 388, 'smooth surfaces. ½H2O = 2 CaSO4 share 1 water!', 15, C.ink, 'middle'),
 ].join(''), SRC2);
 
+
+// ---- Chapter 3 cards ----
+const SRC3 = 'Source: NCERT Class 10 Science, Ch.3 · Red Pen';
+
+// Reactivity series
+{
+  const seg = [];
+  const metals = ['K', 'Na', 'Ca', 'Mg', 'Al', 'Zn', 'Fe', 'Pb', 'H', 'Cu', 'Hg', 'Ag', 'Au'];
+  for (let i = 0; i < metals.length; i++) {
+    const hot = i < 3, mid = i >= 3 && i < 8;
+    const fill = hot ? '#f8ece8' : mid ? '#fdf3e3' : '#eef4ec';
+    const stroke = hot ? C.pen : mid ? C.amber : C.sage;
+    seg.push(`<rect x="${60 + i * 53}" y="150" width="50" height="50" rx="10" fill="${fill}" stroke="${stroke}" stroke-width="2"/>`);
+    seg.push(txt(60 + i * 53 + 25, 182, metals[i], 17, stroke, 'middle', 700));
+  }
+  seg.push(txt(60, 130, 'MOST REACTIVE', 14, C.pen, 'start', 700));
+  seg.push(txt(740, 130, 'LEAST', 14, C.sage, 'end', 700));
+  seg.push(txt(60, 240, 'TOP zone (K-Ca): cold water se react, electrolysis se extract', 14, C.pen));
+  seg.push(txt(60, 268, 'MIDDLE (Zn-Pb): steam/acids se react, carbon reduction se extract', 14, C.amber));
+  seg.push(txt(60, 296, 'BOTTOM (Cu-Au): paani ko bhaav nahi, free state mein milte hain', 14, C.sage));
+  seg.push(box(60, 330, 680, 90, '#fff', C.sky));
+  seg.push(txt(400, 362, 'Rule: upar wala metal neeche wale ko uske salt solution', 15, C.ink, 'middle'));
+  seg.push(txt(400, 388, 'se DISPLACE karta hai. H ke upar = dilute acid se H2 nikalega.', 15, C.ink, 'middle'));
+  cards['reactivity-series'] = frame('Reactivity series', 'ek power ranking - 3 zones mein yaad karo', seg.join(''), SRC3);
+}
+
+// Ionic transfer (MgCl2)
+cards['ionic-transfer'] = frame('Ionic bond: electron handover', 'Mg + 2Cl → MgCl2', [
+  box(60, 140, 200, 110, '#f8ece8', C.pen),
+  txt(160, 175, 'Mg (2,8,2)', 17, C.ink, 'middle', 700),
+  txt(160, 205, '2 electrons DETA hai', 14, C.soft, 'middle'),
+  txt(160, 228, '→ Mg2+ (2,8)', 15, C.pen, 'middle', 700),
+  box(540, 140, 200, 110, '#eef4ec', C.sage),
+  txt(640, 175, '2 x Cl (2,8,7)', 17, C.ink, 'middle', 700),
+  txt(640, 205, '1 electron each LETE hain', 14, C.soft, 'middle'),
+  txt(640, 228, '→ 2Cl- (2,8,8)', 15, C.sage, 'middle', 700),
+  arrow(260, 180, 540, 180),
+  txt(400, 165, 'electron transfer', 14, C.amber, 'middle', 700),
+  box(280, 290, 240, 70, '#fdf3e3', C.amber),
+  txt(400, 320, 'MgCl2', 22, C.ink, 'middle', 700),
+  txt(400, 345, '(ionic / electrovalent compound)', 13, C.soft, 'middle'),
+  txt(400, 410, 'Opposite charges ka strong attraction = high melting point', 15, C.ink, 'middle'),
+].join(''), SRC3);
+
+// Electrolytic refining of copper
+cards['electro-refining'] = frame('Electrolytic refining of copper', 'impure → pure, electrolysis se', [
+  box(60, 150, 200, 150, '#f8ece8', C.pen),
+  txt(160, 185, 'ANODE', 16, C.pen, 'middle', 700),
+  txt(160, 215, 'IMPURE copper', 15, C.ink, 'middle'),
+  txt(160, 245, 'copper dissolves', 13, C.soft, 'middle'),
+  txt(160, 268, 'into solution', 13, C.soft, 'middle'),
+  box(300, 150, 200, 150, '#eef1f6', C.sky),
+  txt(400, 185, 'ELECTROLYTE', 15, C.sky, 'middle', 700),
+  txt(400, 215, 'acidified copper', 14, C.ink, 'middle'),
+  txt(400, 238, 'sulphate solution', 14, C.ink, 'middle'),
+  box(540, 150, 200, 150, '#eef4ec', C.sage),
+  txt(640, 185, 'CATHODE', 16, C.sage, 'middle', 700),
+  txt(640, 215, 'PURE copper strip', 15, C.ink, 'middle'),
+  txt(640, 245, 'pure Cu deposits', 13, C.soft, 'middle'),
+  txt(640, 268, 'here, layer by layer', 13, C.soft, 'middle'),
+  arrow(160, 300, 160, 345, C.pen),
+  box(60, 345, 200, 55, '#fff', C.pen),
+  txt(160, 378, 'anode mud (insoluble', 13, C.pen, 'middle', 700),
+  txt(160, 396, 'impurities - may hold Ag/Au!)', 12, C.soft, 'middle'),
+  arrow(260, 225, 300, 225, C.sky),
+  arrow(500, 225, 540, 225, C.sage),
+  txt(400, 440, 'Cu, Zn, Sn, Ni, Ag, Au - sab aise hi refine hote hain', 14, C.ink, 'middle'),
+].join(''), SRC3);
+
 for (const [name, svg] of Object.entries(cards)) {
   fs.writeFileSync(path.join(OUT, `${name}.svg`), svg);
 }
