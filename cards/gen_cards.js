@@ -332,8 +332,8 @@ cards['carbon-bonding'] = frame('Carbon bonding &amp; allotropes', 'share karta 
   txt(220, 150, 'COVALENT BOND', 16, C.amber, 'middle', 700),
   txt(220, 180, 'electron pair SHARE hota hai', 15, C.ink, 'middle'),
   txt(220, 205, '(transfer nahi - wo ionic tha!)', 13, C.soft, 'middle'),
-  txt(220, 232, 'weak intermolecular forces', 13, C.soft, 'middle'),
-  txt(220, 248, '→ low m.p./b.p., poor conductor', 13, C.soft, 'middle'),
+  txt(220, 226, 'weak intermolecular forces', 13, C.soft, 'middle'),
+  txt(220, 242, '→ low m.p./b.p., poor conductor', 13, C.soft, 'middle'),
   box(420, 120, 320, 140, '#eef1f6', C.sky),
   txt(580, 150, '2 SUPERPOWERS', 16, C.sky, 'middle', 700),
   txt(580, 180, 'Tetravalency: 4 bonds', 15, C.ink, 'middle'),
@@ -355,17 +355,19 @@ cards['carbon-bonding'] = frame('Carbon bonding &amp; allotropes', 'share karta 
 {
   const seg = [];
   const members = [['CH4', 'methane'], ['C2H6', 'ethane'], ['C3H8', 'propane'], ['C4H10', 'butane'], ['C5H12', 'pentane']];
+  const W = 110, H = 56, X0 = 42, Y0 = 322, HS = 150, VS = 48;
   for (let i = 0; i < members.length; i++) {
-    const x = 90 + i * 130, y = 300 - i * 45;
-    seg.push(box(x, y, 150, 60, '#eef4ec', C.sage));
-    seg.push(txt(x + 75, y + 28, members[i][0], 18, C.ink, 'middle', 700));
-    seg.push(txt(x + 75, y + 48, members[i][1], 13, C.soft, 'middle'));
+    const x = X0 + i * HS, y = Y0 - i * VS;
+    seg.push(box(x, y, W, H, '#eef4ec', C.sage));
+    seg.push(txt(x + W / 2, y + 26, members[i][0], 17, C.ink, 'middle', 700));
+    seg.push(txt(x + W / 2, y + 44, members[i][1], 12, C.soft, 'middle'));
     if (i < 4) {
-      seg.push(arrow(x + 150, y - 2, x + 130 + 20, y - 45 + 58, C.pen));
-      seg.push(txt(x + 116, y - 26, '+CH2', 13, C.pen, 'middle', 700));
+      // rising diagonal arrow through the 40px stair corridor; label floats clear above it
+      seg.push(arrow(x + W + 2, y + H - 6, x + HS - 2, y - VS + 6, C.pen));
+      seg.push(txt(x + 130, y - 14, '+CH2', 12, C.pen, 'middle', 700));
     }
   }
-  seg.push(txt(400, 110, 'har step = +1 carbon, +2 hydrogen = +14 u', 16, C.ink, 'middle', 700));
+  seg.push(txt(400, 104, 'har step = +1 carbon, +2 hydrogen = +14 u', 16, C.ink, 'middle', 700));
   seg.push(txt(400, 445, 'Same general formula · similar chemical properties · gradual physical change', 14, C.soft, 'middle'));
   cards['homologous-ladder'] = frame('Homologous series ladder', 'alkanes: ek family, har member ek CH2 bada', seg.join(''), SRC4);
 }
