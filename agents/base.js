@@ -30,7 +30,12 @@ class Agent {
   // Reasoning hook. Uses the LLM brain when present, otherwise the
   // rule-based fallback. The fallback is real logic, never a fake.
   async think(context, fallback) {
-    if (this.brain) return this.brain({ role: this.role, context });
+    if (this.brain) {
+      // Provider down or key rejected: the rule-based brain still answers,
+      // so a student is never left with an error instead of feedback.
+      try { return await this.brain({ role: this.role, context }); }
+      catch { return fallback(); }
+    }
     return fallback();
   }
 }

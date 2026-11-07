@@ -84,6 +84,9 @@ async function post(p, body) {
   check('bot proactive reminder', /Re-check time/.test(bot.sendLog.at(-1).text));
   check('bot never polled without token', bot.offset === 0);
 
+  // LLM brain + STT wiring, exercised against a mock Groq (no real key)
+  await require('./brain_mock').runBrainMock(check);
+
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed ? 1 : 0);
 })().catch((e) => { console.error(e); process.exit(1); });

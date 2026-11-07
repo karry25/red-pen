@@ -14,8 +14,9 @@ function activeBrainInfo() {
 
 async function callGemini(systemPrompt, userText) {
   const key = process.env.GEMINI_API_KEY;
+  const base = process.env.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com';
   const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`,
+    `${base}/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`,
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -33,7 +34,8 @@ async function callGemini(systemPrompt, userText) {
 
 async function callGroq(systemPrompt, userText) {
   const key = process.env.GROQ_API_KEY;
-  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+  const base = process.env.GROQ_BASE_URL || 'https://api.groq.com';
+  const res = await fetch(`${base}/openai/v1/chat/completions`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` },
     body: JSON.stringify({
