@@ -64,7 +64,7 @@ async function post(p, body) {
 
   // Chapter agents (Ch.2)
   const chs = await (await fetch(base + '/api/chapters')).json();
-  check('3 chapters with their own agents', chs.chapters.length === 3 && chs.chapters[1].agent === 'Ch.2 Guide' && chs.chapters[2].agent === 'Ch.3 Guide');
+  check('4 chapters with their own agents', chs.chapters.length === 4 && chs.chapters[1].agent === 'Ch.2 Guide' && chs.chapters[2].agent === 'Ch.3 Guide' && chs.chapters[3].agent === 'Ch.4 Guide');
   const q2 = await (await fetch(base + '/api/questions?chapter=ch2')).json();
   check('ch2: 9 bank + 5 PYQ questions', q2.questions.length === 9 && q2.mostAsked.length === 5 && q2.chapterAgent === 'Ch.2 Guide');
   const g2w = await post('/api/grade', { questionId: 'ch2-q3', answer: 'because it is safer' });
@@ -96,6 +96,20 @@ async function post(p, body) {
   check('ch3 PYQ graded from official scheme', pyq3.score === 1);
   const t3 = await (await fetch(base + '/api/teach/topics?chapter=ch3')).json();
   check('ch3 teach topics listed', t3.topics.length === 5 && t3.topics.every((t) => t.chapter === 'ch3'));
+
+  // Chapter agents (Ch.4)
+  const q4 = await (await fetch(base + '/api/questions?chapter=ch4')).json();
+  check('ch4: 9 bank + 4 PYQ questions', q4.questions.length === 9 && q4.mostAsked.length === 4 && q4.chapterAgent === 'Ch.4 Guide');
+  const g4s = await post('/api/grade', { questionId: 'ch4-q2', answer: 'Diamond and graphite are allotropes of carbon: the same element with different bonding arrangements, so their physical properties differ. In diamond each carbon is bonded to four others in a rigid 3D network, making it the hardest substance. In graphite each carbon bonds to only three others, forming hexagonal layers that slide over each other, and its free electrons make it a good conductor of electricity.' });
+  check('ch4 strong allotrope answer full marks', g4s.score === g4s.maxScore && g4s.chapterAgent === 'Ch.4 Guide');
+  const g4w = await post('/api/grade', { questionId: 'ch4-q2', answer: 'diamond is expensive and shiny' });
+  check('ch4 weak answer scores low', g4w.score <= 1);
+  const d4 = await post('/api/doubt', { doubt: 'micelle kya hai soap mein?' });
+  check('micelle doubt routed to Ch.4', d4.chapter === 'ch4' && d4.chapterAgent === 'Ch.4 Guide');
+  const pyq4 = await post('/api/grade', { questionId: 'pyq-2526-q29a', answer: 'X is propene C3H6, it has 3 carbons and 6 hydrogens so x=3 and y=6. It is an unsaturated hydrocarbon with a double bond. On hydrogenation with Ni catalyst it gives propane C3H8.' });
+  check('ch4 PYQ graded from official scheme', pyq4.score >= 1);
+  const t4 = await (await fetch(base + '/api/teach/topics?chapter=ch4')).json();
+  check('ch4 teach topics listed', t4.topics.length === 5 && t4.topics.every((t) => t.chapter === 'ch4'));
 
   // security
   const trav = await fetch(base + '/../../etc/passwd');

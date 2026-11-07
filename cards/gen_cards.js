@@ -322,6 +322,78 @@ cards['electro-refining'] = frame('Electrolytic refining of copper', 'impure →
   txt(400, 440, 'Cu, Zn, Sn, Ni, Ag, Au - sab aise hi refine hote hain', 14, C.ink, 'middle'),
 ].join(''), SRC3);
 
+
+// ---- Chapter 4 cards ----
+const SRC4 = 'Source: NCERT Class 10 Science, Ch.4 · Red Pen';
+
+// Carbon bonding: covalent + allotropes
+cards['carbon-bonding'] = frame('Carbon bonding &amp; allotropes', 'share karta hai, transfer nahi', [
+  box(60, 120, 320, 140, '#fdf3e3', C.amber),
+  txt(220, 150, 'COVALENT BOND', 16, C.amber, 'middle', 700),
+  txt(220, 180, 'electron pair SHARE hota hai', 15, C.ink, 'middle'),
+  txt(220, 205, '(transfer nahi - wo ionic tha!)', 13, C.soft, 'middle'),
+  txt(220, 232, 'weak intermolecular forces', 13, C.soft, 'middle'),
+  txt(220, 248, '→ low m.p./b.p., poor conductor', 13, C.soft, 'middle'),
+  box(420, 120, 320, 140, '#eef1f6', C.sky),
+  txt(580, 150, '2 SUPERPOWERS', 16, C.sky, 'middle', 700),
+  txt(580, 180, 'Tetravalency: 4 bonds', 15, C.ink, 'middle'),
+  txt(580, 205, 'Catenation: C khud C se judta hai', 15, C.ink, 'middle'),
+  txt(580, 235, 'chains · branches · rings', 13, C.soft, 'middle'),
+  box(60, 300, 320, 130, '#f8ece8', C.pen),
+  txt(220, 330, 'DIAMOND', 16, C.pen, 'middle', 700),
+  txt(220, 358, 'har C → 4 C se bonded', 14, C.ink, 'middle'),
+  txt(220, 382, 'rigid 3D network', 13, C.soft, 'middle'),
+  txt(220, 405, '= HARDEST substance', 14, C.pen, 'middle', 700),
+  box(420, 300, 320, 130, '#eef4ec', C.sage),
+  txt(580, 330, 'GRAPHITE', 16, C.sage, 'middle', 700),
+  txt(580, 358, 'har C → 3 C se, hexagonal', 14, C.ink, 'middle'),
+  txt(580, 382, 'layers SLIDE karte hain', 13, C.soft, 'middle'),
+  txt(580, 405, '= slippery + conducts!', 14, C.sage, 'middle', 700),
+].join(''), SRC4);
+
+// Homologous ladder
+{
+  const seg = [];
+  const members = [['CH4', 'methane'], ['C2H6', 'ethane'], ['C3H8', 'propane'], ['C4H10', 'butane'], ['C5H12', 'pentane']];
+  for (let i = 0; i < members.length; i++) {
+    const x = 90 + i * 130, y = 300 - i * 45;
+    seg.push(box(x, y, 150, 60, '#eef4ec', C.sage));
+    seg.push(txt(x + 75, y + 28, members[i][0], 18, C.ink, 'middle', 700));
+    seg.push(txt(x + 75, y + 48, members[i][1], 13, C.soft, 'middle'));
+    if (i < 4) {
+      seg.push(arrow(x + 150, y - 2, x + 130 + 20, y - 45 + 58, C.pen));
+      seg.push(txt(x + 116, y - 26, '+CH2', 13, C.pen, 'middle', 700));
+    }
+  }
+  seg.push(txt(400, 110, 'har step = +1 carbon, +2 hydrogen = +14 u', 16, C.ink, 'middle', 700));
+  seg.push(txt(400, 445, 'Same general formula · similar chemical properties · gradual physical change', 14, C.soft, 'middle'));
+  cards['homologous-ladder'] = frame('Homologous series ladder', 'alkanes: ek family, har member ek CH2 bada', seg.join(''), SRC4);
+}
+
+// Soap micelle + hard water
+cards['soap-micelle'] = frame('Soap micelle &amp; hard water', 'ek end paani-pyar, ek end oil-pyar', [
+  box(60, 130, 320, 130, '#eef1f6', C.sky),
+  txt(220, 160, 'SOAP MOLECULE', 15, C.sky, 'middle', 700),
+  txt(220, 190, 'ionic end: HYDROPHILIC', 14, C.ink, 'middle'),
+  txt(220, 212, '(paani mein ghulta)', 12, C.soft, 'middle'),
+  txt(220, 238, 'tail: HYDROPHOBIC (oil mein)', 14, C.ink, 'middle'),
+  box(420, 130, 320, 130, '#eef4ec', C.sage),
+  txt(580, 160, 'MICELLE', 15, C.sage, 'middle', 700),
+  txt(580, 190, 'tails andar → oil/dirt pakdo', 14, C.ink, 'middle'),
+  txt(580, 212, 'ionic ends bahar → paani mein', 14, C.ink, 'middle'),
+  txt(580, 238, 'dirt rinse ho jaata hai', 13, C.soft, 'middle'),
+  box(60, 300, 320, 120, '#f8ece8', C.pen),
+  txt(220, 330, 'HARD WATER + SOAP', 15, C.pen, 'middle', 700),
+  txt(220, 358, 'Ca/Mg ions → SCUM', 14, C.ink, 'middle'),
+  txt(220, 380, '(insoluble, foam kam)', 12, C.soft, 'middle'),
+  txt(220, 402, 'soap waste hota hai', 13, C.soft, 'middle'),
+  box(420, 300, 320, 120, '#fff', C.sage),
+  txt(580, 330, 'HARD WATER + DETERGENT', 15, C.sage, 'middle', 700),
+  txt(580, 358, 'sulphonic acid salts', 14, C.ink, 'middle'),
+  txt(580, 380, 'Ca/Mg se precipitate NAHI', 13, C.soft, 'middle'),
+  txt(580, 402, '= effective! (shampoos)', 14, C.sage, 'middle', 700),
+].join(''), SRC4);
+
 for (const [name, svg] of Object.entries(cards)) {
   fs.writeFileSync(path.join(OUT, `${name}.svg`), svg);
 }

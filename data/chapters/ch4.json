@@ -1,0 +1,520 @@
+{
+  "id": "ch4",
+  "number": 4,
+  "title": "Carbon and its Compounds",
+  "source": "NCERT Class 10 Science, Ch.4 (ncert.nic.in jesc104, Reprint 2026-27)",
+  "questions": [
+    {
+      "id": "ch4-q1",
+      "marks": 2,
+      "text": "What is a covalent bond? Why do covalent compounds generally have low melting/boiling points and poor electrical conductivity?",
+      "points": [
+        {
+          "text": "A covalent bond is formed by the sharing of an electron pair between two atoms.",
+          "marks": 1,
+          "keywords": [["sharing", "share", "shared"], ["electron pair", "pair of electrons", "electrons"]]
+        },
+        {
+          "text": "Bonds within the molecule are strong but intermolecular forces are weak (low mp/bp); since electrons are shared and no charged particles (ions) are formed, they are poor conductors.",
+          "marks": 1,
+          "keywords": [["intermolecular", "weak"], ["charged particles", "ions", "no ions"], ["conductor", "conduct", "electricity"]]
+        }
+      ]
+    },
+    {
+      "id": "ch4-q2",
+      "marks": 3,
+      "text": "Diamond and graphite are both made of carbon atoms, yet diamond is the hardest substance while graphite is slippery and conducts electricity. Explain on the basis of their structures.",
+      "points": [
+        {
+          "text": "They are allotropes of carbon - same element, different bonding arrangements, so physical properties differ while chemical properties stay the same.",
+          "marks": 1,
+          "keywords": [["allotrope", "allotropes"], ["bonded", "bonding", "structure", "arrangement"], ["different physical", "physical properties"]]
+        },
+        {
+          "text": "In diamond each carbon atom is bonded to FOUR other carbon atoms, forming a rigid three-dimensional structure - hence hardest.",
+          "marks": 1,
+          "keywords": [["four", "4"], ["three-dimensional", "3d", "rigid"], ["hardest", "hard"]]
+        },
+        {
+          "text": "In graphite each carbon is bonded to THREE others in the same plane, forming hexagonal layers that slide over each other (slippery) and it is a good conductor of electricity (one bond is a double bond).",
+          "marks": 1,
+          "keywords": [["three", "3"], ["hexagonal", "layers", "plane"], ["slippery", "smooth", "slide"], ["conductor", "conducts"]]
+        }
+      ]
+    },
+    {
+      "id": "ch4-q3",
+      "marks": 2,
+      "text": "Carbon forms a very large number of compounds. Name and explain the two characteristic properties of carbon responsible for this.",
+      "points": [
+        {
+          "text": "Catenation: carbon atoms can bond with each other to form long chains, branched chains and even rings - no other element shows this to the same extent.",
+          "marks": 1,
+          "keywords": [["catenation"], ["chains", "branched", "rings", "each other", "self linking", "carbon atoms"]]
+        },
+        {
+          "text": "Tetravalency: carbon has four valence electrons, so it can share electrons and form bonds with four other atoms (and strong C-C bonds give stable chains).",
+          "marks": 1,
+          "keywords": [["tetravalent", "tetravalency", "tetravalen"], ["four valence", "4 valence"], ["four atoms", "4 atoms", "share"]]
+        }
+      ]
+    },
+    {
+      "id": "ch4-q4",
+      "marks": 3,
+      "text": "What is a homologous series? State any three characteristics with an example series.",
+      "points": [
+        {
+          "text": "A series of compounds where the same functional group substitutes for hydrogen in a carbon chain - successive members differ by a -CH2- unit (14 u).",
+          "marks": 1,
+          "keywords": [["functional group"], ["ch2"], ["14", "fourteen"]]
+        },
+        {
+          "text": "Characteristics: same general formula / same functional group and similar chemical properties; gradual change in physical properties as molecular mass increases.",
+          "marks": 1,
+          "keywords": [["general formula", "same functional group"], ["similar chemical"], ["gradual", "physical properties"]]
+        },
+        {
+          "text": "Example: alkanes CH4, C2H6, C3H8, C4H10 (each differs by CH2) or alkenes C2H4, C3H6, C4H8.",
+          "marks": 1,
+          "keywords": [["ch4", "methane", "alkane"], ["c2h6", "ethane", "c3h8", "propane", "ethene", "alkene"]]
+        }
+      ]
+    },
+    {
+      "id": "ch4-q5",
+      "marks": 2,
+      "text": "What are structural isomers? Draw/describe the two structural isomers of C4H10.",
+      "points": [
+        {
+          "text": "Compounds with identical molecular formula but different structures are called structural isomers.",
+          "marks": 1,
+          "keywords": [["identical", "same"], ["molecular formula"], ["different structure", "different structures"]]
+        },
+        {
+          "text": "C4H10: (1) butane - straight chain of 4 carbons (CH3-CH2-CH2-CH3); (2) 2-methylpropane - branched chain of 3 carbons with a CH3 branch on the middle carbon.",
+          "marks": 1,
+          "keywords": [["butane", "straight"], ["2-methylpropane", "methylpropane", "branched", "isobutane"]]
+        }
+      ]
+    },
+    {
+      "id": "ch4-q6",
+      "marks": 3,
+      "text": "Distinguish between addition and substitution reactions of hydrocarbons with one example equation each.",
+      "points": [
+        {
+          "text": "Addition: UNSATURATED hydrocarbons (double/triple bonds) add hydrogen in the presence of nickel/palladium catalyst to become saturated - used in hydrogenation of vegetable oils.",
+          "marks": 1.5,
+          "keywords": [["unsaturated"], ["hydrogen", "h2"], ["nickel", "palladium", "catalyst"], ["hydrogenation", "vegetable oil", "saturated"]]
+        },
+        {
+          "text": "Substitution: SATURATED hydrocarbons (fairly unreactive) react with chlorine in sunlight, where chlorine replaces hydrogen atoms one by one: CH4 + Cl2 -> CH3Cl + HCl.",
+          "marks": 1.5,
+          "keywords": [["saturated"], ["chlorine", "cl2"], ["sunlight"], ["replace", "takes the place"], ["ch4", "ch3cl", "methane"]]
+        }
+      ]
+    },
+    {
+      "id": "ch4-q7",
+      "marks": 3,
+      "text": "Give two chemical reactions of ethanol: (a) its oxidation to ethanoic acid, (b) its dehydration to ethene. Name the reagents used in each.",
+      "points": [
+        {
+          "text": "Oxidation: alkaline potassium permanganate (KMnO4) or acidified potassium dichromate oxidises ethanol to ethanoic acid (CH3COOH).",
+          "marks": 1.5,
+          "keywords": [["potassium permanganate", "kmno4", "potassium dichromate", "k2cr2o7"], ["alkaline", "acidified"], ["ethanoic acid", "ch3cooh", "acetic acid"]]
+        },
+        {
+          "text": "Dehydration: heating ethanol at 443 K with excess concentrated sulphuric acid (a dehydrating agent) gives ethene: CH3-CH2OH -> CH2=CH2 + H2O.",
+          "marks": 1.5,
+          "keywords": [["443"], ["concentrated sulphuric acid", "conc h2so4", "concentrated h2so4"], ["ethene", "ch2=ch2", "ch2 ch2"], ["dehydrat", "water"]]
+        }
+      ]
+    },
+    {
+      "id": "ch4-q8",
+      "marks": 3,
+      "text": "What is esterification? Write its equation. What happens when the ester is treated with sodium hydroxide, and what is this process called?",
+      "points": [
+        {
+          "text": "Esterification: ethanoic acid reacts with ethanol in the presence of an acid catalyst to give an ester (sweet-smelling) + water: CH3COOH + C2H5OH -> CH3COOC2H5 + H2O.",
+          "marks": 1,
+          "keywords": [["ethanoic", "ch3cooh", "acetic"], ["ethanol", "c2h5oh", "alcohol"], ["ester"], ["acid catalyst", "catalyst", "h2o", "water"]]
+        },
+        {
+          "text": "With NaOH the ester converts back to alcohol (ethanol) and the sodium salt of the carboxylic acid (sodium ethanoate): CH3COOC2H5 + NaOH -> C2H5OH + CH3COONa.",
+          "marks": 1,
+          "keywords": [["naoh", "sodium hydroxide"], ["alcohol", "ethanol", "c2h5oh"], ["sodium ethanoate", "ch3coona", "sodium acetate"]]
+        },
+        {
+          "text": "This is saponification - used in the preparation of soap (soaps are sodium/potassium salts of long-chain carboxylic acids).",
+          "marks": 1,
+          "keywords": [["saponification"], ["soap"], ["long chain carboxylic", "long-chain carboxylic", "salts"]]
+        }
+      ]
+    },
+    {
+      "id": "ch4-q9",
+      "marks": 3,
+      "text": "Why does soap not work well in hard water while detergents do? Explain with the ions involved.",
+      "points": [
+        {
+          "text": "Hard water contains calcium and magnesium salts/ions.",
+          "marks": 1,
+          "keywords": [["calcium", "magnesium", "ca", "mg"], ["salts", "ions"], ["hard water"]]
+        },
+        {
+          "text": "Soap (sodium/potassium salt of long-chain carboxylic acid) reacts with Ca/Mg ions to form an INSOLUBLE substance called scum - so less foam and more soap is wasted.",
+          "marks": 1,
+          "keywords": [["scum"], ["insoluble", "precipitate"], ["foam", "lather"], ["carboxylic"]]
+        },
+        {
+          "text": "Detergents are sodium salts of sulphonic acids (or ammonium salts); their charged ends do NOT form insoluble precipitates with Ca/Mg ions, so they remain effective in hard water.",
+          "marks": 1,
+          "keywords": [["sulphonic"], ["do not form", "no insoluble", "soluble"], ["effective", "remain effective", "precipitate"]]
+        }
+      ]
+    }
+  ],
+  "pyqs": [
+    {
+      "id": "pyq-2526-q29a",
+      "marks": 4,
+      "repeated": true,
+      "repeatNote": "Hydrocarbon chemistry appeared as the 5-mark long-answer in BOTH years: 2024-25 Q34A (combustion, homologous, ethyne welding) and 2025-26 Q29A (this combustion case).",
+      "source": "CBSE Sample Paper 2025-26, Q29A case (official marking scheme)",
+      "text": "Case: a hydrocarbon CxHy undergoes complete combustion: 2CxHy + 9O2 -> 6CO2 + 6H2O. (a) Find x and y. (b) Give the IUPAC name of the hydrocarbon. (c) Name the alcohol which on heating with conc. H2SO4 produces this hydrocarbon. (d) Write the equation for the reaction of this hydrocarbon with H2 in the presence of nickel.",
+      "points": [
+        {
+          "text": "(a) x = 3 (carbon: 2x = 6) and y = 6 (hydrogen: 2y = 12).",
+          "marks": 1,
+          "keywords": [["x = 3", "x=3"], ["y = 6", "y=6"]]
+        },
+        {
+          "text": "(b) Propene (C3H6).",
+          "marks": 1,
+          "keywords": [["propene"], ["c3h6"]]
+        },
+        {
+          "text": "(c) Propanol (dehydration of propanol with hot conc. H2SO4 gives propene).",
+          "marks": 1,
+          "keywords": [["propanol"], ["dehydrat", "sulphuric", "h2so4"]]
+        },
+        {
+          "text": "(d) C3H6 + H2 ->(Ni) C3H8 - addition/hydrogenation of propene to propane.",
+          "marks": 1,
+          "keywords": [["c3h6"], ["h2", "hydrogen"], ["c3h8", "propane"], ["nickel", "ni"]]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2425-q34b",
+      "marks": 3,
+      "repeated": false,
+      "repeatNote": "Soap-vs-detergent cleansing appeared only in 2024-25 (Q34B) - not tagged as repeated.",
+      "source": "CBSE Sample Paper 2024-25, Q34B (official marking scheme)",
+      "text": "A and B are sodium salts of long-chain carboxylic acid and long-chain sulphonic acid respectively. (a) Which one do you prefer for cleansing with underground (hand-pump, hard) water and why? (b) Explain the cleansing action of soap via micelles. (c) Write the equation for preparing soap from an ester and name the process.",
+      "points": [
+        {
+          "text": "(a) B (the detergent) is preferred: Ca/Mg salts of sulphonic acid are soluble in water, while soap's carboxylate salts precipitate (scum) with the calcium and magnesium salts in underground water.",
+          "marks": 1,
+          "keywords": [["b", "detergent", "sulphonic"], ["calcium", "magnesium", "ca", "mg"], ["soluble", "precipitate", "scum"]]
+        },
+        {
+          "text": "(b) Soap molecules have a hydrophilic (ionic, water-loving) end and a hydrophobic (hydrocarbon, oil-loving) end; they form micelles around oil/dirt droplets, pulling the dirt into water so it rinses away.",
+          "marks": 1,
+          "keywords": [["hydrophilic"], ["hydrophobic"], ["micelle"], ["oil", "dirt"]]
+        },
+        {
+          "text": "(c) Ester + NaOH -> sodium salt of the acid + alcohol; the process is saponification.",
+          "marks": 1,
+          "keywords": [["naoh", "sodium hydroxide"], ["sodium salt", "alcohol", "roh"], ["saponification"]]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2425-q34a",
+      "marks": 3,
+      "repeated": true,
+      "repeatNote": "Combustion of hydrocarbons (clean vs sooty flame) appeared in both years' long-answer questions (2024-25 Q34A, 2025-26 Q29A).",
+      "source": "CBSE Sample Paper 2024-25, Q34A (official marking scheme)",
+      "text": "(a) A mixture of oxygen and ethyne is burnt for welding. Why is a mixture of ethyne and AIR not used? (b) Methane and propane (and their isomers) are used as fuels - comment. (c) Give any two characteristics of members of a homologous series.",
+      "points": [
+        {
+          "text": "(a) With sufficient pure oxygen, ethyne undergoes COMPLETE combustion giving a clean blue (very hot) flame; with air (insufficient oxygen) combustion is incomplete, producing a sooty flame.",
+          "marks": 1,
+          "keywords": [["complete combustion"], ["incomplete"], ["sooty", "blue"], ["oxygen", "air"]]
+        },
+        {
+          "text": "(b) Methane and propane undergo combustion in the presence of oxygen and produce a large amount of energy - good fuels.",
+          "marks": 1,
+          "keywords": [["combustion", "burn"], ["oxygen"], ["large amount of energy", "energy", "heat"]]
+        },
+        {
+          "text": "(c) Adjacent homologues differ by -CH2- / 14 u; same general formula/functional group; similar chemical properties; gradual change in physical properties (any two).",
+          "marks": 1,
+          "keywords": [["ch2", "14"], ["general formula", "functional group", "similar chemical", "gradual"]]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2425-q35v",
+      "marks": 2,
+      "repeated": false,
+      "repeatNote": "Ethanol vs ethanoic acid distinction appeared only in 2024-25 (visually-impaired variant of Q35) - not tagged as repeated.",
+      "source": "CBSE Sample Paper 2024-25, Q35 visually-impaired variant (official marking scheme)",
+      "text": "Distinguish between ethanol and ethanoic acid experimentally. Write the chemical equation for the test you use.",
+      "points": [
+        {
+          "text": "Ethanoic acid reacts with carbonates/hydrogencarbonates to give salt + water + CO2 (effervescence); ethanol shows no reaction.",
+          "marks": 1,
+          "keywords": [["carbonate", "hydrogencarbonate", "hydrogen carbonate", "nahco3", "na2co3"], ["co2", "carbon dioxide", "effervescence"], ["no reaction", "does not react"]]
+        },
+        {
+          "text": "2CH3COOH + Na2CO3 -> 2CH3COONa (sodium acetate) + H2O + CO2.",
+          "marks": 1,
+          "keywords": [["ch3cooh"], ["na2co3"], ["ch3coona", "sodium acetate", "sodium ethanoate"], ["co2"]]
+        }
+      ]
+    }
+  ],
+  "kb": [
+    {
+      "keywords": ["covalent", "sharing electrons", "covalent bond", "covalent compound"],
+      "question": "What is a covalent bond?",
+      "answer": "Jab do atoms electron pair SHARE karte hain (transfer nahi!) - that's a covalent bond. Carbon jaise: 4 valence electrons, toh 4 H ke saath share karke CH4 banta hai. Covalent compounds ke andar bonds strong but molecules ke beech forces WEAK - isliye low melting/boiling points. Aur ions nahi bante, isliye electricity conduct nahi karte (poor conductors).",
+      "source": "NCERT Class 10 Science, Ch.4, Section 4.1",
+      "card": null
+    },
+    {
+      "keywords": ["catenation", "tetravalent", "tetravalency", "so many compounds", "versatile"],
+      "question": "Why does carbon form millions of compounds?",
+      "answer": "Do superpowers: (1) TETRAVALENCY - 4 valence electrons, toh 4 atoms se bond kar sakta hai. (2) CATENATION - carbon carbon se khud judta hai: lambi chains, branches, rings, sab! Aur koi element itna catenation nahi dikhata. Double-triple bonds bhi bana leta hai - combinations endless.",
+      "source": "NCERT Class 10 Science, Ch.4, Section 4.2",
+      "card": null
+    },
+    {
+      "keywords": ["allotrope", "diamond", "graphite", "fullerene", "buckminsterfullerene"],
+      "question": "What are allotropes of carbon?",
+      "answer": "Same element, different structures = allotropes. DIAMOND: har carbon 4 others se bonded - rigid 3D network - hardest substance. GRAPHITE: har carbon 3 others se same plane mein - hexagonal layers slide karti hain - soft/slippery aur electricity conduct karta hai (unusual for non-metal!). FULLERENES: C-60 Buckminsterfullerene - football jaisa. Chemical properties same, physical alag.",
+      "source": "NCERT Class 10 Science, Ch.4, 'Allotropes of carbon'",
+      "card": "carbon-bonding.png"
+    },
+    {
+      "keywords": ["homologous", "homologous series", "ch2 unit", "14 u"],
+      "question": "What is a homologous series?",
+      "answer": "Ek family of compounds jahan SAME functional group carbon chain mein hydrogen ki jagah aata hai. Successive members -CH2- unit se differ karte hain (molecular mass 14 u ka farak). Jaise alkanes: CH4, C2H6, C3H8, C4H10. Properties: same general formula, similar chemical properties, physical properties gradually change (mass badhne ke saath).",
+      "source": "NCERT Class 10 Science, Ch.4, Section 4.2.4",
+      "card": "homologous-ladder.png"
+    },
+    {
+      "keywords": ["isomer", "structural isomer", "same formula different structure", "c4h10"],
+      "question": "What are structural isomers?",
+      "answer": "Same molecular formula, DIFFERENT structures. C4H10 ka classic example: (1) butane - seedhi 4-carbon chain; (2) 2-methylpropane - 3-carbon chain + beech carbon pe CH3 branch. Formula same, arrangement alag, properties alag. Branches badhne se isomers badhte jaate hain.",
+      "source": "NCERT Class 10 Science, Ch.4, Fig 4.8",
+      "card": null
+    },
+    {
+      "keywords": ["saturated", "unsaturated", "alkane", "alkene", "alkyne", "sooty flame", "blue flame"],
+      "question": "Saturated vs unsaturated compounds - difference?",
+      "answer": "SATURATED: carbon-carbon SINGLE bonds only (alkanes) - fairly unreactive, clean BLUE flame se jalte hain. UNSATURATED: double ya triple bonds (alkenes/alkynes) - MORE reactive, yellow SOOTY flame. (Limited air mein saturated bhi sooty jalta hai.) Tests mein addition reaction sirf unsaturated karta hai.",
+      "source": "NCERT Class 10 Science, Ch.4, Sections 4.2.1 & 4.3.1",
+      "card": null
+    },
+    {
+      "keywords": ["functional group", "functional groups", "alcohol group", "aldehyde", "ketone", "carboxylic"],
+      "question": "What is a functional group?",
+      "answer": "Ek atom ya group jo carbon chain ke hydrogen ki jagah aata hai aur compound ki CHEMICAL PROPERTIES decide karta hai. Main ones (NCERT Table 4.3): alcohol (-OH, jaise ethanol), aldehyde (-CHO), ketone (C=O beech mein), carboxylic acid (-COOH, jaise ethanoic acid), halogens (Cl/Br), double/triple bonds bhi. Same functional group = similar properties (homologous series ka base).",
+      "source": "NCERT Class 10 Science, Ch.4, Section 4.2.3, Table 4.3",
+      "card": null
+    },
+    {
+      "keywords": ["hydrogenation", "addition reaction", "vegetable oil", "nickel catalyst"],
+      "question": "What is hydrogenation?",
+      "answer": "Unsaturated hydrocarbons (double/triple bond wale) hydrogen ADD karte hain nickel ya palladium catalyst ki presence mein - ban jaate hain saturated. Industrial use: vegetable oils (unsaturated) ka hydrogenation karke vanaspati/shortening banaya jaata hai - Ni catalyst ke saath. Ye ek ADDITION reaction hai.",
+      "source": "NCERT Class 10 Science, Ch.4, Section 4.3.3",
+      "card": null
+    },
+    {
+      "keywords": ["substitution reaction", "chlorine sunlight", "ch4 cl2"],
+      "question": "What is a substitution reaction?",
+      "answer": "Saturated hydrocarbons normally inert hote hain, but SUNLIGHT mein chlorine se fast reaction hoti hai: chlorine hydrogen atoms ko ONE BY ONE replace karta hai: CH4 + Cl2 -> CH3Cl + HCl. Ek atom/group doosre ki JAGAH leta hai - isliye 'substitution'. Higher alkanes mein kayi products bante hain.",
+      "source": "NCERT Class 10 Science, Ch.4, Section 4.3.4",
+      "card": null
+    },
+    {
+      "keywords": ["ethanol", "oxidation ethanol", "dehydration", "ethene", "443", "alcohol reactions"],
+      "question": "Important reactions of ethanol?",
+      "answer": "Do star reactions: (1) OXIDATION: alkaline KMnO4 (ya acidified K2Cr2O7) se ethanol -> ethanoic acid (CH3COOH). (2) DEHYDRATION: 443 K pe excess conc. H2SO4 (dehydrating agent) ke saath heat karo -> ETHENE + water: CH3CH2OH -> CH2=CH2 + H2O. Dono ke reagents yaad rakhna = pakke marks.",
+      "source": "NCERT Class 10 Science, Ch.4, Section 4.4.1",
+      "card": null
+    },
+    {
+      "keywords": ["ethanoic acid", "acetic acid", "glacial", "vinegar", "ch3cooh"],
+      "question": "What is ethanoic acid / glacial acetic acid?",
+      "answer": "CH3COOH - carboxylic acid group wala weak acid (vinegar mein 5-8% solution). Pure ethanoic acid cold climates mein FREEZE ho jaata hai - isliye naam 'glacial' acetic acid. Reactions: carbonates se CO2 (ye test hai!), NaOH se sodium ethanoate + water, ethanol se ester (esterification).",
+      "source": "NCERT Class 10 Science, Ch.4, Section 4.4.2",
+      "card": null
+    },
+    {
+      "keywords": ["esterification", "ester", "saponification", "sweet smelling"],
+      "question": "Esterification and saponification?",
+      "answer": "ESTERIFICATION: acid + alcohol --(acid catalyst)--> ESTER + water. CH3COOH + C2H5OH -> CH3COOC2H5 + H2O. Esters sweet-smelling hote hain - perfumes/flavouring mein use. SAPONIFICATION (ulta): ester + NaOH -> alcohol + sodium salt of acid: CH3COOC2H5 + NaOH -> C2H5OH + CH3COONa. Naam isliye kyunki isi se SOAP banta hai (soap = Na/K salts of long-chain carboxylic acids).",
+      "source": "NCERT Class 10 Science, Ch.4, Section 4.4.2 (esterification)",
+      "card": null
+    },
+    {
+      "keywords": ["micelle", "soap work", "cleansing action", "hydrophilic", "hydrophobic"],
+      "question": "How does soap clean (micelle action)?",
+      "answer": "Soap molecule ke do ends: ionic end HYDROPHILIC (paani mein ghulta), hydrocarbon tail HYDROPHOBIC (oil mein ghulta). Soap molecules oil/dirt droplet ke around MICELLE banate hain - tail andar oil ki taraf, ionic end bahar paani ki taraf. Dirt paani mein pull ho jaata hai, emulsion banta hai, rinse mein dho jaata hai. Micelles light scatter karte hain - isliye soap solution cloudy dikhta hai.",
+      "source": "NCERT Class 10 Science, Ch.4, Section 4.5, Fig 4.12",
+      "card": "soap-micelle.png"
+    },
+    {
+      "keywords": ["hard water", "scum", "detergent", "soap not work"],
+      "question": "Why doesn't soap work in hard water?",
+      "answer": "Hard water mein CALCIUM aur MAGNESIUM salts hote hain. Soap (carboxylic acid ka salt) unse react karke INSOLUBLE SCUM banata hai - foam kam, soap waste, ganda residue. DETERGENTS (sodium salts of sulphonic acids) ke charged ends Ca/Mg ke saath insoluble precipitate NAHI banate - isliye hard water mein bhi effective. Shampoos mostly detergents hain.",
+      "source": "NCERT Class 10 Science, Ch.4, Section 4.5 (detergents)",
+      "card": "soap-micelle.png"
+    }
+  ],
+  "teachTopics": [
+    {
+      "id": "ch4-t1",
+      "name": "Covalent bonding & carbon's two superpowers",
+      "juniorOpening": "Didi, carbon ka chapter sabse bada hai - carbon itna special kyun hai? Normal element jaisa kyun nahi?",
+      "points": [
+        { "text": "Covalent bond = sharing of an electron pair between two atoms (no ions formed).", "keywords": [["sharing", "share"], ["electron pair", "electrons"], ["no ions", "charged particles", "no charge"]] },
+        { "text": "Carbon is tetravalent: 4 valence electrons, bonds with up to 4 atoms.", "keywords": [["tetravalent"], ["4", "four"]] },
+        { "text": "Catenation: carbon bonds with itself to form chains, branches and rings - more than any other element.", "keywords": [["catenation"], ["chains", "branches", "rings"], ["itself", "each other"]] },
+        { "text": "Covalent compounds: weak intermolecular forces (low melting/boiling points) and poor conductors (no charged particles).", "keywords": [["weak", "intermolecular"], ["low melting", "low boiling"], ["poor conductor", "not conduct"]] }
+      ],
+      "followUps": [
+        "Covalent bond ka matlab? Electrons ka kya hota hai?",
+        "Carbon kitne bonds bana sakta hai ek saath? Kyun?",
+        "Carbon-carbon ke beech kya hota hai? Ye khaas kyun hai?",
+        "Covalent compounds pighalne mein easy kyun hote hain? Bijli kyun nahi chalte?"
+      ],
+      "gotIt": "Samajh gayi! Carbon social butterfly hai - 4 haath hain aur apne jaise carbons se bhi haath mila leta hai. Isliye itne saare compounds. Covalent = share, ionic = transfer - farak clear!"
+    },
+    {
+      "id": "ch4-t2",
+      "name": "Homologous series & isomers",
+      "juniorOpening": "Bhaiya, homologous series aur isomers mein confuse hota hoon - dono 'same but different' lagte hain!",
+      "points": [
+        { "text": "Homologous series: same functional group, successive members differ by -CH2- (14 u).", "keywords": [["functional group"], ["ch2"], ["14"]] },
+        { "text": "Members have the same general formula, similar chemical properties, gradually changing physical properties.", "keywords": [["general formula"], ["similar chemical"], ["gradual", "physical"]] },
+        { "text": "Example: alkanes CH4, C2H6, C3H8, C4H10.", "keywords": [["alkane", "ch4", "methane"], ["c2h6", "c3h8", "ethane", "propane"]] },
+        { "text": "Isomers: SAME molecular formula but DIFFERENT structures (e.g. C4H10 = butane straight-chain and 2-methylpropane branched).", "keywords": [["same molecular formula", "identical"], ["different structure"], ["butane", "methylpropane", "branched"]] }
+      ],
+      "followUps": [
+        "Homologous series ka rule kya hai? Members mein farak kitna hota hai?",
+        "Properties same hoti hain kya sabki?",
+        "Ek example do na series ka!",
+        "Isomers mein kya same hota hai aur kya different?"
+      ],
+      "gotIt": "Ohhhh! Homologous = ek family, har member ek CH2 bada. Isomers = same formula, alag drawing. Dono ab alag-alag dimaag mein fit ho gaye!"
+    },
+    {
+      "id": "ch4-t3",
+      "name": "4 reactions of carbon compounds",
+      "juniorOpening": "Combustion, oxidation, addition, substitution - chaaro same-same lagti hain. Ek line mein farak batao na!",
+      "points": [
+        { "text": "Combustion: carbon compounds burn in oxygen to give CO2 + H2O + heat and light (complete = clean blue flame).", "keywords": [["oxygen", "burn"], ["co2", "carbon dioxide"], ["heat", "light", "blue flame", "clean"]] },
+        { "text": "Oxidation: controlled addition of oxygen with oxidising agents like alkaline KMnO4 (ethanol -> ethanoic acid).", "keywords": [["oxidising agent", "oxidizing"], ["kmno4", "potassium permanganate", "dichromate"], ["ethanoic acid", "ch3cooh"]] },
+        { "text": "Addition: unsaturated compounds add H2 across double/triple bonds with Ni/Pd catalyst (hydrogenation of vegetable oils).", "keywords": [["unsaturated"], ["h2", "hydrogen"], ["nickel", "palladium", "catalyst"], ["hydrogenation", "vegetable"]] },
+        { "text": "Substitution: saturated compounds + chlorine in sunlight - chlorine replaces hydrogen one by one (CH4 + Cl2 -> CH3Cl + HCl).", "keywords": [["saturated"], ["chlorine", "cl2"], ["sunlight"], ["replace"], ["ch4", "ch3cl"]] }
+      ],
+      "followUps": [
+        "Combustion mein kya banta hai? Blue flame kab?",
+        "Oxidation mein kaunsa agent? Ethanol se kya banta hai?",
+        "Addition kaun karta hai - saturated ya unsaturated? Catalyst ka naam?",
+        "Substitution mein kaun replace hota hai? Conditions kya chahiye?"
+      ],
+      "gotIt": "Clear! Combustion = jala do, Oxidation = dheere se oxygen do, Addition = double bond todo H2 se, Substitution = sunlight mein swap. Chaaro alag boxes mein pack!"
+    },
+    {
+      "id": "ch4-t4",
+      "name": "Ethanol vs ethanoic acid",
+      "juniorOpening": "Ethanol aur ethanoic acid - dono 2-carbon hain. Ek sharab(?) aur ek sirka? Chemistry kya hai dono ki?",
+      "points": [
+        { "text": "Ethanol (C2H5OH) is an alcohol - functional group -OH.", "keywords": [["c2h5oh", "ethanol"], ["alcohol"], ["oh"]] },
+        { "text": "Ethanoic acid (CH3COOH) is a carboxylic acid (-COOH); pure form freezes in cold climates so it is called glacial acetic acid (vinegar = 5-8% solution).", "keywords": [["ch3cooh", "ethanoic"], ["carboxylic", "cooh"], ["glacial", "vinegar"]] },
+        { "text": "Test: ethanoic acid gives CO2 effervescence with carbonates/hydrogencarbonates (2CH3COOH + Na2CO3 -> 2CH3COONa + H2O + CO2); ethanol does not react.", "keywords": [["carbonate", "na2co3", "nahco3"], ["co2", "effervescence"], ["no reaction", "not react"]] },
+        { "text": "Ethanol oxidises to ethanoic acid with alkaline KMnO4; ethanol dehydrates to ethene at 443 K with conc. H2SO4.", "keywords": [["kmno4", "permanganate"], ["ethene", "443"], ["h2so4", "sulphuric", "dehydrat"]] },
+        { "text": "Together they do esterification: CH3COOH + C2H5OH -> ester + water (acid catalyst).", "keywords": [["ester"], ["esterification"], ["water", "catalyst"]] }
+      ],
+      "followUps": [
+        "Dono ke functional groups kya hain?",
+        "Glacial acetic acid naam kyun pada?",
+        "Experiment se kaise pehchanoge kaun sa hai? Equation?",
+        "Ethanol se ethanoic acid kaise banta hai? Aur ethene kaise?",
+        "Dono ko milao toh kya banta hai?"
+      ],
+      "gotIt": "Haan ab yaad rahega: alcohol vs acid, carbonate test se pakdo, KMnO4 se badlo, saath milao toh ester. Sirka vs spirit, done!"
+    },
+    {
+      "id": "ch4-t5",
+      "name": "Soap, micelles and the hard-water problem",
+      "juniorOpening": "Ghar pe borewell ka paani hai aur shampoo jhaag achhi banata hai par soap nahi? Aisa kyun?",
+      "points": [
+        { "text": "Soaps are sodium/potassium salts of long-chain carboxylic acids, made by saponification (ester + NaOH).", "keywords": [["sodium", "potassium"], ["carboxylic"], ["saponification", "ester", "naoh"]] },
+        { "text": "Soap molecule: hydrophilic ionic end (water-loving) + hydrophobic hydrocarbon tail (oil-loving).", "keywords": [["hydrophilic"], ["hydrophobic"], ["ionic", "tail"]] },
+        { "text": "Micelles: soap molecules surround oil/dirt with tails inward, ionic ends outward - dirt gets pulled into water and rinses away.", "keywords": [["micelle"], ["oil", "dirt"], ["rinse", "water", "emulsion"]] },
+        { "text": "Hard water has Ca/Mg salts; soap forms insoluble SCUM with them - less foam, wasted soap.", "keywords": [["calcium", "magnesium", "ca", "mg"], ["scum"], ["insoluble"], ["foam"]] },
+        { "text": "Detergents (sodium salts of sulphonic acids) do not form insoluble precipitates with Ca/Mg - effective in hard water (shampoos!).", "keywords": [["detergent"], ["sulphonic"], ["effective", "do not form", "no precipitate"]] }
+      ],
+      "followUps": [
+        "Soap banta kaise hai? Chemical naam?",
+        "Soap molecule ke do ends kya karte hain?",
+        "Micelle kya hota hai? Dirt kaise nikalta hai?",
+        "Hard water mein problem kya hoti hai? Scum kya hai?",
+        "Detergent aisa kyun nahi karta?"
+      ],
+      "gotIt": "Ab shampoo wala raaz samjha - detergent hai isliye borewell paani mein bhi kaam karta hai! Micelle = oil pakadne wala kavach. Full concept clear!"
+    }
+  ],
+  "explainers": [
+    {
+      "id": "x-ch4-flame",
+      "title": "Why your gas stove flame is blue (and when it turns yellow)",
+      "hook": "Ghar ka gas stove BLUE flame deta hai, par diye ki lau YELLOW. Dono mein chemistry ka fark boards mein aata hai.",
+      "concept": "BLUE = complete combustion (kaafi oxygen, clean jala: CO2 + H2O + heat + light, no smoke). YELLOW sooty = incomplete combustion (oxygen kam, unburnt carbon particles glow karke yellow dete hain aur black smoke dete hain). Saturated hydrocarbons generally clean flame dete hain; unsaturated yellow/sooty. Isliye stove mein air inlets hote hain - oxygen-rich mix ke liye. Aur welding mein ethyne + PURE OXYGEN (air nahi!) - complete combustion se itni heat ki metal melt ho jaaye.",
+      "hack": "Exam hack: flame colour = oxygen supply ka report card. 'Blue/clean/complete' vs 'yellow/sooty/incomplete' - 4 words ka poora answer. Connect it to the stove you've seen daily (elaboration - Make It Stick, Brown/Roediger/McDaniel 2014).",
+      "hackSource": "Brown, Roediger & McDaniel (2014), Make It Stick, Harvard UP, ISBN 9780674729018",
+      "card": null,
+      "learnMore": [
+        { "label": "NCERT Class 10 Science Ch.4 (official PDF)", "url": "https://ncert.nic.in/textbook/pdf/jesc104.pdf" },
+        { "label": "Khan Academy: Carbon and its compounds", "url": "https://www.khanacademy.org/science/class-10-chemistry/x7d4ebb5bb7a7bb2e:carbon-and-its-compounds" }
+      ]
+    },
+    {
+      "id": "x-ch4-soap",
+      "title": "The soap that fails in borewell water",
+      "hook": "Borewell/hand-pump ke paani mein soap jhaag nahi banata - bas safed gadar (scum) banta hai. Shampoo kyun kaam kar jaata hai?",
+      "concept": "Hard water = Ca/Mg salts. Soap (long-chain carboxylic acid ka Na/K salt) in ions se react karke INSOLUBLE scum banata hai - foam kam, soap waste. Detergents (sodium salts of sulphonic acids) ke charged ends Ca/Mg ke saath precipitate nahi banate - isliye hard water mein bhi effective. Cleaning ka magic micelle hai: soap ka hydrophobic tail oil/dirt mein ghusta hai, hydrophilic head paani mein - dirt ko paani mein kheench ke rinse kar dete hain.",
+      "hack": "Exam hack: 'hard water' dekhte hi likho - Ca/Mg ions, insoluble scum, detergent = sulphonic acid salt = soluble = effective. Ye 2024-25 ka 5-marker tha (Q34B). Writing the answer from memory (not re-reading) is what makes it stick (Roediger & Karpicke 2006, Psychological Science).",
+      "hackSource": "Roediger & Karpicke (2006), Psychological Science 17(3), PMID 16507066",
+      "card": "soap-micelle.png",
+      "learnMore": [
+        { "label": "NCERT Class 10 Science Ch.4 (official PDF)", "url": "https://ncert.nic.in/textbook/pdf/jesc104.pdf" },
+        { "label": "Khan Academy: Carbon and its compounds", "url": "https://www.khanacademy.org/science/class-10-chemistry/x7d4ebb5bb7a7bb2e:carbon-and-its-compounds" }
+      ]
+    },
+    {
+      "id": "x-ch4-carbon",
+      "title": "Carbon: the element that can't stop making friends",
+      "hook": "Ek element jo diamond bhi hai, pencil bhi, tumhari body bhi, aur petrol bhi. Carbon ke paas do superpowers hain jo use periodic table ka sabse social element banati hain.",
+      "concept": "Superpower 1 - TETRAVALENCY: 4 valence electrons, toh 4 bonds ek saath. Superpower 2 - CATENATION: carbon khud carbon se judta hai - chains, branches, rings, double/triple bonds. Result: millions of compounds. Isi liye allotropes bhi (diamond: har C 4 se bonded, hardest; graphite: 3 se, layers slide, conducts). Aur isi se homologous series (family mein har member +CH2) aur isomers (same formula, alag structure) ka concept aata hai.",
+      "hack": "Exam hack: 'why so many compounds' = 2 words: tetravalency + catenation (+ chain/branch/ring examples). Chapter ko 2 superpowers + 4 reactions (combustion/oxidation/addition/substitution) mein compress karo. Small daily reps of these compressed notes beat marathon re-reading (Atomic Habits, Clear 2018).",
+      "hackSource": "Clear (2018), Atomic Habits, jamesclear.com",
+      "card": "carbon-bonding.png",
+      "learnMore": [
+        { "label": "NCERT Class 10 Science Ch.4 (official PDF)", "url": "https://ncert.nic.in/textbook/pdf/jesc104.pdf" },
+        { "label": "Khan Academy: Carbon and its compounds", "url": "https://www.khanacademy.org/science/class-10-chemistry/x7d4ebb5bb7a7bb2e:carbon-and-its-compounds" }
+      ]
+    }
+  ]
+}

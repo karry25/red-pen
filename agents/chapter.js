@@ -68,6 +68,7 @@ function findQuestion(questionId) {
 const CHAPTER_HINTS = [
   { id: 'ch2', hints: ['acid', 'base', 'salt', 'ph', 'indicator', 'litmus', 'neutralis', 'neutraliz', 'antacid', 'baking', 'washing soda', 'plaster', 'gypsum', 'bleaching', 'chlor-alkali', 'brine', 'tooth', 'sting', 'hydronium', 'crystallis', 'crystalliz', 'lime water', 'limewater'] },
   { id: 'ch3', hints: ['metal', 'non-metal', 'nonmetal', 'reactivity', 'amphoteric', 'ionic', 'alloy', 'corrosion', 'rusting', 'galvani', 'thermit', 'roasting', 'calcination', 'refining', 'anode mud', 'aqua regia', 'ore', 'extraction', 'tarnish', 'anodis', 'kerosene'] },
+  { id: 'ch4', hints: ['carbon', 'covalent', 'homologous', 'isomer', 'alkane', 'alkene', 'alkyne', 'ethanol', 'ethanoic', 'ester', 'saponification', 'soap', 'detergent', 'micelle', 'catenation', 'allotrope', 'hydrogenation', 'vinegar', 'diamond', 'graphite', 'methane', 'ethane', 'propane', 'butane', 'pentane', 'functional group', 'tetravalen', 'unsaturated hydrocarbon', 'saturated hydrocarbon'] },
   { id: 'ch1', hints: ['balance', 'balancing', 'equation', 'rust', 'corrosion', 'rancidity', 'decomposition', 'combination', 'displacement', 'exothermic', 'endothermic', 'oxidation', 'reduction', 'redox', 'magnesium', 'electrolysis of water'] },
 ];
 
