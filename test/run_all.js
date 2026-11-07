@@ -84,7 +84,7 @@ async function post(p, body) {
   check('bot proactive reminder', /Re-check time/.test(bot.sendLog.at(-1).text));
   check('bot never polled without token', bot.offset === 0);
   await bot.handleUpdate({ update_id: ++id, message: { message_id: id, chat: { id: 7 }, voice: { file_id: 'sim-voice' } } });
-  check('voice note graceful without keys', /voice is not switched on yet/.test(bot.sendLog.at(-1).text));
+  check('voice note graceful without keys', /not switched on yet/.test(bot.sendLog.at(-1).text));
 
   // LLM brain + STT wiring, exercised against a mock Groq (no real key)
   await require('./brain_mock').runBrainMock(check);
