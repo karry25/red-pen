@@ -49,11 +49,41 @@ class TelegramAdapter {
   // One Telegram update (message) -> maybe replies. Same path in sim and live.
   async handleUpdate(update) {
     const msg = update.message;
-    if (!msg || !msg.text) return;
+    if (!msg) return;
     const flow = this.flowFor(msg.chat.id);
+    // Voice-note doubt: transcribe with Groq Whisper, then treat as typed.
+    if (!msg.text && msg.voice) {
+      const heard = await this.transcribeVoice(msg.voice);
+      if (!heard) {
+        await this.send(msg.chat.id, 'Got your voice note! Voice answers are not switched on yet (waiting on the free Groq key). Type the doubt for now?');
+        return;
+      }
+      await this.send(msg.chat.id, `Heard: "${heard}"`);
+      const reply = await flow.handle(heard.startsWith('/') ? heard : `/doubt ${heard}`);
+      if (reply && reply.text) await this.send(msg.chat.id, reply.text);
+      if (reply && reply.photo) await this.sendPhoto(msg.chat.id, reply.photo);
+      return;
+    }
+    if (!msg.text) return;
     const reply = await flow.handle(msg.text);
     if (reply && reply.text) await this.send(msg.chat.id, reply.text);
     if (reply && reply.photo) await this.sendPhoto(msg.chat.id, reply.photo);
+  }
+
+  // Telegram getFile -> download bytes -> Whisper. Returns null when the
+  // token or Groq key is missing (voice stays politely off).
+  async transcribeVoice(voice) {
+    if (!this.token || !process.env.GROQ_API_KEY) return null;
+    const { transcribe } = require('../agents/stt');
+    const f = await (await fetch(`${API}/bot${this.token}/getFile`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ file_id: voice.file_id }),
+    })).json();
+    if (!f.ok) return null;
+    const res = await fetch(`${API}/file/bot${this.token}/${f.result.file_path}`);
+    const buf = Buffer.from(await res.arrayBuffer());
+    return transcribe(buf, 'voice.oga');
   }
 
   // Proactive revision reminders for every known chat.
