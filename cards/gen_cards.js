@@ -168,18 +168,18 @@ const SRC2 = 'Source: NCERT Class 10 Science, Ch.2 · Red Pen';
 // pH scale 0-14
 {
   const seg = [];
-  const cols = ['#e8b4a8','#eabfae','#eccab4','#eed5ba','#f0dfc0','#f2e9c8','#eef0c9','#cfe3c0','#bcd8c4','#abcdd0','#9ac2d6','#8db4d8','#87a6d4','#8598cc','#8a8cc2'];
-  for (let i = 0; i < 14; i++) {
-    seg.push(`<rect x="${70 + i * 47}" y="150" width="45" height="46" rx="8" fill="${cols[i]}" stroke="${C.line}"/>`);
-    seg.push(txt(70 + i * 47 + 22.5, 180, String(i + 1), 15, C.ink, 'middle', 700));
+  const cols = ['#dd9c8e','#e8b4a8','#eabfae','#eccab4','#eed5ba','#f0dfc0','#f2e9c8','#eef0c9','#cfe3c0','#bcd8c4','#abcdd0','#9ac2d6','#8db4d8','#87a6d4','#8598cc'];
+  for (let i = 0; i <= 14; i++) {
+    seg.push(`<rect x="${50 + i * 47}" y="150" width="45" height="46" rx="8" fill="${cols[i]}" stroke="${C.line}"/>`);
+    seg.push(txt(50 + i * 47 + 22.5, 180, String(i), 15, C.ink, 'middle', 700));
   }
-  seg.push(txt(70, 140, '0', 15, C.pen, 'start', 700));
-  seg.push(txt(70 + 6 * 47 + 22.5, 230, '7 = NEUTRAL (pure water)', 15, C.sage, 'middle', 700));
-  seg.push(arrow(70 + 3 * 47, 265, 70 + 1 * 47, 265, C.pen));
-  seg.push(txt(70, 290, 'ACIDIC (zyada H3O+ ions)', 15, C.pen, 'start', 700));
-  seg.push(txt(70, 315, 'lemon juice, vinegar, stomach HCl', 13, C.soft));
-  seg.push(txt(70 + 9 * 47, 290, 'BASIC (zyada OH- ions)', 15, C.sky, 'start', 700));
-  seg.push(txt(70 + 9 * 47, 315, 'NaOH solution, soap, baking soda', 13, C.soft));
+  seg.push(txt(50 + 7 * 47 + 22.5, 232, '7 = NEUTRAL (pure water)', 15, C.sage, 'middle', 700));
+  seg.push(arrow(50 + 5 * 47, 258, 50 + 1 * 47 + 22.5, 258, C.pen));
+  seg.push(txt(50, 288, 'ACIDIC (zyada H3O+ ions)', 15, C.pen, 'start', 700));
+  seg.push(txt(50, 313, 'lemon juice, vinegar, stomach HCl', 13, C.soft));
+  seg.push(arrow(50 + 9 * 47, 258, 50 + 13 * 47 + 22.5, 258, C.sky));
+  seg.push(txt(50 + 9 * 47, 288, 'BASIC (zyada OH- ions)', 15, C.sky, 'start', 700));
+  seg.push(txt(50 + 9 * 47, 313, 'NaOH solution, soap, baking soda', 13, C.soft));
   seg.push(box(70, 350, 660, 70, '#fff', C.amber));
   seg.push(txt(400, 380, 'YAAD RAKHO: pH ulta chalta hai - jitna ZYADA H3O+,', 15, C.ink, 'middle'));
   seg.push(txt(400, 405, 'utna KAM pH number. (p = potenz = power)', 15, C.ink, 'middle'));
