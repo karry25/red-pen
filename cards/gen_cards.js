@@ -364,10 +364,10 @@ cards['carbon-bonding'] = frame('Carbon bonding &amp; allotropes', 'share karta 
     if (i < 4) {
       // rising diagonal arrow through the 40px stair corridor; label floats clear above it
       seg.push(arrow(x + W + 2, y + H - 6, x + HS - 2, y - VS + 6, C.pen));
-      seg.push(txt(x + 130, y - 14, '+CH2', 12, C.pen, 'middle', 700));
+      seg.push(txt(x + 116, y - 20, '+CH2', 12, C.pen, 'middle', 700));
     }
   }
-  seg.push(txt(400, 104, 'har step = +1 carbon, +2 hydrogen = +14 u', 16, C.ink, 'middle', 700));
+  seg.push(txt(400, 116, 'har step = +1 carbon, +2 hydrogen = +14 u', 16, C.ink, 'middle', 700));
   seg.push(txt(400, 445, 'Same general formula · similar chemical properties · gradual physical change', 14, C.soft, 'middle'));
   cards['homologous-ladder'] = frame('Homologous series ladder', 'alkanes: ek family, har member ek CH2 bada', seg.join(''), SRC4);
 }
