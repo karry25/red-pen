@@ -7,11 +7,7 @@ const { answerDoubt } = require('../agents/module2');
 const module3 = require('../agents/module3');
 const module4 = require('../agents/module4');
 const coordinator = require('../agents/coordinator');
-const fs = require('fs');
-const path = require('path');
-
-const questions = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'questions.json'), 'utf8'));
-const mostAsked = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'most_asked.json'), 'utf8'));
+const { getChapter, findQuestion, detectChapter, listChapters } = require('../agents/chapter');
 
 const WELCOME = `Hi! I'm Red Pen - practise like the examiner.
 
@@ -35,13 +31,17 @@ class ChatFlow {
     this.goals = { grade: false, doubt: false, teach: false };
     this.best = {};            // questionId -> best score (session)
     this.improveStreak = 0;
+    this.chapterId = 'ch1';    // active chapter; /chapter N switches
   }
+
+  chapter() { return getChapter(this.chapterId); }
 
   // Beginner gets shorter questions first; repeat-verified PYQs come early.
   pickQuestion() {
-    const pyqPool = mostAsked.questions.filter((q) => q.repeated);
+    const ch = this.chapter();
+    const pyqPool = ch.pyqs.filter((q) => q.repeated);
     if (pyqPool.length && Math.random() < 0.6) return pyqPool[Math.floor(Math.random() * pyqPool.length)];
-    const pool = [...questions.questions].sort((a, b) =>
+    const pool = [...ch.questions].sort((a, b) =>
       this.level === 'beginner' ? a.marks - b.marks : b.marks - a.marks);
     return pool[Math.floor(Math.random() * Math.min(3, pool.length))];
   }
@@ -51,10 +51,22 @@ class ChatFlow {
     const low = t.toLowerCase();
 
     if (low === '/start' || low === 'hi' || low === 'hello') return { text: WELCOME };
+    if (low === '/chapter' || low.startsWith('/chapter ')) {
+      const n = low.split(' ')[1];
+      const all = listChapters();
+      if (!n) {
+        return { text: `Chapters I can teach right now:\n${all.map((c) => `${c.number}. ${c.title}${c.id === this.chapterId ? '  <- active' : ''}`).join('\n')}\n\nSwitch with /chapter 2` };
+      }
+      const target = all.find((c) => String(c.number) === n || c.id === `ch${n}`);
+      if (!target) return { text: `Chapter ${n} abhi available nahi hai. Available: ${all.map((c) => c.number).join(', ')}` };
+      this.chapterId = target.id;
+      return { text: `Switched to Ch.${target.number}: ${target.title}. ${target.agent} (subject expert) is now helping the other agents with verified NCERT content.\n\n/quiz, /doubt, /teach, /most - sab ab is chapter ke.` };
+    }
     if (low === '/most') {
-      const lines = mostAsked.questions.map((q, i) =>
+      const ch = this.chapter();
+      const lines = ch.pyqs.map((q, i) =>
         `${i + 1}. (${q.marks}m, ${q.source.split(',')[0].replace('CBSE Sample Paper ', 'SQP ')})${q.repeated ? ' [REPEATED]' : ''} ${q.text.split('(')[0].slice(0, 90)}`);
-      return { text: 'Most-asked from official CBSE sample papers:\n\n' + lines.join('\n\n') + '\n\nType /quiz to practise - repeated ones come first.' };
+      return { text: `Most-asked for Ch.${ch.number} (${ch.title}) from official CBSE sample papers:\n\n` + lines.join('\n\n') + '\n\nType /quiz to practise - repeated ones come first.' };
     }
     if (low === '/goals') {
       const g = this.goals;
@@ -67,7 +79,7 @@ class ChatFlow {
       return { text: `Question (${q.marks} marks):\n${q.text}\n\nType your answer like you would in the exam.` };
     }
     if (low === '/teach') {
-      const topics = module3.listTopics();
+      const topics = module3.listTopics(this.chapterId);
       const pick = topics[Math.floor(Math.random() * topics.length)];
       this.mode = 'teach'; this.topicId = pick.id;
       return { text: `OK, you are the teacher now!\n\n${pick.juniorOpening}\n\n(Topic: ${pick.name}) - explain in your own words.` };
@@ -88,8 +100,7 @@ class ChatFlow {
 
     // state: answering a quiz question
     if (this.mode === 'quiz' && this.questionId) {
-      const q = questions.questions.find((x) => x.id === this.questionId)
-        || mostAsked.questions.find((x) => x.id === this.questionId);
+      const q = findQuestion(this.questionId).question;
       this.mode = null; this.questionId = null;
       const r = await gradeAnswer(q, t);
       this.goals.grade = true;
@@ -130,9 +141,11 @@ class ChatFlow {
   }
 
   async doDoubt(d) {
-    const r = await answerDoubt(d, []);
+    // keyword routing first; the student's active chapter is the fallback
+    const ch = detectChapter(d) || this.chapter();
+    const r = await answerDoubt(d, [], ch);
     this.goals.doubt = true;
-    const out = { text: r.answer + '\n\n(Source: ' + (r.source || 'NCERT Class 10 Science, Ch.1') + ')' };
+    const out = { text: r.answer + '\n\n(Source: ' + (r.source || `NCERT Class 10 Science, Ch.${ch.number}`) + ')' };
     if (r.card) out.photo = '/cards/' + r.card;
     return out;
   }

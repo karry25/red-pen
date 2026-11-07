@@ -1,0 +1,1471 @@
+{
+  "id": "ch2",
+  "number": 2,
+  "title": "Acids, Bases and Salts",
+  "source": "NCERT Class 10 Science, Ch.2 (ncert.nic.in jesc102, Reprint 2026-27)",
+  "questions": [
+    {
+      "id": "ch2-q1",
+      "marks": 2,
+      "text": "Why should curd and sour substances not be kept in brass and copper vessels? (NCERT Exercise)",
+      "points": [
+        {
+          "text": "Curd and sour substances contain acids.",
+          "marks": 1,
+          "keywords": [
+            [
+              "acid",
+              "acids",
+              "acidic"
+            ],
+            [
+              "curd",
+              "sour"
+            ]
+          ]
+        },
+        {
+          "text": "These acids react with the metal (copper/brass) and form harmful/toxic compounds, which spoil the food and can poison it.",
+          "marks": 1,
+          "keywords": [
+            [
+              "react",
+              "reaction",
+              "reacts"
+            ],
+            [
+              "metal",
+              "copper",
+              "brass"
+            ],
+            [
+              "harmful",
+              "toxic",
+              "poisonous",
+              "poison"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2-q2",
+      "marks": 2,
+      "text": "Dry HCl gas does not change the colour of dry litmus paper. Why? What happens when the litmus paper is moistened? (NCERT Exercise)",
+      "points": [
+        {
+          "text": "Dry HCl gas produces no H+ (hydrogen) ions because the separation of H+ from HCl happens only in the presence of water.",
+          "marks": 1,
+          "keywords": [
+            [
+              "h+",
+              "hydrogen ion",
+              "hydrogen ions",
+              "h3o",
+              "hydronium"
+            ],
+            [
+              "water",
+              "moisture",
+              "absence of water",
+              "aqueous"
+            ]
+          ]
+        },
+        {
+          "text": "Acids show acidic behaviour only through H+(aq)/H3O+ ions, so on moist litmus the gas dissolves, forms ions, and blue litmus turns red.",
+          "marks": 1,
+          "keywords": [
+            [
+              "moist",
+              "wet",
+              "damp"
+            ],
+            [
+              "red",
+              "turns red"
+            ],
+            [
+              "dissolve",
+              "dissolves",
+              "aqueous",
+              "forms ions",
+              "produces ions"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2-q3",
+      "marks": 2,
+      "text": "While diluting an acid, why is it recommended that the acid should be added to water and not water to the acid? (NCERT Exercise)",
+      "points": [
+        {
+          "text": "Mixing a concentrated acid with water is a highly exothermic process (a large amount of heat is released).",
+          "marks": 1,
+          "keywords": [
+            [
+              "exothermic",
+              "heat evolved",
+              "heat released",
+              "heat generated",
+              "heat is produced"
+            ]
+          ]
+        },
+        {
+          "text": "If water is added to concentrated acid, the heat generated may cause the mixture to splash out and cause burns (the glass container may even break from local heating); adding acid slowly to water with stirring avoids this.",
+          "marks": 1,
+          "keywords": [
+            [
+              "splash",
+              "splashes",
+              "splash out",
+              "spurt"
+            ],
+            [
+              "burns",
+              "burn"
+            ],
+            [
+              "stirring",
+              "slowly",
+              "drop by drop",
+              "break"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2-q4",
+      "marks": 3,
+      "text": "Give reasons: (a) Why is an antacid (like milk of magnesia) taken during indigestion? (b) Why does tooth decay start when the pH of the mouth falls below 5.5? (c) Why do farmers treat acidic soil with quicklime (calcium oxide)?",
+      "points": [
+        {
+          "text": "During indigestion the stomach produces too much hydrochloric acid; the antacid, being a mild base (magnesium hydroxide), neutralises the excess acid.",
+          "marks": 1,
+          "keywords": [
+            [
+              "stomach"
+            ],
+            [
+              "acid",
+              "hydrochloric",
+              "hcl"
+            ],
+            [
+              "neutralise",
+              "neutralizes",
+              "neutralise",
+              "neutralization",
+              "base",
+              "basic",
+              "magnesium hydroxide"
+            ]
+          ]
+        },
+        {
+          "text": "Tooth enamel (calcium phosphate) is corroded when the mouth pH falls below 5.5 because bacteria in the mouth produce acids.",
+          "marks": 1,
+          "keywords": [
+            [
+              "5.5"
+            ],
+            [
+              "enamel",
+              "corrode",
+              "corroded",
+              "corrosion"
+            ],
+            [
+              "bacteria",
+              "acid",
+              "sugar"
+            ]
+          ]
+        },
+        {
+          "text": "Quicklime is basic, so it neutralises the excess acid in the soil (brings the soil pH back towards neutral for healthy plant growth).",
+          "marks": 1,
+          "keywords": [
+            [
+              "neutralise",
+              "neutralizes",
+              "neutralization",
+              "base",
+              "basic"
+            ],
+            [
+              "soil"
+            ],
+            [
+              "acidic",
+              "acid"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2-q5",
+      "marks": 3,
+      "text": "What is the chlor-alkali process? Write the chemical equation and name the product formed at each electrode.",
+      "points": [
+        {
+          "text": "When electricity is passed through an aqueous solution of sodium chloride (brine), it decomposes to form sodium hydroxide - this is the chlor-alkali process (chlor for chlorine, alkali for sodium hydroxide).",
+          "marks": 1,
+          "keywords": [
+            [
+              "brine",
+              "sodium chloride solution",
+              "aqueous sodium chloride",
+              "nacl"
+            ],
+            [
+              "electricity",
+              "electrolysis",
+              "electric current"
+            ],
+            [
+              "sodium hydroxide",
+              "naoh"
+            ]
+          ]
+        },
+        {
+          "text": "Equation: 2NaCl(aq) + 2H2O(l) -> 2NaOH(aq) + Cl2(g) + H2(g).",
+          "marks": 1,
+          "keywords": [
+            [
+              "2nacl",
+              "nacl"
+            ],
+            [
+              "2naoh",
+              "naoh"
+            ],
+            [
+              "cl2",
+              "chlorine"
+            ],
+            [
+              "h2",
+              "hydrogen"
+            ]
+          ]
+        },
+        {
+          "text": "Chlorine gas is given off at the anode, hydrogen gas at the cathode, and sodium hydroxide solution is formed near the cathode.",
+          "marks": 1,
+          "keywords": [
+            [
+              "anode"
+            ],
+            [
+              "cathode"
+            ],
+            [
+              "chlorine",
+              "cl2",
+              "hydrogen",
+              "h2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2-q6",
+      "marks": 3,
+      "text": "What is Plaster of Paris? Write its chemical formula, the equation for its preparation from gypsum, and one use.",
+      "points": [
+        {
+          "text": "Plaster of Paris is calcium sulphate hemihydrate, CaSO4.1/2H2O (half a water molecule of crystallisation per formula unit - two CaSO4 units share one water molecule).",
+          "marks": 1,
+          "keywords": [
+            [
+              "hemihydrate",
+              "hemi hydrate",
+              "hemihydrate"
+            ],
+            [
+              "caso4",
+              "calcium sulphate"
+            ],
+            [
+              "half",
+              "1/2",
+              "0.5"
+            ]
+          ]
+        },
+        {
+          "text": "It is prepared by heating gypsum (CaSO4.2H2O) at 373 K, which loses water molecules.",
+          "marks": 1,
+          "keywords": [
+            [
+              "gypsum"
+            ],
+            [
+              "373"
+            ],
+            [
+              "heat",
+              "heating",
+              "heated"
+            ]
+          ]
+        },
+        {
+          "text": "Used by doctors as plaster to support fractured bones in the right position (also: toys, decoration material, smooth surfaces).",
+          "marks": 1,
+          "keywords": [
+            [
+              "fracture",
+              "fractured",
+              "broken bone",
+              "bones"
+            ],
+            [
+              "doctor",
+              "plaster",
+              "cast",
+              "support",
+              "toys",
+              "decoration",
+              "smooth"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2-q7",
+      "marks": 3,
+      "text": "Write the chemical equation for the reaction of sodium carbonate with dilute hydrochloric acid. How is the gas evolved tested, and what happens if excess gas is passed?",
+      "points": [
+        {
+          "text": "Na2CO3(s) + 2HCl(aq) -> 2NaCl(aq) + H2O(l) + CO2(g) - salt, water and carbon dioxide are formed.",
+          "marks": 1,
+          "keywords": [
+            [
+              "na2co3",
+              "sodium carbonate"
+            ],
+            [
+              "hcl",
+              "hydrochloric"
+            ],
+            [
+              "co2",
+              "carbon dioxide"
+            ]
+          ]
+        },
+        {
+          "text": "The gas is passed through lime water (calcium hydroxide solution), which turns milky due to formation of a white precipitate of calcium carbonate: Ca(OH)2 + CO2 -> CaCO3 + H2O.",
+          "marks": 1,
+          "keywords": [
+            [
+              "lime water",
+              "limewater",
+              "calcium hydroxide",
+              "ca(oh)2"
+            ],
+            [
+              "milky",
+              "white precipitate"
+            ],
+            [
+              "caco3",
+              "calcium carbonate"
+            ]
+          ]
+        },
+        {
+          "text": "On passing excess CO2, the milkiness disappears because insoluble calcium carbonate converts to soluble calcium hydrogencarbonate: CaCO3 + H2O + CO2 -> Ca(HCO3)2.",
+          "marks": 1,
+          "keywords": [
+            [
+              "excess"
+            ],
+            [
+              "soluble",
+              "dissolves",
+              "disappears",
+              "milkiness disappears"
+            ],
+            [
+              "ca(hco3)2",
+              "calcium hydrogencarbonate",
+              "calcium bicarbonate",
+              "hydrogencarbonate"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2-q8",
+      "marks": 2,
+      "text": "Write the chemical formula of baking soda and the equation showing how it is produced from sodium chloride. Why is it used in baking powder?",
+      "points": [
+        {
+          "text": "Baking soda is sodium hydrogencarbonate, NaHCO3. It is produced using sodium chloride as a raw material: NaCl + H2O + CO2 + NH3 -> NH4Cl + NaHCO3.",
+          "marks": 1,
+          "keywords": [
+            [
+              "nahco3",
+              "sodium hydrogencarbonate",
+              "sodium hydrogen carbonate"
+            ],
+            [
+              "nacl",
+              "sodium chloride"
+            ],
+            [
+              "nh3",
+              "ammonia",
+              "nh4cl",
+              "ammonium chloride",
+              "co2",
+              "carbon dioxide"
+            ]
+          ]
+        },
+        {
+          "text": "Baking powder is a mixture of baking soda and a mild edible acid (tartaric acid); on heating or mixing in water it releases CO2 which makes the batter rise / cakes soft and fluffy. Being a mild non-corrosive basic salt, it can also neutralise excess acid.",
+          "marks": 1,
+          "keywords": [
+            [
+              "tartaric",
+              "edible acid"
+            ],
+            [
+              "co2",
+              "carbon dioxide",
+              "rise",
+              "rises",
+              "fluffy",
+              "soft"
+            ],
+            [
+              "basic",
+              "base",
+              "neutralise",
+              "neutralizes"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2-q9",
+      "marks": 2,
+      "text": "What is water of crystallisation? Explain with the example of blue vitriol (hydrated copper sulphate), including what happens on heating.",
+      "points": [
+        {
+          "text": "Water of crystallisation is the fixed number of water molecules present in one formula unit of a salt.",
+          "marks": 1,
+          "keywords": [
+            [
+              "fixed number",
+              "fixed"
+            ],
+            [
+              "water molecule",
+              "water molecules"
+            ],
+            [
+              "formula unit",
+              "one formula",
+              "salt"
+            ]
+          ]
+        },
+        {
+          "text": "Hydrated copper sulphate is CuSO4.5H2O (5 water molecules, blue crystals). On heating, the water is removed and the blue salt turns white; adding water again restores the blue colour.",
+          "marks": 1,
+          "keywords": [
+            [
+              "cuso4",
+              "copper sulphate"
+            ],
+            [
+              "5h2o",
+              "5 water",
+              "five water"
+            ],
+            [
+              "white",
+              "colourless"
+            ],
+            [
+              "blue",
+              "restored",
+              "reappears"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "pyqs": [
+    {
+      "id": "pyq-2526-q28",
+      "marks": 4,
+      "repeated": true,
+      "repeatNote": "Neutralisation with phenolphthalein appeared in both papers: as an MCQ in 2024-25 (Q4) and as this 4-mark case study in 2025-26 (Q28, based on NCERT Activity 2.6).",
+      "source": "CBSE Sample Paper 2025-26, Q28 case study (official marking scheme)",
+      "text": "Case: Sara adds phenolphthalein to dilute NaOH (turns pink), then adds dilute H2SO4 dropwise until colourless. (a) With concentrated H2SO4 instead, will the drops needed be <40, =40 or >40? (b) 20 drops = 1 mL; if 3 mL of acid changed the colour, how much NaOH was taken initially (table: 2mL/20drops, 3mL/30, 4mL/40)? (c) Write the balanced equation and state whether the reaction is neutralisation/double displacement/precipitation.",
+      "points": [
+        {
+          "text": "(a) Fewer than 40 drops, because concentrated H2SO4 gives more H+ ions per drop than dilute acid.",
+          "marks": 1,
+          "keywords": [
+            [
+              "less than 40",
+              "< 40",
+              "fewer"
+            ],
+            [
+              "concentrated"
+            ],
+            [
+              "more h+",
+              "more hydrogen ions",
+              "more h+ ions",
+              "more acid"
+            ]
+          ]
+        },
+        {
+          "text": "(b) 3 mL = 60 drops; from the pattern (20 drops per 2 mL NaOH), 60 drops neutralise 6 mL of NaOH.",
+          "marks": 1,
+          "keywords": [
+            [
+              "60"
+            ],
+            [
+              "6 ml",
+              "6ml",
+              "6 ml of naoh"
+            ]
+          ]
+        },
+        {
+          "text": "(c) 2NaOH + H2SO4 -> Na2SO4 + 2H2O.",
+          "marks": 1,
+          "keywords": [
+            [
+              "naoh"
+            ],
+            [
+              "h2so4"
+            ],
+            [
+              "na2so4"
+            ],
+            [
+              "h2o",
+              "water"
+            ]
+          ]
+        },
+        {
+          "text": "It is a neutralisation AND double displacement reaction (base NaOH neutralised, ions exchanged: Na+ replaced by H+, OH- by SO4 2-). NOT precipitation because Na2SO4 is soluble in water.",
+          "marks": 1,
+          "keywords": [
+            [
+              "neutralisation",
+              "neutralization"
+            ],
+            [
+              "double displacement"
+            ],
+            [
+              "soluble",
+              "not precipitation",
+              "no precipitate"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2425-q4",
+      "marks": 1,
+      "repeated": true,
+      "repeatNote": "Phenolphthalein/neutralisation reasoning appeared in both 2024-25 (Q4) and 2025-26 (Q28 case study).",
+      "source": "CBSE Sample Paper 2024-25, Q4 (official marking scheme: C)",
+      "text": "An aqueous solution A turns phenolphthalein pink. On adding solution B, the pink colour disappears. State the nature of A and B with their pH ranges, and explain the colour change.",
+      "points": [
+        {
+          "text": "A is basic (pH greater than 7) - phenolphthalein is pink in a basic solution.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "basic",
+              "base",
+              "alkaline"
+            ],
+            [
+              "greater than 7",
+              ">7",
+              "more than 7",
+              "above 7",
+              "ph greater"
+            ]
+          ]
+        },
+        {
+          "text": "B is acidic (pH less than 7) - adding acid neutralises the base, so the pink colour disappears (phenolphthalein is colourless in acid/neutral solution).",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "acidic",
+              "acid"
+            ],
+            [
+              "less than 7",
+              "<7",
+              "below 7",
+              "ph less"
+            ],
+            [
+              "neutralise",
+              "neutralizes",
+              "neutralisation",
+              "colourless",
+              "disappears"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2526-q21",
+      "marks": 1,
+      "repeated": true,
+      "repeatNote": "pH-comparison questions appeared in both years: 2024-25 Q28A(iii) (pH 6/8/9.5, hydronium ions) and 2025-26 Q21 (highest pH).",
+      "source": "CBSE Sample Paper 2025-26, Q21 (official marking scheme: D)",
+      "text": "Which of these dissolved in equal volumes of water has the highest pH - sulphuric acid, acetic acid, magnesium hydroxide or sodium hydroxide? Justify your answer.",
+      "points": [
+        {
+          "text": "Sodium hydroxide (NaOH) has the highest pH.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "sodium hydroxide",
+              "naoh"
+            ]
+          ]
+        },
+        {
+          "text": "It is a strong base, producing the most OH- ions in solution (Mg(OH)2 is a weak/sparingly soluble base; the other two are acids with pH below 7).",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "strong base",
+              "strong alkali"
+            ],
+            [
+              "oh-",
+              "oh ions",
+              "hydroxide ions",
+              "most oh"
+            ],
+            [
+              "acid",
+              "weak"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2526-q22",
+      "marks": 1,
+      "repeated": false,
+      "repeatNote": "Lime-water/CO2 appeared only in the 2025-26 paper - not tagged as repeated.",
+      "source": "CBSE Sample Paper 2025-26, Q22 (official marking scheme: B)",
+      "text": "When excess carbon dioxide is passed through lime water, the milkiness disappears. Why? Write the equation.",
+      "points": [
+        {
+          "text": "Insoluble calcium carbonate (the milky white precipitate) converts to water-soluble calcium hydrogencarbonate (bicarbonate).",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "insoluble"
+            ],
+            [
+              "soluble"
+            ],
+            [
+              "calcium hydrogencarbonate",
+              "calcium bicarbonate",
+              "ca(hco3)2",
+              "hydrogencarbonate"
+            ]
+          ]
+        },
+        {
+          "text": "CaCO3(s) + H2O(l) + CO2(g) -> Ca(HCO3)2(aq).",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "caco3"
+            ],
+            [
+              "ca(hco3)2",
+              "ca(hco3)"
+            ],
+            [
+              "co2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2425-q28b",
+      "marks": 3,
+      "repeated": false,
+      "repeatNote": "Everyday neutralisation applications appeared as a 3-marker in 2024-25 (Q28B); the 2025-26 paper used a case study instead - not tagged as repeated.",
+      "source": "CBSE Sample Paper 2024-25, Q28B (official marking scheme)",
+      "text": "Comment: (i) Bee sting is treated with baking soda paste but wasp sting with dilute vinegar. (ii) Farmers treat soil with quicklime while tilling. (iii) Ancient marble sculptures are conserved by treating them with certain chemicals.",
+      "points": [
+        {
+          "text": "(i) Bee sting is acidic (injects an acid), so basic baking soda neutralises it; wasp sting is basic/alkaline, so acidic vinegar neutralises it.",
+          "marks": 1,
+          "keywords": [
+            [
+              "bee"
+            ],
+            [
+              "acidic",
+              "acid"
+            ],
+            [
+              "wasp"
+            ],
+            [
+              "basic",
+              "alkaline",
+              "base"
+            ]
+          ]
+        },
+        {
+          "text": "(ii) Quicklime (calcium oxide, a base) is added to change acidic soil to neutral/basic - it neutralises the excess acid in the soil.",
+          "marks": 1,
+          "keywords": [
+            [
+              "soil"
+            ],
+            [
+              "neutral",
+              "neutralise",
+              "basic",
+              "acidic"
+            ]
+          ]
+        },
+        {
+          "text": "(iii) To protect the sculptures from the effects of certain gases in the environment and acid rain (marble/calcium carbonate reacts with acids).",
+          "marks": 1,
+          "keywords": [
+            [
+              "acid rain"
+            ],
+            [
+              "gases",
+              "environment",
+              "protect",
+              "conserve"
+            ],
+            [
+              "marble",
+              "calcium carbonate",
+              "caco3",
+              "react"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "kb": [
+    {
+      "keywords": [
+        "acid metal",
+        "metal react acid",
+        "hydrogen gas",
+        "pop test",
+        "zinc granules"
+      ],
+      "question": "How do acids react with metals?",
+      "answer": "Acid + Metal -> Salt + Hydrogen gas. Example: Zn + dilute H2SO4 gives zinc sulphate + H2. Test: gas mein burning candle ke paas 'pop' sound aata hai - wahi hydrogen hai. Fun part: NaOH (base) bhi Zn se react karke H2 deta hai (sodium zincate banta hai), but sab metals ke saath nahi.",
+      "source": "NCERT Class 10 Science, Ch.2, Section 2.1.2, Activity 2.3-2.4",
+      "card": null
+    },
+    {
+      "keywords": [
+        "neutralisation",
+        "neutralization",
+        "acid base react",
+        "acid + base",
+        "neutralise"
+      ],
+      "question": "What is a neutralisation reaction?",
+      "answer": "Base + Acid -> Salt + Water. Jaise NaOH + HCl -> NaCl + H2O. Acid base ka effect nullify kar deta hai aur base acid ka - isliye phenolphthalein wale experiment mein pink colour gayab ho jaata hai jab acid daalte hain, aur wapas aa jaata hai jab base zyada ho jaata hai.",
+      "source": "NCERT Class 10 Science, Ch.2, Section 2.1.4, Activity 2.6",
+      "card": "neutralisation-loop.png"
+    },
+    {
+      "keywords": [
+        "ph",
+        "pH scale",
+        "ph kya",
+        "ph value",
+        "potenz"
+      ],
+      "question": "What is pH and what does the pH scale tell us?",
+      "answer": "pH scale measures hydrogen ion concentration - 'p' is German 'potenz' (power). Scale 0 (very acidic) se 14 (very alkaline) tak, 7 = neutral. Yaad rakhne ka funda: jitna zyada H3O+ ions, utna KAM pH (ulta chalta hai). pH paper mein universal indicator hota hai jo alag colours dikhata hai.",
+      "source": "NCERT Class 10 Science, Ch.2, Section 2.2.4",
+      "card": "ph-scale.png"
+    },
+    {
+      "keywords": [
+        "dilute",
+        "dilution",
+        "acid water",
+        "water acid",
+        "mix acid",
+        "patla"
+      ],
+      "question": "How do you dilute an acid safely?",
+      "answer": "Hamesha ACID ko paani mein daalo, dheere dheere, stir karte hue - kabhi paani ko acid mein nahi. Mixing highly exothermic hai; paani acid mein daaloge toh itni garmi banti hai ki mixture splash karke burns kar sakta hai, glass container bhi toot sakta hai. Dilution ka matlab: H3O+/OH- ions per unit volume kam ho jaate hain.",
+      "source": "NCERT Class 10 Science, Ch.2, Activity 2.10 (Section 2.2.3)",
+      "card": null
+    },
+    {
+      "keywords": [
+        "dry hcl",
+        "litmus",
+        "dry litmus",
+        "hcl gas",
+        "acidic behaviour"
+      ],
+      "question": "Why doesn't dry HCl gas change dry litmus paper?",
+      "answer": "Kyunki acidic behaviour ka asli hero H+ (ya H3O+) ion hai, aur H+ tabhi banta hai jab HCl paani mein ghule: HCl + H2O -> H3O+ + Cl-. Dry gas mein water nahi, toh ions nahi, toh litmus ka colour nahi badalta. Litmus ko moist karo - gas dissolve hogi, ions banenge, blue litmus red ho jaayega.",
+      "source": "NCERT Class 10 Science, Ch.2, Section 2.2.2",
+      "card": null
+    },
+    {
+      "keywords": [
+        "hydronium",
+        "h3o",
+        "h+ ion",
+        "hydrogen ion"
+      ],
+      "question": "What is a hydronium ion?",
+      "answer": "H+ ion akela exist nahi kar sakta - woh paani ke molecule se judkar H3O+ bana leta hai: H+ + H2O -> H3O+. Isliye acids mein hydrogen ions ko hamesha H+(aq) ya H3O+ (hydronium ion) likhte hain.",
+      "source": "NCERT Class 10 Science, Ch.2, Section 2.2.2",
+      "card": null
+    },
+    {
+      "keywords": [
+        "chlor alkali",
+        "chlor-alkali",
+        "brine",
+        "sodium hydroxide made",
+        "naoh production"
+      ],
+      "question": "What is the chlor-alkali process?",
+      "answer": "Brine (NaCl solution) mein electricity pass karo toh woh decompose ho jaata hai: 2NaCl + 2H2O -> 2NaOH + Cl2 + H2. Anode pe chlorine gas, cathode pe hydrogen gas, aur cathode ke paas NaOH solution banta hai. Naam yaad rakho: chlor = chlorine, alkali = NaOH. Teeno products useful hain.",
+      "source": "NCERT Class 10 Science, Ch.2, 'Common salt - a raw material for chemicals'",
+      "card": "salt-family.png"
+    },
+    {
+      "keywords": [
+        "baking soda",
+        "washing soda",
+        "difference baking",
+        "nahco3",
+        "na2co3"
+      ],
+      "question": "What is the difference between baking soda and washing soda?",
+      "answer": "Baking soda = sodium hydrogencarbonate (NaHCO3) - mild non-corrosive basic salt, kitchen wala. Usko heat karo: 2NaHCO3 -> Na2CO3 + H2O + CO2, aur jo sodium carbonate bana usko recrystallise karo toh washing soda = Na2CO3.10H2O (10 water molecules of crystallisation) - glass/soap/paper industry mein use hota hai.",
+      "source": "NCERT Class 10 Science, Ch.2, 'Baking soda' and 'Washing soda'",
+      "card": "salt-family.png"
+    },
+    {
+      "keywords": [
+        "plaster of paris",
+        "pop",
+        "gypsum",
+        "hemihydrate",
+        "fracture"
+      ],
+      "question": "What is Plaster of Paris and how is it made?",
+      "answer": "POP = calcium sulphate hemihydrate (CaSO4.1/2H2O). Gypsum (CaSO4.2H2O) ko 373 K pe heat karo toh paani nikal jaata hai aur POP banta hai. POP + water -> wapas gypsum (hard solid). 'Half water molecule' isliye kyunki 2 CaSO4 units ek water share karte hain. Doctors fracture mein plaster isi se banate hain.",
+      "source": "NCERT Class 10 Science, Ch.2, 'Plaster of Paris'",
+      "card": "pop-cycle.png"
+    },
+    {
+      "keywords": [
+        "water of crystallisation",
+        "crystallization",
+        "blue vitriol",
+        "cuso4",
+        "hydrated"
+      ],
+      "question": "What is water of crystallisation?",
+      "answer": "Ek formula unit of salt mein fixed number of water molecules jo hote hain, wahi water of crystallisation hai. CuSO4.5H2O (blue vitriol) ke 5 molecules. Blue crystals ko heat karo - paani ud jaata hai, salt WHITE ho jaata hai. Wapas paani daalo - blue colour restore! Aur haan, Na2CO3.10H2O 'geela' nahi hai - woh water structure mein locked hai.",
+      "source": "NCERT Class 10 Science, Ch.2, Activity 2.15",
+      "card": null
+    },
+    {
+      "keywords": [
+        "indicator",
+        "litmus",
+        "turmeric",
+        "china rose",
+        "olfactory",
+        "vanilla",
+        "onion"
+      ],
+      "question": "What are acid-base indicators?",
+      "answer": "Substances jo acid/base mein colour badalte hain. Natural indicators: litmus (acid: blue->red, base: red->blue), turmeric, China rose petals. Olfactory indicators: vanilla, onion, clove - inki SMELL basic medium mein change ho jaati hai (vanilla ki smell base mein gayab, acid mein nahi).",
+      "source": "NCERT Class 10 Science, Ch.2, Section 2.1.1, Activity 2.2",
+      "card": "ph-scale.png"
+    },
+    {
+      "keywords": [
+        "metal oxide",
+        "copper oxide acid",
+        "basic oxide",
+        "cuo"
+      ],
+      "question": "How do metal oxides react with acids?",
+      "answer": "Metal oxide + Acid -> Salt + Water. CuO (kaala powder) + dilute HCl -> CuCl2 (blue-green solution) + H2O. Kyunki metal oxides base ki tarah behave karte hain (salt + water dete hain), unhe basic oxides kehte hain. Ulta bhi sach: CO2 jaise non-metal oxides bases se react karte hain - acidic oxides.",
+      "source": "NCERT Class 10 Science, Ch.2, Sections 2.1.5-2.1.6, Activity 2.7",
+      "card": null
+    },
+    {
+      "keywords": [
+        "antacid",
+        "indigestion",
+        "stomach acid",
+        "acidity",
+        "milk of magnesia"
+      ],
+      "question": "Why are antacids used for acidity?",
+      "answer": "Stomach naturally HCl banata hai (digestion ke liye, stomach ko harm nahi karta). But indigestion mein ZYADA acid banta hai = pain/irritation. Antacid (jaise milk of magnesia, Mg(OH)2 - ek mild base) us excess acid ko neutralise kar deta hai. Baking soda bhi mild base hai isliye kaam aata hai.",
+      "source": "NCERT Class 10 Science, Ch.2, Section 2.2.4 (pH in everyday life)",
+      "card": null
+    },
+    {
+      "keywords": [
+        "tooth decay",
+        "teeth",
+        "enamel",
+        "5.5",
+        "cavity"
+      ],
+      "question": "Why does tooth decay start below pH 5.5?",
+      "answer": "Tooth enamel = calcium phosphate - mouth ka hardest substance, but pH 5.5 se neeche corrode ho jaata hai. Mouth ke bacteria sugar se ACID banate hain, pH girta hai, enamel kharab = cavity. Solution: toothpaste (basic) se brush karo - acid neutralise ho jaata hai.",
+      "source": "NCERT Class 10 Science, Ch.2, Section 2.2.4",
+      "card": "ph-scale.png"
+    },
+    {
+      "keywords": [
+        "bleaching powder",
+        "bleach",
+        "caocl2",
+        "slaked lime chlorine"
+      ],
+      "question": "How is bleaching powder made and used?",
+      "answer": "Chlorine gas ko dry slaked lime [Ca(OH)2] pe action karwao: 2Ca(OH)2 + 2Cl2 -> Ca(ClO)2 + CaCl2 + 2H2O (NCERT ise Ca(ClO)2 se represent karti hai; actual composition complex hai). Uses: kapda/lakdi pulp bleach karna, chemical industries mein oxidising agent, drinking water ko germ-free karna. Iska chlorine chlor-alkali process se aata hai.",
+      "source": "NCERT Class 10 Science, Ch.2, 'Bleaching powder'",
+      "card": "salt-family.png"
+    }
+  ],
+  "teachTopics": [
+    {
+      "id": "ch2-t1",
+      "name": "How do acids react with metals?",
+      "juniorOpening": "Didi, ma'am ne kaha acid metal se react karke GAS deta hai? Kaunsi gas? Aur kaise pata chalega?",
+      "points": [
+        {
+          "text": "Acid + metal gives a salt and hydrogen gas.",
+          "keywords": [
+            [
+              "salt"
+            ],
+            [
+              "hydrogen",
+              "h2"
+            ]
+          ]
+        },
+        {
+          "text": "Example: zinc + dilute sulphuric acid -> zinc sulphate + hydrogen (Zn + H2SO4 -> ZnSO4 + H2).",
+          "keywords": [
+            [
+              "zinc",
+              "zn"
+            ],
+            [
+              "zinc sulphate",
+              "znso4"
+            ],
+            [
+              "sulphuric",
+              "h2so4"
+            ]
+          ]
+        },
+        {
+          "text": "Hydrogen is tested with a burning candle/splinter near the gas - it burns with a pop sound.",
+          "keywords": [
+            [
+              "pop"
+            ],
+            [
+              "burning",
+              "candle",
+              "splinter",
+              "flame"
+            ]
+          ]
+        },
+        {
+          "text": "Bases like NaOH can also react with some metals like zinc to give hydrogen (sodium zincate forms), but not with all metals.",
+          "keywords": [
+            [
+              "sodium zincate",
+              "na2zno2",
+              "naoh",
+              "base"
+            ],
+            [
+              "not all",
+              "some metals",
+              "all metals"
+            ]
+          ]
+        }
+      ],
+      "followUps": [
+        "Salt toh samjha, par GAS kaunsi banti hai? Koi bhi gas ho sakti hai kya?",
+        "H2 ka pata kaise chalta hai? Dekh ke pehchan sakte hain kya?",
+        "Zinc + H2SO4 ka equation likh ke dikhao na, balanced wala!",
+        "Base bhi aisa kar sakta hai? NaOH bhi gas dega kya? Sab metals ke saath?"
+      ],
+      "gotIt": "Ohhhh! Acid + metal = salt + HYDROGEN, aur pop test se confirm. Zinc wala example bhi yaad ho gaya. Tum toh pro ho!"
+    },
+    {
+      "id": "ch2-t2",
+      "name": "Neutralisation in everyday life",
+      "juniorOpening": "Bhaiya, neutralisation toh sirf lab wala concept lagta hai. Real life mein kahan use hota hai?",
+      "points": [
+        {
+          "text": "Neutralisation: acid + base -> salt + water (they cancel each other's effect).",
+          "keywords": [
+            [
+              "salt"
+            ],
+            [
+              "water"
+            ],
+            [
+              "acid",
+              "base"
+            ]
+          ]
+        },
+        {
+          "text": "Indigestion: stomach makes too much HCl; antacid (magnesium hydroxide, a mild base) neutralises it.",
+          "keywords": [
+            [
+              "antacid",
+              "magnesium hydroxide",
+              "milk of magnesia"
+            ],
+            [
+              "stomach"
+            ]
+          ]
+        },
+        {
+          "text": "Soil treatment: acidic soil is treated with quicklime/slaked lime (bases) to bring pH back to neutral.",
+          "keywords": [
+            [
+              "soil"
+            ],
+            [
+              "quicklime",
+              "slaked lime",
+              "lime"
+            ]
+          ]
+        },
+        {
+          "text": "Stings: bee sting is acidic (treated with basic baking soda); wasp sting is basic (treated with vinegar, a weak acid).",
+          "keywords": [
+            [
+              "bee"
+            ],
+            [
+              "wasp"
+            ],
+            [
+              "baking soda",
+              "vinegar"
+            ]
+          ]
+        },
+        {
+          "text": "Tooth decay: bacteria make acid; below pH 5.5 enamel corrodes; basic toothpaste neutralises the acid.",
+          "keywords": [
+            [
+              "5.5"
+            ],
+            [
+              "toothpaste",
+              "enamel",
+              "tooth"
+            ]
+          ]
+        }
+      ],
+      "followUps": [
+        "Neutralisation ka matlab? Dono ek dusre ko 'cancel' karte hain kya?",
+        "Acidity mein antacid kyun dete hain? Stomach mein acid toh hona hi chahiye na?",
+        "Kisan mitti mein chuna (lime) kyun daalte hain?",
+        "Bee aur wasp ke kaante mein farak kya hai? Dono pe same cheez kyun nahi?",
+        "Toothpaste mein kya hota hai jo cavity rokta hai?"
+      ],
+      "gotIt": "Samajh gaya! Har jagah wahi pattern - acid zyada toh base se neutralise, base zyada toh acid se. Antacid, lime, baking soda, sab yehi hain!"
+    },
+    {
+      "id": "ch2-t3",
+      "name": "The pH scale",
+      "juniorOpening": "Ye pH scale 0 se 14 kyun hai? Aur 7 pe kya special hai?",
+      "points": [
+        {
+          "text": "pH measures hydrogen ion concentration in a solution (p = potenz, German for power).",
+          "keywords": [
+            [
+              "potenz",
+              "power"
+            ],
+            [
+              "hydrogen ion",
+              "h+",
+              "h3o"
+            ]
+          ]
+        },
+        {
+          "text": "Scale runs 0 (very acidic) to 14 (very alkaline); 7 is neutral.",
+          "keywords": [
+            [
+              "0",
+              "14"
+            ],
+            [
+              "neutral"
+            ]
+          ]
+        },
+        {
+          "text": "Higher H3O+ concentration means LOWER pH (inverse relation).",
+          "keywords": [
+            [
+              "inverse",
+              "ulta",
+              "opposite",
+              "lower",
+              "kam"
+            ],
+            [
+              "higher",
+              "more",
+              "zyada"
+            ]
+          ]
+        },
+        {
+          "text": "Measured with universal indicator / pH paper which shows different colours.",
+          "keywords": [
+            [
+              "universal indicator"
+            ],
+            [
+              "ph paper",
+              "colour",
+              "color"
+            ]
+          ]
+        },
+        {
+          "text": "Acids have pH < 7, bases have pH > 7.",
+          "keywords": [
+            [
+              "less than 7",
+              "<7",
+              "below 7"
+            ],
+            [
+              "greater than 7",
+              ">7",
+              "above 7",
+              "more than 7"
+            ]
+          ]
+        }
+      ],
+      "followUps": [
+        "pH ka 'p' ka matlab kya hai? Aur ye measure kya karta hai exactly?",
+        "0 se 14 tak? Beech ka number kaunsa hai aur wahan kya hota hai?",
+        "Zyada H3O+ ions ka matlab ZYADA pH hoga na? ...nahi? Ulta??",
+        "pH measure kaise karte hain practically?",
+        "Acid ka pH kitna hota hai aur base ka kitna?"
+      ],
+      "gotIt": "Got it! pH ulta chalta hai - zyada H3O+ = KAM pH. 7 neutral, neeche acid, upar base. Ab pH questions darawne nahi lagte!"
+    },
+    {
+      "id": "ch2-t4",
+      "name": "The common-salt family (chlor-alkali to washing soda)",
+      "juniorOpening": "Table salt se itne saare chemicals kaise bante hain? NaCl toh sirf namak hai na?",
+      "points": [
+        {
+          "text": "Chlor-alkali: electricity through brine (NaCl solution) -> NaOH + Cl2 + H2 (2NaCl + 2H2O -> 2NaOH + Cl2 + H2).",
+          "keywords": [
+            [
+              "brine",
+              "nacl"
+            ],
+            [
+              "electricity",
+              "electrolysis"
+            ],
+            [
+              "naoh",
+              "sodium hydroxide"
+            ]
+          ]
+        },
+        {
+          "text": "Chlorine at the anode, hydrogen at the cathode, NaOH near the cathode.",
+          "keywords": [
+            [
+              "anode"
+            ],
+            [
+              "cathode"
+            ]
+          ]
+        },
+        {
+          "text": "Baking soda (NaHCO3) is made from NaCl: NaCl + H2O + CO2 + NH3 -> NH4Cl + NaHCO3.",
+          "keywords": [
+            [
+              "nahco3",
+              "baking soda"
+            ],
+            [
+              "nh3",
+              "ammonia",
+              "co2"
+            ]
+          ]
+        },
+        {
+          "text": "Heating baking soda gives sodium carbonate (2NaHCO3 -> Na2CO3 + H2O + CO2); recrystallisation gives washing soda Na2CO3.10H2O.",
+          "keywords": [
+            [
+              "na2co3",
+              "sodium carbonate"
+            ],
+            [
+              "washing soda",
+              "10h2o"
+            ]
+          ]
+        },
+        {
+          "text": "Chlorine + dry slaked lime gives bleaching powder (used to disinfect drinking water).",
+          "keywords": [
+            [
+              "bleaching powder"
+            ],
+            [
+              "slaked lime",
+              "ca(oh)2",
+              "chlorine"
+            ]
+          ]
+        }
+      ],
+      "followUps": [
+        "Namak se NaOH kaise banega? Bina kuch add kiye?",
+        "Kaunsa gas kahan nikalta hai - anode pe ya cathode pe? Confuse hota hoon yahan.",
+        "Baking soda ka formula? Aur woh NaCl se kaise banta hai?",
+        "Baking soda aur washing soda same cheez hain kya? Dono ka formula batao na.",
+        "Bleaching powder kahan se aata hai is family mein?"
+      ],
+      "gotIt": "Ek NaCl se NaOH, baking soda, washing soda, bleaching powder - poora family tree clear hai! Anode = Cl2, cathode = H2, ye bhi pakka."
+    },
+    {
+      "id": "ch2-t5",
+      "name": "Plaster of Paris & water of crystallisation",
+      "juniorOpening": "Doctor jo plaster lagate hain fracture pe, woh bhi chemistry hai? Seriously?",
+      "points": [
+        {
+          "text": "Water of crystallisation = fixed number of water molecules in one formula unit of a salt (CuSO4.5H2O has 5).",
+          "keywords": [
+            [
+              "fixed"
+            ],
+            [
+              "water molecule"
+            ],
+            [
+              "cuso4",
+              "5h2o",
+              "formula unit"
+            ]
+          ]
+        },
+        {
+          "text": "Gypsum is CaSO4.2H2O (2 water molecules).",
+          "keywords": [
+            [
+              "gypsum"
+            ],
+            [
+              "caso4.2h2o",
+              "caso4",
+              "2h2o"
+            ]
+          ]
+        },
+        {
+          "text": "Heating gypsum at 373 K removes water and gives Plaster of Paris, CaSO4.1/2H2O (calcium sulphate hemihydrate).",
+          "keywords": [
+            [
+              "373"
+            ],
+            [
+              "hemihydrate"
+            ],
+            [
+              "1/2",
+              "half"
+            ]
+          ]
+        },
+        {
+          "text": "POP + water -> back to gypsum, a hard solid - this setting is why it supports fractured bones.",
+          "keywords": [
+            [
+              "gypsum",
+              "hard",
+              "solid",
+              "sets"
+            ],
+            [
+              "fracture",
+              "bone",
+              "bones"
+            ]
+          ]
+        },
+        {
+          "text": "Half a water molecule is possible because two CaSO4 formula units share one water molecule.",
+          "keywords": [
+            [
+              "share",
+              "two formula units",
+              "2 caso4",
+              "two caso4"
+            ]
+          ]
+        }
+      ],
+      "followUps": [
+        "Water of crystallisation ka matlab? Salt ke andar PAANI hota hai?",
+        "Gypsum ka formula kya hai phir?",
+        "Gypsum se POP kaise banta hai? Temperature kitna?",
+        "POP pe paani daalo toh kya hota hai? Isliye fracture mein use hota hai?",
+        "Aadha (1/2) water molecule kaise ho sakta hai?? Molecule toh poora hota hai na!"
+      ],
+      "gotIt": "Ye toh genius hai - 2 CaSO4 ek paani share karte hain, isliye 1/2! 373 K, hemihydrate, wapas gypsum. Sab yaad!"
+    }
+  ],
+  "explainers": [
+    {
+      "id": "x-ch2-stings",
+      "title": "Bee sting vs wasp sting: why two opposite remedies?",
+      "hook": "Nani ke paas ek remedy har kaante ke liye alag kyun hai? Bee kaanta = baking soda paste, wasp kaanta = vinegar. Random nahi hai - poora chemistry hai.",
+      "concept": "Bee sting skin mein ACID inject karti hai, isliye mild BASE (baking soda, NaHCO3) usse neutralise kar deta hai. Wasp sting ALKALINE hai, isliye weak ACID (vinegar) kaam aata hai. Dono mein wahi reaction: acid + base -> salt + water. NCERT isi ko 'neutralisation in everyday life' mein antacid aur soil treatment ke saath rakhti hai.",
+      "hack": "Exam hack: sting/soil/antacid dekhte hi likho - 'neutralisation' + kaun acid hai kaun base + ek general equation. 2024-25 SQP mein ye exact 3-marker aaya tha (Q28B). Explaining it once in your own words locks it in far better than re-reading (learning-by-teaching: Kobayashi 2019, Japanese Psychological Research).",
+      "hackSource": "Kobayashi (2019), Japanese Psychological Research, doi 10.1111/jpr.12221",
+      "card": "neutralisation-loop.png",
+      "learnMore": [
+        {
+          "label": "NCERT Class 10 Science Ch.2 (official PDF)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc102.pdf"
+        },
+        {
+          "label": "Khan Academy: Acids, bases and pH",
+          "url": "https://www.khanacademy.org/science/chemistry/acids-and-bases-topic"
+        }
+      ]
+    },
+    {
+      "id": "x-ch2-pakora",
+      "title": "The pakora-rising chemistry of baking soda",
+      "hook": "Crispy, fluffy pakore ka secret ek chemical reaction hai jo tumhari kitchen mein roz hoti hai - aur boards mein bhi aati hai.",
+      "concept": "Baking soda = NaHCO3, ek mild non-corrosive basic salt. Heat karo toh: 2NaHCO3 -> Na2CO3 + H2O + CO2. Ye CO2 bubbles hi batter ko phulate hain. Baking powder = baking soda + tartaric acid (edible weak acid); paani/heat pe dono milkar CO2 dete hain: NaHCO3 + H+ -> CO2 + H2O + salt. Aur baking soda bhi common salt se banta hai: NaCl + H2O + CO2 + NH3 -> NH4Cl + NaHCO3.",
+      "hack": "Exam hack: 'baking soda' aate hi 3 cheezein likho - formula NaHCO3, production equation, heating equation. Yehi 2-3 marks pakke. Linking a fact to a real memory (pakoras!) is elaboration - one of the strongest encoding strategies (Make It Stick, Brown/Roediger/McDaniel 2014).",
+      "hackSource": "Brown, Roediger & McDaniel (2014), Make It Stick, Harvard UP, ISBN 9780674729018",
+      "card": "salt-family.png",
+      "learnMore": [
+        {
+          "label": "NCERT Class 10 Science Ch.2 (official PDF)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc102.pdf"
+        },
+        {
+          "label": "Khan Academy: Acids and bases",
+          "url": "https://www.khanacademy.org/science/chemistry/acids-and-bases-topic"
+        }
+      ]
+    },
+    {
+      "id": "x-ch2-ph",
+      "title": "pH is just a 'power' - and it runs backwards",
+      "hook": "0 se 14 ka scale, 7 neutral... aur sabse confusing: strong acid ka pH LOW kyun? Ek baar ye 'ulta' samajh lo, pH questions free marks hain.",
+      "concept": "'p' in pH = German 'potenz' = power. pH measures hydrogen ion (H3O+) concentration. Funda ULTA hai: jitne zyada H3O+ ions, utna KAM pH number. Isliye strong acid 0 ke paas, strong base 14 ke paas. Neutral = 7. Universal indicator (pH paper) colours se batata hai. NCERT deta hai real uses: soil pH (farmers quicklime daalte hain), stomach acid (antacid), tooth decay below 5.5 (basic toothpaste).",
+      "hack": "Exam hack: pH comparison aaye toh pehle classify karo acid/weak/strong, phir order. Dono saal ke SQPs mein pH comparison aaya hai (2024-25 Q28A, 2025-26 Q21). Testing yourself on these (not re-reading) is exactly what improves retention (Roediger & Karpicke 2006, Psychological Science).",
+      "hackSource": "Roediger & Karpicke (2006), Psychological Science 17(3), PMID 16507066",
+      "card": "ph-scale.png",
+      "learnMore": [
+        {
+          "label": "NCERT Class 10 Science Ch.2 (official PDF)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc102.pdf"
+        },
+        {
+          "label": "Khan Academy: pH scale",
+          "url": "https://www.khanacademy.org/science/chemistry/acids-and-bases-topic/acids-bases-and-ph/v/introduction-to-acid-base-theory"
+        }
+      ]
+    }
+  ]
+}

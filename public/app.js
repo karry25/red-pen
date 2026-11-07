@@ -3,14 +3,34 @@ document.querySelectorAll('[data-icon]').forEach((el) => { el.innerHTML = icon(e
 let questions = [];
 let selectedId = null;
 let lastScore = null;
+let activeChapter = new URLSearchParams(location.search).get('chapter') || 'ch1';
+
+// Chapter switcher: each chapter has its own subject-expert agent.
+async function loadChapters() {
+  const res = await fetch('/api/chapters');
+  const { chapters } = await res.json();
+  const sw = document.getElementById('ch-switch');
+  sw.innerHTML = '';
+  chapters.forEach((c) => {
+    const b = document.createElement('button');
+    b.className = 'ch-chip' + (c.id === activeChapter ? ' active' : '');
+    b.textContent = `Ch.${c.number} ${c.title}`;
+    b.title = `${c.agent} (subject-expert agent) · ${c.counts.questions}+${c.counts.pyqs} questions, ${c.counts.doubts} doubt answers, ${c.counts.topics} teach topics`;
+    b.onclick = () => { activeChapter = c.id; loadChapters(); load(); loadTeach(); loadExplainers(); };
+    sw.appendChild(b);
+  });
+  document.getElementById('footer-chapters').textContent =
+    chapters.map((c) => `Ch.${c.number} ${c.title}`).join(' · ');
+}
 
 async function load() {
-  const res = await fetch('/api/questions');
+  const res = await fetch('/api/questions?chapter=' + activeChapter);
   const data = await res.json();
   document.getElementById('chapter').textContent = data.chapter;
   questions = data.questions;
   // most-asked PYQ strip
   const ma = document.getElementById('most-asked-list');
+  ma.innerHTML = '';
   (data.mostAsked || []).forEach((q) => {
     const el = document.createElement('div');
     el.className = 'q-item pyq';
@@ -125,7 +145,7 @@ document.getElementById('doubt-btn').onclick = async () => {
   if (!doubt.trim()) { alert('Type your doubt first.'); return; }
   const res = await fetch('/api/doubt', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ doubt }),
+    body: JSON.stringify({ doubt, chapterId: activeChapter }),
   });
   const r = await res.json();
   document.getElementById('doubt-result').classList.remove('hidden');
@@ -159,6 +179,7 @@ document.getElementById('retry-btn').onclick = () => {
   document.getElementById('answer').focus();
   document.getElementById('answer').scrollIntoView({ behavior: 'smooth' });
 };
+loadChapters();
 load();
 
 // Demo hook for testing/screenshots only: #demo auto-fills and grades.
@@ -181,10 +202,11 @@ if (location.hash === '#demo2') {
 let teachTopics = [];
 let teachTopicId = null;
 async function loadTeach() {
-  const res = await fetch('/api/teach/topics');
+  const res = await fetch('/api/teach/topics?chapter=' + activeChapter);
   const data = await res.json();
   teachTopics = data.topics;
   const list = document.getElementById('topic-list');
+  list.innerHTML = '';
   teachTopics.forEach((t) => {
     const el = document.createElement('div');
     el.className = 'q-item';
@@ -295,9 +317,10 @@ if (location.hash === '#demo5') {
 
 // ---- Explainers (blog-style reads) ----
 async function loadExplainers() {
-  const res = await fetch('/api/explainers');
+  const res = await fetch('/api/explainers?chapter=' + activeChapter);
   const data = await res.json();
   const box = document.getElementById('explainer-list');
+  box.innerHTML = '';
   data.explainers.forEach((x) => {
     const el = document.createElement('details');
     el.className = 'explainer';

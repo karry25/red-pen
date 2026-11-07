@@ -288,3 +288,9 @@ footer { text-align: center; font-size: 11px; color: #b7ab9c; padding: 20px 16px
 .fun-challenge { font-size: 13px; font-weight: 800; color: var(--amber); margin: 8px 0; }
 
 footer .kind { max-width: 520px; margin: 10px auto 0; font-size: 10.5px; line-height: 1.5; }
+
+/* chapter switcher */
+.ch-switch { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.ch-chip { border: 2px solid #e9dfd0; background: #fffdf6; color: #3d3833; border-radius: 999px; padding: 6px 14px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .15s; }
+.ch-chip:hover { border-color: #c08a2d; }
+.ch-chip.active { background: #6f9272; border-color: #6f9272; color: #fffdf6; }

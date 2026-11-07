@@ -6,10 +6,7 @@
 //     about most. Session memory only; no names, no storage.
 const { Agent } = require('./base');
 const { makeLlmBrain } = require('./brains');
-const fs = require('fs');
-const path = require('path');
-
-const kb = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'doubts_kb.json'), 'utf8'));
+const { getChapter } = require('./chapter');
 
 const doubtAgent = new Agent({
   name: 'Doubt',
@@ -27,13 +24,16 @@ let totalDoubts = 0;
 
 function norm(s) { return String(s || '').toLowerCase(); }
 
-async function answerDoubt(doubtText, trace) {
+async function answerDoubt(doubtText, trace, chapter) {
+  const ch = chapter || getChapter('ch1');
   const text = norm(doubtText);
+
+  await ch.act(trace, `Ch.${ch.number} Guide supplying verified ${ch.title} content`, async () => {});
 
   const hit = await doubtAgent.act(trace, 'finding the best answer for this anonymous doubt', async () => {
     let best = null;
     let bestScore = 0;
-    for (const e of kb.entries) {
+    for (const e of ch.kb) {
       const score = e.keywords.reduce((s, k) => s + (text.includes(norm(k)) ? k.length : 0), 0);
       if (score > bestScore) { best = e; bestScore = score; }
     }
@@ -49,10 +49,12 @@ async function answerDoubt(doubtText, trace) {
       answered: true,
       topic: key,
       answer: hit.answer,
-      source: hit.source || 'NCERT Class 10 Science, Ch.1',
+      source: hit.source || `NCERT Class 10 Science, Ch.${ch.number}`,
       card: hit.card || null,
+      chapter: ch.chapterId,
+      chapterAgent: ch.name,
       anonymous: true,
-      engine: 'FAQ retrieval over Ch.1 knowledge base (no AI key used yet)',
+      engine: `FAQ retrieval over Ch.${ch.number} knowledge base (no AI key used yet)`,
     };
   }
 
@@ -60,9 +62,11 @@ async function answerDoubt(doubtText, trace) {
   topicCounts.set('(unmatched doubts)', (topicCounts.get('(unmatched doubts)') || 0) + 1);
   return {
     answered: false,
-    answer: 'Good doubt! Mera rule-based brain is Chapter 1 ke faq tak limited hai, aur ye doubt usme cover nahi hai. AI key approve hone ke baad main koi bhi doubt answer kar paunga. Try: balancing, decomposition, exothermic, corrosion, rancidity...',
+    answer: `Good doubt! Mera rule-based brain abhi Ch.${ch.number} (${ch.title}) ke verified FAQ tak limited hai, aur ye doubt usme cover nahi hai. AI key approve hone ke baad main koi bhi doubt answer kar paunga. Chapter switch karne ke liye: /chapter.`,
+    chapter: ch.chapterId,
+    chapterAgent: ch.name,
     anonymous: true,
-    engine: 'FAQ retrieval over Ch.1 knowledge base (no AI key used yet)',
+    engine: `FAQ retrieval over Ch.${ch.number} knowledge base (no AI key used yet)`,
   };
 }
 

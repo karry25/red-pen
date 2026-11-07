@@ -13,9 +13,7 @@ const module4 = require('./agents/module4');
 const PORT = process.env.PORT || 4173;
 const ROOT = __dirname;
 const PUBLIC = path.join(ROOT, 'public');
-const questions = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'questions.json'), 'utf8'));
-const mostAsked = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'most_asked.json'), 'utf8'));
-const explainers = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'explainers.json'), 'utf8'));
+const { getChapter, listChapters, findQuestion, detectChapter } = require('./agents/chapter');
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -34,10 +32,15 @@ function send(res, code, body, type = 'application/json; charset=utf-8') {
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, 'http://localhost');
 
+  if (req.method === 'GET' && url.pathname === '/api/chapters') {
+    return send(res, 200, JSON.stringify({ chapters: listChapters() }));
+  }
+
   if (req.method === 'GET' && url.pathname === '/api/questions') {
-    const list = questions.questions.map((q) => ({ id: q.id, text: q.text, marks: q.marks }));
-    const pyq = mostAsked.questions.map((q) => ({ id: q.id, text: q.text, marks: q.marks, source: q.source, repeated: q.repeated, repeatNote: q.repeatNote }));
-    return send(res, 200, JSON.stringify({ chapter: questions.chapter, questions: list, mostAsked: pyq, mostAskedNote: mostAsked.note }));
+    const ch = getChapter(url.searchParams.get('chapter') || 'ch1');
+    const list = ch.questions.map((q) => ({ id: q.id, text: q.text, marks: q.marks }));
+    const pyq = ch.pyqs.map((q) => ({ id: q.id, text: q.text, marks: q.marks, source: q.source, repeated: q.repeated, repeatNote: q.repeatNote }));
+    return send(res, 200, JSON.stringify({ chapter: `Ch.${ch.number}: ${ch.title}`, chapterId: ch.chapterId, chapterAgent: ch.name, questions: list, mostAsked: pyq, mostAskedNote: 'Verified from official CBSE sample papers (cbseacademic.nic.in), answers cross-checked with the official marking scheme. REPEATED only when the pattern appears in more than one paper.' }));
   }
 
   if (req.method === 'POST' && url.pathname === '/api/grade') {
@@ -49,11 +52,12 @@ const server = http.createServer((req, res) => {
     req.on('end', () => {
       try {
         const { questionId, answer } = JSON.parse(body || '{}');
-        const q = questions.questions.find((x) => x.id === questionId)
-          || mostAsked.questions.find((x) => x.id === questionId);
-        if (!q) return send(res, 400, JSON.stringify({ error: 'Unknown question.' }));
+        const found = findQuestion(questionId);
+        if (!found) return send(res, 400, JSON.stringify({ error: 'Unknown question.' }));
         if (!answer || !String(answer).trim()) return send(res, 400, JSON.stringify({ error: 'Answer is empty.' }));
-        gradeAnswer(q, answer).then((r) => send(res, 200, JSON.stringify(r))).catch((e) => send(res, 500, JSON.stringify({ error: String(e) })));
+        gradeAnswer(found.question, answer)
+          .then((r) => { r.chapter = found.chapter.chapterId; r.chapterAgent = found.chapter.name; r.chapterSource = found.chapter.source; send(res, 200, JSON.stringify(r)); })
+          .catch((e) => send(res, 500, JSON.stringify({ error: String(e) })));
       } catch {
         return send(res, 400, JSON.stringify({ error: 'Bad request.' }));
       }
@@ -66,11 +70,12 @@ const server = http.createServer((req, res) => {
     req.on('data', (c) => { body += c; if (body.length > 20_000) req.destroy(); });
     req.on('end', () => {
       try {
-        const { doubt, sessionId } = JSON.parse(body || '{}');
+        const { doubt, sessionId, chapterId } = JSON.parse(body || '{}');
         if (!doubt || !String(doubt).trim()) return send(res, 400, JSON.stringify({ error: 'Doubt is empty.' }));
         const trace = [];
+        const ch = chapterId ? getChapter(chapterId) : (detectChapter(doubt) || getChapter('ch1'));
         coordinator.handle(sessionId || 'anon', doubt, trace)
-          .then(() => answerDoubt(doubt, trace))
+          .then(() => answerDoubt(doubt, trace, ch))
           .then((r) => { r.trace = trace; send(res, 200, JSON.stringify(r)); })
           .catch((e) => send(res, 500, JSON.stringify({ error: String(e) })));
       } catch { send(res, 400, JSON.stringify({ error: 'Bad request.' })); }
@@ -79,7 +84,8 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === 'GET' && url.pathname === '/api/explainers') {
-    return send(res, 200, JSON.stringify(explainers));
+    const ch = getChapter(url.searchParams.get('chapter') || 'ch1');
+    return send(res, 200, JSON.stringify({ chapterId: ch.chapterId, chapter: `Ch.${ch.number}: ${ch.title}`, explainers: ch.explainers }));
   }
 
   if (req.method === 'GET' && url.pathname === '/api/digest') {
@@ -89,7 +95,7 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === 'GET' && url.pathname === '/api/teach/topics') {
-    return send(res, 200, JSON.stringify({ topics: module3.listTopics() }));
+    return send(res, 200, JSON.stringify({ topics: module3.listTopics(url.searchParams.get('chapter') || null) }));
   }
 
   if (req.method === 'POST' && url.pathname === '/api/teach') {

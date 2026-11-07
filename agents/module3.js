@@ -6,10 +6,7 @@
 //     against the topic's key points (same keyword tool as Module 1).
 //     The understanding meter IS the Assessor's coverage - never vibes.
 const { Agent } = require('./base');
-const fs = require('fs');
-const path = require('path');
-
-const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'teach_topics.json'), 'utf8'));
+const { loadChapters, getChapter } = require('./chapter');
 
 const junior = new Agent({
   name: 'Junior',
@@ -26,10 +23,19 @@ const progress = new Map(); // sessionId:topicId -> Set(covered point indexes)
 
 function norm(s) { return String(s || '').toLowerCase(); }
 
-function topicById(id) { return data.topics.find((t) => t.id === id); }
+// Topic ids are chapter-namespaced, so an id alone finds its chapter.
+function topicById(id) {
+  for (const c of loadChapters().values()) {
+    const t = c.teachTopics.find((x) => x.id === id);
+    if (t) return { topic: t, chapter: c };
+  }
+  return {};
+}
 
-function listTopics() {
-  return data.topics.map((t) => ({ id: t.id, name: t.name, juniorOpening: t.juniorOpening }));
+function listTopics(chapterId) {
+  const c = chapterId ? getChapter(chapterId) : null;
+  const packs = c ? [c] : [...loadChapters().values()];
+  return packs.flatMap((ch) => ch.teachTopics.map((t) => ({ id: t.id, name: t.name, juniorOpening: t.juniorOpening, chapter: ch.chapterId, chapterTitle: ch.title })));
 }
 
 function getState(sessionId, topicId) {
@@ -39,8 +45,10 @@ function getState(sessionId, topicId) {
 }
 
 async function explain(sessionId, topicId, explanation, trace) {
-  const topic = topicById(topicId);
+  const found = topicById(topicId);
+  const topic = found.topic;
   if (!topic) return { error: 'Unknown topic.' };
+  await found.chapter.act(trace, `Ch.${found.chapter.number} Guide supplying the topic's key points`, async () => {});
   const covered = getState(sessionId, topicId);
   const text = norm(explanation);
 
@@ -75,6 +83,8 @@ async function explain(sessionId, topicId, explanation, trace) {
     missingPoints: missingIdx.map((i) => topic.points[i].text),
     juniorReply,
     done: missingIdx.length === 0,
+    chapter: found.chapter.chapterId,
+    chapterAgent: found.chapter.name,
     agents: [assessor.name, junior.name],
     engine: 'rule-based agent brains (no AI key used yet)',
   };

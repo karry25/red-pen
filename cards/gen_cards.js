@@ -12,14 +12,14 @@ const C = {
   sage: '#6f9272', amber: '#c08a2d', sky: '#7d94b5', line: '#e9dfd0', panel: '#faf6ec',
 };
 
-function frame(title, subtitle, body) {
+function frame(title, subtitle, body, source = 'Source: NCERT Class 10 Science, Ch.1 · Red Pen') {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
   <rect width="800" height="500" fill="${C.bg}"/>
   <rect x="16" y="16" width="768" height="468" rx="20" fill="${C.panel}" stroke="${C.line}" stroke-width="2"/>
   <text x="40" y="62" font-family="Georgia, serif" font-size="30" font-weight="700" fill="${C.ink}">${title}</text>
   <text x="40" y="90" font-family="Georgia, serif" font-size="16" font-style="italic" fill="${C.pen}">${subtitle}</text>
   ${body}
-  <text x="40" y="468" font-family="sans-serif" font-size="12" fill="${C.soft}">Source: NCERT Class 10 Science, Ch.1 · Red Pen</text>
+  <text x="40" y="468" font-family="sans-serif" font-size="12" fill="${C.soft}">${source}</text>
 </svg>`;
 }
 
@@ -160,6 +160,98 @@ cards['decomposition-types'] = frame('Decomposition: 3 types', 'ek reactant toot
   txt(650, 375, '2AgBr →', 15, C.ink, 'middle'),
   txt(650, 397, '2Ag + Br2', 15, C.ink, 'middle'),
 ].join(''));
+
+
+// ---- Chapter 2 cards ----
+const SRC2 = 'Source: NCERT Class 10 Science, Ch.2 · Red Pen';
+
+// pH scale 0-14
+{
+  const seg = [];
+  const cols = ['#e8b4a8','#eabfae','#eccab4','#eed5ba','#f0dfc0','#f2e9c8','#eef0c9','#cfe3c0','#bcd8c4','#abcdd0','#9ac2d6','#8db4d8','#87a6d4','#8598cc','#8a8cc2'];
+  for (let i = 0; i < 14; i++) {
+    seg.push(`<rect x="${70 + i * 47}" y="150" width="45" height="46" rx="8" fill="${cols[i]}" stroke="${C.line}"/>`);
+    seg.push(txt(70 + i * 47 + 22.5, 180, String(i + 1), 15, C.ink, 'middle', 700));
+  }
+  seg.push(txt(70, 140, '0', 15, C.pen, 'start', 700));
+  seg.push(txt(70 + 6 * 47 + 22.5, 230, '7 = NEUTRAL (pure water)', 15, C.sage, 'middle', 700));
+  seg.push(arrow(70 + 3 * 47, 265, 70 + 1 * 47, 265, C.pen));
+  seg.push(txt(70, 290, 'ACIDIC (zyada H3O+ ions)', 15, C.pen, 'start', 700));
+  seg.push(txt(70, 315, 'lemon juice, vinegar, stomach HCl', 13, C.soft));
+  seg.push(txt(70 + 9 * 47, 290, 'BASIC (zyada OH- ions)', 15, C.sky, 'start', 700));
+  seg.push(txt(70 + 9 * 47, 315, 'NaOH solution, soap, baking soda', 13, C.soft));
+  seg.push(box(70, 350, 660, 70, '#fff', C.amber));
+  seg.push(txt(400, 380, 'YAAD RAKHO: pH ulta chalta hai - jitna ZYADA H3O+,', 15, C.ink, 'middle'));
+  seg.push(txt(400, 405, 'utna KAM pH number. (p = potenz = power)', 15, C.ink, 'middle'));
+  cards['ph-scale'] = frame('The pH scale (0-14)', 'neutral 7 · neeche acid · upar base', seg.join(''), SRC2);
+}
+
+// Neutralisation loop (phenolphthalein)
+cards['neutralisation-loop'] = frame('Neutralisation loop', 'Activity 2.6 - pink, gone, pink again', [
+  box(60, 130, 300, 110, '#f8ece8', C.pen),
+  txt(210, 165, 'NaOH + phenolphthalein', 16, C.ink, 'middle'),
+  txt(210, 195, '= PINK solution', 20, C.pen, 'middle', 700),
+  txt(210, 222, '(base zyada hai)', 13, C.soft, 'middle'),
+  box(440, 130, 300, 110, '#eef4ec', C.sage),
+  txt(590, 165, '+ dilute HCl, drop by drop', 16, C.ink, 'middle'),
+  txt(590, 195, '= COLOURLESS', 20, C.sage, 'middle', 700),
+  txt(590, 222, '(exactly neutralised)', 13, C.soft, 'middle'),
+  box(250, 280, 300, 100, '#fdf3e3', C.amber),
+  txt(400, 315, '+ thoda NaOH wapas', 16, C.ink, 'middle'),
+  txt(400, 345, '= PINK AGAIN', 20, C.amber, 'middle', 700),
+  arrow(360, 185, 440, 185),
+  arrow(500, 240, 430, 280, C.amber),
+  arrow(300, 280, 230, 240, C.pen),
+  txt(400, 425, 'NaOH + HCl → NaCl + H2O   (base + acid → salt + water)', 17, C.ink, 'middle', 700),
+].join(''), SRC2);
+
+// Common-salt family tree
+cards['salt-family'] = frame('Common salt ki family', 'ek NaCl se itne saare chemicals', [
+  box(280, 115, 240, 62, '#fdf3e3', C.amber),
+  txt(400, 145, 'Common salt (NaCl)', 17, C.ink, 'middle', 700),
+  txt(400, 168, '+ paani = brine', 13, C.soft, 'middle'),
+  box(40, 225, 220, 120, '#eef4ec', C.sage),
+  txt(150, 255, 'NaOH (caustic soda)', 15, C.sage, 'middle', 700),
+  txt(150, 280, 'chlor-alkali:', 13, C.ink, 'middle'),
+  txt(150, 300, 'brine + electricity', 13, C.ink, 'middle'),
+  txt(150, 325, 'Cl2 anode · H2 cathode', 12, C.soft, 'middle'),
+  box(290, 225, 220, 120, '#f8ece8', C.pen),
+  txt(400, 255, 'Baking soda', 15, C.pen, 'middle', 700),
+  txt(400, 278, 'NaHCO3', 14, C.ink, 'middle'),
+  txt(400, 300, 'NaCl+H2O+CO2+NH3', 12, C.soft, 'middle'),
+  txt(400, 325, 'heat → Na2CO3', 12, C.soft, 'middle'),
+  box(540, 225, 220, 120, '#eef1f6', C.sky),
+  txt(650, 255, 'Bleaching powder', 15, C.sky, 'middle', 700),
+  txt(650, 280, 'Cl2 + dry slaked lime', 13, C.ink, 'middle'),
+  txt(650, 300, 'Ca(ClO)2 (NCERT)', 12, C.soft, 'middle'),
+  txt(650, 325, 'drinking water germ-free', 12, C.soft, 'middle'),
+  box(400, 380, 220, 60, '#fff', C.pen),
+  txt(510, 405, 'Washing soda', 15, C.pen, 'middle', 700),
+  txt(510, 427, 'Na2CO3.10H2O (recrystallised)', 12, C.soft, 'middle'),
+  arrow(350, 177, 170, 225, C.sage),
+  arrow(400, 177, 400, 225, C.pen),
+  arrow(450, 177, 640, 225, C.sky),
+  arrow(455, 345, 500, 380, C.pen),
+].join(''), SRC2);
+
+// POP cycle
+cards['pop-cycle'] = frame('Gypsum ↔ Plaster of Paris', 'water of crystallisation in action', [
+  box(60, 150, 280, 130, '#eef4ec', C.sage),
+  txt(200, 185, 'GYPSUM', 20, C.sage, 'middle', 700),
+  txt(200, 215, 'CaSO4.2H2O', 18, C.ink, 'middle'),
+  txt(200, 245, '(2 water molecules)', 13, C.soft, 'middle'),
+  box(460, 150, 280, 130, '#fdf3e3', C.amber),
+  txt(600, 185, 'PLASTER OF PARIS', 18, C.amber, 'middle', 700),
+  txt(600, 215, 'CaSO4.½H2O', 18, C.ink, 'middle'),
+  txt(600, 245, '(calcium sulphate hemihydrate)', 12, C.soft, 'middle'),
+  arrow(340, 195, 460, 195),
+  txt(400, 180, 'heat 373 K', 14, C.pen, 'middle', 700),
+  arrow(460, 240, 340, 240, C.sky),
+  txt(400, 265, '+ 1½ H2O (sets hard)', 14, C.sky, 'middle', 700),
+  box(150, 330, 500, 90, '#fff', C.line),
+  txt(400, 362, 'Uses: fractured-bone plaster, toys, moulds,', 15, C.ink, 'middle'),
+  txt(400, 388, 'smooth surfaces. ½H2O = 2 CaSO4 share 1 water!', 15, C.ink, 'middle'),
+].join(''), SRC2);
 
 for (const [name, svg] of Object.entries(cards)) {
   fs.writeFileSync(path.join(OUT, `${name}.svg`), svg);

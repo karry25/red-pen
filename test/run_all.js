@@ -60,7 +60,28 @@ async function post(p, body) {
   const tt = await post('/api/triage/plan', { sessionId: 'tt', daysLeft: 3, confidence: {} });
   check('timetable with 4 slots/day', tt.timetable.every((d) => d.slots.length >= 3) && /Pomodoro/.test(tt.timetableWhy));
   const cards = require('fs').readdirSync(require('path').join(__dirname, '..', 'public', 'cards'));
-  check('6 visual cards rendered as PNG', cards.filter((c) => c.endsWith('.png')).length === 6);
+  check('visual cards rendered as PNG (>=10)', cards.filter((c) => c.endsWith('.png')).length >= 10);
+
+  // Chapter agents (Ch.2)
+  const chs = await (await fetch(base + '/api/chapters')).json();
+  check('2 chapters with their own agents', chs.chapters.length === 2 && chs.chapters[1].agent === 'Ch.2 Guide');
+  const q2 = await (await fetch(base + '/api/questions?chapter=ch2')).json();
+  check('ch2: 9 bank + 5 PYQ questions', q2.questions.length === 9 && q2.mostAsked.length === 5 && q2.chapterAgent === 'Ch.2 Guide');
+  const g2w = await post('/api/grade', { questionId: 'ch2-q3', answer: 'because it is safer' });
+  check('ch2 weak dilution answer scores low', g2w.score <= 1);
+  const g2s = await post('/api/grade', { questionId: 'ch2-q3', answer: 'Mixing concentrated acid with water is highly exothermic, heat is released. If water is added to acid the heat generated can make the mixture splash out and cause burns; the glass may break. So acid is added slowly to water with stirring.' });
+  check('ch2 strong dilution answer full marks', g2s.score === g2s.maxScore && g2s.chapterAgent === 'Ch.2 Guide');
+  const d2 = await post('/api/doubt', { doubt: 'pH scale kya hota hai? 7 pe kya hota hai?' });
+  check('pH doubt routed to Ch.2 Guide with card', d2.chapter === 'ch2' && d2.chapterAgent === 'Ch.2 Guide' && d2.card === 'ph-scale.png');
+  check('chapter agent appears in trace', d2.trace.some((t) => t.agent === 'Ch.2 Guide'));
+  const tt2 = await (await fetch(base + '/api/teach/topics?chapter=ch2')).json();
+  check('ch2 teach topics listed', tt2.topics.length === 5 && tt2.topics.every((t) => t.chapter === 'ch2'));
+  const e2 = await post('/api/teach', { sessionId: 't2', topicId: 'ch2-t3', explanation: 'pH measures hydrogen ion concentration, p means potenz or power. The scale goes from 0 very acidic to 14 very alkaline, 7 is neutral. Higher H3O+ means lower pH, the relation is inverse. It is measured with a universal indicator like pH paper showing different colours. Acids are below 7, bases are above 7.' });
+  check('ch2 teach meter honest full', e2.meter === 100 && e2.done === true);
+  const x2 = await (await fetch(base + '/api/explainers?chapter=ch2')).json();
+  check('ch2 explainers with verified links', x2.explainers.length === 3 && x2.explainers.every((x) => x.hackSource && x.learnMore.length >= 2));
+  const pyq2 = await post('/api/grade', { questionId: 'pyq-2526-q21', answer: 'Sodium hydroxide NaOH, because it is a strong base giving the most OH- ions; Mg(OH)2 is weak and the other two are acids.' });
+  check('ch2 PYQ graded from official scheme', pyq2.score === 1);
 
   // security
   const trav = await fetch(base + '/../../etc/passwd');
@@ -83,6 +104,11 @@ async function post(p, body) {
   await bot.reminderTick();
   check('bot proactive reminder', /Re-check time/.test(bot.sendLog.at(-1).text));
   check('bot never polled without token', bot.offset === 0);
+  await bot.handleUpdate(upd('/chapter 2'));
+  check('bot chapter switch to Ch.2', /Acids, Bases and Salts/.test(bot.sendLog.at(-1).text));
+  await bot.handleUpdate(upd('/quiz'));
+  check('bot quiz from Ch.2', /marks\)/.test(bot.sendLog.at(-1).text));
+  await bot.handleUpdate(upd('/chapter 1'));
   await bot.handleUpdate({ update_id: ++id, message: { message_id: id, chat: { id: 7 }, voice: { file_id: 'sim-voice' } } });
   check('voice note graceful without keys', /not switched on yet/.test(bot.sendLog.at(-1).text));
 

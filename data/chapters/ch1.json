@@ -1,0 +1,1423 @@
+{
+  "id": "ch1",
+  "number": 1,
+  "title": "Chemical Reactions and Equations",
+  "source": "NCERT Class 10 Science, Ch.1 (ncert.nic.in jesc101, Reprint 2026-27)",
+  "questions": [
+    {
+      "id": "ch1-q1",
+      "marks": 3,
+      "text": "Why should a magnesium ribbon be cleaned before burning in air? Write the balanced chemical equation for the reaction that takes place.",
+      "points": [
+        {
+          "text": "A layer of magnesium oxide (or basic magnesium carbonate) forms on the ribbon's surface.",
+          "marks": 1,
+          "keywords": [
+            [
+              "magnesium oxide",
+              "basic magnesium carbonate",
+              "oxide layer",
+              "layer of oxide"
+            ],
+            [
+              "surface",
+              "ribbon",
+              "layer"
+            ]
+          ]
+        },
+        {
+          "text": "Cleaning removes this layer so the magnesium is exposed and burns properly.",
+          "marks": 1,
+          "keywords": [
+            [
+              "remove",
+              "removed",
+              "removing",
+              "clean"
+            ],
+            [
+              "exposed",
+              "pure magnesium",
+              "burns properly",
+              "reactive",
+              "react with oxygen"
+            ]
+          ]
+        },
+        {
+          "text": "Balanced equation: 2Mg + O2 -> 2MgO.",
+          "marks": 1,
+          "keywords": [
+            [
+              "mgo"
+            ],
+            [
+              "2mg",
+              "2 mg"
+            ],
+            [
+              "o2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q2",
+      "marks": 3,
+      "text": "What is a combination reaction? Give one example with a balanced chemical equation.",
+      "points": [
+        {
+          "text": "Two or more reactants combine to form a single product.",
+          "marks": 1,
+          "keywords": [
+            [
+              "two or more",
+              "more than one",
+              "combine",
+              "combination"
+            ],
+            [
+              "single product",
+              "one product",
+              "a single",
+              "only one product"
+            ]
+          ]
+        },
+        {
+          "text": "Correct example named (e.g. burning of magnesium, formation of water, calcium oxide with water).",
+          "marks": 1,
+          "keywords": [
+            [
+              "magnesium",
+              "water",
+              "calcium oxide",
+              "quicklime",
+              "hydrogen",
+              "iron",
+              "sulphide",
+              "example"
+            ]
+          ]
+        },
+        {
+          "text": "Balanced equation for the example, e.g. CaO + H2O -> Ca(OH)2 or 2H2 + O2 -> 2H2O.",
+          "marks": 1,
+          "keywords": [
+            [
+              "ca(oh)2",
+              "ca(oh)",
+              "2h2o",
+              "2 h2o",
+              "mgo",
+              "fes"
+            ],
+            [
+              "->",
+              "=",
+              "gives",
+              "+"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q3",
+      "marks": 5,
+      "text": "What is a decomposition reaction? Name and explain its types, giving one balanced equation for each.",
+      "points": [
+        {
+          "text": "Definition: a single reactant breaks down into two or more products.",
+          "marks": 1,
+          "keywords": [
+            [
+              "single reactant",
+              "one reactant",
+              "a compound",
+              "single substance"
+            ],
+            [
+              "breaks",
+              "splits",
+              "decomposes",
+              "break down"
+            ],
+            [
+              "two or more",
+              "simpler substances",
+              "more than one product",
+              "two or more products"
+            ]
+          ]
+        },
+        {
+          "text": "Thermal decomposition: caused by heat. Example: CaCO3 -> CaO + CO2 (or similar).",
+          "marks": 1,
+          "keywords": [
+            [
+              "thermal",
+              "heat"
+            ],
+            [
+              "caco3",
+              "limestone",
+              "calcium carbonate",
+              "ferrous sulphate",
+              "feso4"
+            ]
+          ]
+        },
+        {
+          "text": "Electrolytic decomposition: caused by electricity. Example: 2H2O -> 2H2 + O2.",
+          "marks": 1,
+          "keywords": [
+            [
+              "electric",
+              "electroly"
+            ],
+            [
+              "h2o",
+              "water",
+              "acidified water"
+            ]
+          ]
+        },
+        {
+          "text": "Photolytic decomposition: caused by light. Example: 2AgCl -> 2Ag + Cl2 (or AgBr).",
+          "marks": 1,
+          "keywords": [
+            [
+              "light",
+              "photo",
+              "sunlight"
+            ],
+            [
+              "agcl",
+              "agbr",
+              "silver chloride",
+              "silver bromide"
+            ]
+          ]
+        },
+        {
+          "text": "Balanced equations written correctly for the examples given.",
+          "marks": 1,
+          "keywords": [
+            [
+              "cao",
+              "co2",
+              "h2",
+              "o2",
+              "ag",
+              "cl2"
+            ],
+            [
+              "->",
+              "=",
+              "gives"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q4",
+      "marks": 3,
+      "text": "Why is respiration considered an exothermic reaction? Explain.",
+      "points": [
+        {
+          "text": "Exothermic means a reaction that releases heat/energy.",
+          "marks": 1,
+          "keywords": [
+            [
+              "exothermic"
+            ],
+            [
+              "release",
+              "releases",
+              "given out",
+              "evolved",
+              "produced"
+            ],
+            [
+              "heat",
+              "energy"
+            ]
+          ]
+        },
+        {
+          "text": "During digestion, food (carbohydrates/glucose) is broken down.",
+          "marks": 1,
+          "keywords": [
+            [
+              "glucose",
+              "carbohydrate",
+              "food",
+              "starch"
+            ],
+            [
+              "broken down",
+              "digested",
+              "breaks down",
+              "oxidised",
+              "oxidized"
+            ]
+          ]
+        },
+        {
+          "text": "Glucose combines with oxygen to give carbon dioxide, water and energy, so respiration is exothermic.",
+          "marks": 1,
+          "keywords": [
+            [
+              "oxygen"
+            ],
+            [
+              "carbon dioxide",
+              "co2"
+            ],
+            [
+              "energy",
+              "heat",
+              "atp"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q5",
+      "marks": 2,
+      "text": "What is a displacement reaction? Give one example with a balanced equation.",
+      "points": [
+        {
+          "text": "A more reactive element displaces a less reactive element from its compound/solution.",
+          "marks": 1,
+          "keywords": [
+            [
+              "more reactive"
+            ],
+            [
+              "displace"
+            ],
+            [
+              "less reactive",
+              "compound",
+              "solution",
+              "salt"
+            ]
+          ]
+        },
+        {
+          "text": "Example with balanced equation, e.g. Fe + CuSO4 -> FeSO4 + Cu.",
+          "marks": 1,
+          "keywords": [
+            [
+              "cuso4",
+              "copper sulphate",
+              "copper sulfate",
+              "feso4",
+              "zn",
+              "iron nail",
+              "fe"
+            ],
+            [
+              "->",
+              "=",
+              "gives",
+              "+"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q6",
+      "marks": 3,
+      "text": "What is corrosion? Explain rusting of iron and write two methods to prevent it.",
+      "points": [
+        {
+          "text": "Corrosion: slow eating away of a metal by air/moisture/chemicals around it.",
+          "marks": 1,
+          "keywords": [
+            [
+              "corrosion",
+              "eating away",
+              "slow"
+            ],
+            [
+              "air",
+              "moisture",
+              "oxygen",
+              "water",
+              "environment"
+            ]
+          ]
+        },
+        {
+          "text": "Rusting: iron reacts with oxygen and moisture to form hydrated iron oxide (rust, Fe2O3.xH2O).",
+          "marks": 1,
+          "keywords": [
+            [
+              "iron"
+            ],
+            [
+              "oxygen",
+              "moisture",
+              "water"
+            ],
+            [
+              "rust",
+              "iron oxide",
+              "fe2o3",
+              "hydrated"
+            ]
+          ]
+        },
+        {
+          "text": "Prevention: painting/oiling/greasing or galvanisation (zinc coating).",
+          "marks": 1,
+          "keywords": [
+            [
+              "paint",
+              "oil",
+              "grease"
+            ],
+            [
+              "galvani",
+              "zinc"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q7",
+      "marks": 3,
+      "text": "What is rancidity? Give two methods to prevent it.",
+      "points": [
+        {
+          "text": "Rancidity: oxidation of oils/fats in food, giving bad smell and taste.",
+          "marks": 1,
+          "keywords": [
+            [
+              "rancid"
+            ],
+            [
+              "oil",
+              "fat"
+            ],
+            [
+              "oxidation",
+              "oxygen",
+              "air"
+            ],
+            [
+              "smell",
+              "taste"
+            ]
+          ]
+        },
+        {
+          "text": "Prevention: airtight containers / refrigeration.",
+          "marks": 1,
+          "keywords": [
+            [
+              "airtight",
+              "air-tight",
+              "air tight",
+              "refrigerat",
+              "fridge",
+              "air tight container"
+            ]
+          ]
+        },
+        {
+          "text": "Prevention: adding antioxidants (BHA/BHT) or flushing packets with nitrogen.",
+          "marks": 1,
+          "keywords": [
+            [
+              "antioxidant",
+              "bha",
+              "bht",
+              "nitrogen"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q8",
+      "marks": 3,
+      "text": "In the reaction CuO + H2 -> Cu + H2O, which substance is oxidised and which is reduced? Define both terms.",
+      "points": [
+        {
+          "text": "Oxidation = gain of oxygen (or loss of hydrogen).",
+          "marks": 1,
+          "keywords": [
+            [
+              "oxidation"
+            ],
+            [
+              "gain of oxygen",
+              "oxygen add",
+              "loss of hydrogen",
+              "hydrogen remov"
+            ]
+          ]
+        },
+        {
+          "text": "Reduction = loss of oxygen (or gain of hydrogen).",
+          "marks": 1,
+          "keywords": [
+            [
+              "reduction"
+            ],
+            [
+              "loss of oxygen",
+              "oxygen remov",
+              "gain of hydrogen",
+              "hydrogen add"
+            ]
+          ]
+        },
+        {
+          "text": "H2 is oxidised to H2O; CuO is reduced to Cu. It is a redox reaction.",
+          "marks": 1,
+          "keywords": [
+            [
+              "h2",
+              "hydrogen"
+            ],
+            [
+              "oxidised",
+              "oxidized"
+            ],
+            [
+              "cuo",
+              "copper oxide"
+            ],
+            [
+              "reduced"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch1-q9",
+      "marks": 2,
+      "text": "Balance: Fe + H2O -> Fe3O4 + H2. Name the type of reaction.",
+      "points": [
+        {
+          "text": "Balanced: 3Fe + 4H2O -> Fe3O4 + 4H2.",
+          "marks": 1,
+          "keywords": [
+            [
+              "3fe",
+              "3 fe"
+            ],
+            [
+              "4h2o",
+              "4 h2o"
+            ],
+            [
+              "4h2",
+              "4 h2"
+            ]
+          ]
+        },
+        {
+          "text": "It is a displacement reaction (iron displaces hydrogen from water/steam).",
+          "marks": 1,
+          "keywords": [
+            [
+              "displacement"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "pyqs": [
+    {
+      "id": "pyq-2425-q21",
+      "marks": 2,
+      "repeated": true,
+      "repeatNote": "Reaction-type identification appeared in both 2024-25 (Q21) and 2025-26 (Q27 variant) papers.",
+      "source": "CBSE Sample Paper 2024-25, Q21 (official marking scheme)",
+      "text": "Identify the type of each reaction, stating the reason: A. Fe2O3 + 2Al -> Al2O3 + 2Fe + heat   B. Pb(NO3)2 + 2KI -> PbI2 + 2KNO3",
+      "points": [
+        {
+          "text": "A is an exothermic displacement / redox reaction.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "exothermic",
+              "displacement",
+              "redox"
+            ]
+          ]
+        },
+        {
+          "text": "Reason: heat is evolved / Al (more reactive) displaces Fe / aluminium reduces iron oxide.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "heat",
+              "more reactive",
+              "displace",
+              "reduces"
+            ]
+          ]
+        },
+        {
+          "text": "B is a double displacement / precipitation reaction.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "double displacement",
+              "precipitation"
+            ]
+          ]
+        },
+        {
+          "text": "Reason: exchange of ions / yellow precipitate of lead iodide (PbI2) forms.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "exchange of ions",
+              "precipitate",
+              "pbi2",
+              "lead iodide"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2526-q27",
+      "marks": 3,
+      "repeated": false,
+      "repeatNote": "Electrolysis of water appears in 2025-26 (Q27); not in the 2024-25 paper, so not tagged repeated.",
+      "source": "CBSE Sample Paper 2025-26, Q27 (official marking scheme)",
+      "text": "Amrita passed electricity through distilled water but the bulb did not glow. She then added a substance for electrolysis. A. Which gas forms at the anode and which at the cathode? B. Why did the bulb not glow with distilled water? C. Which substance did she add?",
+      "points": [
+        {
+          "text": "Oxygen at the anode, hydrogen at the cathode.",
+          "marks": 1,
+          "keywords": [
+            [
+              "oxygen",
+              "o2"
+            ],
+            [
+              "anode"
+            ],
+            [
+              "hydrogen",
+              "h2"
+            ],
+            [
+              "cathode"
+            ]
+          ]
+        },
+        {
+          "text": "Distilled water is a poor conductor of electricity.",
+          "marks": 1,
+          "keywords": [
+            [
+              "distilled"
+            ],
+            [
+              "poor conductor",
+              "does not conduct",
+              "no ions"
+            ]
+          ]
+        },
+        {
+          "text": "She added a few drops of H2SO4 (or NaCl / any strong electrolyte).",
+          "marks": 1,
+          "keywords": [
+            [
+              "h2so4",
+              "sulphuric acid",
+              "nacl",
+              "electrolyte",
+              "salt",
+              "acid"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2526-q19",
+      "marks": 1,
+      "repeated": true,
+      "repeatNote": "Metal-salt displacement with CuSO4 appeared in both 2024-25 (Q5, lead) and 2025-26 (Q19, iron nail).",
+      "source": "CBSE Sample Paper 2025-26, Q19 (MCQ, official marking scheme)",
+      "text": "An iron nail is added to test tube P (aqueous copper(II) sulphate) and Q (aqueous silver nitrate). The correct observation is: (official answer: brown coating in P, silver coating in Q - explain WHY both reactions happen)",
+      "points": [
+        {
+          "text": "Iron is more reactive than copper and silver, so it displaces both from their salt solutions.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "more reactive"
+            ],
+            [
+              "displace"
+            ]
+          ]
+        },
+        {
+          "text": "Fe + CuSO4 -> FeSO4 + Cu (brown copper coating); Fe + 2AgNO3 -> Fe(NO3)2 + 2Ag (silver coating).",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "cuso4",
+              "feso4",
+              "brown",
+              "copper"
+            ],
+            [
+              "agno3",
+              "silver"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2425-q5",
+      "marks": 1,
+      "repeated": true,
+      "repeatNote": "Metal-salt displacement with CuSO4 appeared in both 2024-25 (Q5, lead) and 2025-26 (Q19, iron nail).",
+      "source": "CBSE Sample Paper 2024-25, Q5 (MCQ, official marking scheme)",
+      "text": "When lead powder is added to blue copper sulphate solution, after a few hours the solution becomes colourless. What type of reaction is this, and why does the colour disappear? (official answer: displacement)",
+      "points": [
+        {
+          "text": "It is a displacement reaction.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "displacement"
+            ]
+          ]
+        },
+        {
+          "text": "Lead (more reactive) displaces copper: Pb + CuSO4 -> PbSO4 + Cu, so blue CuSO4 is used up and the colour disappears.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "lead",
+              "pb",
+              "more reactive"
+            ],
+            [
+              "cuso4",
+              "pbso4",
+              "copper displaced",
+              "colour",
+              "color"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyq-2425-q7",
+      "marks": 1,
+      "repeated": true,
+      "repeatNote": "Exo/endothermic identification appeared in both years (2024-25 Q7; 2025-26 Q27 variant tags 2Mg+O2 as exothermic and ZnCO3 as endothermic).",
+      "source": "CBSE Sample Paper 2024-25, Q7 (MCQ, official marking scheme)",
+      "text": "Which of these is an endothermic reaction - burning a candle, cooking food, decomposition of vegetable matter, or sodium reacting with air? Explain what makes it endothermic. (official answer: cooking of food)",
+      "points": [
+        {
+          "text": "Cooking of food is endothermic.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "cooking",
+              "endothermic"
+            ]
+          ]
+        },
+        {
+          "text": "It absorbs heat from outside (heat must be supplied continuously); the others release heat, so they are exothermic.",
+          "marks": 0.5,
+          "keywords": [
+            [
+              "absorb",
+              "takes in",
+              "supplied"
+            ],
+            [
+              "heat",
+              "energy"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "kb": [
+    {
+      "keywords": [
+        "balanced",
+        "balance",
+        "balancing",
+        "why balance"
+      ],
+      "question": "Why do we balance chemical equations?",
+      "answer": "Ek reaction mein atoms na bante hain na mit te hain (law of conservation of mass). Isliye dono side har element ke atoms equal hone chahiye - isi ko balancing kehte hain. Unbalanced equation galat hota hai kyunki woh mass conserve nahi karta.",
+      "source": "NCERT Class 10 Science, Ch.1 §1.1.2 (law of conservation of mass)",
+      "card": "balancing-steps.png"
+    },
+    {
+      "keywords": [
+        "combination",
+        "combination reaction"
+      ],
+      "question": "What is a combination reaction?",
+      "answer": "Jab 2 ya zyada reactants milke SIRF EK product banate hain, woh combination reaction hai. Example: CaO + H2O -> Ca(OH)2 (quicklime + paani = slaked lime). Yaad rakho: A + B -> AB.",
+      "source": "NCERT Class 10 Science, Ch.1 (Eq. 1.13 and after)",
+      "card": "reaction-types.png"
+    },
+    {
+      "keywords": [
+        "decomposition"
+      ],
+      "question": "What is a decomposition reaction?",
+      "answer": "Isme EK reactant toot ke 2 ya zyada products banata hai - combination ka ulta. 3 types: thermal (heat se, jaise CaCO3 -> CaO + CO2), electrolytic (electricity se, jaise 2H2O -> 2H2 + O2), photolytic (light se, jaise 2AgCl -> 2Ag + Cl2).",
+      "source": "NCERT Class 10 Science, Ch.1 (Eq. 1.19-1.22)",
+      "card": "decomposition-types.png"
+    },
+    {
+      "keywords": [
+        "displacement"
+      ],
+      "question": "What is a displacement reaction?",
+      "answer": "Zyada reactive element kam reactive element ko uske compound se hata deta hai. Example: Fe + CuSO4 -> FeSO4 + Cu - iron nail blue copper sulphate solution mein daalo, solution green ho jata hai aur nail pe brown copper jamta hai.",
+      "source": "NCERT Class 10 Science, Ch.1, Activity 1.9 (iron nail in CuSO4)",
+      "card": "reaction-types.png"
+    },
+    {
+      "keywords": [
+        "double displacement",
+        "precipitate",
+        "precipitation"
+      ],
+      "question": "What is a double displacement / precipitation reaction?",
+      "answer": "Do compounds apne ions exchange karte hain. Agar ek product insoluble solid (precipitate) bane toh use precipitation reaction bhi kehte hain. Example: Na2SO4 + BaCl2 -> BaSO4 (white ppt) + 2NaCl.",
+      "source": "NCERT Class 10 Science, Ch.1, Activity 1.10 (Na2SO4 + BaCl2)",
+      "card": "reaction-types.png"
+    },
+    {
+      "keywords": [
+        "exothermic",
+        "endothermic",
+        "heat"
+      ],
+      "question": "Exothermic vs endothermic?",
+      "answer": "Exothermic = heat RELEASE hoti hai (jalna, respiration, CaO + paani). Endothermic = heat ABSORB hoti hai (CaCO3 ko heat karna, photosynthesis). Exam tip: 'exo' = exit, heat bahar nikalti hai.",
+      "source": "NCERT Class 10 Science, Ch.1 (after Eq. 1.17)",
+      "card": "exo-endo.png"
+    },
+    {
+      "keywords": [
+        "oxidation",
+        "reduction",
+        "redox",
+        "oxidised",
+        "oxidized"
+      ],
+      "question": "What are oxidation and reduction?",
+      "answer": "Oxidation = oxygen ka judna YA hydrogen ka nikalna. Reduction = oxygen ka nikalna YA hydrogen ka judna. Dono saath mein hote hain - isliye 'redox' reaction. Example: CuO + H2 -> Cu + H2O mein CuO reduce hota hai, H2 oxidise hota hai.",
+      "source": "NCERT Class 10 Science, Ch.1 (oxidation-reduction section)"
+    },
+    {
+      "keywords": [
+        "rancidity",
+        "rancid"
+      ],
+      "question": "What is rancidity?",
+      "answer": "Jab oil/fat wale food hawa ke oxygen se react karke kharaab smell aur taste de dete hain, use rancidity kehte hain. Rokne ke liye: airtight container, antioxidants (BHA/BHT), ya chips packet mein nitrogen gas bharna.",
+      "source": "NCERT Class 10 Science, Ch.1 §1.3.2"
+    },
+    {
+      "keywords": [
+        "corrosion",
+        "rust",
+        "rusting"
+      ],
+      "question": "What is corrosion and rusting?",
+      "answer": "Metal ka dheere-dheere hawa/moisture se react karke kharab hona corrosion hai. Iron ka corrosion = rusting (brown rust, Fe2O3.xH2O). Rokne ke liye painting, oiling, galvanisation (zinc coating) karte hain.",
+      "source": "NCERT Class 10 Science, Ch.1 §1.3.1 (prevention detail from Ch.3)",
+      "card": "corrosion-rusting.png"
+    },
+    {
+      "keywords": [
+        "magnesium",
+        "ribbon"
+      ],
+      "question": "Why clean magnesium ribbon before burning?",
+      "answer": "Ribbon ke surface pe magnesium oxide ki layer jam jati hai jo burning rokti hai. Sandpaper se saaf karne se pure magnesium expose hota hai aur woh aache se jalta hai: 2Mg + O2 -> 2MgO (dazzling white light).",
+      "source": "NCERT Class 10 Science, Ch.1, Activity 1.1"
+    },
+    {
+      "keywords": [
+        "respiration"
+      ],
+      "question": "Why is respiration exothermic?",
+      "answer": "Digestion mein carbohydrates glucose mein tootte hain. Glucose oxygen ke saath react karke CO2 + water + ENERGY deta hai. Energy release ho rahi hai, isliye respiration exothermic reaction hai.",
+      "source": "NCERT Class 10 Science, Ch.1 (Eq. 1.18)"
+    },
+    {
+      "keywords": [
+        "slaked lime",
+        "whitewash",
+        "quicklime",
+        "calcium oxide"
+      ],
+      "question": "Quicklime, slaked lime and whitewashing?",
+      "answer": "CaO (quicklime) + H2O -> Ca(OH)2 (slaked lime) + bahut heat. Whitewash mein Ca(OH)2 ka solution lagate hain; woh hawa ke CO2 se 2-3 din mein react karke CaCO3 (chamakta white layer) banata hai.",
+      "source": "NCERT Class 10 Science, Ch.1 (Eq. 1.13, 1.16)"
+    },
+    {
+      "keywords": [
+        "electrolysis",
+        "electrolytic"
+      ],
+      "question": "What is electrolysis of water?",
+      "answer": "Acidified water mein electric current pass karo toh water tootta hai: 2H2O -> 2H2 + O2. Cathode pe hydrogen (double volume), anode pe oxygen. Ye electrolytic decomposition ka classic example hai.",
+      "source": "NCERT Class 10 Science, Ch.1, Activity 1.7 (Fig. 1.6)",
+      "card": "electrolysis-water.png"
+    },
+    {
+      "keywords": [
+        "silver chloride",
+        "agcl",
+        "photography",
+        "photolytic"
+      ],
+      "question": "Why is AgCl stored in dark bottles?",
+      "answer": "AgCl sunlight mein toot jata hai (photolytic decomposition): 2AgCl -> 2Ag + Cl2 - grey silver ban jata hai. Isliye light se bachane ke liye dark coloured bottles mein rakhte hain.",
+      "source": "NCERT Class 10 Science, Ch.1, Activity 1.8 (Eq. 1.22)",
+      "card": "decomposition-types.png"
+    },
+    {
+      "keywords": [
+        "ferrous sulphate",
+        "feso4",
+        "green vitriol"
+      ],
+      "question": "Heating ferrous sulphate?",
+      "answer": "Green ferrous sulphate crystals heat karne pe tootte hain: 2FeSO4 -> Fe2O3 + SO2 + SO3. Colour green se brown (Fe2O3) ho jata hai aur sulphur ke oxide gases nikalti hain. Thermal decomposition hai ye.",
+      "source": "NCERT Class 10 Science, Ch.1, Activity 1.6 (Eq. 2FeSO4 -> Fe2O3 + SO2 + SO3)",
+      "card": "decomposition-types.png"
+    }
+  ],
+  "teachTopics": [
+    {
+      "id": "t-balancing",
+      "name": "Why do we balance equations?",
+      "juniorOpening": "Bhaiya/didi, mujhe ye balancing samajh hi nahi aati. Equation aise hi likh do na, balance kyun karna hai?",
+      "points": [
+        {
+          "text": "Atoms can neither be created nor destroyed in a reaction (law of conservation of mass).",
+          "keywords": [
+            [
+              "conservation of mass",
+              "created nor destroyed",
+              "atoms neither",
+              "mass conserve"
+            ]
+          ]
+        },
+        {
+          "text": "So each element must have equal atoms on both sides of the equation.",
+          "keywords": [
+            [
+              "equal"
+            ],
+            [
+              "both sides",
+              "left and right",
+              "reactant and product",
+              "dono side",
+              "donon side"
+            ]
+          ]
+        },
+        {
+          "text": "We balance by changing the numbers (coefficients) in front of formulas, never the formulas themselves.",
+          "keywords": [
+            [
+              "coefficient",
+              "number in front",
+              "numbers in front"
+            ],
+            [
+              "formula",
+              "formulas",
+              "subscript"
+            ]
+          ]
+        },
+        {
+          "text": "An unbalanced equation is wrong because it breaks that law.",
+          "keywords": [
+            [
+              "wrong",
+              "incorrect",
+              "galat",
+              "breaks the law",
+              "violat"
+            ]
+          ]
+        }
+      ],
+      "followUps": [
+        "Par atoms kahan gaye phir? Reaction mein atoms toot te nahi kya?",
+        "Matlab left side aur right side same atoms? Ek example do na!",
+        "Number kahan change karte hain? Formula ke andar wale chhote number bhi badal sakte hain kya?",
+        "Agar balance na karo toh kya bigad jayega, seriously?"
+      ],
+      "gotIt": "OHHH! Ab samjha - atoms same rakhne hote hain dono side, isliye coefficients badalte hain. Tum toh teacher se bhi achhe samjhate ho!"
+    },
+    {
+      "id": "t-decomposition",
+      "name": "Decomposition reactions and their types",
+      "juniorOpening": "Yaar ye decomposition reaction kya hota hai? Aur uske types bhi hain?? Confused hu totally.",
+      "points": [
+        {
+          "text": "One reactant breaks down into two or more products.",
+          "keywords": [
+            [
+              "one reactant",
+              "single reactant",
+              "ek reactant",
+              "a compound"
+            ],
+            [
+              "breaks",
+              "toot",
+              "splits",
+              "decomposes"
+            ],
+            [
+              "two or more",
+              "many products",
+              "zyada product"
+            ]
+          ]
+        },
+        {
+          "text": "Thermal decomposition uses heat, e.g. CaCO3 -> CaO + CO2.",
+          "keywords": [
+            [
+              "thermal",
+              "heat",
+              "garam"
+            ],
+            [
+              "caco3",
+              "limestone",
+              "calcium carbonate",
+              "feso4",
+              "ferrous"
+            ]
+          ]
+        },
+        {
+          "text": "Electrolytic decomposition uses electricity, e.g. 2H2O -> 2H2 + O2.",
+          "keywords": [
+            [
+              "electric",
+              "electroly",
+              "current",
+              "bijli"
+            ],
+            [
+              "water",
+              "h2o",
+              "paani"
+            ]
+          ]
+        },
+        {
+          "text": "Photolytic decomposition uses light, e.g. 2AgCl -> 2Ag + Cl2.",
+          "keywords": [
+            [
+              "light",
+              "photo",
+              "sunlight",
+              "dhoop"
+            ],
+            [
+              "agcl",
+              "agbr",
+              "silver chloride",
+              "silver bromide"
+            ]
+          ]
+        }
+      ],
+      "followUps": [
+        "Ek cheez toot ke alag alag ban jati hai? Example do na please!",
+        "Heat se kaise tootta hai? Koi real example?",
+        "Electricity se bhi toot sakta hai?? Kaise?",
+        "Aur light se? Seriously, dhoop se reaction hoti hai?"
+      ],
+      "gotIt": "Samajh gaya! Thermal = heat, electrolytic = current, photolytic = light - teeno mein ek reactant tootta hai. Kal exam mein pakka yaad rahega!"
+    },
+    {
+      "id": "t-exo-endo",
+      "name": "Exothermic vs endothermic",
+      "juniorOpening": "Exo-endo mein hamesha confuse ho jata hu. Kaunsa heat deta hai, kaunsa leta hai? Simple mein batao na.",
+      "points": [
+        {
+          "text": "Exothermic reactions release heat/energy.",
+          "keywords": [
+            [
+              "exothermic"
+            ],
+            [
+              "release",
+              "deta",
+              "nikal",
+              "given out",
+              "evolve"
+            ],
+            [
+              "heat",
+              "energy",
+              "garmi"
+            ]
+          ]
+        },
+        {
+          "text": "Examples: burning, respiration, quicklime + water.",
+          "keywords": [
+            [
+              "burning",
+              "jalna",
+              "combustion",
+              "respiration",
+              "saans",
+              "quicklime",
+              "cao"
+            ]
+          ]
+        },
+        {
+          "text": "Endothermic reactions absorb heat/energy.",
+          "keywords": [
+            [
+              "endothermic"
+            ],
+            [
+              "absorb",
+              "leta",
+              "soak",
+              "take in"
+            ],
+            [
+              "heat",
+              "energy"
+            ]
+          ]
+        },
+        {
+          "text": "Examples: thermal decomposition of CaCO3, photosynthesis.",
+          "keywords": [
+            [
+              "caco3",
+              "decomposition",
+              "photosynthesis",
+              "khana ban"
+            ]
+          ]
+        }
+      ],
+      "followUps": [
+        "Release matlab? Garam hota hai kya reaction? Example?",
+        "Respiration mein heat kaise nikalti hai, hum toh jalte nahi?",
+        "Toh endothermic mein thanda ho jata hai kya? Example batao na.",
+        "Photosynthesis mein heat kahan se aati hai?"
+      ],
+      "gotIt": "Exo = heat bahar, endo = heat andar! Respiration aur burning exo, CaCO3 ka decomposition endo. Easy tha ye toh, thanks!"
+    },
+    {
+      "id": "t-oxidation",
+      "name": "Oxidation, reduction and redox",
+      "juniorOpening": "Oxidation-reduction suna hai but kabhi samajh nahi aaya. Redox kya hota hai bhaiya/didi?",
+      "points": [
+        {
+          "text": "Oxidation = gain of oxygen or loss of hydrogen.",
+          "keywords": [
+            [
+              "oxidation"
+            ],
+            [
+              "gain of oxygen",
+              "oxygen jud",
+              "loss of hydrogen",
+              "hydrogen hat"
+            ]
+          ]
+        },
+        {
+          "text": "Reduction = loss of oxygen or gain of hydrogen.",
+          "keywords": [
+            [
+              "reduction"
+            ],
+            [
+              "loss of oxygen",
+              "oxygen hat",
+              "gain of hydrogen",
+              "hydrogen jud"
+            ]
+          ]
+        },
+        {
+          "text": "Both happen together - that is why it is called a redox reaction.",
+          "keywords": [
+            [
+              "together",
+              "saath",
+              "same time",
+              "redox"
+            ]
+          ]
+        },
+        {
+          "text": "Example: CuO + H2 -> Cu + H2O, CuO reduced, H2 oxidised.",
+          "keywords": [
+            [
+              "cuo",
+              "copper oxide"
+            ],
+            [
+              "h2",
+              "hydrogen"
+            ],
+            [
+              "cu",
+              "copper"
+            ]
+          ]
+        }
+      ],
+      "followUps": [
+        "Oxygen judna = oxidation? Toh reduction mein kya hota hai?",
+        "Dono ek saath kaise ho sakte hain? Ek hi reaction mein?",
+        "Ek example se samjhao na, formula wala!",
+        "Toh CuO + H2 wale mein kiska oxidation, kiska reduction?"
+      ],
+      "gotIt": "Aha! Oxidation aur reduction hamesha saath hote hain - isliye redox. CuO ka oxygen H2 ko mil gaya, sorted!"
+    },
+    {
+      "id": "t-corrosion",
+      "name": "Corrosion, rusting and rancidity",
+      "juniorOpening": "Cycle kyun rust ho jati hai aur chips kyun stale? Corrosion aur rancidity same hai kya?",
+      "points": [
+        {
+          "text": "Corrosion: metal slowly destroyed by reaction with air/moisture around it.",
+          "keywords": [
+            [
+              "corrosion",
+              "metal"
+            ],
+            [
+              "air",
+              "moisture",
+              "oxygen",
+              "water"
+            ],
+            [
+              "slow",
+              "dheere",
+              "gradually"
+            ]
+          ]
+        },
+        {
+          "text": "Rusting of iron: hydrated iron oxide Fe2O3.xH2O forms.",
+          "keywords": [
+            [
+              "rust",
+              "iron",
+              "fe2o3"
+            ],
+            [
+              "oxygen",
+              "moisture",
+              "water"
+            ]
+          ]
+        },
+        {
+          "text": "Prevention: painting, oiling, galvanisation.",
+          "keywords": [
+            [
+              "paint",
+              "oil",
+              "grease",
+              "galvani",
+              "zinc"
+            ]
+          ]
+        },
+        {
+          "text": "Rancidity: oxidation of oils/fats in food; prevented by airtight packing, antioxidants, nitrogen flushing.",
+          "keywords": [
+            [
+              "rancid"
+            ],
+            [
+              "oil",
+              "fat",
+              "food"
+            ],
+            [
+              "airtight",
+              "antioxidant",
+              "nitrogen"
+            ]
+          ]
+        }
+      ],
+      "followUps": [
+        "Metal hawa se react karta hai? Har metal?",
+        "Rust ka formula kya hai, exam mein aata hai kya?",
+        "Rust rokne ke liye kya kare? Ghar pe kya karte hain?",
+        "Aur chips packet mein nitrogen kyun bharte hain?"
+      ],
+      "gotIt": "Clear hai! Corrosion = metal ka kharab hona, rancidity = food ke fats ka oxidation. Dono oxidation hi hai basically!"
+    }
+  ],
+  "explainers": [
+    {
+      "id": "x-balancing",
+      "title": "Why your equation is 'wrong' even when it's right",
+      "hook": "You wrote Mg + O2 -> MgO in the exam. Correct reaction, na? Still zero. The examiner's red pen didn't even blink.",
+      "concept": "Atoms can't appear or vanish mid-reaction - that's the law of conservation of mass (NCERT Ch.1, §1.1.2). Mg + O2 -> MgO has 2 oxygens entering and only 1 leaving. An unbalanced equation claims matter vanished, so it's not an approximation, it's wrong. Balance with coefficients only: 2Mg + O2 -> 2MgO. Never touch the formula itself.",
+      "hack": "Write the unbalanced equation first, then balance it as a separate visible step. Examiners award the balancing mark when they SEE the step. Doing it in your head hides your own mark.",
+      "hackSource": "Visible step-by-step answers work like self-explanation - Make It Stick (Brown, Roediger & McDaniel, 2014).",
+      "card": "balancing-steps.png",
+      "learnMore": [
+        {
+          "label": "NCERT official chapter PDF (Ch.1)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc101.pdf"
+        },
+        {
+          "label": "Khan Academy: balancing chemical equations (video)",
+          "url": "https://www.khanacademy.org/science/chemistry/chemical-reactions-stoichiome/balancing-chemical-equations/v/balancing-more-complex-chemical-equation"
+        }
+      ]
+    },
+    {
+      "id": "x-four-types",
+      "title": "The 4 reaction types are 4 dance moves",
+      "hook": "Combination = two people become one couple. Decomposition = couple splits, both dance solo. Displacement = someone cuts in. Double displacement = everyone swaps partners.",
+      "concept": "NCERT Ch.1 defines them by pattern: A+B->AB (combination, Eq. 1.13), AB->A+B (decomposition, Eq. 1.19-1.22), A+BC->AC+B (displacement, Activity 1.9), AB+CD->AD+CB (double displacement, Activity 1.10). Identify the PATTERN first, name the reaction second - never the other way round.",
+      "hack": "Before the exam, take 10 random equations and sort them into the 4 patterns out loud. Sorting mixed types beats studying one type at a time - that's interleaving.",
+      "hackSource": "Interleaving mixed practice improves discrimination between problem types - Make It Stick (Brown, Roediger & McDaniel, 2014).",
+      "card": "reaction-types.png",
+      "learnMore": [
+        {
+          "label": "NCERT official chapter PDF (Ch.1)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc101.pdf"
+        },
+        {
+          "label": "Khan Academy: types of chemical reactions",
+          "url": "https://www.khanacademy.org/science/chemistry/chemical-reactions/types-of-reactions/a/types-of-chemical-reactions"
+        }
+      ]
+    },
+    {
+      "id": "x-exo-endo",
+      "title": "Your body's heating bill: exo vs endo",
+      "hook": "Ever touched a beaker when quicklime met water in the lab? It burns. That beaker was paying out heat like a heater with the window open.",
+      "concept": "Exothermic = heat released along with products (NCERT Ch.1, after Eq. 1.17): burning, respiration (Eq. 1.18: glucose + oxygen -> CO2 + water + energy), CaO + water. Endothermic = heat absorbed: thermal decomposition of CaCO3, photosynthesis. Respiration is the classic trap - it FEELS like nothing is burning, but it releases energy, so it's exothermic.",
+      "hack": "When a 'which is exothermic?' MCQ appears, physically recall the warm-beaker feeling for 5 seconds, then answer. Tying facts to a sensory memory makes them stickier.",
+      "hackSource": "Linking new facts to concrete memories aids retrieval - Make It Stick (2014); retrieval itself strengthens memory (Roediger & Karpicke, Psychological Science, 2006).",
+      "card": "exo-endo.png",
+      "learnMore": [
+        {
+          "label": "NCERT official chapter PDF (Ch.1)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc101.pdf"
+        },
+        {
+          "label": "Khan Academy: endothermic vs exothermic reactions",
+          "url": "https://www.khanacademy.org/science/chemistry/thermochemistry-chemistry/enthalpy/a/endothermic-vs-exothermic-reactions"
+        }
+      ]
+    },
+    {
+      "id": "x-corrosion",
+      "title": "The brown powder eating your cycle",
+      "hook": "That reddish-brown powder on an old cycle isn't dirt. It's the iron literally reacting away into the air, molecule by molecule.",
+      "concept": "Corrosion: a metal is attacked by substances around it - moisture, acids (NCERT Ch.1, §1.3.1). Rusting is iron's corrosion; silver blackens and copper turns green too. Rancidity is the food version: fats and oils get oxidised, smell and taste change (§1.3.2). Prevention from the same chapter: antioxidants, airtight containers, nitrogen-flushed chip bags.",
+      "hack": "Rancidity's three preventions come as a 2-marker nearly every cycle. Recite them from memory right now without looking - if you can't, that's the one to revise tonight.",
+      "hackSource": "Self-testing beats re-reading for long-term retention - Roediger & Karpicke, Psychological Science (2006); spacing over days - Ebbinghaus (1885).",
+      "card": "corrosion-rusting.png",
+      "learnMore": [
+        {
+          "label": "NCERT official chapter PDF (Ch.1)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc101.pdf"
+        },
+        {
+          "label": "Khan Academy (Class 10 Science): corrosion and its prevention",
+          "url": "https://www.khanacademy.org/science/up-class-10th-science/x5d08d26681869997:metals-and-non-metals/x5d08d26681869997:untitled-136/e/corrosion"
+        }
+      ]
+    },
+    {
+      "id": "x-electrolysis",
+      "title": "Water splits, but only if you add a pinch of chemistry",
+      "hook": "A student connects a battery to plain distilled water. Nothing happens. Bulb stays dark. The exam asks WHY - and 'no electricity' is not the answer.",
+      "concept": "Distilled water is a poor conductor; a few drops of dilute H2SO4 make it conduct (NCERT Ch.1, Activity 1.7). Then: 2H2O -> 2H2 + O2, hydrogen at the cathode at DOUBLE the volume of oxygen at the anode. This was CBSE Sample Paper 2025-26 Q27, all three parts.",
+      "hack": "Remember 'cathode = H2 = double'. One anchor fact, and the anode answer falls out free. Anchor facts beat re-reading whole paragraphs.",
+      "hackSource": "Small retrieval anchors strengthen recall of linked facts - Roediger & Karpicke (2006).",
+      "card": "electrolysis-water.png",
+      "learnMore": [
+        {
+          "label": "NCERT official chapter PDF (Ch.1)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc101.pdf"
+        },
+        {
+          "label": "Khan Academy: introduction to electrolysis (video)",
+          "url": "https://www.khanacademy.org/science/ap-chemistry/redox-reactions-and-electrochemistry-ap/electrolytic-cells-and-electrolysis-tutorial-ap/v/introduction-to-electrolysis"
+        }
+      ]
+    },
+    {
+      "id": "x-decomposition",
+      "title": "One breaks into many, three different ways",
+      "hook": "Limestone in a kiln, water under current, a photograph fading in sunlight - three unrelated scenes, one reaction type.",
+      "concept": "Decomposition = one reactant breaks into two or more products (NCERT Ch.1, Eq. 1.19-1.22). The three triggers: HEAT (thermal: CaCO3 -> CaO + CO2; 2FeSO4 -> Fe2O3 + SO2 + SO3), ELECTRICITY (electrolytic: 2H2O -> 2H2 + O2), LIGHT (photolytic: 2AgCl -> 2Ag + Cl2, why photo films hate sunlight).",
+      "hack": "Teach this to a friend (or our Junior) without notes. Explaining the three triggers with one example each is the fastest way to find out which one you actually don't know.",
+      "hackSource": "Learning by teaching - Kobayashi meta-analysis (Japanese Psychological Research, 2019); the Feynman technique.",
+      "card": "decomposition-types.png",
+      "learnMore": [
+        {
+          "label": "NCERT official chapter PDF (Ch.1)",
+          "url": "https://ncert.nic.in/textbook/pdf/jesc101.pdf"
+        },
+        {
+          "label": "Khan Academy: types of chemical reactions",
+          "url": "https://www.khanacademy.org/science/chemistry/chemical-reactions/types-of-reactions/a/types-of-chemical-reactions"
+        }
+      ]
+    }
+  ]
+}
