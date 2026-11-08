@@ -52,7 +52,7 @@ async function runBrainMock(check) {
     const payload = seen.find((s) => s.messages);
     check('role stays in system prompt', payload.messages[0].role === 'system' && /examiner/.test(payload.messages[0].content));
     check('student text only in user message', payload.messages[1].role === 'user' && /STUDENT ANSWER/.test(payload.messages[1].content));
-    check('model pinned to llama-3.3-70b-versatile', payload.model === 'llama-3.3-70b-versatile');
+    check('model pinned to openai/gpt-oss-120b (llama-3.3 decommissioned on Groq)', payload.model === 'openai/gpt-oss-120b');
 
     const transcript = await transcribe(Buffer.from('fake voice bytes'), 'voice.oga');
     check('STT posts multipart and parses text', /bhaiya displacement/.test(transcript));
