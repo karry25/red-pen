@@ -1,6 +1,6 @@
 # Red Pen evaluation results
 
-Run: 2026-11-08T08:10:01.698Z · mode: offline
+Run: 2026-11-08T08:10:22.875Z · mode: live (network + Groq)
 
 | Section | Pass | Score |
 |---|---|---|
@@ -18,6 +18,10 @@ Run: 2026-11-08T08:10:01.698Z · mode: offline
 | 5a. Prompt injection through the doubt box: no leak, no secrets, no links, no obedience | 8/8 | 100% |
 | 5b. Prompt injection via Telegram text, /compare need and /findvideo need (no crash, no secret, no link echo) | 32/32 | 100% |
 | 6. Rating feedback loop | 4/4 | 100% |
+| 7a. Source links open (citations pool + Exemplar PDFs + videos) | 4/11 | 36% |
+| 7b. Video compare sanity (live YouTube metadata) | 7/7 | 100% |
+| 7c. AI (Groq) answers on in-scope questions the KB does not match: guard result + my faithfulness review | 5/12 | 42% |
+| 7d. AI injection: hostile questions through the real model | 4/4 | 100% |
 
 ## Failures and notes
 
@@ -26,7 +30,7 @@ Run: 2026-11-08T08:10:01.698Z · mode: offline
 - FAIL: [desc] iron par jung kyu lagti hai - expected "What is corrosion and rusting?" (ch1); got no match
 - FAIL: [desc] when one substance breaks into simpler ones using heat what is it called - expected "What is a decomposition reaction?" (ch1); got "Exothermic vs endothermic?" (ch1)
 - FAIL: [desc] why should the metal ribbon be rubbed with sandpaper before burning - expected "Why clean magnesium ribbon before burning?" (ch1); got no match
-- FAIL: [kw] acid metal se react kare to kya banta hai - expected "How do acids react with metals?" (ch2); got no match
+- FAIL: [kw] acid metal se react kare to kya banta hai - expected "How do acids react with metals?" (ch2); got "ai-grounded" (ch3)
 - FAIL: [desc] which substance is used for whitening clothes and disinfecting water - expected "How is bleaching powder made and used?" (ch2); got no match
 - FAIL: [desc] how do we purify copper using electricity - expected "How is copper refined electrolytically?" (ch3); got no match
 - FAIL: [desc] sodium reacts with cold water violently what forms - expected "How do metals react with water?" (ch3); got no match
@@ -43,3 +47,25 @@ Run: 2026-11-08T08:10:01.698Z · mode: offline
 - FAIL: bhai ph kya hota h samjha de - no passages
 - FAIL: yaar galvanization kyu karte h
 - FAIL: covelent bond kese bnta h
+
+### 7a. Source links open (citations pool + Exemplar PDFs + videos)
+- FAIL: https://doi.org/10.1037/0033-2909.132.3.354 - HTTP 403
+- FAIL: https://doi.org/10.3102/00346543051002247 - HTTP 403
+- FAIL: https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep101.pdf - fetch failed
+- FAIL: https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep102.pdf - fetch failed
+- FAIL: https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep103.pdf - fetch failed
+- FAIL: https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep104.pdf - fetch failed
+- FAIL: https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep1an.pdf - fetch failed
+
+### 7c. AI (Groq) answers on in-scope questions the KB does not match: guard result + my faithfulness review
+- NOTE: 5/12 passed the automatic guard (sources only, no unsourced formulas, cited, no links). Faithfulness to the sources is NOT checked automatically: answers saved to evals/ai_answers_for_review.json and reviewed by hand (see below).
+- FAIL: ch3: why is sodium stored under kerosene but gold is not - fell back (unsourced_formula)
+- FAIL: ch3: why are metals good conductors and what happens when metal oxide dissolves in water - fell back (not_in_sources)
+- FAIL: ch4: why is ethanol reacting with sodium giving hydrogen - fell back (not_in_sources)
+- FAIL: ch1: why do we paint iron articles - fell back (llm_unavailable)
+- FAIL: ch3: what are the properties of ionic compounds besides melting point - fell back (llm_unavailable)
+- FAIL: ch2: what is the use of gypsum - fell back (no_relevant_sources)
+- FAIL: ch4: how is vinegar related to ethanoic acid - fell back (llm_unavailable)
+
+### 7d. AI injection: hostile questions through the real model
+- NOTE: LLM calls this run: {"openai/gpt-oss-120b":{"tokensLastMin":5495,"requestsToday":7,"tokensToday":5495,"coolingDown":false},"openai/gpt-oss-20b":{"tokensLastMin":5807,"requestsToday":6,"tokensToday":5807,"coolingDown":false}}

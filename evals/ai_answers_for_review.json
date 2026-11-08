@@ -1,0 +1,92 @@
+[
+ {
+  "c": "ch2",
+  "q": "why should we always add acid to water and not water to acid",
+  "ok": true,
+  "answer": "Acid ko paani mein daalna safe hota hai kyunki concentrated acid aur paani milane se bahut heat release hoti hai (exothermic). Agar aap paani ko acid mein daalte ho, to wo heat turant generate hoti hai, mixture splash ho sakta hai aur aapko ya glass ko nuksan pahunch sakta hai. Acid ko dheere‑dheere paani mein stir karte hue daalne se heat thodi‑thodi release hoti hai, isliye splash aur burn ka risk kam ho jata hai.",
+  "sources": [
+   "NCERT Class 10 Science, Ch.2 (ncert.nic.in jesc102, Reprint 2026-27) (marking points)"
+  ]
+ },
+ {
+  "c": "ch2",
+  "q": "difference between alkali and base with example",
+  "ok": true,
+  "answer": "Alkali aur base dono hi “OH‑” dene wale substances hote hain, lekin unka use thoda alag hota hai. **Base** – koi bhi aisa material jo metal ke saath react karke hydrogen gas (H₂) de, jaise NaOH jab Zn se react karta hai (Zn + NaOH → H₂ + …). **Alkali** – wo base jo paani mein dissolve ho kar solution banata hai; chlor‑alkali process mein electricity se NaCl aur paani se NaOH solution banta hai, isliye NaOH ko alkali kehte hain. Example dono ke liye: NaOH.",
+  "sources": [
+   "NCERT Class 10 Science, Ch.2, Section 2.1.2, Activity 2.3-2.4 (notes: How do acids react with metals?)",
+   "NCERT Class 10 Science, Ch.2, 'Common salt - a raw material for chemicals' (notes: What is the chlor-alkali process?)"
+  ]
+ },
+ {
+  "c": "ch3",
+  "q": "why is sodium stored under kerosene but gold is not",
+  "ok": false,
+  "why": "unsourced_formula"
+ },
+ {
+  "c": "ch1",
+  "q": "what is the colour change when copper sulphate reacts with iron nail",
+  "ok": true,
+  "answer": "Copper sulphate solution pe iron nail daalne se solution ka rang blue se green ho jata hai, aur iron nail pe brown rang ka copper jamta hai.",
+  "sources": [
+   "NCERT Class 10 Science, Ch.1, Activity 1.9 (iron nail in CuSO4) (notes: What is a displacement reaction?)"
+  ]
+ },
+ {
+  "c": "ch3",
+  "q": "why are metals good conductors and what happens when metal oxide dissolves in water",
+  "ok": false,
+  "why": "not_in_sources"
+ },
+ {
+  "c": "ch4",
+  "q": "why is ethanol reacting with sodium giving hydrogen",
+  "ok": false,
+  "why": "not_in_sources"
+ },
+ {
+  "c": "ch2",
+  "q": "why is sodium hydrogencarbonate used to treat acidity",
+  "ok": true,
+  "answer": "Sodium hydrogencarbonate (baking soda) ek mild base hai. Jab stomach me zyada HCl hota hai, to baking soda us acid ko neutralise kar deta hai, jis se acidity kam hoti hai aur dard door hota hai. Isliye ise antacid ke roop me use kiya jata hai.",
+  "sources": [
+   "NCERT Class 10 Science, Ch.2 (ncert.nic.in jesc102, Reprint 2026-27) (marking points)",
+   "NCERT Class 10 Science, Ch.2, Section 2.2.4 (pH in everyday life) (notes: Why are antacids used for acidity?)"
+  ]
+ },
+ {
+  "c": "ch4",
+  "q": "what happens when soap is added to hard water",
+  "ok": true,
+  "answer": "Hard water mein calcium aur magnesium ke ions hote hain. Jab soap (carboxylic acid ka sodium/potassium salt) hard water mein daala jata hai, to ye ions soap ke saath react karke ek insoluble substance banate hain jise scum kehte hain. Isse foam kam ho jata hai aur soap waste ho jata hai.",
+  "sources": [
+   "NCERT Class 10 Science, Ch.4, Section 4.5 (detergents) (notes: Why doesn't soap work in hard water?)",
+   "NCERT Class 10 Science, Ch.4 (ncert.nic.in jesc104, Reprint 2026-27) (marking points)"
+  ]
+ },
+ {
+  "c": "ch1",
+  "q": "why do we paint iron articles",
+  "ok": false,
+  "why": "llm_unavailable"
+ },
+ {
+  "c": "ch3",
+  "q": "what are the properties of ionic compounds besides melting point",
+  "ok": false,
+  "why": "llm_unavailable"
+ },
+ {
+  "c": "ch2",
+  "q": "what is the use of gypsum",
+  "ok": false,
+  "why": "no_relevant_sources"
+ },
+ {
+  "c": "ch4",
+  "q": "how is vinegar related to ethanoic acid",
+  "ok": false,
+  "why": "llm_unavailable"
+ }
+]
