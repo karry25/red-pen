@@ -142,6 +142,7 @@ async function post(p, body) {
   const trav = await fetch(base + '/../../etc/passwd');
   check('path traversal blocked', trav.status === 404 || trav.status === 403);
 
+  await require('./pwa_test').runPwaTests(check);
   server.kill();
 
   // Telegram simulation
@@ -174,7 +175,6 @@ async function post(p, body) {
   await require('./memory_test').runMemoryTests(check);
   await require('./features_test').runFeatureTests(check);
   await require('./scale_test').runScaleTests(check);
-  await require('./pwa_test').runPwaTests(check);
 
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed ? 1 : 0);
