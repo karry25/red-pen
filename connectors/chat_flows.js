@@ -3,6 +3,7 @@
 // web app uses. Channel-agnostic: Telegram is the first adapter; the
 // flow only ever sees {chatId, text} and returns {text, ...} replies.
 const { gradeAnswer } = require('../agents/module1');
+const { playlist, formatForChat } = require('../agents/playlist');
 const { answerDoubt } = require('../agents/module2');
 const module3 = require('../agents/module3');
 const module4 = require('../agents/module4');
@@ -16,6 +17,7 @@ const WELCOME = `Hi! I'm Red Pen, your study buddy - ask me a doubt or let me qu
 /teach - teach me a topic, my understanding meter shows if YOU got it
 /plan <days> - revision plan from past-paper weightage
 /goals - today's small study goals
+/videos [topic] - checked video playlist for the active chapter
 /chapter <1-4> - switch the chapter I'm working from
 
 Right now my verified material covers NCERT Class 10 Science chapters 1-4 (Chemical Reactions, Acids-Bases-Salts, Metals & Non-metals, Carbon), with answers backed by the NCERT text and CBSE sample papers. More subjects coming - I'll always tell you honestly what I actually know.
@@ -86,6 +88,11 @@ class ChatFlow {
       const pick = topics[Math.floor(Math.random() * topics.length)];
       this.mode = 'teach'; this.topicId = pick.id;
       return { text: `OK, you are the teacher now!\n\n${pick.juniorOpening}\n\n(Topic: ${pick.name}) - explain in your own words.` };
+    }
+    if (low.startsWith('/videos')) {
+      const ch = this.chapter();
+      const pl = playlist(ch.chapterId, t.slice(7).trim());
+      return { text: formatForChat(`Ch.${ch.number} ${ch.title}`, pl) };
     }
     if (low.startsWith('/doubt')) {
       const d = t.slice(6).trim();

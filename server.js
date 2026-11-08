@@ -5,6 +5,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const { gradeAnswer } = require('./agents/module1');
+const { playlist } = require('./agents/playlist');
 const { answerDoubt, teacherDigest } = require('./agents/module2');
 const coordinator = require('./agents/coordinator');
 const module3 = require('./agents/module3');
@@ -81,6 +82,11 @@ const server = http.createServer((req, res) => {
       } catch { send(res, 400, JSON.stringify({ error: 'Bad request.' })); }
     });
     return;
+  }
+
+  if (req.method === 'GET' && url.pathname === '/api/videos') {
+    const ch = getChapter(url.searchParams.get('chapter') || 'ch1');
+    return send(res, 200, JSON.stringify({ chapterId: ch.chapterId, chapter: `Ch.${ch.number}: ${ch.title}`, ...playlist(ch.chapterId, url.searchParams.get('topic') || '') }));
   }
 
   if (req.method === 'GET' && url.pathname === '/api/explainers') {

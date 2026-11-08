@@ -1,0 +1,26 @@
+{
+ "ch1": [
+  {"topic":"Whole chapter (quick revision)","ncert":"Ch.1 all","videos":[
+    {"id":"Hxd1TNgSuPg","min":26,"level":"full"},{"id":"TfXOwxXprtE","min":26,"level":"full"},{"id":"jSPxGNGUc9g","min":60,"level":"full"},{"id":"_Wv97T-ekSM","min":92,"level":"full"}]},
+  {"topic":"Balancing chemical equations","ncert":"Ch.1 §1.1","videos":[
+    {"id":"AVhOK75I748","min":24},{"id":"7Wx1ooWnjQ0","min":15},{"id":"R4T9O68ckzM","min":6}]},
+  {"topic":"Types of chemical reactions","ncert":"Ch.1 §1.2","videos":[
+    {"id":"EZ2BzRkFDGQ","min":14},{"id":"T963Hrp76lg","min":3,"note":"double displacement/precipitation only"}]},
+  {"topic":"Exothermic and endothermic reactions","ncert":"Ch.1 §1.2","videos":[
+    {"id":"sGQV70Vj83g","min":11}]},
+  {"topic":"Oxidation, reduction, corrosion and rancidity","ncert":"Ch.1 §1.3","videos":[
+    {"id":"FTHgFuhx5xQ","min":9},{"id":"xzu4wO6IC4w","min":4}]}
+ ],
+ "ch2": [
+  {"topic":"Whole chapter (quick revision)","ncert":"Ch.2 all","videos":[
+    {"id":"zv1-ZuLSskQ","min":15,"level":"full"},{"id":"qKl4mieovu0","min":88,"level":"full"},{"id":"baXI34Zb7j0","min":111,"level":"full"},{"id":"Lcvn0uOINwE","min":170,"level":"full"}]},
+  {"topic":"Indicators","ncert":"Ch.2 §2.1","videos":[
+    {"id":"2jCLtfRIXv0","min":6},{"id":"KWKzLWefcyc","min":3}]},
+  {"topic":"pH scale","ncert":"Ch.2 §2.3","videos":[
+    {"id":"ckbsHM2igT0","min":3,"note":"FuseSchool, global English"},{"id":"qCDSfihEhno","min":8,"note":"Khan Academy, middle-school level"}]},
+  {"topic":"Neutralisation","ncert":"Ch.2 §2.2","videos":[
+    {"id":"n9wUdgxCLMQ","min":6,"note":"Professor Dave, general chemistry"}]},
+  {"topic":"Common salt, baking soda, washing soda, bleaching powder, plaster of Paris","ncert":"Ch.2 §2.4","videos":[
+    {"id":"Y-h3mVAm53k","min":13},{"id":"Ci19NCkx8Pk","min":7}]}
+ ]
+}

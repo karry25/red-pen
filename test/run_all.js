@@ -111,6 +111,17 @@ async function post(p, body) {
   const t4 = await (await fetch(base + '/api/teach/topics?chapter=ch4')).json();
   check('ch4 teach topics listed', t4.topics.length === 5 && t4.topics.every((t) => t.chapter === 'ch4'));
 
+  // video playlists (M1)
+  const vp = await (await fetch(base + '/api/videos?chapter=ch2')).json();
+  check('ch2 playlist: 5 topics, every video has id/url/channel', vp.topics.length === 5 && vp.topics.every((t) => t.videos.length && t.videos.every((v) => /^[A-Za-z0-9_-]{11}$/.test(v.id) && v.url.includes(v.id) && v.channel)));
+  const vp34 = await (await fetch(base + '/api/videos?chapter=ch3')).json();
+  check('unverified chapter returns no invented videos', vp34.available === false && vp34.topics.length === 0);
+  const vpt = await (await fetch(base + '/api/videos?chapter=ch2&topic=indicators')).json();
+  check('topic filter works', vpt.topics.length === 1 && /Indicators/.test(vpt.topics[0].topic));
+  const { parseVideoId } = require('../agents/video_meta');
+  check('parseVideoId accepts youtube/youtu.be/shorts', parseVideoId('https://youtu.be/jSPxGNGUc9g?t=5') === 'jSPxGNGUc9g' && parseVideoId('https://www.youtube.com/watch?v=jSPxGNGUc9g&list=x') === 'jSPxGNGUc9g' && parseVideoId('https://youtube.com/shorts/jSPxGNGUc9g') === 'jSPxGNGUc9g');
+  check('parseVideoId rejects other hosts and junk', parseVideoId('https://evil.com/watch?v=jSPxGNGUc9g') === null && parseVideoId('https://youtube.com.evil.com/watch?v=jSPxGNGUc9g') === null && parseVideoId('javascript:alert(1)') === null && parseVideoId('http://169.254.169.254/') === null);
+
   // security
   const trav = await fetch(base + '/../../etc/passwd');
   check('path traversal blocked', trav.status === 404 || trav.status === 403);
@@ -136,6 +147,8 @@ async function post(p, body) {
   check('bot chapter switch to Ch.2', /Acids, Bases and Salts/.test(bot.sendLog.at(-1).text));
   await bot.handleUpdate(upd('/quiz'));
   check('bot quiz from Ch.2', /marks\)/.test(bot.sendLog.at(-1).text));
+  await bot.handleUpdate(upd('/videos pH'));
+  check('bot /videos lists verified pH videos with links', /youtube\.com\/watch\?v=/.test(bot.sendLog.at(-1).text) && /pH scale/.test(bot.sendLog.at(-1).text) && /not watched/.test(bot.sendLog.at(-1).text));
   await bot.handleUpdate(upd('/chapter 1'));
   await bot.handleUpdate({ update_id: ++id, message: { message_id: id, chat: { id: 7 }, voice: { file_id: 'sim-voice' } } });
   check('voice note graceful without keys', /not switched on yet/.test(bot.sendLog.at(-1).text));
