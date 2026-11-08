@@ -66,13 +66,20 @@ async function fetchMeta(idOrUrl) {
     const h = await r.text();
     const d = h.match(/"attributedDescription":\{"content":"(.*?)","commandRuns"/s);
     if (d) out.description = decodeJsonText(d[1]).slice(0, 4000);
-    const titles = [...h.matchAll(/"macroMarkersListItemRenderer":\{"title":\{"simpleText":"(.*?)"\},"timeDescription":\{"simpleText":"([^"]+)"/g)];
+    // each marker: strict JSON-string title, then its own timeDescription within the same block
+    const titles = [];
+    const re = /"macroMarkersListItemRenderer":\{"title":\{"simpleText":"((?:[^"\\]|\\.)*)"\}/g;
+    let mm;
+    while ((mm = re.exec(h))) {
+      const near = h.slice(mm.index, mm.index + 900).match(/"timeDescription":\{(?:"accessibility":\{.*?\}\}\},)?"simpleText":"([\d:]+)"/s);
+      if (near) titles.push([null, mm[1], near[1]]);
+    }
     const seen = new Set();
     for (const m of titles) {
       const start = ts(m[2]);
       if (start == null || seen.has(start)) continue;
       seen.add(start);
-      out.chapters.push({ start, title: decodeJsonText(m[1]) });
+      out.chapters.push({ start, title: decodeJsonText(m[1]).slice(0, 120) });
     }
     out.chapters.sort((a, b) => a.start - b.start);
     if (out.chapters.length) out.lastMarkerSec = out.chapters[out.chapters.length - 1].start;

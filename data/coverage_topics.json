@@ -1,0 +1,355 @@
+{
+ "note": "NCERT Class 10 Science section list per chapter, with match words. Used to measure what a video covers.",
+ "ch1": [
+  {
+   "id": "equations",
+   "name": "Writing and balancing chemical equations",
+   "ncert": "§1.1",
+   "words": [
+    "balanc",
+    "skeleton",
+    "chemical equation",
+    "word equation",
+    "symbol",
+    "law of conservation"
+   ]
+  },
+  {
+   "id": "combination",
+   "name": "Combination reactions",
+   "ncert": "§1.2",
+   "words": [
+    "combination"
+   ]
+  },
+  {
+   "id": "decomposition",
+   "name": "Decomposition reactions",
+   "ncert": "§1.2",
+   "words": [
+    "decomposition",
+    "thermal",
+    "electrolysis",
+    "photolysis",
+    "photochemical"
+   ]
+  },
+  {
+   "id": "displacement",
+   "name": "Displacement and double displacement",
+   "ncert": "§1.2",
+   "words": [
+    "displacement",
+    "precipitat",
+    "reactivity"
+   ]
+  },
+  {
+   "id": "exoendo",
+   "name": "Exothermic and endothermic reactions",
+   "ncert": "§1.2",
+   "words": [
+    "exothermic",
+    "endothermic"
+   ]
+  },
+  {
+   "id": "redox",
+   "name": "Oxidation and reduction",
+   "ncert": "§1.2.5",
+   "words": [
+    "oxidation",
+    "reduction",
+    "redox",
+    "oxidising",
+    "reducing"
+   ]
+  },
+  {
+   "id": "corrosion",
+   "name": "Corrosion and rancidity",
+   "ncert": "§1.3",
+   "words": [
+    "corrosion",
+    "rusting",
+    "rancid",
+    "tarnish"
+   ]
+  }
+ ],
+ "ch2": [
+  {
+   "id": "indicators",
+   "name": "Indicators (litmus, turmeric, olfactory)",
+   "ncert": "§2.1.1",
+   "words": [
+    "indicator",
+    "litmus",
+    "turmeric",
+    "phenolphthalein",
+    "methyl orange",
+    "olfactory"
+   ]
+  },
+  {
+   "id": "acid_reactions",
+   "name": "Reactions of acids and bases with metals, carbonates, oxides",
+   "ncert": "§2.1.2-2.1.6",
+   "words": [
+    "metal",
+    "carbonate",
+    "bicarbonate",
+    "hydrogen gas",
+    "limewater",
+    "lime water",
+    "metal oxide",
+    "non-metal oxide"
+   ]
+  },
+  {
+   "id": "neutralisation",
+   "name": "Neutralisation",
+   "ncert": "§2.1.4",
+   "words": [
+    "neutralis",
+    "neutraliz"
+   ]
+  },
+  {
+   "id": "ions",
+   "name": "Acids and bases in water (H+ / OH- ions, dilution)",
+   "ncert": "§2.2",
+   "words": [
+    "h+",
+    "hydronium",
+    "h3o",
+    "oh-",
+    "dilution",
+    "dissociat",
+    "strong acid",
+    "weak acid",
+    "ions in water"
+   ]
+  },
+  {
+   "id": "ph",
+   "name": "pH scale",
+   "ncert": "§2.3",
+   "words": [
+    "ph scale",
+    "ph ",
+    "ph of",
+    "universal indicator"
+   ]
+  },
+  {
+   "id": "salts",
+   "name": "Common salt and its products",
+   "ncert": "§2.4",
+   "words": [
+    "common salt",
+    "chlor-alkali",
+    "chlor alkali",
+    "sodium chloride",
+    "brine",
+    "bleaching",
+    "washing soda",
+    "baking soda",
+    "sodium hydrogencarbonate"
+   ]
+  },
+  {
+   "id": "pop",
+   "name": "Plaster of Paris and water of crystallisation",
+   "ncert": "§2.4.4",
+   "words": [
+    "plaster of paris",
+    "crystallisation",
+    "crystallization",
+    "gypsum",
+    "hydrated"
+   ]
+  }
+ ],
+ "ch3": [
+  {
+   "id": "physical",
+   "name": "Physical properties of metals and non-metals",
+   "ncert": "§3.1",
+   "words": [
+    "physical propert",
+    "malleab",
+    "ductil",
+    "lustre",
+    "sonorous",
+    "conductiv"
+   ]
+  },
+  {
+   "id": "chemical",
+   "name": "Chemical properties (oxygen, water, acids)",
+   "ncert": "§3.2",
+   "words": [
+    "with oxygen",
+    "with water",
+    "with acid",
+    "amphoteric",
+    "chemical propert"
+   ]
+  },
+  {
+   "id": "reactivity",
+   "name": "Reactivity series and displacement",
+   "ncert": "§3.2",
+   "words": [
+    "reactivity series",
+    "displacement",
+    "reactivity"
+   ]
+  },
+  {
+   "id": "ionic",
+   "name": "Ionic compounds",
+   "ncert": "§3.3",
+   "words": [
+    "ionic",
+    "electron transfer",
+    "melting point",
+    "electrovalent"
+   ]
+  },
+  {
+   "id": "extraction",
+   "name": "Occurrence and extraction of metals",
+   "ncert": "§3.4",
+   "words": [
+    "extraction",
+    "ore",
+    "roasting",
+    "calcination",
+    "thermit",
+    "electrolytic reduction",
+    "gangue"
+   ]
+  },
+  {
+   "id": "refining",
+   "name": "Refining of metals",
+   "ncert": "§3.4",
+   "words": [
+    "refining",
+    "anode mud",
+    "electrorefin"
+   ]
+  },
+  {
+   "id": "corr",
+   "name": "Corrosion, rusting and alloys",
+   "ncert": "§3.5",
+   "words": [
+    "corrosion",
+    "rusting",
+    "galvaniz",
+    "alloy",
+    "anodis"
+   ]
+  }
+ ],
+ "ch4": [
+  {
+   "id": "bonding",
+   "name": "Covalent bonding in carbon",
+   "ncert": "§4.1",
+   "words": [
+    "covalent",
+    "bonding",
+    "octet",
+    "electron sharing"
+   ]
+  },
+  {
+   "id": "versatile",
+   "name": "Versatile nature: catenation, tetravalency, allotropes",
+   "ncert": "§4.2",
+   "words": [
+    "catenation",
+    "tetravalen",
+    "allotrope",
+    "diamond",
+    "graphite",
+    "fullerene",
+    "isomer"
+   ]
+  },
+  {
+   "id": "homologous",
+   "name": "Homologous series, functional groups, nomenclature",
+   "ncert": "§4.2",
+   "words": [
+    "homologous",
+    "functional group",
+    "nomenclature",
+    "iupac",
+    "alkane",
+    "alkene",
+    "alkyne"
+   ]
+  },
+  {
+   "id": "carbon_chem",
+   "name": "Combustion, oxidation, addition, substitution",
+   "ncert": "§4.3",
+   "words": [
+    "combustion",
+    "oxidation",
+    "addition reaction",
+    "hydrogenation",
+    "substitution"
+   ]
+  },
+  {
+   "id": "ethanol",
+   "name": "Ethanol and ethanoic acid",
+   "ncert": "§4.4",
+   "words": [
+    "ethanol",
+    "ethanoic",
+    "acetic",
+    "esterification",
+    "ester",
+    "glacial"
+   ]
+  },
+  {
+   "id": "soap",
+   "name": "Soaps and detergents",
+   "ncert": "§4.5",
+   "words": [
+    "soap",
+    "detergent",
+    "micelle",
+    "saponification",
+    "hard water",
+    "scum"
+   ]
+  }
+ ],
+ "examSignals": [
+  "pyq",
+  "previous year",
+  "board",
+  "important question",
+  "ncert exercise",
+  "back exercise",
+  "exercise question",
+  "case study",
+  "assertion",
+  "reason",
+  "3 marks",
+  "5 marks",
+  "numerical",
+  "diagram",
+  "one shot",
+  "revision"
+ ]
+}

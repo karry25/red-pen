@@ -3,6 +3,7 @@
 // web app uses. Channel-agnostic: Telegram is the first adapter; the
 // flow only ever sees {chatId, text} and returns {text, ...} replies.
 const { gradeAnswer } = require('../agents/module1');
+const videoCompare = require('../agents/video_compare');
 const { playlist, formatForChat } = require('../agents/playlist');
 const { answerDoubt } = require('../agents/module2');
 const module3 = require('../agents/module3');
@@ -17,6 +18,7 @@ const WELCOME = `Hi! I'm Red Pen, your study buddy - ask me a doubt or let me qu
 /teach - teach me a topic, my understanding meter shows if YOU got it
 /plan <days> - revision plan from past-paper weightage
 /goals - today's small study goals
+/compare <link1> <link2> <your need> - which video suits you
 /videos [topic] - checked video playlist for the active chapter
 /chapter <1-4> - switch the chapter I'm working from
 
@@ -88,6 +90,14 @@ class ChatFlow {
       const pick = topics[Math.floor(Math.random() * topics.length)];
       this.mode = 'teach'; this.topicId = pick.id;
       return { text: `OK, you are the teacher now!\n\n${pick.juniorOpening}\n\n(Topic: ${pick.name}) - explain in your own words.` };
+    }
+    if (low.startsWith('/compare')) {
+      const parts = t.slice(8).trim().split(/\s+/);
+      const links = parts.filter((p) => /^https?:\/\//i.test(p)).slice(0, 2);
+      const need = parts.filter((p) => !/^https?:\/\//i.test(p)).join(' ');
+      if (links.length < 2) return { text: 'Send two YouTube links and what you need, e.g.\n/compare <link1> <link2> fastest revision for exam\n(I rank by YOUR need: fast revision, exam answers, full syllabus, clear concepts, or a topic name.)' };
+      const r = await videoCompare.compare(links[0], links[1], this.chapterId, need);
+      return { text: videoCompare.formatForChat(r) };
     }
     if (low.startsWith('/videos')) {
       const ch = this.chapter();

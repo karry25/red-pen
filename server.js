@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { gradeAnswer } = require('./agents/module1');
 const { playlist } = require('./agents/playlist');
+const videoCompare = require('./agents/video_compare');
 const { answerDoubt, teacherDigest } = require('./agents/module2');
 const coordinator = require('./agents/coordinator');
 const module3 = require('./agents/module3');
@@ -133,6 +134,20 @@ const server = http.createServer((req, res) => {
         module4.makePlan(sessionId || 'anon', daysLeft, confidence || {}, [])
           .then((r) => send(res, 200, JSON.stringify(r)))
           .catch((e) => send(res, 500, JSON.stringify({ error: String(e) })));
+      } catch { send(res, 400, JSON.stringify({ error: 'Bad request.' })); }
+    });
+    return;
+  }
+
+  if (req.method === 'POST' && url.pathname === '/api/compare') {
+    let body = '';
+    req.on('data', (c) => { body += c; if (body.length > 5_000) req.destroy(); });
+    req.on('end', async () => {
+      try {
+        const { a, b, chapter, need } = JSON.parse(body || '{}');
+        const ch = getChapter(chapter || 'ch1');
+        const r = await videoCompare.compare(a, b, ch.chapterId, need || '');
+        send(res, r.ok ? 200 : 400, JSON.stringify(r));
       } catch { send(res, 400, JSON.stringify({ error: 'Bad request.' })); }
     });
     return;

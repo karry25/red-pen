@@ -122,6 +122,17 @@ async function post(p, body) {
   check('parseVideoId accepts youtube/youtu.be/shorts', parseVideoId('https://youtu.be/jSPxGNGUc9g?t=5') === 'jSPxGNGUc9g' && parseVideoId('https://www.youtube.com/watch?v=jSPxGNGUc9g&list=x') === 'jSPxGNGUc9g' && parseVideoId('https://youtube.com/shorts/jSPxGNGUc9g') === 'jSPxGNGUc9g');
   check('parseVideoId rejects other hosts and junk', parseVideoId('https://evil.com/watch?v=jSPxGNGUc9g') === null && parseVideoId('https://youtube.com.evil.com/watch?v=jSPxGNGUc9g') === null && parseVideoId('javascript:alert(1)') === null && parseVideoId('http://169.254.169.254/') === null);
 
+  // video compare (M2) - offline checks of the need parser + input guards
+  const vc = require('../agents/video_compare');
+  const n1 = vc.parseNeed('kal exam hai, fastest revision', 'ch1');
+  check('need parser: fast + exam understood', n1.criteria.map((c) => c.key).sort().join() === 'exam,fast');
+  const n2 = vc.parseNeed('hindi me samjhao balancing', 'ch1');
+  check('need parser: language flagged as unjudgeable, topic found', n2.cannotJudge.length === 1 && n2.topics.some((x) => x.id === 'equations'));
+  const bad = await post('/api/compare', { a: 'https://evil.com/watch?v=jSPxGNGUc9g', b: 'https://youtu.be/jSPxGNGUc9g', chapter: 'ch1', need: 'exam' });
+  check('compare rejects non-YouTube link', bad.ok === false && /valid YouTube|Couldn't read/.test(bad.error || ''));
+  const same = await post('/api/compare', { a: 'https://youtu.be/jSPxGNGUc9g', b: 'https://www.youtube.com/watch?v=jSPxGNGUc9g', chapter: 'ch1', need: '' });
+  check('compare rejects same video twice', same.ok === false);
+
   // security
   const trav = await fetch(base + '/../../etc/passwd');
   check('path traversal blocked', trav.status === 404 || trav.status === 403);
