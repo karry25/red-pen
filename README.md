@@ -28,4 +28,4 @@ Extras: formula cards (26), NCERT Exemplar MCQs (96, official key), study path, 
 Telegram: set TELEGRAM_BOT_TOKEN and TELEGRAM_WEBHOOK_SECRET (webhook mode).
 
 ## License
-Apache-2.0 (see LICENSE). NCERT content is cited and linked, not redistributed.
+MIT (see LICENSE). NCERT content is cited and linked, not redistributed.
