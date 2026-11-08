@@ -5,6 +5,7 @@
 const { gradeAnswer } = require('../agents/module1');
 const videoCompare = require('../agents/video_compare');
 const videoSearch = require('../agents/video_search');
+const memory = require('../agents/memory');
 const { playlist, formatForChat } = require('../agents/playlist');
 const { answerDoubt } = require('../agents/module2');
 const module3 = require('../agents/module3');
@@ -26,7 +27,11 @@ const WELCOME = `Hi! I'm Red Pen, your study buddy - ask me a doubt or let me qu
 
 Right now my verified material covers NCERT Class 10 Science chapters 1-4 (Chemical Reactions, Acids-Bases-Salts, Metals & Non-metals, Carbon), with answers backed by the NCERT text and CBSE sample papers. More subjects coming - I'll always tell you honestly what I actually know.
 
-Nothing you send is stored after I answer.`;
+Memory: by default I store nothing. If you send /remember on, I save a tiny file about you (chapters/topics you ask about, questions you find hard, your video language - never your messages or name) so I can personalise. /mydata shows it, /forget deletes it, and it auto-deletes after 90 days of not using me. On the free host this memory may reset if the server restarts.`;
+
+// a coarse topic key for memory: first matched chapter hint word, else 'general'
+const { matchedHint } = require('../agents/chapter');
+const topicKey = (text, chapterId) => (matchedHint(text, chapterId) || 'general').replace(/[^a-z0-9-]/gi, '-').slice(0, 30);
 
 class ChatFlow {
   constructor(chatId) {
@@ -41,7 +46,12 @@ class ChatFlow {
     this.best = {};            // questionId -> best score (session)
     this.improveStreak = 0;
     this.chapterId = 'ch1';    // active chapter; /chapter N switches
+    this.lang = null;
+    const m = memory.get(chatId); // only exists if the student opted in
+    if (m) { if (m.lang) this.lang = m.lang; if (m.chapter && getChapter(m.chapter)) this.chapterId = m.chapter; }
   }
+
+  mem(ev) { try { memory.record(this.chatId, ev); } catch { /* memory must never break chat */ } }
 
   chapter() { return getChapter(this.chapterId); }
 
@@ -59,7 +69,11 @@ class ChatFlow {
     const t = String(text || '').trim();
     const low = t.toLowerCase();
 
-    if (low === '/start' || low === 'hi' || low === 'hello') return { text: WELCOME };
+    if (low === '/start' || low === 'hi' || low === 'hello') {
+      const m = memory.get(this.chatId);
+      const weak = m ? Object.keys(m.weak).slice(0, 1) : [];
+      return { text: WELCOME + (weak.length ? `\n\nWelcome back. You found ${weak[0]} tricky last time - want another go? Send /quiz.` : '') };
+    }
     if (low === '/chapter' || low.startsWith('/chapter ')) {
       const n = low.split(' ')[1];
       const all = listChapters();
@@ -68,7 +82,7 @@ class ChatFlow {
       }
       const target = all.find((c) => String(c.number) === n || c.id === `ch${n}`);
       if (!target) return { text: `Chapter ${n} abhi available nahi hai. Available: ${all.map((c) => c.number).join(', ')}` };
-      this.chapterId = target.id;
+      this.chapterId = target.id; this.mem({ type: 'chapter', chapter: target.id });
       return { text: `Switched to Ch.${target.number}: ${target.title}. ${target.agent} (subject expert) is now helping the other agents with verified NCERT content.\n\n/quiz, /doubt, /teach, /most - sab ab is chapter ke.` };
     }
     if (low === '/most') {
@@ -93,15 +107,26 @@ class ChatFlow {
       this.mode = 'teach'; this.topicId = pick.id;
       return { text: `OK, you are the teacher now!\n\n${pick.juniorOpening}\n\n(Topic: ${pick.name}) - explain in your own words.` };
     }
+    if (low.startsWith('/remember')) {
+      const arg = low.split(/\s+/)[1];
+      if (arg === 'off') { memory.forget(this.chatId); return { text: 'Memory turned off and everything I had saved about you is deleted.' }; }
+      if (arg !== 'on') return { text: memory.isOn(this.chatId) ? 'Memory is ON. /mydata to see it, /remember off or /forget to delete it.' : 'Memory is OFF. Send /remember on and I will save a tiny file (topics, hard questions, video language - never your messages or name). /forget deletes it any time.' };
+      memory.enable(this.chatId);
+      this.mem({ type: 'chapter', chapter: this.chapterId }); if (this.lang) this.mem({ type: 'lang', lang: this.lang });
+      return { text: 'Memory ON. I will remember which chapters/topics you ask about, which questions you find hard and your video language - not your messages or name. /mydata shows it, /forget deletes it. Auto-deletes after 90 days of not using me, and on the free host it may reset if the server restarts.' };
+    }
+    if (low === '/mydata') return { text: memory.summaryText(this.chatId) };
+    if (low === '/forget') { memory.forget(this.chatId); return { text: 'Done - everything I had saved about you is deleted. Memory is OFF.' }; }
     if (low.startsWith('/findvideo')) {
       const need = t.slice(10).trim().slice(0, 200);
+      this.mem({ type: 'need', keys: videoCompare.parseNeed(need, this.chapterId).criteria.map((x) => x.key) });
       const r = await videoSearch.find({ chapterId: this.chapterId, need, lang: this.lang || null });
       return { text: videoSearch.formatForChat(r) };
     }
     if (low.startsWith('/language')) {
       const l = videoSearch.parseLang(t.slice(9));
       if (!l) return { text: 'Which language for videos? /language english, hindi, hinglish or marathi' };
-      this.lang = l;
+      this.lang = l; this.mem({ type: 'lang', lang: l });
       return { text: `OK, I'll look for ${l} videos (judged from the video title only). Use /findvideo <what you need>.` };
     }
     if (low.startsWith('/compare')) {
@@ -109,6 +134,7 @@ class ChatFlow {
       const links = parts.filter((p) => /^https?:\/\//i.test(p)).slice(0, 2);
       const need = parts.filter((p) => !/^https?:\/\//i.test(p)).join(' ');
       if (links.length < 2) return { text: 'Send two YouTube links and what you need, e.g.\n/compare <link1> <link2> fastest revision for exam\n(I rank by YOUR need: fast revision, exam answers, full syllabus, clear concepts, or a topic name.)' };
+      this.mem({ type: 'need', keys: videoCompare.parseNeed(need, this.chapterId).criteria.map((x) => x.key) });
       const r = await videoCompare.compare(links[0], links[1], this.chapterId, need);
       return { text: videoCompare.formatForChat(r) };
     }
@@ -139,6 +165,7 @@ class ChatFlow {
       this.goals.grade = true;
       this.lastScore = r.score / r.maxScore;
       this.level = this.lastScore < 0.5 ? 'beginner' : 'intermediate';
+      this.mem(this.lastScore < 0.5 ? { type: 'weak', questionId: q.id } : this.lastScore >= 1 ? { type: 'strong', questionId: q.id } : { type: 'topic', chapter: this.chapterId, topic: 'quiz' });
       const missing = r.points.filter((p) => p.status === 'missing');
       if (missing.length) {
         this.revisionQueue.push({ label: q.text.slice(0, 60), questionId: q.id, due: Date.now() + 10 * 60 * 1000 });
@@ -177,6 +204,7 @@ class ChatFlow {
     // keyword routing first; the student's active chapter is the fallback
     const ch = detectChapter(d) || this.chapter();
     const r = await answerDoubt(d, [], ch);
+    this.mem({ type: 'topic', chapter: ch.chapterId, topic: topicKey(d, ch.chapterId) });
     this.goals.doubt = true;
     const out = { text: r.answer + '\n\n(Source: ' + (r.source || `NCERT Class 10 Science, Ch.${ch.number}`) + ')' };
     if (r.card) out.photo = '/cards/' + r.card;

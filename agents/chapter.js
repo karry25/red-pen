@@ -85,4 +85,12 @@ function detectChapter(text) {
   return best ? getChapter(best) : null; // null = no opinion; caller picks the active/default chapter
 }
 
-module.exports = { loadChapters, getChapter, listChapters, findQuestion, detectChapter, ChapterAgent };
+// the longest hint word of a chapter that appears in the text (used as a coarse topic label)
+function matchedHint(text, chapterId) {
+  const t = String(text || '').toLowerCase();
+  const e = CHAPTER_HINTS.find((x) => x.id === chapterId);
+  if (!e) return null;
+  return e.hints.filter((h) => t.includes(h)).sort((a, b) => b.length - a.length)[0] || null;
+}
+
+module.exports = { matchedHint, loadChapters, getChapter, listChapters, findQuestion, detectChapter, ChapterAgent };
