@@ -173,4 +173,6 @@ const server = http.createServer((req, res) => {
   });
 });
 
+require('./agents/memory').sweep();
+setInterval(() => require('./agents/memory').sweep(), 24 * 60 * 60 * 1000).unref();
 server.listen(PORT, () => console.log(`Red Pen running at http://localhost:${PORT}`));

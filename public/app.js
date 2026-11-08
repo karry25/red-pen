@@ -3,7 +3,26 @@ document.querySelectorAll('[data-icon]').forEach((el) => { el.innerHTML = icon(e
 let questions = [];
 let selectedId = null;
 let lastScore = null;
-let activeChapter = new URLSearchParams(location.search).get('chapter') || 'ch1';
+// On-device memory (opt-in): stays in THIS browser's localStorage, never sent to the server.
+const DEVICE_KEY = 'redpen_device_memory';
+function deviceMemory() { try { return JSON.parse(localStorage.getItem(DEVICE_KEY) || 'null'); } catch { return null; } }
+function saveDeviceChapter(id) { if (deviceMemory()) localStorage.setItem(DEVICE_KEY, JSON.stringify({ chapter: id })); }
+let activeChapter = new URLSearchParams(location.search).get('chapter') || (deviceMemory() && deviceMemory().chapter) || 'ch1';
+function renderDeviceMemoryToggle() {
+  const el = document.getElementById('device-memory');
+  if (!el) return;
+  const on = !!deviceMemory();
+  el.innerHTML = '';
+  const label = document.createElement('label');
+  const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = on;
+  cb.onchange = () => { if (cb.checked) localStorage.setItem(DEVICE_KEY, JSON.stringify({ chapter: activeChapter })); else localStorage.removeItem(DEVICE_KEY); renderDeviceMemoryToggle(); };
+  label.appendChild(cb);
+  label.appendChild(document.createTextNode(' Remember my chapter on this device'));
+  el.appendChild(label);
+  const note = document.createElement('div'); note.className = 'dm-note';
+  note.textContent = on ? 'Saved only in this browser (chapter id, nothing else). Untick to delete.' : 'Off. Nothing is saved on your device.';
+  el.appendChild(note);
+}
 
 // Chapter switcher: each chapter has its own subject-expert agent.
 async function loadChapters() {
@@ -16,9 +35,10 @@ async function loadChapters() {
     b.className = 'ch-chip' + (c.id === activeChapter ? ' active' : '');
     b.textContent = `Ch.${c.number} ${c.title}`;
     b.title = `${c.agent} (subject-expert agent) · ${c.counts.questions}+${c.counts.pyqs} questions, ${c.counts.doubts} doubt answers, ${c.counts.topics} teach topics`;
-    b.onclick = () => { activeChapter = c.id; loadChapters(); load(); loadTeach(); loadExplainers(); };
+    b.onclick = () => { activeChapter = c.id; saveDeviceChapter(c.id); loadChapters(); load(); loadTeach(); loadExplainers(); };
     sw.appendChild(b);
   });
+  renderDeviceMemoryToggle();
   document.getElementById('footer-chapters').textContent =
     chapters.map((c) => `Ch.${c.number} ${c.title}`).join(' · ');
 }
