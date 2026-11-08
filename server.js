@@ -25,6 +25,7 @@ const MIME = {
   '.json': 'application/json; charset=utf-8',
   '.png': 'image/png',
   '.svg': 'image/svg+xml',
+  '.webmanifest': 'application/manifest+json',
 };
 
 function send(res, code, body, type = 'application/json; charset=utf-8') {
@@ -231,7 +232,7 @@ const server = http.createServer((req, res) => {
   fs.readFile(file, (err, data) => {
     if (err) return send(res, 404, JSON.stringify({ error: 'Not found' }));
     const type = MIME[path.extname(file)] || 'application/octet-stream';
-    const headers = { 'Content-Type': type, 'Cache-Control': 'public, max-age=300' }; // static assets are cheap to cache at the browser
+    const headers = { 'Content-Type': type, 'Cache-Control': /sw\.js$/.test(file) ? 'no-cache' : 'public, max-age=300' }; // static assets are cheap to cache at the browser
     if (/text|javascript|json|svg/.test(type) && /\bgzip\b/.test(req.headers['accept-encoding'] || '')) {
       if (!gz.has(file)) gz.set(file, zlib.gzipSync(data));
       headers['Content-Encoding'] = 'gzip'; headers['Vary'] = 'Accept-Encoding';

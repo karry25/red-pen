@@ -312,3 +312,22 @@ footer .kind { max-width: 520px; margin: 10px auto 0; font-size: 10.5px; line-he
 .ex-pre { white-space: pre-wrap; font: inherit; font-size: 13.5px; background: #faf5e9; padding: 10px; border-radius: 10px; margin-top: 8px; }
 
 .fb-bar { margin-top: 10px; font-size: 13px; color: var(--ink-soft); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+/* ---- phone polish (PWA) ---- */
+body { padding-bottom: env(safe-area-inset-bottom); -webkit-text-size-adjust: 100%; }
+header { padding-top: calc(14px + env(safe-area-inset-top)); }
+button, .chip-btn, .ch-switch button, input[type=checkbox] { touch-action: manipulation; }
+button { min-height: 44px; }
+textarea, input, select { font-size: 16px; } /* stops iOS zoom-on-focus */
+img, svg, video { max-width: 100%; }
+#install-bar { position: fixed; left: 8px; right: 8px; bottom: calc(8px + env(safe-area-inset-bottom)); background: var(--card); border: 1.5px solid var(--sage); border-radius: 14px; padding: 10px 12px; font-size: 13px; box-shadow: var(--shadow); z-index: 50; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+#install-bar[hidden] { display: none; }
+#install-bar button { min-height: 36px; padding: 4px 12px; border-radius: 10px; }
+@media (max-width: 480px) {
+  main { padding: 10px 8px; }
+  .card { padding: 14px 12px; }
+  .timer-btns { width: 96px; }
+  table { display: block; overflow-x: auto; }
+  pre, code { white-space: pre-wrap; word-break: break-word; }
+}
+@media (display-mode: standalone) { footer .kind { padding-bottom: 20px; } }

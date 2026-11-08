@@ -174,6 +174,7 @@ async function post(p, body) {
   await require('./memory_test').runMemoryTests(check);
   await require('./features_test').runFeatureTests(check);
   await require('./scale_test').runScaleTests(check);
+  await require('./pwa_test').runPwaTests(check);
 
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed ? 1 : 0);
