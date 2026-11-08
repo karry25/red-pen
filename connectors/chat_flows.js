@@ -254,6 +254,7 @@ class ChatFlow {
     this.mem({ type: 'topic', chapter: ch.chapterId, topic: topicKey(d, ch.chapterId) });
     this.goals.doubt = true;
     const out = { text: r.answer + '\n\n(Source: ' + (r.source || `NCERT Class 10 Science, Ch.${ch.number}`) + ')' };
+    if (r.feedbackKey && r.answered) out.buttons = [[{ text: 'Helpful', data: `fb:${r.feedbackKey}:up` }, { text: 'Not helpful', data: `fb:${r.feedbackKey}:down` }]];
     if (r.card) out.photo = '/cards/' + r.card;
     return out;
   }

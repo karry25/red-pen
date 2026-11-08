@@ -1,3 +1,4 @@
+const kwm = require('./kwmatch');
 // Chapter agents: one subject-expert agent per NCERT chapter, working
 // under the Coordinator. The module agents (Examiner, Doubt, Junior,
 // Triage) are pedagogy specialists; the chapter agent owns the subject
@@ -79,7 +80,7 @@ function detectChapter(text) {
   let best = null; let bestScore = 0;
   for (const { id, hints } of CHAPTER_HINTS) {
     if (!loadChapters().has(id)) continue;
-    const score = hints.reduce((s, h) => s + (t.includes(h) ? h.length : 0), 0);
+    const score = hints.reduce((s, h) => s + (kwm.match(t, h) ? h.length : 0), 0);
     if (score > bestScore) { bestScore = score; best = id; }
   }
   return best ? getChapter(best) : null; // null = no opinion; caller picks the active/default chapter
@@ -90,7 +91,7 @@ function matchedHint(text, chapterId) {
   const t = String(text || '').toLowerCase();
   const e = CHAPTER_HINTS.find((x) => x.id === chapterId);
   if (!e) return null;
-  return e.hints.filter((h) => t.includes(h)).sort((a, b) => b.length - a.length)[0] || null;
+  return e.hints.filter((h) => kwm.match(t, h)).sort((a, b) => b.length - a.length)[0] || null;
 }
 
 module.exports = { matchedHint, loadChapters, getChapter, listChapters, findQuestion, detectChapter, ChapterAgent };

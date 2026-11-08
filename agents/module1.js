@@ -3,6 +3,7 @@
 // Hand-off: Keyword Checker extracts what the answer covers; the Examiner
 // awards marks per marking-scheme point; Rewrite composes the model answer.
 const { Agent } = require('./base');
+const kw = require('./kwmatch');
 
 const keywordChecker = new Agent({
   name: 'Keyword Checker',
@@ -28,7 +29,7 @@ function matchGroups(answer, points) {
   const norm = normalize(answer);
   return points.map((p) => {
     const groups = p.keywords.map((alts) => ({
-      matched: alts.some((a) => norm.includes(normalize(a))),
+      matched: alts.some((a) => kw.match(norm, a, { strict: true })), // grader stays strict: whole words for short keys, no typo-forgiveness
       missing: alts[0],
     }));
     const matched = groups.filter((g) => g.matched).length;
@@ -57,7 +58,12 @@ async function gradeAnswer(question, answerText) {
     })
   );
 
-  const total = Math.round(scored.reduce((s, p) => s + p.earnedMarks, 0) * 2) / 2;
+  let total = Math.round(scored.reduce((s, p) => s + p.earnedMarks, 0) * 2) / 2;
+  // Keyword-salad guard: a long answer with almost no ordinary words ("the, is, of, to...") is a list of keywords, not an answer.
+  const ws = kw.words(answerText); const STOPS = new Set('the a an is are was of and to in that it by with as for on this which when be from or'.split(' '));
+  const stopShare = ws.length ? ws.filter((w) => STOPS.has(w)).length / ws.length : 1;
+  const salad = ws.length >= 10 && stopShare < 0.05 && !/->|→|=/.test(answerText);
+  if (salad) total = Math.min(total, Math.floor(question.marks * 0.25 * 2) / 2);
 
   await examiner.act(trace, 'writing examiner notes', async () => {});
   const notes = [];
@@ -65,6 +71,7 @@ async function gradeAnswer(question, answerText) {
   if (wordCount < 10) notes.push('Very short answer - examiners award marks per point, so write one line per marking point.');
   const missed = scored.filter((p) => p.status === 'missing');
   if (missed.length) notes.push(`${missed.length} marking point(s) missing - those cost full marks even when the rest is correct.`);
+  if (salad) notes.push('This looks like a list of keywords. Examiners give marks for sentences that explain - write it as full sentences.');
   if (total >= question.marks) notes.push('Full marks. This is what the examiner wants to see.');
 
   const modelAnswer = await rewrite.act(trace, 'composing the full-mark model answer', async () =>

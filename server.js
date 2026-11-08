@@ -32,8 +32,23 @@ function send(res, code, body, type = 'application/json; charset=utf-8') {
   res.end(body);
 }
 
+const { guard, counters: guardCounters } = require('./lib/guard');
+const zlib = require('zlib');
+const gz = new Map(); // path -> gzipped bytes (static files only; bounded by number of files)
+const MAX_CONN = Number(process.env.MAX_CONNECTIONS || 200);
+
 const server = http.createServer((req, res) => {
-  const url = new URL(req.url, 'http://localhost');
+  let url;
+  try { url = new URL(req.url, 'http://localhost'); } catch { return send(res, 400, '{}'); }
+  if (guard(req, res, url.pathname)) return;
+
+  if (req.method === 'GET' && url.pathname === '/healthz') {
+    const g = require('./lib/llmgate').snapshot();
+    return send(res, 200, JSON.stringify({ ok: true, uptimeSec: Math.round(process.uptime()), rssMB: Math.round(process.memoryUsage().rss / 1048576), cpuSec: +((process.cpuUsage().user + process.cpuUsage().system) / 1e6).toFixed(3), llm: g, limiter: guardCounters, bot: global.__botStats ? global.__botStats() : null }));
+  }
+  if (req.method === 'POST' && process.env.TELEGRAM_WEBHOOK_SECRET && url.pathname === `/telegram/${process.env.TELEGRAM_WEBHOOK_SECRET}`) {
+    return require('./connectors/webhook').handle(req, res, send);
+  }
 
   if (req.method === 'GET' && url.pathname === '/api/chapters') {
     return send(res, 200, JSON.stringify({ chapters: listChapters() }));
@@ -181,6 +196,18 @@ const server = http.createServer((req, res) => {
     });
     return;
   }
+  if (req.method === 'POST' && url.pathname === '/api/feedback') {
+    let body = '';
+    req.on('data', (c) => { body += c; if (body.length > 1_000) req.destroy(); });
+    req.on('end', () => {
+      try {
+        const { key, value, sessionId } = JSON.parse(body || '{}');
+        const r = require('./agents/feedback').rate(`web${String(sessionId || 'anon').slice(0, 40)}|${require('./lib/guard').clientKey(req)}`, key, value);
+        send(res, r.ok ? 200 : 400, JSON.stringify(r.ok ? { ok: true } : { error: r.why }));
+      } catch { send(res, 400, JSON.stringify({ error: 'Bad request.' })); }
+    });
+    return;
+  }
   if (req.method === 'GET' && url.pathname === '/api/formulas') {
     const ch = getChapter(url.searchParams.get('chapter') || 'ch1');
     return send(res, 200, JSON.stringify({ chapterId: ch.chapterId, items: require('./agents/formulas').forChapter(ch.chapterId), note: require('./agents/formulas').data.note }));
@@ -203,10 +230,19 @@ const server = http.createServer((req, res) => {
   if (!file.startsWith(PUBLIC)) return send(res, 403, '{}');
   fs.readFile(file, (err, data) => {
     if (err) return send(res, 404, JSON.stringify({ error: 'Not found' }));
-    send(res, 200, data, MIME[path.extname(file)] || 'application/octet-stream');
+    const type = MIME[path.extname(file)] || 'application/octet-stream';
+    const headers = { 'Content-Type': type, 'Cache-Control': 'public, max-age=300' }; // static assets are cheap to cache at the browser
+    if (/text|javascript|json|svg/.test(type) && /\bgzip\b/.test(req.headers['accept-encoding'] || '')) {
+      if (!gz.has(file)) gz.set(file, zlib.gzipSync(data));
+      headers['Content-Encoding'] = 'gzip'; headers['Vary'] = 'Accept-Encoding';
+      res.writeHead(200, headers); return res.end(gz.get(file));
+    }
+    res.writeHead(200, headers); res.end(data);
   });
 });
 
 require('./agents/memory').sweep();
 setInterval(() => require('./agents/memory').sweep(), 24 * 60 * 60 * 1000).unref();
+server.maxConnections = MAX_CONN;
+server.headersTimeout = 15000; server.requestTimeout = 30000; server.keepAliveTimeout = 5000;
 server.listen(PORT, () => console.log(`Red Pen running at http://localhost:${PORT}`));

@@ -181,6 +181,17 @@ document.getElementById('doubt-btn').onclick = async () => {
     src.textContent = 'Source: ' + r.source;
     document.getElementById('doubt-answer').appendChild(src);
   }
+  if (r.feedbackKey && r.answered) {
+    const bar = document.createElement('div'); bar.className = 'fb-bar';
+    const label = document.createElement('span'); label.textContent = 'Was this helpful? (anonymous) ';
+    bar.appendChild(label);
+    ['up', 'down'].forEach((v) => {
+      const b = document.createElement('button'); b.className = 'btn ghost small'; b.textContent = v === 'up' ? 'Helpful' : 'Not helpful';
+      b.onclick = async () => { const x = await fetch('/api/feedback', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key: r.feedbackKey, value: v }) }); bar.textContent = x.ok ? 'Thanks - this helps me fix weak answers.' : 'You already rated this one.'; };
+      bar.appendChild(b);
+    });
+    document.getElementById('doubt-answer').appendChild(bar);
+  }
   document.getElementById('doubt-engine').textContent = 'Answered by: Doubt agent (' + (r.answered ? 'matched: ' + r.topic : 'not in knowledge base yet') + ') · ' + r.engine;
 };
 

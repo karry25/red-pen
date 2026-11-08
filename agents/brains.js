@@ -58,7 +58,7 @@ async function callGroq(systemPrompt, userText) {
 function makeLlmBrain() {
   const info = activeBrainInfo();
   if (!info.ready) return null;
-  const call = info.provider === 'gemini' ? callGemini : callGroq;
+  const call = info.provider === 'gemini' ? callGemini : require('../lib/llmgate').call; // Groq goes through the free-tier gate
   return async ({ role, context }) => call(role, context);
 }
 

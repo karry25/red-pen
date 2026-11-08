@@ -17,7 +17,7 @@ async function post(p, body) {
 }
 
 (async () => {
-  const server = spawn('node', [path.join(__dirname, '..', 'server.js')], { env: { ...process.env, PORT } });
+  const server = spawn('node', [path.join(__dirname, '..', 'server.js')], { env: { ...process.env, PORT, RATE_LIMITS: 'off' } });
   await new Promise((r) => setTimeout(r, 800));
 
   // Module 1
@@ -173,6 +173,7 @@ async function post(p, body) {
   await require('./brain_mock').runBrainMock(check);
   await require('./memory_test').runMemoryTests(check);
   await require('./features_test').runFeatureTests(check);
+  await require('./scale_test').runScaleTests(check);
 
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed ? 1 : 0);
