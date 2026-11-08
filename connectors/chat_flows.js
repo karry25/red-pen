@@ -9,13 +9,16 @@ const module4 = require('../agents/module4');
 const coordinator = require('../agents/coordinator');
 const { getChapter, findQuestion, detectChapter, listChapters } = require('../agents/chapter');
 
-const WELCOME = `Hi! I'm Red Pen - practise like the examiner.
+const WELCOME = `Hi! I'm Red Pen, your study buddy - ask me a doubt or let me quiz you, examiner style.
 
-/quiz - get a board question, I grade your answer like a real examiner
+/quiz - get a question, I grade your answer like a real examiner
 /doubt <your doubt> - ask anything, no judgement (Hinglish chalega)
 /teach - teach me a topic, my understanding meter shows if YOU got it
-/plan <days> - ruthless revision plan from past-paper weightage
+/plan <days> - revision plan from past-paper weightage
 /goals - today's small study goals
+/chapter <1-4> - switch the chapter I'm working from
+
+Right now my verified material covers NCERT Class 10 Science chapters 1-4 (Chemical Reactions, Acids-Bases-Salts, Metals & Non-metals, Carbon), with answers backed by the NCERT text and CBSE sample papers. More subjects coming - I'll always tell you honestly what I actually know.
 
 Nothing you send is stored after I answer.`;
 
