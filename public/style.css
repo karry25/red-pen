@@ -297,3 +297,16 @@ footer .kind { max-width: 520px; margin: 10px auto 0; font-size: 10.5px; line-he
 
 .device-memory { font-size: 0.85rem; margin-top: 8px; color: #5a5348; }
 .device-memory .dm-note { font-size: 0.78rem; opacity: 0.8; margin-top: 2px; }
+
+.ex-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.ex-tab { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 5px 12px; font: inherit; font-size: 13px; cursor: pointer; color: var(--ink); }
+.ex-tab.active { background: var(--sage); color: #fff; border-color: var(--sage); }
+.ex-body input, .ex-body select { width: 100%; margin: 4px 0; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: #fff; }
+.ex-h { font-weight: 800; margin: 12px 0 4px; font-size: 14px; }
+.ex-row { padding: 8px 0; border-bottom: 1px dashed var(--line); font-size: 14px; }
+.ex-meta { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+.ex-note { font-size: 12.5px; color: var(--ink-soft); margin: 8px 0; }
+.ex-link { color: var(--pen-dark); font-weight: 700; word-break: break-word; }
+.ex-q { margin: 6px 0 10px; font-size: 15px; }
+.ex-opt { display: block; width: 100%; text-align: left; margin: 5px 0; white-space: normal; }
+.ex-pre { white-space: pre-wrap; font: inherit; font-size: 13.5px; background: #faf5e9; padding: 10px; border-radius: 10px; margin-top: 8px; }

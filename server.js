@@ -162,6 +162,40 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  if (req.method === 'GET' && url.pathname === '/api/exemplar') {
+    const ex = require('./agents/exemplar');
+    const ch = getChapter(url.searchParams.get('chapter') || 'ch1');
+    const q = ex.pick(ch.chapterId, (url.searchParams.get('seen') || '').split(',').slice(0, 40));
+    return send(res, 200, JSON.stringify(q ? { question: ex.publicView(q), count: ex.list(ch.chapterId).length, note: ex.data.note } : { question: null }));
+  }
+  if (req.method === 'POST' && url.pathname === '/api/exemplar/check') {
+    let body = '';
+    req.on('data', (c) => { body += c; if (body.length > 2_000) req.destroy(); });
+    req.on('end', () => {
+      try {
+        const { id, letter } = JSON.parse(body || '{}');
+        const r = require('./agents/exemplar').check(String(id || ''), letter);
+        if (!r || !r.valid) return send(res, 400, JSON.stringify({ error: 'Unknown question or choice.' }));
+        send(res, 200, JSON.stringify(r));
+      } catch { send(res, 400, JSON.stringify({ error: 'Bad request.' })); }
+    });
+    return;
+  }
+  if (req.method === 'GET' && url.pathname === '/api/formulas') {
+    const ch = getChapter(url.searchParams.get('chapter') || 'ch1');
+    return send(res, 200, JSON.stringify({ chapterId: ch.chapterId, items: require('./agents/formulas').forChapter(ch.chapterId), note: require('./agents/formulas').data.note }));
+  }
+  if (req.method === 'GET' && url.pathname === '/api/path') {
+    const sp = require('./agents/studypath');
+    const days = Math.max(1, Math.min(30, parseInt(url.searchParams.get('days'), 10) || 7));
+    const mins = Math.max(20, Math.min(240, parseInt(url.searchParams.get('minutes'), 10) || 60));
+    const p = sp.buildPath({ days, minutesPerDay: mins, mem: null });
+    return send(res, 200, JSON.stringify({ ...p, text: sp.format(p) }));
+  }
+  if (req.method === 'GET' && url.pathname === '/api/sources') {
+    return send(res, 200, JSON.stringify(require('./data/citations.json')));
+  }
+
   // static files, no path traversal
   let p = path.normalize(decodeURIComponent(url.pathname)).replace(/^(\.\.[/\\])+/, '');
   if (p === '/' || p === '\\') p = '/index.html';

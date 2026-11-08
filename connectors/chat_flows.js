@@ -15,6 +15,7 @@ const formulas = require('../agents/formulas');
 const studypath = require('../agents/studypath');
 const quickmode = require('../agents/quickmode');
 const drip = require('../agents/drip');
+const exemplar = require('../agents/exemplar');
 const { getChapter, findQuestion, detectChapter, listChapters } = require('../agents/chapter');
 
 const WELCOME = `Hi! I'm Red Pen, your study buddy - ask me a doubt or let me quiz you, examiner style.
@@ -27,6 +28,7 @@ const WELCOME = `Hi! I'm Red Pen, your study buddy - ask me a doubt or let me qu
 /findvideo <your need> - best videos for you (set /language first)
 /compare <link1> <link2> <your need> - which video suits you
 /videos [topic] - checked video playlist for the active chapter
+/extra - NCERT Exemplar MCQs (extra practice, official answer key)
 /formulas - key equations + memory aids for the chapter
 /path - a study path built for you (not forced)
 /drip on - optional spaced formula reminders (/pause, /stop any time)
@@ -103,6 +105,13 @@ class ChatFlow {
       const g = this.goals;
       const line = (b, s) => `${b ? '[x]' : '[ ]'} ${s}`;
       return { text: `Today's goals:\n${line(g.grade, 'Grade 1 answer (/quiz)')}\n${line(g.doubt, 'Ask 1 doubt (/doubt)')}\n${line(g.teach, 'Teach me once (/teach)')}` };
+    }
+    if (low === '/extra' || low === '/exemplar') {
+      const q = exemplar.pick(this.chapterId, this.seenExemplar || []);
+      if (!q) return { text: 'No Exemplar questions for this chapter yet.' };
+      this.seenExemplar = [...(this.seenExemplar || []), q.id].slice(-20);
+      this.mode = 'extra'; this.extraId = q.id;
+      return { text: exemplar.formatQuestion(q) };
     }
     if (low === '/formulas') { const ch = this.chapter(); return { text: formulas.formatSheet(ch.chapterId, `Ch.${ch.number} ${ch.title}`) }; }
     if (low === '/sources') {
@@ -188,6 +197,13 @@ class ChatFlow {
       return { text: `${plan.summary}\n\n${lines.join('\n')}\n\nSKIP: ${plan.skip.map((c) => c.name).join(', ') || 'nothing - enough days!'}\n\nI'll check in on your plan daily.` };
     }
 
+    if (this.mode === 'extra' && this.extraId) {
+      const r = exemplar.check(this.extraId, t);
+      if (r && !r.valid) return { text: exemplar.formatResult(r) };
+      const id = this.extraId; this.mode = null; this.extraId = null;
+      if (r) this.mem(r.correct ? { type: 'strong', questionId: id } : { type: 'weak', questionId: id });
+      return { text: exemplar.formatResult(r) };
+    }
     // state: answering a quiz question
     if (this.mode === 'quiz' && this.questionId) {
       const q = findQuestion(this.questionId).question;

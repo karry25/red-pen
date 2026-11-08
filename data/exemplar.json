@@ -1,0 +1,1269 @@
+{
+ "note": "Official NCERT Exemplar Problems, Class X Science (ncert.nic.in/exemplar-problems.php?ln=en). MCQs with the official answer key. Extra practice - not the same as the 'most asked' board-paper list.",
+ "pdf": {
+  "ch1": "https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep101.pdf",
+  "ch2": "https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep102.pdf",
+  "ch3": "https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep103.pdf",
+  "ch4": "https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep104.pdf"
+ },
+ "key": "https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep1an.pdf",
+ "chapters": {
+  "ch1": [
+   {
+    "id": "xem-ch1-q1",
+    "n": 1,
+    "stem": "Which of the following is not a physical change?",
+    "options": {
+     "a": "Boiling of water to give water vapour",
+     "b": "Melting of ice to give water",
+     "c": "Dissolution of salt in water",
+     "d": "Combustion of Liquefied Petroleum Gas (LPG)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.1 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q2",
+    "n": 2,
+    "stem": "The following reaction is an example of a 4NH3(g) + 5O2(g) → 4NO(g) + 6H2O(g) (i) displacement reaction (ii) combination reaction (iii) redox reaction (iv) neutralisation reaction",
+    "options": {
+     "a": "(i) and (iv)",
+     "b": "(ii) and (iii)",
+     "c": "(i) and (iii)",
+     "d": "(iii) and (iv)"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.2 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q3",
+    "n": 3,
+    "stem": "Which of the following statements about the given reaction are correct? 3Fe(s) + 4H2O(g) → Fe3O4(s) + 4H2(g) (i) Iron metal is getting oxidised (ii) Water is getting reduced (iii) Water is acting as reducing agent (iv) Water is acting as oxidising agent",
+    "options": {
+     "a": "(i), (ii) and (iii)",
+     "b": "(iii) and (iv)",
+     "c": "(i), (ii) and (iv)",
+     "d": "(ii) and (iv)"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.3 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q4",
+    "n": 4,
+    "stem": "Which of the following are exothermic processes? (i) Reaction of water with quick lime (ii) Dilution of an acid (iii) Evaporation of water (iv) Sublimation of camphor (crystals)",
+    "options": {
+     "a": "(i) and (ii)",
+     "b": "(ii) and (iii)",
+     "c": "(i) and (iv)",
+     "d": "(iii) and (iv)"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.4 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q5",
+    "n": 5,
+    "stem": "Three beakers labelled as A, B and C each containing 25 mL of water were taken. A small amount of NaOH, anhydrous CuSO 4 and NaCl were added to the beakers A, B and C respectively. It was observed that there was an increase in the temperature of the solutions contained in beakers A and B, whereas in case of beaker C, the temperature of the solution falls. Which one of the following statement(s) is(are) correct? (i) In beakers A and B, exothermic process has occurred. (ii) In beakers A and B, endothermic process has occurred. (iii) In beaker C exothermic process has occurred. (iv) In beaker C endothermic process has occurred.",
+    "options": {
+     "a": "(i) only",
+     "b": "(ii) only",
+     "c": "(i) and (iv)",
+     "d": "(ii) and (iii)"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.5 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q6",
+    "n": 6,
+    "stem": "A dilute ferrous sulphate solution was gradually added to the beaker containing acidified permanganate solution. The light purple colour of the solution fades and finally disappears. Which of the following is the correct explanation for the observation?",
+    "options": {
+     "a": "KMnO4 is an oxidising agent, it oxidises FeSO4",
+     "b": "FeSO4 acts as an oxidising agent and oxidises KMnO4",
+     "c": "The colour disappears due to dilution; no reaction is involved",
+     "d": "KMnO4 is an unstable compound and decomposes in presence of FeSO4 to a colourless compound."
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.6 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q7",
+    "n": 7,
+    "stem": "Which among the following is(are) double displacement reaction(s)? (i) Pb + CuCl2 → PbCl2 + Cu (ii) Na2SO4 + BaCl2 → BaSO4 + 2NaCl (iii) C + O2 → CO2 (iv) CH4 + 2O2 → CO2 + 2H2O",
+    "options": {
+     "a": "(i) and (iv)",
+     "b": "(ii) only",
+     "c": "(i) and (ii)",
+     "d": "(iii) and (iv)"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.7 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q8",
+    "n": 8,
+    "stem": "Which among the following statement(s) is(are) true? Exposure of silver chloride to sunlight for a long duration turns grey due to (i) the formation of silver by decomposition of silver chloride (ii) sublimation of silver chloride (iii) decomposition of chlorine gas from silver chloride (iv) oxidation of silver chloride",
+    "options": {
+     "a": "(i) only",
+     "b": "(i) and (iii)",
+     "c": "(ii) and (iii)",
+     "d": "(iv) only"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.8 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q9",
+    "n": 9,
+    "stem": "Solid calcium oxide reacts vigorously with water to form calcium hydroxide accompanied by liberation of heat. This process is called slaking of lime. Calcium hydroxide dissolves in water to form its solution called lime water. Which among the following is (are) true about slaking of lime and the solution formed? (i) It is an endothermic reaction (ii) It is an exothermic reaction (iii) The pH of the resulting solution will be more than seven (iv) The pH of the resulting solution will be less than seven",
+    "options": {
+     "a": "(i) and (ii)",
+     "b": "(ii) and (iii)",
+     "c": "(i) and (iv)",
+     "d": "(iii) and (iv)"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.9 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q10",
+    "n": 10,
+    "stem": "Barium chloride on reacting with ammonium sulphate forms barium sulphate and ammonium chloride. Which of the following correctly represents the type of the reaction involved? (i) Displacement reaction (ii) Precipitation reaction (iii) Combination reaction (iv) Double displacement reaction",
+    "options": {
+     "a": "(i) only",
+     "b": "(ii) only",
+     "c": "(iv) only",
+     "d": "(ii) and (iv)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.10 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q11",
+    "n": 11,
+    "stem": "Electrolysis of water is a decomposition reaction. The mole ratio of hydrogen and oxygen gases liberated during electrolysis of water is",
+    "options": {
+     "a": "1:1",
+     "b": "2:1",
+     "c": "4:1",
+     "d": "1:2"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.11 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q12",
+    "n": 12,
+    "stem": "Which of the following is(are) an endothermic process(es)? (i) Dilution of sulphuric acid (ii) Sublimation of dry ice (iii) Condensation of water vapours (iv) Evaporation of water",
+    "options": {
+     "a": "(i) and (iii)",
+     "b": "(ii) only",
+     "c": "(iii) only",
+     "d": "(ii) and (iv)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.12 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q13",
+    "n": 13,
+    "stem": "In the double displacement reaction between aqueous potassium iodide and aqueous lead nitrate, a yellow precipitate of lead iodide is formed. While performing the activity if lead nitrate is not available, which of the following can be used in place of lead nitrate?",
+    "options": {
+     "a": "Lead sulphate (insoluble)",
+     "b": "Lead acetate",
+     "c": "Ammonium nitrate",
+     "d": "Potassium sulphate"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.13 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q14",
+    "n": 14,
+    "stem": "Which of the following gases can be used for storage of fresh sample of an oil for a long time?",
+    "options": {
+     "a": "Carbon dioxide or oxygen",
+     "b": "Nitrogen or oxygen",
+     "c": "Carbon dioxide or helium",
+     "d": "Helium or nitrogen"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.14 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q15",
+    "n": 15,
+    "stem": "The following reaction is used for the preparation of oxygen gas in the laboratory Heat 2KClO3 (s) ⎯⎯⎯⎯⎯ Catalyst → 2KCl (s) + 3O2 (g) Which of the following statement(s) is(are) correct about the reaction?",
+    "options": {
+     "a": "It is a decomposition reaction and endothermic in nature",
+     "b": "It is a combination reaction",
+     "c": "It is a decomposition reaction and accompanied by release of heat",
+     "d": "It is a photochemical decomposition reaction and exothermic in nature"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.15 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q16",
+    "n": 16,
+    "stem": "Which one of the following processes involve chemical reactions?",
+    "options": {
+     "a": "Storing of oxygen gas under pressure in a gas cylinder",
+     "b": "Liquefaction of air",
+     "c": "Keeping petrol in a china dish in the open",
+     "d": "Heating copper wire in presence of air at high temperature"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.16 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q17",
+    "n": 17,
+    "stem": "In which of the following chemical equations, the abbreviations represent the correct states of the reactants and products involved at reaction temperature?",
+    "options": {
+     "a": "2H2(l) + O2(l) → 2H2O(g)",
+     "b": "2H2(g) + O2(l) → 2H2O(l)",
+     "c": "2H2(g) + O2(g) → 2H2O(l)",
+     "d": "2H2(g) + O2(g) → 2H2O(g)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.17 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch1-q18",
+    "n": 18,
+    "stem": "Which of the following are combination reactions? Heat → 2KCl + 3O (i) 2KClO3 ⎯⎯⎯⎯ 2 (ii) MgO + H2O ⎯→ Mg(OH)2 (iii) 4Al + 3O2 ⎯→ 2Al2 O3 (iv) Zn + FeSO4 ⎯→ ZnSO4 + Fe",
+    "options": {
+     "a": "(i) and (iii)",
+     "b": "(iii) and (iv)",
+     "c": "(ii) and (iv)",
+     "d": "(ii) and (iii)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.1 Q.18 (Multiple Choice)"
+   }
+  ],
+  "ch2": [
+   {
+    "id": "xem-ch2-q1",
+    "n": 1,
+    "stem": "What happens when a solution of an acid is mixed with a solution of a base in a test tube? (i) The temperature of the solution increases (ii) The temperature of the solution decreases (iii) The temperature of the solution remains the same (iv) Salt formation takes place",
+    "options": {
+     "a": "(i) only",
+     "b": "(i) and (iii)",
+     "c": "(ii) and (iii)",
+     "d": "(i) and (iv)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.1 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q2",
+    "n": 2,
+    "stem": "An aqueous solution turns red litmus solution blue. Excess addition of which of the following solution would reverse the change?",
+    "options": {
+     "a": "Baking powder",
+     "b": "Lime",
+     "c": "Ammonium hydroxide solution",
+     "d": "Hydrochloric acid"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.2 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q3",
+    "n": 3,
+    "stem": "During the preparation of hydrogen chloride gas on a humid day, the gas is usually passed through the guard tube containing calcium chloride. The role of calcium chloride taken in the guard tube is to",
+    "options": {
+     "a": "absorb the evolved gas",
+     "b": "moisten the gas",
+     "c": "absorb moisture from the gas",
+     "d": "absorb Cl– ions from the evolved gas"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.3 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q4",
+    "n": 4,
+    "stem": "Which of the following salts does not contain water of crystallisation?",
+    "options": {
+     "a": "Blue vitriol",
+     "b": "Baking soda",
+     "c": "Washing soda",
+     "d": "Gypsum"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.4 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q5",
+    "n": 5,
+    "stem": "Sodium carbonate is a basic salt because it is a salt of",
+    "options": {
+     "a": "strong acid and strong base",
+     "b": "weak acid and weak base",
+     "c": "strong acid and weak base",
+     "d": "weak acid and strong base"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.5 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q6",
+    "n": 6,
+    "stem": "Calcium phosphate is present in tooth enamel. Its nature is",
+    "options": {
+     "a": "basic",
+     "b": "acidic",
+     "c": "neutral",
+     "d": "amphoteric"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.6 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q7",
+    "n": 7,
+    "stem": "A sample of soil is mixed with water and allowed to settle. The clear supernatant solution turns the pH paper yellowish-orange. Which of the following would change the colour of this pH paper to greenish-blue?",
+    "options": {
+     "a": "Lemon juice",
+     "b": "Vinegar",
+     "c": "Common salt",
+     "d": "An antacid"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.7 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q8",
+    "n": 8,
+    "stem": "Which of the following gives the correct increasing order of acidic strength?",
+    "options": {
+     "a": "Water <Acetic acid <Hydrochloric acid",
+     "b": "Water <Hydrochloric acid <Acetic acid",
+     "c": "Acetic acid <Water <Hydrochloric acid",
+     "d": "Hydrochloric acid <Water <Acetic acid"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.8 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q9",
+    "n": 9,
+    "stem": "If a few drops of a concentrated acid accidentally spills over the hand of a student, what should be done?",
+    "options": {
+     "a": "Wash the hand with saline solution",
+     "b": "Wash the hand immediately with plenty of water and apply a paste of sodium hydrogencarbonate",
+     "c": "After washing with plenty of water apply solution of sodium hydroxide on the hand",
+     "d": "Neutralise the acid with a strong alkali"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.9 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q10",
+    "n": 10,
+    "stem": "Sodium hydrogencarbonate when added to acetic acid evolves a gas. Which of the following statements are true about the gas evolved? (i) It turns lime water milky (ii) It extinguishes a burning splinter (iii) It dissolves in a solution of sodium hydroxide (iv) It has a pungent odour",
+    "options": {
+     "a": "(i) and (ii)",
+     "b": "(i), (ii) and (iii)",
+     "c": "(ii), (iii) and (iv)",
+     "d": "(i) and (iv)"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.10 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q11",
+    "n": 11,
+    "stem": "Common salt besides being used in kitchen can also be used as the raw material for making (i) washing soda (ii) bleaching powder (iii) baking soda (iv) slaked lime",
+    "options": {
+     "a": "(i) and (ii)",
+     "b": "(i), (ii) and (iv)",
+     "c": "(i) and (iii)",
+     "d": "(i), (iii) and (iv)"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.11 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q12",
+    "n": 12,
+    "stem": "One of the constituents of baking powder is sodium hydrogencarbonate, the other constituent is",
+    "options": {
+     "a": "hydrochloric acid",
+     "b": "tartaric acid",
+     "c": "acetic acid",
+     "d": "sulphuric acid"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.12 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q13",
+    "n": 13,
+    "stem": "To protect tooth decay we are advised to brush our teeth regularly. The nature of the tooth paste commonly used is",
+    "options": {
+     "a": "acidic",
+     "b": "neutral",
+     "c": "basic",
+     "d": "corrosive"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.13 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q14",
+    "n": 14,
+    "stem": "Which of the following statements is correct about an aqueous solution of an acid and of a base? (i) Higher the pH, stronger the acid (ii) Higher the pH, weaker the acid (iii) Lower the pH, stronger the base (iv) Lower the pH, weaker the base",
+    "options": {
+     "a": "(i) and (iii)",
+     "b": "(ii) and (iii)",
+     "c": "(i) and (iv)",
+     "d": "(ii) and (iv)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.14 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q15",
+    "n": 15,
+    "stem": "The pH of the gastric juices released during digestion is",
+    "options": {
+     "a": "less than 7",
+     "b": "more than 7",
+     "c": "equal to 7",
+     "d": "equal to 0"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.15 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q16",
+    "n": 16,
+    "stem": "Which of the following phenomena occur, when a small amount of acid is added to water? (i) Ionisation (ii) Neutralisation (iii) Dilution (iv) Salt formation",
+    "options": {
+     "a": "(i) and (ii)",
+     "b": "(i) and (iii)",
+     "c": "(ii) and (iii)",
+     "d": "(ii) and (iv)"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.16 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q22",
+    "n": 22,
+    "stem": "Which of the following is not a mineral acid?",
+    "options": {
+     "a": "Hydrochloric acid",
+     "b": "Citric acid",
+     "c": "Sulphuric acid",
+     "d": "Nitric acid"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.22 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q23",
+    "n": 23,
+    "stem": "Which among the following is not a base?",
+    "options": {
+     "a": "NaOH",
+     "b": "KOH",
+     "c": "NH4OH",
+     "d": "C2H5 OH"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.23 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q24",
+    "n": 24,
+    "stem": "Which of the following statements is not correct?",
+    "options": {
+     "a": "All metal carbonates react with acid to give a salt, water and carbon dioxide",
+     "b": "All metal oxides react with water to give salt and acid",
+     "c": "Some metals react with acids to give salt and hydrogen",
+     "d": "Some non metal oxides react with water to form an acid"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.24 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q27",
+    "n": 27,
+    "stem": "Which of the following is(are) true when HCl (g) is passed through water? (i) It does not ionise in the solution as it is a covalent compound. (ii) It ionises in the solution (iii) It gives both hydrogen and hydroxyl ion in the solution (iv) It forms hydronium ion in the solution due to the combination of hydrogen ion with water molecule",
+    "options": {
+     "a": "(i) only",
+     "b": "(iii) only",
+     "c": "(ii) and (iv)",
+     "d": "(iii) and (iv)"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.27 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q28",
+    "n": 28,
+    "stem": "Which of the following statements is true for acids?",
+    "options": {
+     "a": "Bitter and change red litmus to blue",
+     "b": "Sour and change red litmus to blue",
+     "c": "Sour and change blue litmus to red",
+     "d": "Bitter and change blue litmus to red"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.28 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q29",
+    "n": 29,
+    "stem": "Which of the following are present in a dilute aqueous solution of hydrochloric acid?",
+    "options": {
+     "a": "H3O+ + Cl–",
+     "b": "H3O+ + OH–",
+     "c": "Cl– + OH–",
+     "d": "unionised HCl"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.29 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch2-q30",
+    "n": 30,
+    "stem": "Identify the correct representation of reaction occurring during chloralkali process",
+    "options": {
+     "a": "2NaCl(l) + 2H2O(l) → 2NaOH(l) + Cl2(g) + H2(g)",
+     "b": "2NaCl(aq) + 2H2O(aq) → 2NaOH(aq) + Cl2(g) + H2(g)",
+     "c": "2NaCl(aq) + 2H2O(l) → 2NaOH(aq) + Cl2(aq) + H2(aq)",
+     "d": "2NaCl (aq) + 2H2O (l) → 2NaOH (aq) + Cl2(g) + H2(g) Short Answer Questions"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.2 Q.30 (Multiple Choice)"
+   }
+  ],
+  "ch3": [
+   {
+    "id": "xem-ch3-q1",
+    "n": 1,
+    "stem": "Which of the following property is generally not shown by metals?",
+    "options": {
+     "a": "Electrical conduction",
+     "b": "Sonorous in nature",
+     "c": "Dullness",
+     "d": "Ductility"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.1 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q2",
+    "n": 2,
+    "stem": "The ability of metals to be drawn into thin wire is known as",
+    "options": {
+     "a": "ductility",
+     "b": "malleability",
+     "c": "sonorousity",
+     "d": "conductivity"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.2 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q3",
+    "n": 3,
+    "stem": "Aluminium is used for making cooking utensils. Which of the following properties of aluminium are responsible for the same? (i) Good thermal conductivity (ii) Good electrical conductivity (iii) Ductility (iv) High melting point",
+    "options": {
+     "a": "(i) and (ii)",
+     "b": "(i) and (iii)",
+     "c": "(ii) and (iii)",
+     "d": "(i) and (iv)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.3 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q4",
+    "n": 4,
+    "stem": "Which one of the following metals do not react with cold as well as hot water?",
+    "options": {
+     "a": "Na",
+     "b": "Ca",
+     "c": "Mg",
+     "d": "Fe"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.4 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q5",
+    "n": 5,
+    "stem": "Which of the following oxide(s) of iron would be obtained on prolonged reaction of iron with steam?",
+    "options": {
+     "a": "FeO",
+     "b": "Fe2O3",
+     "c": "Fe3O4",
+     "d": "Fe2O3 and Fe3O4"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.5 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q6",
+    "n": 6,
+    "stem": "What happens when calcium is treated with water? (i) It does not react with water (ii) It reacts violently with water (iii) It reacts less violently with water (iv) Bubbles of hydrogen gas formed stick to the surface of calcium",
+    "options": {
+     "a": "(i) and (iv)",
+     "b": "(ii) and (iii)",
+     "c": "(i) and (ii)",
+     "d": "(iii) and (iv)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.6 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q7",
+    "n": 7,
+    "stem": "Generally metals react with acids to give salt and hydrogen gas. Which of the following acids does not give hydrogen gas on reacting with metals (except Mn and Mg)?",
+    "options": {
+     "a": "H2SO4",
+     "b": "HCl",
+     "c": "HNO3",
+     "d": "All of these"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.7 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q8",
+    "n": 8,
+    "stem": "The composition of aqua-regia is",
+    "options": {
+     "a": "Dil.HCl : Conc. HNO3 3 : 1",
+     "b": "Conc.HCl : Dil. HNO3 3 : 1",
+     "c": "Conc.HCl : Conc.HNO3 3 : 1",
+     "d": "Dil.HCl : Dil.HNO3 3 : 1"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.8 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q9",
+    "n": 9,
+    "stem": "Which of the following are not ionic compounds? (i) KCl (ii) HCl (iii) CCl4 (iv) NaCl",
+    "options": {
+     "a": "(i) and (ii)",
+     "b": "(ii) and (iii)",
+     "c": "(iii) and (iv)",
+     "d": "(i) and (iii)"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.9 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q10",
+    "n": 10,
+    "stem": "Which one of the following properties is not generally exhibited by ionic compounds?",
+    "options": {
+     "a": "Solubility in water",
+     "b": "Electrical conductivity in solid state",
+     "c": "High melting and boiling points",
+     "d": "Electrical conductivity in molten state"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.10 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q11",
+    "n": 11,
+    "stem": "Which of the following metals exist in their native state in nature? (i) Cu (ii) Au (iii) Zn (iv) Ag",
+    "options": {
+     "a": "(i) and (ii)",
+     "b": "(ii) and (iii)",
+     "c": "(ii) and (iv)",
+     "d": "(iii) and (iv)"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.11 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q12",
+    "n": 12,
+    "stem": "Metals are refined by using different methods. Which of the following metals are refined by electrolytic refining? (i) Au (ii) Cu (iii) Na (iv) K",
+    "options": {
+     "a": "(i) and (ii)",
+     "b": "(i) and (iii)",
+     "c": "(ii) and (iii)",
+     "d": "(iii) and (iv)"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.12 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q13",
+    "n": 13,
+    "stem": "Silver articles become black on prolonged exposure to air. This is due to the formation of",
+    "options": {
+     "a": "Ag3N",
+     "b": "Ag2O",
+     "c": "Ag2S",
+     "d": "Ag2S and Ag3N"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.13 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q14",
+    "n": 14,
+    "stem": "Galvanisation is a method of protecting iron from rusting by coating with a thin layer of",
+    "options": {
+     "a": "Gallium",
+     "b": "Aluminium",
+     "c": "Zinc",
+     "d": "Silver"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.14 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q15",
+    "n": 15,
+    "stem": "Stainless steel is very useful material for our life. In stainless steel, iron is mixed with",
+    "options": {
+     "a": "Ni and Cr",
+     "b": "Cu and Cr",
+     "c": "Ni and Cu",
+     "d": "Cu and Au"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.15 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q16",
+    "n": 16,
+    "stem": "If copper is kept open in air, it slowly loses its shining brown surface and gains a green coating. It is due to the formation of",
+    "options": {
+     "a": "CuSO4",
+     "b": "CuCO3",
+     "c": "Cu(NO3)2",
+     "d": "CuO"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.16 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q17",
+    "n": 17,
+    "stem": "Generally, metals are solid in nature. Which one of the following metals is found in liquid state at room temperature?",
+    "options": {
+     "a": "Na",
+     "b": "Fe",
+     "c": "Cr",
+     "d": "Hg"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.17 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q18",
+    "n": 18,
+    "stem": "Which of the following metals are obtained by electrolysis of their chlorides in molten state ? (i) Na (ii) Ca (iii) Fe (iv) Cu",
+    "options": {
+     "a": "(i) and (iv)",
+     "b": "(iii) and (iv)",
+     "c": "(i) and (iii)",
+     "d": "(i) and (ii)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.18 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q19",
+    "n": 19,
+    "stem": "Generally, non-metals are not lustrous. Which of the following non- metal is lustrous?",
+    "options": {
+     "a": "Sulphur",
+     "b": "Oxygen",
+     "c": "Nitrogen",
+     "d": "Iodine"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.19 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q20",
+    "n": 20,
+    "stem": "Which one of the following four metals would be displaced from the solution of its salts by other three metals?",
+    "options": {
+     "a": "Mg",
+     "b": "Ag",
+     "c": "Zn",
+     "d": "Cu"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.20 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q21",
+    "n": 21,
+    "stem": "2 mL each of concentrated HCl, HNO3 and a mixture of concentrated HCl and concentrated HNO3 in the ratio of 3 : 1 were taken in test tubes labelled as A, B and C. A small piece of metal was put in each test tube. No change occurred in test tubes A and B but the metal got dissolved in test tube C respectively. The metal could be",
+    "options": {
+     "a": "Al",
+     "b": "Au",
+     "c": "Cu",
+     "d": "Pt"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.21 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q22",
+    "n": 22,
+    "stem": "An alloy is",
+    "options": {
+     "a": "an element",
+     "b": "a compound",
+     "c": "a homogeneous mixture",
+     "d": "a heterogeneous mixture"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.22 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q23",
+    "n": 23,
+    "stem": "An electrolytic cell consists of (i) positively charged cathode (ii) negatively charged anode (iii) positively charged anode (iv) negatively charged cathode",
+    "options": {
+     "a": "(i) and (ii)",
+     "b": "(iii) and (iv)",
+     "c": "(i) and (iii)",
+     "d": "(ii) ad (iv)"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.23 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q24",
+    "n": 24,
+    "stem": "During electrolytic refining of zinc, it gets",
+    "options": {
+     "a": "deposited on cathode",
+     "b": "deposited on anode",
+     "c": "deposited on cathode as well as anode",
+     "d": "remains in the solution"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.24 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q26",
+    "n": 26,
+    "stem": "Alloys are homogeneous mixtures of a metal with a metal or non- metal. Which among the following alloys contain non-metal as one of its constituents?",
+    "options": {
+     "a": "Brass",
+     "b": "Bronze",
+     "c": "Amalgam",
+     "d": "Steel"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.26 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q27",
+    "n": 27,
+    "stem": "Which among the following statements is incorrect for magnesium metal?",
+    "options": {
+     "a": "It burns in oxygen with a dazzling white flame",
+     "b": "It reacts with cold water to form magnesium oxide and evolves hydrogen gas",
+     "c": "It reacts with hot water to form magnesium hydroxide and evolves hydrogen gas",
+     "d": "It reacts with steam to form magnesium hydroxide and evolves hydrogen gas"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.27 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q28",
+    "n": 28,
+    "stem": "Which among the following alloys contain mercury as one of its constituents?",
+    "options": {
+     "a": "Stainless steel",
+     "b": "Alnico",
+     "c": "Solder",
+     "d": "Zinc amalgam"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.28 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q29",
+    "n": 29,
+    "stem": "Reaction between X and Y, forms compound Z. X loses electron and Y gains electron. Which of the following properties is not shown by Z?",
+    "options": {
+     "a": "Has high melting point",
+     "b": "Has low melting point",
+     "c": "Conducts electricity in molten state",
+     "d": "Occurs as solid"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.29 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q30",
+    "n": 30,
+    "stem": "The electronic configurations of three elements X, Y and Z are X — 2, 8; Y — 2, 8, 7 and Z — 2, 8, 2. Which of the following is correct?",
+    "options": {
+     "a": "X is a metal",
+     "b": "Y is a metal",
+     "c": "Z is a non-metal",
+     "d": "Y is a non-metal and Z is a metal"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.30 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q31",
+    "n": 31,
+    "stem": "Although metals form basic oxides, which of the following metals form an amphoteric oxide?",
+    "options": {
+     "a": "Na",
+     "b": "Ca",
+     "c": "Al",
+     "d": "Cu"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.31 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q32",
+    "n": 32,
+    "stem": "Generally, non-metals are not conductors of electricity. Which of the following is a good conductor of electricity?",
+    "options": {
+     "a": "Diamond",
+     "b": "Graphite",
+     "c": "Sulphur",
+     "d": "Fullerene"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.32 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q33",
+    "n": 33,
+    "stem": "Electrical wires have a coating of an insulting material. The material, generally used is",
+    "options": {
+     "a": "Sulphur",
+     "b": "Graphite",
+     "c": "PVC",
+     "d": "All can be used"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.33 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q34",
+    "n": 34,
+    "stem": "Which of the following non-metals is a liquid?",
+    "options": {
+     "a": "Carbon",
+     "b": "Bromine",
+     "c": "Phosphorus",
+     "d": "Sulphur"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.34 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch3-q35",
+    "n": 35,
+    "stem": "Which of the following can undergo a chemical reaction?",
+    "options": {
+     "a": "MgSO4 + Fe",
+     "b": "ZnSO4 + Fe",
+     "c": "MgSO4 + Pb",
+     "d": "CuSO4 + Fe"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.3 Q.35 (Multiple Choice)"
+   }
+  ],
+  "ch4": [
+   {
+    "id": "xem-ch4-q1",
+    "n": 1,
+    "stem": "Carbon exists in the atmosphere in the form of",
+    "options": {
+     "a": "carbon monoxide only",
+     "b": "carbon monoxide in traces and carbon dioxide",
+     "c": "carbon dioxide only",
+     "d": "coal"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.1 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q2",
+    "n": 2,
+    "stem": "Which of the following statements are usually correct for carbon compounds? These (i) are good conductors of electricity (ii) are poor conductors of electricity (iii) have strong forces of attraction between their molecules (iv) do not have strong forces of attraction between their molecules",
+    "options": {
+     "a": "(i) and (iii)",
+     "b": "(ii) and (iii)",
+     "c": "(i) and (iv)",
+     "d": "(ii) and (iv)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.2 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q3",
+    "n": 3,
+    "stem": "A molecule of ammonia (NH3) has",
+    "options": {
+     "a": "only single bonds",
+     "b": "only double bonds",
+     "c": "only triple bonds",
+     "d": "two double bonds and one single bond"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.3 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q4",
+    "n": 4,
+    "stem": "Buckminsterfullerene is an allotropic form of",
+    "options": {
+     "a": "phosphorus",
+     "b": "sulphur",
+     "c": "carbon",
+     "d": "tin"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.4 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q6",
+    "n": 6,
+    "stem": "CH3– CH2– OH → CH3 – COOH In the above given reaction, alkaline KMnO4 acts as",
+    "options": {
+     "a": "reducing agent",
+     "b": "oxidising agent",
+     "c": "catalyst",
+     "d": "dehydrating agent"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.6 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q7",
+    "n": 7,
+    "stem": "Oils on treating with hydrogen in the presence of palladium or nickel catalyst form fats. This is an example of",
+    "options": {
+     "a": "Addition reaction",
+     "b": "Substitution reaction",
+     "c": "Displacement reaction",
+     "d": "Oxidation reaction"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.7 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q8",
+    "n": 8,
+    "stem": "In which of the following compounds, — OH is the functional group?",
+    "options": {
+     "a": "Butanone",
+     "b": "Butanol",
+     "c": "Butanoic acid",
+     "d": "Butanal"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.8 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q9",
+    "n": 9,
+    "stem": "The soap molecule has a",
+    "options": {
+     "a": "hydrophilic head and a hydrophobic tail",
+     "b": "hydrophobic head and a hydrophilic tail",
+     "c": "hydrophobic head and a hydrophobic tail",
+     "d": "hydrophilic head and a hydrophilic tail"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.9 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q12",
+    "n": 12,
+    "stem": "Identify the unsaturated compounds from the following (i) Propane (ii) Propene (iii) Propyne (iv) Chloropropane",
+    "options": {
+     "a": "(i) and (ii)",
+     "b": "(ii) and (iv)",
+     "c": "(iii) and (iv)",
+     "d": "(ii) and (iii)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.12 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q13",
+    "n": 13,
+    "stem": "Chlorine reacts with saturated hydrocarbons at room temperature in the",
+    "options": {
+     "a": "absence of sunlight",
+     "b": "presence of sunlight",
+     "c": "presence of water",
+     "d": "presence of hydrochloric acid"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.13 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q14",
+    "n": 14,
+    "stem": "In the soap micelles",
+    "options": {
+     "a": "the ionic end of soap is on the surface of the cluster while the carbon chain is in the interior of the cluster.",
+     "b": "ionic end of soap is in the interior of the cluster and the carbon chain is out of the cluster.",
+     "c": "both ionic end and carbon chain are in the interior of the cluster",
+     "d": "both ionic end and carbon chain are on the exterior of the cluster"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.14 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q15",
+    "n": 15,
+    "stem": "Pentane has the molecular formula C5 H12. It has",
+    "options": {
+     "a": "5 covalent bonds",
+     "b": "12 covalent bonds",
+     "c": "16 covalent bonds",
+     "d": "17 covalent bonds"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.15 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q17",
+    "n": 17,
+    "stem": "Ethanol reacts with sodium and forms two products. These are",
+    "options": {
+     "a": "sodium ethanoate and hydrogen",
+     "b": "sodium ethanoate and oxygen",
+     "c": "sodium ethoxide and hydrogen",
+     "d": "sodium ethoxide and oxygen"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.17 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q19",
+    "n": 19,
+    "stem": "Vinegar is a solution of",
+    "options": {
+     "a": "50% – 60% acetic acid in alcohol",
+     "b": "5% – 8% acetic acid in alcohol",
+     "c": "5% – 8% acetic acid in water",
+     "d": "50% – 60% acetic acid in water"
+    },
+    "answer": "c",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.19 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q20",
+    "n": 20,
+    "stem": "Mineral acids are stronger acids than carboxylic acids because (i) mineral acids are completely ionised (ii) carboxylic acids are completely ionised (iii) mineral acids are partially ionised (iv) carboxylic acids are partially ionised",
+    "options": {
+     "a": "(i) and (iv)",
+     "b": "(ii) and (iii)",
+     "c": "(i) and (ii)",
+     "d": "(iii) and (iv)"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.20 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q21",
+    "n": 21,
+    "stem": "Carbon forms four covalent bonds by sharing its four valence electrons with four univalent atoms, e.g. hydrogen. After the for mation of four bonds, carbon attains the electronic configuration of",
+    "options": {
+     "a": "helium",
+     "b": "neon",
+     "c": "argon",
+     "d": "krypton"
+    },
+    "answer": "b",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.21 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q25",
+    "n": 25,
+    "stem": "Which of the following does not belong to the same homologous series?",
+    "options": {
+     "a": "CH4",
+     "b": "C2 H6",
+     "c": "C3 H8",
+     "d": "C4 H8"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.25 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q26",
+    "n": 26,
+    "stem": "The name of the compound CH3 — CH2 — CHO is",
+    "options": {
+     "a": "Propanal",
+     "b": "Propanone",
+     "c": "Ethanol",
+     "d": "Ethanal"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.26 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q27",
+    "n": 27,
+    "stem": "The heteroatoms present in CH3 — CH2 — O — CH2— CH2 Cl are (i) oxygen (ii) carbon (iii) hydrogen (iv) chlorine",
+    "options": {
+     "a": "(i) and (ii)",
+     "b": "(ii) and (iii)",
+     "c": "(iii) and (iv)",
+     "d": "(i) and (iv)"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.27 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q28",
+    "n": 28,
+    "stem": "Which of the following represents saponification reaction?",
+    "options": {
+     "a": "CH3COONa + NaOH CH4 + Na2CO3",
+     "b": "CH3COOH + C2H5OH CH3 COOC2H5 +H2O",
+     "c": "2CH3COOH + 2Na → 2CH3 COONa + H2",
+     "d": "CH3COOC2H5 + NaOH → CH3 COONa + C2 H5OH"
+    },
+    "answer": "d",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.28 (Multiple Choice)"
+   },
+   {
+    "id": "xem-ch4-q29",
+    "n": 29,
+    "stem": "The first member of alkyne homologous series is",
+    "options": {
+     "a": "ethyne",
+     "b": "ethene",
+     "c": "propyne",
+     "d": "methane"
+    },
+    "answer": "a",
+    "source": "NCERT Exemplar Class X Science Ch.4 Q.29 (Multiple Choice)"
+   }
+  ]
+ },
+ "verifiedAgainst": "Question text and key read from the official PDFs on 2026-11-08. Questions that depend on a figure or structure drawing, or that did not extract cleanly, are left out."
+}

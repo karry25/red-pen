@@ -35,7 +35,7 @@ async function loadChapters() {
     b.className = 'ch-chip' + (c.id === activeChapter ? ' active' : '');
     b.textContent = `Ch.${c.number} ${c.title}`;
     b.title = `${c.agent} (subject-expert agent) · ${c.counts.questions}+${c.counts.pyqs} questions, ${c.counts.doubts} doubt answers, ${c.counts.topics} teach topics`;
-    b.onclick = () => { activeChapter = c.id; saveDeviceChapter(c.id); loadChapters(); load(); loadTeach(); loadExplainers(); };
+    b.onclick = () => { activeChapter = c.id; saveDeviceChapter(c.id); window.dispatchEvent(new Event('redpen-chapter')); loadChapters(); load(); loadTeach(); loadExplainers(); };
     sw.appendChild(b);
   });
   renderDeviceMemoryToggle();

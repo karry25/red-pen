@@ -69,6 +69,18 @@ async function runFeatureTests(check) {
   check('quick: no fake app link when not deployed', !/https?:\/\//.test(quick.plan(null, null)) && /https:\/\/x\.example/.test(quick.plan(null, 'https://x.example')));
   await upd({ message: { chat: { id: 701 }, text: 'kal exam hai' } });
   check('telegram: quick phrase gets quick plan', /Quick plan/.test(bot.sendLog.at(-1).text));
+  // exemplar: official key spot checks (answers read from jeep1an.pdf by me) + behaviour
+  const ex = require('../agents/exemplar');
+  const known = { 'xem-ch1-q1': 'd', 'xem-ch1-q11': 'b', 'xem-ch2-q15': 'a', 'xem-ch2-q4': 'b', 'xem-ch3-q31': 'c', 'xem-ch3-q17': 'd', 'xem-ch4-q25': 'd', 'xem-ch4-q29': 'a', 'xem-ch4-q7': 'a' };
+  check('exemplar: official-key spot checks (9 known answers)', Object.entries(known).every(([id, a]) => ex.find(id) && ex.find(id).answer === a));
+  check('exemplar: all 4 chapters have >= 18 MCQs with 4 options and an NCERT Exemplar source', ['ch1', 'ch2', 'ch3', 'ch4'].every((c) => ex.list(c).length >= 18 && ex.list(c).every((q) => Object.keys(q.options).length === 4 && /^NCERT Exemplar Class X Science Ch\.\d Q\.\d+/.test(q.source))));
+  check('exemplar: no question carries PDF junk', ex.list('ch3').concat(ex.list('ch4'), ex.list('ch1'), ex.list('ch2')).every((q) => !/5JQTV|EXEMPLAR|METALS AND NON/.test(q.stem + Object.values(q.options).join(' '))));
+  check('exemplar: public view hides the answer', !('answer' in ex.publicView(ex.list('ch1')[0])));
+  check('exemplar: wrong/right/invalid handled', ex.check('xem-ch1-q1', 'a').correct === false && ex.check('xem-ch1-q1', '(d)').correct === true && ex.check('xem-ch1-q1', 'zebra').valid === false && ex.check('nope', 'a') === null);
+  await upd({ message: { chat: { id: 702 }, text: '/extra' } });
+  const qtext = bot.sendLog.at(-1).text; const qid = ex.list('ch1').find((q) => qtext.includes(q.stem.slice(0, 40)));
+  await upd({ message: { chat: { id: 702 }, text: qid.answer } });
+  check('telegram: /extra then letter answer checks against official key', !!qid && /Correct/.test(bot.sendLog.at(-1).text) && /NCERT Exemplar/.test(bot.sendLog.at(-1).text));
   fs.rmSync(dir, { recursive: true, force: true });
 }
 module.exports = { runFeatureTests };
