@@ -4,7 +4,7 @@
   {
    "id": "equations",
    "name": "Writing and balancing chemical equations",
-   "ncert": "§1.1",
+   "ncert": "\u00a71.1",
    "words": [
     "balanc",
     "skeleton",
@@ -17,7 +17,7 @@
   {
    "id": "combination",
    "name": "Combination reactions",
-   "ncert": "§1.2",
+   "ncert": "\u00a71.2",
    "words": [
     "combination"
    ]
@@ -25,7 +25,7 @@
   {
    "id": "decomposition",
    "name": "Decomposition reactions",
-   "ncert": "§1.2",
+   "ncert": "\u00a71.2",
    "words": [
     "decomposition",
     "thermal",
@@ -37,7 +37,7 @@
   {
    "id": "displacement",
    "name": "Displacement and double displacement",
-   "ncert": "§1.2",
+   "ncert": "\u00a71.2",
    "words": [
     "displacement",
     "precipitat",
@@ -47,7 +47,7 @@
   {
    "id": "exoendo",
    "name": "Exothermic and endothermic reactions",
-   "ncert": "§1.2",
+   "ncert": "\u00a71.2",
    "words": [
     "exothermic",
     "endothermic"
@@ -56,7 +56,7 @@
   {
    "id": "redox",
    "name": "Oxidation and reduction",
-   "ncert": "§1.2.5",
+   "ncert": "\u00a71.2.5",
    "words": [
     "oxidation",
     "reduction",
@@ -68,7 +68,7 @@
   {
    "id": "corrosion",
    "name": "Corrosion and rancidity",
-   "ncert": "§1.3",
+   "ncert": "\u00a71.3",
    "words": [
     "corrosion",
     "rusting",
@@ -81,7 +81,7 @@
   {
    "id": "indicators",
    "name": "Indicators (litmus, turmeric, olfactory)",
-   "ncert": "§2.1.1",
+   "ncert": "\u00a72.1.1",
    "words": [
     "indicator",
     "litmus",
@@ -94,7 +94,7 @@
   {
    "id": "acid_reactions",
    "name": "Reactions of acids and bases with metals, carbonates, oxides",
-   "ncert": "§2.1.2-2.1.6",
+   "ncert": "\u00a72.1.2-2.1.6",
    "words": [
     "metal",
     "carbonate",
@@ -109,7 +109,7 @@
   {
    "id": "neutralisation",
    "name": "Neutralisation",
-   "ncert": "§2.1.4",
+   "ncert": "\u00a72.1.4",
    "words": [
     "neutralis",
     "neutraliz"
@@ -118,7 +118,7 @@
   {
    "id": "ions",
    "name": "Acids and bases in water (H+ / OH- ions, dilution)",
-   "ncert": "§2.2",
+   "ncert": "\u00a72.2",
    "words": [
     "h+",
     "hydronium",
@@ -134,7 +134,7 @@
   {
    "id": "ph",
    "name": "pH scale",
-   "ncert": "§2.3",
+   "ncert": "\u00a72.3",
    "words": [
     "ph scale",
     "ph ",
@@ -145,7 +145,7 @@
   {
    "id": "salts",
    "name": "Common salt and its products",
-   "ncert": "§2.4",
+   "ncert": "\u00a72.4",
    "words": [
     "common salt",
     "chlor-alkali",
@@ -161,7 +161,7 @@
   {
    "id": "pop",
    "name": "Plaster of Paris and water of crystallisation",
-   "ncert": "§2.4.4",
+   "ncert": "\u00a72.4.4",
    "words": [
     "plaster of paris",
     "crystallisation",
@@ -175,7 +175,7 @@
   {
    "id": "physical",
    "name": "Physical properties of metals and non-metals",
-   "ncert": "§3.1",
+   "ncert": "\u00a73.1",
    "words": [
     "physical propert",
     "malleab",
@@ -188,19 +188,21 @@
   {
    "id": "chemical",
    "name": "Chemical properties (oxygen, water, acids)",
-   "ncert": "§3.2",
+   "ncert": "\u00a73.2",
    "words": [
     "with oxygen",
     "with water",
     "with acid",
     "amphoteric",
-    "chemical propert"
+    "chemical propert",
+    "kerosene",
+    "nitric"
    ]
   },
   {
    "id": "reactivity",
    "name": "Reactivity series and displacement",
-   "ncert": "§3.2",
+   "ncert": "\u00a73.2",
    "words": [
     "reactivity series",
     "displacement",
@@ -210,7 +212,7 @@
   {
    "id": "ionic",
    "name": "Ionic compounds",
-   "ncert": "§3.3",
+   "ncert": "\u00a73.3",
    "words": [
     "ionic",
     "electron transfer",
@@ -221,7 +223,7 @@
   {
    "id": "extraction",
    "name": "Occurrence and extraction of metals",
-   "ncert": "§3.4",
+   "ncert": "\u00a73.4",
    "words": [
     "extraction",
     "ore",
@@ -235,7 +237,7 @@
   {
    "id": "refining",
    "name": "Refining of metals",
-   "ncert": "§3.4",
+   "ncert": "\u00a73.4",
    "words": [
     "refining",
     "anode mud",
@@ -245,7 +247,7 @@
   {
    "id": "corr",
    "name": "Corrosion, rusting and alloys",
-   "ncert": "§3.5",
+   "ncert": "\u00a73.5",
    "words": [
     "corrosion",
     "rusting",
@@ -259,7 +261,7 @@
   {
    "id": "bonding",
    "name": "Covalent bonding in carbon",
-   "ncert": "§4.1",
+   "ncert": "\u00a74.1",
    "words": [
     "covalent",
     "bonding",
@@ -270,7 +272,7 @@
   {
    "id": "versatile",
    "name": "Versatile nature: catenation, tetravalency, allotropes",
-   "ncert": "§4.2",
+   "ncert": "\u00a74.2",
    "words": [
     "catenation",
     "tetravalen",
@@ -284,7 +286,7 @@
   {
    "id": "homologous",
    "name": "Homologous series, functional groups, nomenclature",
-   "ncert": "§4.2",
+   "ncert": "\u00a74.2",
    "words": [
     "homologous",
     "functional group",
@@ -298,7 +300,7 @@
   {
    "id": "carbon_chem",
    "name": "Combustion, oxidation, addition, substitution",
-   "ncert": "§4.3",
+   "ncert": "\u00a74.3",
    "words": [
     "combustion",
     "oxidation",
@@ -310,7 +312,7 @@
   {
    "id": "ethanol",
    "name": "Ethanol and ethanoic acid",
-   "ncert": "§4.4",
+   "ncert": "\u00a74.4",
    "words": [
     "ethanol",
     "ethanoic",
@@ -323,7 +325,7 @@
   {
    "id": "soap",
    "name": "Soaps and detergents",
-   "ncert": "§4.5",
+   "ncert": "\u00a74.5",
    "words": [
     "soap",
     "detergent",

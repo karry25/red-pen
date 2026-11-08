@@ -172,6 +172,7 @@ async function post(p, body) {
   // LLM brain + STT wiring, exercised against a mock Groq (no real key)
   await require('./brain_mock').runBrainMock(check);
   await require('./memory_test').runMemoryTests(check);
+  await require('./features_test').runFeatureTests(check);
 
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed ? 1 : 0);

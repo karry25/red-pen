@@ -11,6 +11,10 @@ const { answerDoubt } = require('../agents/module2');
 const module3 = require('../agents/module3');
 const module4 = require('../agents/module4');
 const coordinator = require('../agents/coordinator');
+const formulas = require('../agents/formulas');
+const studypath = require('../agents/studypath');
+const quickmode = require('../agents/quickmode');
+const drip = require('../agents/drip');
 const { getChapter, findQuestion, detectChapter, listChapters } = require('../agents/chapter');
 
 const WELCOME = `Hi! I'm Red Pen, your study buddy - ask me a doubt or let me quiz you, examiner style.
@@ -23,6 +27,10 @@ const WELCOME = `Hi! I'm Red Pen, your study buddy - ask me a doubt or let me qu
 /findvideo <your need> - best videos for you (set /language first)
 /compare <link1> <link2> <your need> - which video suits you
 /videos [topic] - checked video playlist for the active chapter
+/formulas - key equations + memory aids for the chapter
+/path - a study path built for you (not forced)
+/drip on - optional spaced formula reminders (/pause, /stop any time)
+/sources - the studies behind how I teach
 /chapter <1-4> - switch the chapter I'm working from
 
 Right now my verified material covers NCERT Class 10 Science chapters 1-4 (Chemical Reactions, Acids-Bases-Salts, Metals & Non-metals, Carbon), with answers backed by the NCERT text and CBSE sample papers. More subjects coming - I'll always tell you honestly what I actually know.
@@ -96,6 +104,29 @@ class ChatFlow {
       const line = (b, s) => `${b ? '[x]' : '[ ]'} ${s}`;
       return { text: `Today's goals:\n${line(g.grade, 'Grade 1 answer (/quiz)')}\n${line(g.doubt, 'Ask 1 doubt (/doubt)')}\n${line(g.teach, 'Teach me once (/teach)')}` };
     }
+    if (low === '/formulas') { const ch = this.chapter(); return { text: formulas.formatSheet(ch.chapterId, `Ch.${ch.number} ${ch.title}`) }; }
+    if (low === '/sources') {
+      const cit = require('../data/citations.json');
+      const list = Object.values(cit.items).map((x) => `- ${x.cite}\n  ${x.claim}\n  ${x.url}`);
+      return { text: 'Why Red Pen works this way (all checked links):\n' + list.join('\n') };
+    }
+    if (low.startsWith('/path')) {
+      const m = memory.get(this.chatId);
+      const days = parseInt(low.split(' ')[1], 10) || 7;
+      return { text: studypath.format(studypath.buildPath({ days, minutesPerDay: 60, mem: m })) };
+    }
+    if (low.startsWith('/drip')) {
+      const arg = low.split(/\s+/)[1];
+      if (arg === 'on') {
+        const n = drip.start(this.chatId, this.chapterId);
+        return { text: `Formula reminders ON for Ch.${this.chapter().number}: ${n} cards, at most 2 a day, never between 10pm and 7am. Each one asks you to recall first, then you tap Show. Spacing: 1, 3, 7, 14 days (spaced practice works better than cramming - Cepeda et al. 2006). /pause or /stop any time. To send them I save your chat id in your memory file (/mydata shows it); /stop deletes it. No streaks, no guilt if you skip.`, buttons: [[{ text: 'Pause', data: 'drip:pause' }, { text: 'Stop', data: 'drip:stop' }]] };
+      }
+      if (arg === 'resume') { return { text: drip.setPaused(this.chatId, false) ? 'Reminders resumed.' : 'Reminders are not on. Send /drip on.' }; }
+      return { text: drip.state(this.chatId) ? `Reminders are ${drip.state(this.chatId).paused ? 'paused (/drip resume)' : 'on'}. /pause or /stop.` : 'Reminders are off. /drip on to start (optional, easy to stop).' };
+    }
+    if (low === '/pause') return { text: drip.setPaused(this.chatId, true) ? 'Paused. Nothing will be sent until you send /drip resume.' : 'No reminders are running.' };
+    if (low === '/stop') { drip.stop(this.chatId); return { text: 'Stopped. Reminder data deleted.' }; }
+    if (!t.startsWith('/') && !this.mode && quickmode.isQuick(t)) return { text: quickmode.plan(memory.get(this.chatId), process.env.PUBLIC_BASE_URL) };
     if (low === '/quiz') {
       const q = this.pickQuestion();
       this.mode = 'quiz'; this.questionId = q.id;

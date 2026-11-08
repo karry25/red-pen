@@ -95,6 +95,7 @@ function summaryText(chatId) {
     `- Topics you asked about: ${top(rec.topics, 8).map(([k, v]) => `${k} x${v}`).join(', ') || 'none yet'}`,
     `- Questions you found hard: ${top(rec.weak, 8).map(([k, v]) => `${k} x${v}`).join(', ') || 'none yet'}`,
     `- What you usually need: ${top(rec.needs, 4).map(([k, v]) => `${k} x${v}`).join(', ') || 'none yet'}`,
+    rec.drip && rec.drip.on ? `- Formula reminders: ON${rec.drip.paused ? ' (paused)' : ''} - to send them I also keep your Telegram chat id in this file and the formula ids with next-due dates.` : '- Formula reminders: off',
     `Auto-deleted after 90 days of not using me (about ${days} days left). /forget deletes it right now.`,
     'Heads-up: on the free host this file can disappear if the server restarts.',
   ].join('\n');
@@ -113,4 +114,5 @@ function sweep() {
   } catch { /* no dir yet */ }
   return n;
 }
-module.exports = { enable, forget, isOn, get, record, summaryText, sweep, fileFor, TTL_MS, DIR };
+const readRec = read, writeRec = write;
+module.exports = { readRec, writeRec, enable, forget, isOn, get, record, summaryText, sweep, fileFor, TTL_MS, DIR };

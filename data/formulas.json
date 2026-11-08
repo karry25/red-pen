@@ -1,0 +1,193 @@
+{
+ "note": "Formula/equation cards. Facts are from the cited NCERT section. Mnemonics are Red Pen memory aids (NOT from NCERT) and are a low-utility helper per Dunlosky et al. 2013; testing yourself works better.",
+ "items": [
+  {
+   "id": "ch1-conservation",
+   "chapter": "ch1",
+   "title": "Law of conservation of mass",
+   "body": "Total mass of reactants = total mass of products. So the number of atoms of each element must be equal on both sides: balance the equation.",
+   "ncert": "NCERT Ch.1 §1.1.2"
+  },
+  {
+   "id": "ch1-combination",
+   "chapter": "ch1",
+   "title": "Combination reaction",
+   "body": "A + B -> AB. Example: CaO + H2O -> Ca(OH)2 + heat (quicklime + water = slaked lime).",
+   "ncert": "NCERT Ch.1 §1.2.1"
+  },
+  {
+   "id": "ch1-decomp",
+   "chapter": "ch1",
+   "title": "Decomposition reactions",
+   "body": "One reactant -> two or more products. Heat: CaCO3 -> CaO + CO2. Electricity: 2H2O -> 2H2 + O2 (H2 : O2 = 2 : 1). Light: 2AgCl -> 2Ag + Cl2.",
+   "ncert": "NCERT Ch.1 §1.2.2",
+   "mnemonic": "Decomposition needs energy: Heat, Light or Electricity (HLE)."
+  },
+  {
+   "id": "ch1-displacement",
+   "chapter": "ch1",
+   "title": "Displacement reaction",
+   "body": "A more reactive element displaces a less reactive one: Fe + CuSO4 -> FeSO4 + Cu.",
+   "ncert": "NCERT Ch.1 §1.2.3"
+  },
+  {
+   "id": "ch1-double",
+   "chapter": "ch1",
+   "title": "Double displacement",
+   "body": "AB + CD -> AD + CB. Example: Na2SO4 + BaCl2 -> BaSO4 (white ppt) + 2NaCl.",
+   "ncert": "NCERT Ch.1 §1.2.4"
+  },
+  {
+   "id": "ch1-redox",
+   "chapter": "ch1",
+   "title": "Oxidation and reduction (Class 10 view)",
+   "body": "Oxidation = gain of oxygen / loss of hydrogen. Reduction = loss of oxygen / gain of hydrogen. Both happen together (redox): CuO + H2 -> Cu + H2O.",
+   "ncert": "NCERT Ch.1 §1.2.5",
+   "mnemonic": "Oxygen In = Oxidation. Hydrogen In = Reduction."
+  },
+  {
+   "id": "ch2-acid-metal",
+   "chapter": "ch2",
+   "title": "Acid + metal",
+   "body": "Acid + metal -> salt + hydrogen gas. Zn + H2SO4 -> ZnSO4 + H2 (pops with a burning candle).",
+   "ncert": "NCERT Ch.2 §2.1.2"
+  },
+  {
+   "id": "ch2-acid-carbonate",
+   "chapter": "ch2",
+   "title": "Acid + metal carbonate / hydrogencarbonate",
+   "body": "Acid + metal carbonate -> salt + CO2 + H2O. CO2 turns lime water milky: Ca(OH)2 + CO2 -> CaCO3 + H2O.",
+   "ncert": "NCERT Ch.2 §2.1.3"
+  },
+  {
+   "id": "ch2-neutralisation",
+   "chapter": "ch2",
+   "title": "Neutralisation",
+   "body": "Acid + base -> salt + water. NaOH + HCl -> NaCl + H2O.",
+   "ncert": "NCERT Ch.2 §2.1.4"
+  },
+  {
+   "id": "ch2-ph",
+   "chapter": "ch2",
+   "title": "pH scale",
+   "body": "0 to 14. pH 7 neutral, below 7 acidic, above 7 basic. Lower pH = stronger acid (more H+).",
+   "ncert": "NCERT Ch.2 §2.3",
+   "mnemonic": "7 is neutral; less than 7 = Sour side (acid)."
+  },
+  {
+   "id": "ch2-baking",
+   "chapter": "ch2",
+   "title": "Baking soda and washing soda",
+   "body": "Baking soda: NaHCO3. 2NaHCO3 -(heat)-> Na2CO3 + H2O + CO2. Washing soda: Na2CO3.10H2O.",
+   "ncert": "NCERT Ch.2 §2.4.3"
+  },
+  {
+   "id": "ch2-chloralkali",
+   "chapter": "ch2",
+   "title": "Chlor-alkali process",
+   "body": "2NaCl + 2H2O -> 2NaOH + Cl2 + H2 (electrolysis of brine).",
+   "ncert": "NCERT Ch.2 §2.4.3"
+  },
+  {
+   "id": "ch2-pop",
+   "chapter": "ch2",
+   "title": "Plaster of Paris",
+   "body": "Gypsum CaSO4.2H2O, heated at 373 K, gives plaster of Paris CaSO4.1/2H2O.",
+   "ncert": "NCERT Ch.2 §2.4.3"
+  },
+  {
+   "id": "ch3-series",
+   "chapter": "ch3",
+   "title": "Reactivity series (NCERT list)",
+   "body": "K > Na > Ca > Mg > Al > Zn > Fe > Pb > H > Cu > Hg > Ag > Au (most to least reactive).",
+   "ncert": "NCERT Ch.3 §3.2.5",
+   "mnemonic": "Kabhi Naa Calm Mat Aao, Zara Ferry Pe Hum, Cute Hathi Aur Aadmi  (K Na Ca Mg Al Zn Fe Pb H Cu Hg Ag Au)"
+  },
+  {
+   "id": "ch3-amphoteric",
+   "chapter": "ch3",
+   "title": "Amphoteric oxides",
+   "body": "Al2O3 and ZnO react with both acids and bases: Al2O3 + 6HCl -> 2AlCl3 + 3H2O ; Al2O3 + 2NaOH -> 2NaAlO2 + H2O.",
+   "ncert": "NCERT Ch.3 §3.2.1"
+  },
+  {
+   "id": "ch3-thermit",
+   "chapter": "ch3",
+   "title": "Thermit reaction",
+   "body": "Fe2O3 + 2Al -> 2Fe + Al2O3 + heat (used to join railway tracks).",
+   "ncert": "NCERT Ch.3 §3.4.4"
+  },
+  {
+   "id": "ch3-roast",
+   "chapter": "ch3",
+   "title": "Roasting and calcination",
+   "body": "Roasting (sulphide ore in air): 2ZnS + 3O2 -> 2ZnO + 2SO2. Calcination (carbonate ore, limited air): ZnCO3 -> ZnO + CO2. Then ZnO + C -> Zn + CO.",
+   "ncert": "NCERT Ch.3 §3.4.4",
+   "mnemonic": "Roasting = sulphide + lots of air; Calcination = carbonate + little air."
+  },
+  {
+   "id": "ch3-electro",
+   "chapter": "ch3",
+   "title": "Electrolytic refining and extraction",
+   "body": "Cathode: Na+ + e- -> Na (metal deposits). Anode: 2Cl- -> Cl2 + 2e-. Highly reactive metals (above Al) are extracted by electrolysis of molten salts.",
+   "ncert": "NCERT Ch.3 §3.4.5-3.4.6"
+  },
+  {
+   "id": "ch3-rust",
+   "chapter": "ch3",
+   "title": "Rusting needs air AND water",
+   "body": "Iron + oxygen + moisture -> rust. Prevent by painting, oiling, galvanisation (zinc coat), alloying.",
+   "ncert": "NCERT Ch.3 §3.5"
+  },
+  {
+   "id": "ch4-genformula",
+   "chapter": "ch4",
+   "title": "Hydrocarbon general formulas",
+   "body": "Alkane CnH2n+2, alkene CnH2n, alkyne CnH2n-2. Example n=2: ethane C2H6, ethene C2H4, ethyne C2H2.",
+   "ncert": "NCERT Ch.4 §4.2.1 and §4.2.4",
+   "mnemonic": "Alkane = all single (n, 2n+2); alkEne has a double; alkYne has a triple (fewer H each time)."
+  },
+  {
+   "id": "ch4-homologous",
+   "chapter": "ch4",
+   "title": "Homologous series",
+   "body": "Same functional group; successive members differ by -CH2- (12+2 = 14 u). Similar chemical properties, gradual change in physical properties.",
+   "ncert": "NCERT Ch.4 §4.2.4"
+  },
+  {
+   "id": "ch4-combustion",
+   "chapter": "ch4",
+   "title": "Combustion",
+   "body": "Carbon compound + O2 -> CO2 + H2O + heat + light. CH4 + 2O2 -> CO2 + 2H2O.",
+   "ncert": "NCERT Ch.4 §4.3.1"
+  },
+  {
+   "id": "ch4-ethanol",
+   "chapter": "ch4",
+   "title": "Reactions of ethanol",
+   "body": "2C2H5OH + 2Na -> 2C2H5ONa + H2. Hot conc. H2SO4 at 443 K: C2H5OH -> CH2=CH2 + H2O (dehydration).",
+   "ncert": "NCERT Ch.4 §4.4.1"
+  },
+  {
+   "id": "ch4-ester",
+   "chapter": "ch4",
+   "title": "Esterification and saponification",
+   "body": "Ethanoic acid + ethanol (conc. H2SO4) -> ester (sweet smell) + water. Ester + NaOH -> alcohol + sodium salt of the acid (soap).",
+   "ncert": "NCERT Ch.4 §4.4.2"
+  },
+  {
+   "id": "ch4-addition",
+   "chapter": "ch4",
+   "title": "Addition reaction",
+   "body": "Unsaturated + H2 (nickel catalyst) -> saturated: CH2=CH2 + H2 -> CH3-CH3. Used to turn vegetable oils into fats.",
+   "ncert": "NCERT Ch.4 §4.3.3"
+  },
+  {
+   "id": "ch4-carbonate",
+   "chapter": "ch4",
+   "title": "Ethanoic acid reactions",
+   "body": "CH3COOH + NaHCO3 -> CH3COONa + H2O + CO2. Also reacts with Na and NaOH like a (weak) acid.",
+   "ncert": "NCERT Ch.4 §4.4.2"
+  }
+ ]
+}

@@ -23,13 +23,13 @@ class TelegramAdapter {
     return this.flows.get(chatId);
   }
 
-  async send(chatId, text) {
-    this.sendLog.push({ chatId, text });
+  async send(chatId, text, buttons) {
+    this.sendLog.push({ chatId, text, buttons });
     if (!this.token) return; // simulation mode: log only
     await fetch(`${API}/bot${this.token}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: chatId, text }),
+      body: JSON.stringify({ chat_id: chatId, text, ...(buttons ? { reply_markup: { inline_keyboard: buttons.map((r) => r.map((b) => ({ text: b.text, callback_data: b.data })) ) } } : {}) }),
     });
   }
 
@@ -48,6 +48,7 @@ class TelegramAdapter {
 
   // One Telegram update (message) -> maybe replies. Same path in sim and live.
   async handleUpdate(update) {
+    if (update.callback_query) return this.handleCallback(update.callback_query);
     const msg = update.message;
     if (!msg) return;
     const flow = this.flowFor(msg.chat.id);
@@ -66,8 +67,22 @@ class TelegramAdapter {
     }
     if (!msg.text) return;
     const reply = await flow.handle(msg.text);
-    if (reply && reply.text) await this.send(msg.chat.id, reply.text);
+    if (reply && reply.text) await this.send(msg.chat.id, reply.text, reply.buttons);
     if (reply && reply.photo) await this.sendPhoto(msg.chat.id, reply.photo);
+  }
+
+  // Inline-button taps. Data is a closed set; the chat id comes from Telegram, never from the button text.
+  async handleCallback(cb) {
+    const chatId = cb.message && cb.message.chat && cb.message.chat.id;
+    if (!chatId) return;
+    const drip = require('../agents/drip');
+    const formulas = require('../agents/formulas');
+    const d = String(cb.data || '');
+    if (this.token) await fetch(`${API}/bot${this.token}/answerCallbackQuery`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ callback_query_id: cb.id }) }).catch(() => {});
+    if (d === 'drip:pause') { drip.setPaused(chatId, true); return this.send(chatId, 'Paused. /drip resume when you want them back.'); }
+    if (d === 'drip:stop') { drip.stop(chatId); return this.send(chatId, 'Stopped. Reminder data deleted.'); }
+    const m = /^drip:show:([a-z0-9-]{1,40})$/.exec(d);
+    if (m) { const f = formulas.byId(m[1]); if (f) return this.send(chatId, `${f.title}\n${f.body}\n[${f.ncert}]`, [[{ text: 'Pause', data: 'drip:pause' }, { text: 'Stop', data: 'drip:stop' }]]); }
   }
 
   // Telegram getFile -> download bytes -> Whisper. Returns null when the
@@ -90,6 +105,15 @@ class TelegramAdapter {
   async reminderTick() {
     for (const [chatId, flow] of this.flows) {
       for (const r of flow.dueReminders()) await this.send(chatId, r.text);
+    }
+    await this.dripTick();
+  }
+
+  // Spaced formula reminders for students who opted in (/drip on). Chat ids come from their own opt-in files.
+  async dripTick(now = Date.now()) {
+    const drip = require('../agents/drip');
+    for (const chatId of drip.activeChats()) {
+      for (const p of drip.dueFor(chatId, now)) await this.send(chatId, p.prompt, [[{ text: 'Show answer', data: `drip:show:${p.id}` }], [{ text: 'Pause', data: 'drip:pause' }, { text: 'Stop', data: 'drip:stop' }]]);
     }
   }
 
