@@ -4,6 +4,7 @@
 // flow only ever sees {chatId, text} and returns {text, ...} replies.
 const { gradeAnswer } = require('../agents/module1');
 const videoCompare = require('../agents/video_compare');
+const videoSearch = require('../agents/video_search');
 const { playlist, formatForChat } = require('../agents/playlist');
 const { answerDoubt } = require('../agents/module2');
 const module3 = require('../agents/module3');
@@ -18,6 +19,7 @@ const WELCOME = `Hi! I'm Red Pen, your study buddy - ask me a doubt or let me qu
 /teach - teach me a topic, my understanding meter shows if YOU got it
 /plan <days> - revision plan from past-paper weightage
 /goals - today's small study goals
+/findvideo <your need> - best videos for you (set /language first)
 /compare <link1> <link2> <your need> - which video suits you
 /videos [topic] - checked video playlist for the active chapter
 /chapter <1-4> - switch the chapter I'm working from
@@ -90,6 +92,17 @@ class ChatFlow {
       const pick = topics[Math.floor(Math.random() * topics.length)];
       this.mode = 'teach'; this.topicId = pick.id;
       return { text: `OK, you are the teacher now!\n\n${pick.juniorOpening}\n\n(Topic: ${pick.name}) - explain in your own words.` };
+    }
+    if (low.startsWith('/findvideo')) {
+      const need = t.slice(10).trim().slice(0, 200);
+      const r = await videoSearch.find({ chapterId: this.chapterId, need, lang: this.lang || null });
+      return { text: videoSearch.formatForChat(r) };
+    }
+    if (low.startsWith('/language')) {
+      const l = videoSearch.parseLang(t.slice(9));
+      if (!l) return { text: 'Which language for videos? /language english, hindi, hinglish or marathi' };
+      this.lang = l;
+      return { text: `OK, I'll look for ${l} videos (judged from the video title only). Use /findvideo <what you need>.` };
     }
     if (low.startsWith('/compare')) {
       const parts = t.slice(8).trim().split(/\s+/);

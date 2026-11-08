@@ -7,6 +7,7 @@ const path = require('path');
 const { gradeAnswer } = require('./agents/module1');
 const { playlist } = require('./agents/playlist');
 const videoCompare = require('./agents/video_compare');
+const videoSearch = require('./agents/video_search');
 const { answerDoubt, teacherDigest } = require('./agents/module2');
 const coordinator = require('./agents/coordinator');
 const module3 = require('./agents/module3');
@@ -136,6 +137,14 @@ const server = http.createServer((req, res) => {
           .catch((e) => send(res, 500, JSON.stringify({ error: String(e) })));
       } catch { send(res, 400, JSON.stringify({ error: 'Bad request.' })); }
     });
+    return;
+  }
+
+  if (req.method === 'GET' && url.pathname === '/api/videos/find') {
+    const ch = getChapter(url.searchParams.get('chapter') || 'ch1');
+    videoSearch.find({ chapterId: ch.chapterId, need: (url.searchParams.get('need') || '').slice(0, 200), lang: (url.searchParams.get('lang') || '').toLowerCase() || null })
+      .then((r) => send(res, r.ok ? 200 : 502, JSON.stringify(r)))
+      .catch(() => send(res, 500, JSON.stringify({ error: 'Search failed.' })));
     return;
   }
 

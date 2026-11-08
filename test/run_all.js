@@ -133,6 +133,11 @@ async function post(p, body) {
   const same = await post('/api/compare', { a: 'https://youtu.be/jSPxGNGUc9g', b: 'https://www.youtube.com/watch?v=jSPxGNGUc9g', chapter: 'ch1', need: '' });
   check('compare rejects same video twice', same.ok === false);
 
+  const vsr = require('../agents/video_search');
+  check('language parsed from free text', vsr.parseLang('marathi me samjhao') === 'marathi' && vsr.parseLang('मराठी') === 'marathi' && vsr.parseLang('quick') === null);
+  check('language signal honest: Latin title for hindi is unverified', vsr.langSignal('Acids Bases and Salts', 'hindi') === 'unverified' && /likely/.test(vsr.langSignal('अम्ल क्षार लवण', 'hindi')));
+  check('language signal: Devanagari title unlikely for english', /unlikely/.test(vsr.langSignal('अम्ल क्षार', 'english')));
+
   // security
   const trav = await fetch(base + '/../../etc/passwd');
   check('path traversal blocked', trav.status === 404 || trav.status === 403);

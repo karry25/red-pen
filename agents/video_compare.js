@@ -150,4 +150,4 @@ function formatForChat(r) {
   const [A, B] = r.videos;
   return `You need: ${r.need.understood.join(' + ') || 'not specified'}\n\nVideo 1: ${line(A)}\n\nVideo 2: ${line(B)}\n\n${r.recommendation.text}${r.caveats.length ? '\n\nNote: ' + r.caveats.join(' ') : ''}\n\n${r.method}`;
 }
-module.exports = { compare, formatForChat, analyse, parseNeed };
+module.exports = { compare, formatForChat, analyse, parseNeed, needScoreFor: needScore };
