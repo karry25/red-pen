@@ -79,7 +79,7 @@
   }
   async function sourcesTab() {
     const d = await get('/api/sources'); const w = el('div');
-    Object.values(d.items).forEach((x) => { const r = el('div', 'ex-row'); r.appendChild(el('div', '', x.cite)); r.appendChild(el('div', 'ex-meta', x.claim)); const a = Object.assign(el('a', 'ex-link', x.url), { href: x.url, target: '_blank', rel: 'noopener noreferrer' }); r.appendChild(a); w.appendChild(r); });
+    Object.values(d.items).forEach((x) => { const r = el('div', 'src-row'); r.appendChild(el('div', 'src-cite', x.cite)); r.appendChild(el('div', 'ex-meta', x.claim)); const a = Object.assign(el('a', 'src-link', 'Open source'), { href: x.url, target: '_blank', rel: 'noopener noreferrer' }); r.appendChild(a); w.appendChild(r); });
     return w;
   }
   const startTab = Math.max(0, Math.min(tabs.length - 1, parseInt(new URLSearchParams(location.search).get('tab'), 10) || 0));

@@ -45,7 +45,7 @@ async function runFeatureTests(check) {
   const upd = (m) => bot.handleUpdate({ update_id: ++id, ...m });
   await upd({ message: { chat: { id: 700 }, text: '/drip on' } });
   check('telegram: /drip on sends Pause/Stop buttons', !!bot.sendLog.at(-1).buttons);
-  await bot.dripTick(T0 + 90000000);
+  await bot.dripTick(Date.now() + 90000000); // relative to the /drip on start (Date.now()), not the fixed T0, so the test passes at any wall-clock time
   const p = bot.sendLog.at(-1);
   check('telegram: drip prompt has Show answer button', p.buttons && /^drip:show:/.test(p.buttons[0][0].data));
   await upd({ callback_query: { id: '1', data: p.buttons[0][0].data, message: { chat: { id: 700 } } } });
