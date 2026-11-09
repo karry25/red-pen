@@ -67,10 +67,11 @@ class ChatFlow {
 
   mem(ev) {
     try {
-      memory.record(this.chatId, ev);
+      const ok = memory.record(this.chatId, ev);
       if (ev.type === 'weak') drip.addWeak(this.chatId, ev.questionId);
       if (ev.type === 'strong') drip.dropWeak(this.chatId, ev.questionId);
-    } catch { /* memory must never break chat */ }
+      return ok;
+    } catch { return false; /* memory must never break chat */ }
   }
 
   chapter() { return getChapter(this.chapterId); }

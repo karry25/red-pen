@@ -144,6 +144,8 @@ async function runFeatureTests(check) {
   check('exam: nudge fires at 7-day threshold with re-plan and kind copy', n1.length === 1 && n1[0].days === 6 && /re-planned/.test(n1[0].text) && /\/exam off/.test(n1[0].text) && !/panic|failure|streak/i.test(n1[0].text.split('/exam off')[0].split('Small steps')[0]));
   check('exam: same threshold does not fire twice', examcount.dueNudges(tickT).length === 0);
   check('exam: nudges respect quiet hours', examcount.dueNudges(new Date('2027-01-05T00:30:00+05:30').getTime()).every((n) => n.chatId !== 710) || drip.quiet(new Date('2027-01-05T00:30:00+05:30').getTime()));
+  await upd({ message: { chat: { id: 710 }, text: `/exam ${inDays(9)}` } });
+  check('telegram: /exam with a valid date confirms and discloses the chat-id keep', /Noted:/.test(bot.sendLog.at(-1).text) && /chat id/.test(bot.sendLog.at(-1).text) && /\/exam off/.test(bot.sendLog.at(-1).text));
   await upd({ message: { chat: { id: 710 }, text: '/exam' } });
   check('telegram: /exam shows the date and the plan', /days? left/.test(bot.sendLog.at(-1).text));
   await upd({ message: { chat: { id: 710 }, text: '/exam off' } });
