@@ -64,7 +64,7 @@
     w.append(mcq, written, slot);
     w.appendChild(el('div', 'ex-note', 'This is extra practice from the official NCERT Exemplar book, separate from the board-paper "most asked" list.'));
     w.appendChild(why('testing yourself beats rereading - Roediger & Karpicke 2006.'));
-    loadMcq(slot);
+    if (new URLSearchParams(location.search).get('exmode') === 'written') written.click(); else loadMcq(slot);
     return w;
   }
   async function loadMcq(slot) {

@@ -1,7 +1,7 @@
 // Red Pen service worker: caches the app shell so it opens offline.
 // Study content (/api/*) is network-first and falls back to the last copy; AI answers, grading,
 // video search and compare need the internet and say so offline. POSTs are never cached.
-const V = 'redpen-v1';
+const V = 'redpen-v2';
 const SHELL = ['/', '/style.css', '/app.js', '/extras.js', '/study.js', '/fun.js', '/icons.js', '/manifest.webmanifest', '/pwa/icon-192.png'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(V).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== V).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
