@@ -142,8 +142,8 @@ class TelegramAdapter {
     if (d === 'drip:stop') { drip.stop(chatId); return this.send(chatId, 'Stopped. Reminder data deleted.'); }
     const fb = /^fb:([a-z0-9:_.-]{1,80}):(up|down)$/i.exec(d);
     if (fb) { const r = require('../agents/feedback').rate(`tg${chatId}`, fb[1], fb[2]); return this.send(chatId, r.ok ? 'Thanks - this is anonymous and helps me fix weak answers.' : (r.why === 'already_rated' ? 'You already rated this one - thanks!' : 'Could not save that rating.')); }
-    const m = /^drip:show:([a-z0-9-]{1,40})$/.exec(d);
-    if (m) { const f = formulas.byId(m[1]); if (f) return this.send(chatId, `${f.title}\n${f.body}\n[${f.ncert}]`, [[{ text: 'Pause', data: 'drip:pause' }, { text: 'Stop', data: 'drip:stop' }]]); }
+    const m = /^drip:show:([a-z0-9:-]{1,44})$/.exec(d);
+    if (m) { const st = drip.state(chatId); const card = drip.cardFor(st && st.chapterId, m[1]); if (card) return this.send(chatId, card.answer, [[{ text: 'Pause', data: 'drip:pause' }, { text: 'Stop', data: 'drip:stop' }]]); }
   }
 
   // Telegram getFile -> download bytes -> Whisper. Returns null when the

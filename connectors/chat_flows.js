@@ -61,7 +61,13 @@ class ChatFlow {
     if (m) { if (m.lang) this.lang = m.lang; if (m.chapter && getChapter(m.chapter)) this.chapterId = m.chapter; }
   }
 
-  mem(ev) { try { memory.record(this.chatId, ev); } catch { /* memory must never break chat */ } }
+  mem(ev) {
+    try {
+      memory.record(this.chatId, ev);
+      if (ev.type === 'weak') drip.addWeak(this.chatId, ev.questionId);
+      if (ev.type === 'strong') drip.dropWeak(this.chatId, ev.questionId);
+    } catch { /* memory must never break chat */ }
+  }
 
   chapter() { return getChapter(this.chapterId); }
 
@@ -128,7 +134,7 @@ class ChatFlow {
       const arg = low.split(/\s+/)[1];
       if (arg === 'on') {
         const n = drip.start(this.chatId, this.chapterId);
-        return { text: `Formula reminders ON for Ch.${this.chapter().number}: ${n} cards, at most 2 a day, never between 10pm and 7am. Each one asks you to recall first, then you tap Show. Spacing: 1, 3, 7, 14 days (spaced practice works better than cramming - Cepeda et al. 2006). /pause or /stop any time. To send them I save your chat id in your memory file (/mydata shows it); /stop deletes it. No streaks, no guilt if you skip.`, buttons: [[{ text: 'Pause', data: 'drip:pause' }, { text: 'Stop', data: 'drip:stop' }]] };
+        return { text: `Formula reminders ON for Ch.${this.chapter().number}: ${n} cards, at most 2 a day, never between 10pm and 7am. Each one asks you to recall first, then you tap Show. Spacing: 1, 3, 7, 14 days (spaced practice works better than cramming - Cepeda et al. 2006). /pause or /stop any time. To send them I save your chat id in your memory file (/mydata shows it); /stop deletes it. No streaks, no guilt if you skip.${memory.get(this.chatId) ? ' Questions you find hard quietly join the front of your deck - you never have to ask.' : ''}`, buttons: [[{ text: 'Pause', data: 'drip:pause' }, { text: 'Stop', data: 'drip:stop' }]] };
       }
       if (arg === 'resume') { return { text: drip.setPaused(this.chatId, false) ? 'Reminders resumed.' : 'Reminders are not on. Send /drip on.' }; }
       return { text: drip.state(this.chatId) ? `Reminders are ${drip.state(this.chatId).paused ? 'paused (/drip resume)' : 'on'}. /pause or /stop.` : 'Reminders are off. /drip on to start (optional, easy to stop).' };

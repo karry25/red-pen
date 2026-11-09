@@ -39,13 +39,29 @@ async function runFeatureTests(check) {
   check('drip: chats are isolated (601 due does not touch 602 state)', a.length === 2 && Object.values(drip.state(602).items).every((v) => v.stage === 0));
   drip.stop(601); drip.stop(602);
 
+  // personalised drip: questions you found hard lead the deck, drop out when mastered
+  memory.enable(701);
+  memory.record(701, { type: 'weak', questionId: 'ch3-q7' });
+  drip.start(701, 'ch3', T0);
+  const pd = drip.dueFor(701, T0 + 86400000 + 3600000);
+  check('drip: a question you found hard leads the deck', pd.length >= 1 && pd[0].id === 'q:ch3-q7' && /try it again/.test(pd[0].prompt) && /Marking points/.test(pd[0].answer));
+  check('drip: still max 2 a day with personalisation on', pd.length <= 2);
+  check('drip: addWeak is a no-op when reminders are off', drip.addWeak(702, 'ch3-q7', T0) === false);
+  drip.start(703, 'ch3', T0);
+  check('drip: a new weak question joins an active deck', drip.addWeak(703, 'ch3-q5', T0) === true && !!drip.state(703).items['q:ch3-q5']);
+  check('drip: mastering it drops it from the deck', drip.dropWeak(703, 'ch3-q5') === true && !drip.state(703).items['q:ch3-q5']);
+  check('drip: unknown question ids never enter the deck', drip.addWeak(703, 'nope-1', T0) === false);
+  drip.stop(701); drip.stop(703);
+
   // telegram: buttons, callbacks, closed data set
   const bot = new TelegramAdapter();
   let id = 9000;
   const upd = (m) => bot.handleUpdate({ update_id: ++id, ...m });
   await upd({ message: { chat: { id: 700 }, text: '/drip on' } });
   check('telegram: /drip on sends Pause/Stop buttons', !!bot.sendLog.at(-1).buttons);
-  await bot.dripTick(Date.now() + 90000000); // relative to the /drip on start (Date.now()), not the fixed T0, so the test passes at any wall-clock time
+  let tickAt = Date.now() + 90000000; // relative to the /drip on start (Date.now()), not the fixed T0
+  while (drip.quiet(tickAt)) tickAt += 3600000; // and never inside quiet hours, at any wall-clock time
+  await bot.dripTick(tickAt);
   const p = bot.sendLog.at(-1);
   check('telegram: drip prompt has Show answer button', p.buttons && /^drip:show:/.test(p.buttons[0][0].data));
   await upd({ callback_query: { id: '1', data: p.buttons[0][0].data, message: { chat: { id: 700 } } } });
