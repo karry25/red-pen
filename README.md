@@ -12,7 +12,8 @@ Board exams reward keywords, structure and the right NCERT facts. Students pract
 2. Doubt Solver: answers from verified notes, with the NCERT section named. If the notes miss, a grounded AI path (Groq) answers only from those notes, or says it does not know.
 3. Teach-to-Learn: the student explains a topic, the agent checks it.
 4. Exam Triage: what to study first, from PYQ and sample-paper patterns (REPEATED only when verified in both papers).
-Extras: formula cards (26), NCERT Exemplar MCQs (96, official key), study path, 1-minute quick mode, gentle opt-in daily drip, video find/compare (titles only, never claims to have watched), rating buttons.
+Extras: formula cards (26), NCERT Exemplar MCQs (96, official key) + written practice (24, official NCERT model answers, point-by-point check), study path, 1-minute quick mode, gentle opt-in daily drip, video find/compare (titles only, never claims to have watched), rating buttons.
+Agentic (Telegram, opt-in memory only): a student model that remembers how you learn (hard questions, repeatedly missed points, language) and quietly re-tests what you missed; an exam countdown that re-plans by itself at 14/7/3/1 days out. /model shows everything, /remember off stops it, /forget deletes it.
 
 ## Honest limits
 - Grading is keyword based and can be gamed. AI answers can be wrong; they are labelled.
