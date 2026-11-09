@@ -97,6 +97,22 @@ async function runFeatureTests(check) {
   const qtext = bot.sendLog.at(-1).text; const qid = ex.list('ch1').find((q) => qtext.includes(q.stem.slice(0, 40)));
   await upd({ message: { chat: { id: 702 }, text: qid.answer } });
   check('telegram: /extra then letter answer checks against official key', !!qid && /Correct/.test(bot.sendLog.at(-1).text) && /NCERT Exemplar/.test(bot.sendLog.at(-1).text));
+  // exemplar short-answer (written) practice: official NCERT model answers from jeep1an.pdf
+  const sh = ex.short;
+  check('short: all 4 chapters have 6 written questions with official answers and points', ['ch1', 'ch2', 'ch3', 'ch4'].every((c) => sh.list(c).length === 6 && sh.list(c).every((q) => q.question.length > 30 && q.answer.length > 20 && q.points.length >= 2 && /jeep1an/.test(q.source))));
+  check('short: no question carries PDF junk', ['ch1', 'ch2', 'ch3', 'ch4'].every((c) => sh.list(c).every((q) => !/5JQTV|#PUYGT|\.QPI|EXEMPLAR P ROBLEMS/.test(q.question + q.answer))));
+  check('short: public view hides the answer and points', !('answer' in sh.publicView(sh.list('ch2')[0])) && !('points' in sh.publicView(sh.list('ch2')[0])));
+  const g1 = sh.grade('xsa-ch2-q42', 'The gas is hydrogen. Zn + 2HCl gives ZnCl2 and H2. A burning splinter makes it burn with a pop sound.');
+  check('short: full correct answer scores full points', g1.score === g1.maxScore && g1.maxScore === 3);
+  const g2 = sh.grade('xsa-ch2-q42', 'I think some gas comes out but I am not sure.');
+  check('short: vague answer scores 0 and still returns the official answer', g2.score === 0 && /pop sound/.test(g2.answer));
+  check('short: wrong spelling still matches (typo tolerance)', sh.grade('xsa-ch1-q34', 'AgCl decompses in sunlite and forms silver').score >= 1);
+  check('short: too-short and unknown handled', sh.grade('xsa-ch1-q34', 'no').tooShort === true && sh.grade('nope', 'long enough answer text') === null);
+  check('short: known limit - keyword check cannot catch a swapped mapping, so the official answer is always shown', sh.grade('xsa-ch3-q43', 'X is carbon, Y is graphite and Z is diamond').score === 3 && /diamond/.test(sh.grade('xsa-ch3-q43', 'X is carbon, Y is graphite and Z is diamond').answer));
+  await upd({ message: { chat: { id: 703 }, text: '/extrawrite' } });
+  const sq = sh.list('ch1').find((q) => bot.sendLog.at(-1).text.includes(q.question.slice(0, 40)));
+  await upd({ message: { chat: { id: 703 }, text: sq ? sq.answer : 'x' } });
+  check('telegram: /extrawrite grades a written answer against the official answer', !!sq && new RegExp(`You got ${sq.points.length}/${sq.points.length}`).test(bot.sendLog.at(-1).text) && /Official NCERT answer/.test(bot.sendLog.at(-1).text));
   fs.rmSync(dir, { recursive: true, force: true });
 }
 module.exports = { runFeatureTests };

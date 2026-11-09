@@ -119,6 +119,13 @@ class ChatFlow {
       this.mode = 'extra'; this.extraId = q.id;
       return { text: exemplar.formatQuestion(q) };
     }
+    if (low === '/extrawrite' || low === '/extrashort') {
+      const q = exemplar.short.pick(this.chapterId, this.seenExemplarShort || []);
+      if (!q) return { text: 'No written Exemplar questions for this chapter yet.' };
+      this.seenExemplarShort = [...(this.seenExemplarShort || []), q.id].slice(-20);
+      this.mode = 'extrashort'; this.extraShortId = q.id;
+      return { text: exemplar.short.formatQuestion(q) };
+    }
     if (low === '/formulas') { const ch = this.chapter(); return { text: formulas.formatSheet(ch.chapterId, `Ch.${ch.number} ${ch.title}`) }; }
     if (low === '/sources') {
       const cit = require('../data/citations.json');
@@ -209,6 +216,13 @@ class ChatFlow {
       const id = this.extraId; this.mode = null; this.extraId = null;
       if (r) this.mem(r.correct ? { type: 'strong', questionId: id } : { type: 'weak', questionId: id });
       return { text: exemplar.formatResult(r) };
+    }
+    if (this.mode === 'extrashort' && this.extraShortId) {
+      const r = exemplar.short.grade(this.extraShortId, t);
+      if (r && r.tooShort) return { text: exemplar.short.formatResult(r) };
+      const id = this.extraShortId; this.mode = null; this.extraShortId = null;
+      if (r) this.mem(r.score / r.maxScore < 0.5 ? { type: 'weak', questionId: id } : { type: 'strong', questionId: id });
+      return { text: exemplar.short.formatResult(r) };
     }
     // state: answering a quiz question
     if (this.mode === 'quiz' && this.questionId) {

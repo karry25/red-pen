@@ -1,0 +1,285 @@
+{
+  "note": "NCERT Exemplar Class X Science short-answer questions with the official NCERT model answers. Write your answer, then see point by point what the official answer contains.",
+  "questionsPdf": {
+    "ch1": "https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep101.pdf",
+    "ch2": "https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep102.pdf",
+    "ch3": "https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep103.pdf",
+    "ch4": "https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep104.pdf"
+  },
+  "key": "https://ncert.nic.in/pdf/publication/exemplarproblem/classX/science/jeep1an.pdf",
+  "answerNote": "Model answers are the official NCERT exemplar answers (jeep1an.pdf), lightly re-formatted for reading. The point check is keyword-based - it can miss a correct answer written in different words, so always read the official answer after checking.",
+  "chapters": {
+    "ch1": [
+      {
+        "id": "xsa-ch1-q19", "n": 19,
+        "question": "Write the balanced chemical equations for the following reactions and identify the type of reaction in each case. (a) Nitrogen gas is treated with hydrogen gas in the presence of a catalyst at 773 K to form ammonia gas. (b) Sodium hydroxide solution is treated with acetic acid to form sodium acetate and water. (c) Ethanol is warmed with ethanoic acid to form ethyl acetate in the presence of concentrated H2SO4. (d) Ethene is burnt in the presence of oxygen to form carbon dioxide and water, and releases heat and light.",
+        "answer": "(a) N2(g) + 3H2(g) -> 2NH3(g) (catalyst, 773 K); combination reaction. (b) NaOH(aq) + CH3COOH(aq) -> CH3COONa(aq) + H2O(l); double displacement / neutralisation reaction. (c) C2H5OH(l) + CH3COOH(l) -> CH3COOC2H5(l) + H2O(l) (conc. H2SO4); double displacement / esterification reaction. (d) C2H4(g) + 3O2(g) -> 2CO2(g) + 2H2O(g) + heat + light; redox / combustion reaction.",
+        "points": [
+          { "t": "part (a) is a combination reaction", "k": ["combination"] },
+          { "t": "part (b) is neutralisation / double displacement", "k": ["neutralisation", "neutralization", "double displacement"] },
+          { "t": "part (c) is esterification", "k": ["esterification", "ester"] },
+          { "t": "part (d) is combustion / redox", "k": ["combustion", "redox"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.1 Q.19 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch1-q22", "n": 22,
+        "question": "Which among the following changes are exothermic or endothermic in nature? (a) Decomposition of ferrous sulphate (b) Dilution of sulphuric acid (c) Dissolution of sodium hydroxide in water (d) Dissolution of ammonium chloride in water",
+        "answer": "(b) dilution of sulphuric acid and (c) dissolution of sodium hydroxide in water are exothermic, as heat is released in these changes. (a) decomposition of ferrous sulphate and (d) dissolution of ammonium chloride in water are endothermic, as heat is absorbed in these changes.",
+        "points": [
+          { "t": "dilution of H2SO4 and NaOH dissolving are exothermic", "k": ["exothermic"] },
+          { "t": "ferrous sulphate decomposing and NH4Cl dissolving are endothermic", "k": ["endothermic"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.1 Q.22 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch1-q26", "n": 26,
+        "question": "A solution of potassium chloride when mixed with silver nitrate solution forms an insoluble white substance. Write the chemical reaction involved and also mention the type of the chemical reaction.",
+        "answer": "KCl(aq) + AgNO3(aq) -> AgCl(s) + KNO3(aq). The white insoluble substance is silver chloride. It is a double displacement and precipitation reaction.",
+        "points": [
+          { "t": "white precipitate is AgCl", "k": ["agcl", "silver chloride"] },
+          { "t": "KNO3 also forms", "k": ["kno3", "potassium nitrate"] },
+          { "t": "double displacement / precipitation reaction", "k": ["double displacement", "precipitation"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.1 Q.26 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch1-q27", "n": 27,
+        "question": "Ferrous sulphate decomposes with the evolution of a gas having a characteristic odour of burning sulphur. Write the chemical reaction involved and identify the type of reaction.",
+        "answer": "2FeSO4(s) --heat--> Fe2O3(s) + SO2(g) + SO3(g). It is a thermal decomposition reaction (the gases SO2 and SO3 smell of burning sulphur).",
+        "points": [
+          { "t": "Fe2O3 is the solid product", "k": ["fe2o3", "ferric oxide", "iron oxide"] },
+          { "t": "SO2 / SO3 gases evolve", "k": ["so2", "so3", "sulphur dioxide"] },
+          { "t": "thermal decomposition reaction", "k": ["decomposition"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.1 Q.27 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch1-q34", "n": 34,
+        "question": "Why do we store silver chloride in dark coloured bottles?",
+        "answer": "Silver chloride decomposes on exposure to sunlight: 2AgCl -> 2Ag + Cl2. It is stored in dark coloured bottles to keep sunlight out and stop this photolytic decomposition.",
+        "points": [
+          { "t": "sunlight causes the damage", "k": ["sunlight", "light"] },
+          { "t": "AgCl decomposes", "k": ["decompos"] },
+          { "t": "into silver and chlorine", "k": ["silver", "chlorine", "ag", "cl2"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.1 Q.34 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch1-q37", "n": 37,
+        "question": "Zinc liberates hydrogen gas when reacted with dilute hydrochloric acid, whereas copper does not. Explain why.",
+        "answer": "Zinc is above hydrogen whereas copper is below hydrogen in the activity series of metals, so zinc displaces hydrogen from dilute hydrochloric acid while copper cannot. Zn + 2HCl -> ZnCl2 + H2; Cu + HCl -> no reaction.",
+        "points": [
+          { "t": "zinc is above hydrogen", "k": ["above hydrogen", "more reactive"] },
+          { "t": "copper is below hydrogen", "k": ["below hydrogen", "less reactive"] },
+          { "t": "the activity / reactivity series decides it", "k": ["activity series", "reactivity series"] },
+          { "t": "zinc displaces hydrogen from the acid", "k": ["displace"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.1 Q.37 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      }
+    ],
+    "ch2": [
+      {
+        "id": "xsa-ch2-q33", "n": 33,
+        "question": "What will be the action of the following substances on litmus paper? Dry HCl gas, moistened NH3 gas, lemon juice, carbonated soft drink, curd, soap solution.",
+        "answer": "Dry HCl gas: no change (it needs water to show acidic behaviour). Moistened NH3 gas: turns red litmus blue. Lemon juice, carbonated soft drink and curd: turn blue litmus red. Soap solution: turns red litmus blue.",
+        "points": [
+          { "t": "dry HCl gas: no change on litmus", "k": ["no change"] },
+          { "t": "moistened NH3 turns red litmus blue", "k": ["red litmus blue", "red to blue", "red litmus to blue"] },
+          { "t": "lemon juice, soft drink, curd turn blue litmus red", "k": ["blue litmus red", "blue to red", "blue litmus to red"] },
+          { "t": "soap solution turns red litmus blue", "k": ["soap"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.2 Q.33 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch2-q34", "n": 34,
+        "question": "Name the acid present in ant sting and give its chemical formula. Also give the common method to get relief from the discomfort caused by the ant sting.",
+        "answer": "The acid present in ant sting is methanoic acid (formic acid), formula HCOOH. To get relief, rub an available mild base such as baking soda (NaHCO3) on the stung area.",
+        "points": [
+          { "t": "methanoic (formic) acid", "k": ["methanoic", "formic"] },
+          { "t": "formula HCOOH", "k": ["hcooh", "ch2o2"] },
+          { "t": "relief: baking soda / mild base", "k": ["baking soda", "nahco3", "base", "basic"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.2 Q.34 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch2-q35", "n": 35,
+        "question": "What happens when nitric acid is added to egg shell?",
+        "answer": "Egg shells contain calcium carbonate. When nitric acid is added, carbon dioxide gas is evolved (brisk effervescence): CaCO3 + 2HNO3 -> Ca(NO3)2 + H2O + CO2.",
+        "points": [
+          { "t": "egg shell is calcium carbonate", "k": ["calcium carbonate", "caco3"] },
+          { "t": "carbon dioxide gas is evolved", "k": ["carbon dioxide", "co2"] },
+          { "t": "calcium nitrate also forms", "k": ["calcium nitrate", "ca(no3)2"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.2 Q.35 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch2-q37", "n": 37,
+        "question": "How would you distinguish between baking powder and washing soda by heating?",
+        "answer": "Baking powder is sodium hydrogencarbonate (NaHCO3); washing soda is sodium carbonate decahydrate (Na2CO3.10H2O). On heating, NaHCO3 gives off CO2 gas, which turns lime water milky: 2NaHCO3 -> Na2CO3 + H2O + CO2. Washing soda on heating only loses its water of crystallisation: Na2CO3.10H2O -> Na2CO3 + 10H2O, and no gas is evolved.",
+        "points": [
+          { "t": "baking powder / soda is sodium hydrogencarbonate", "k": ["sodium hydrogencarbonate", "sodium bicarbonate", "nahco3"] },
+          { "t": "it gives CO2 on heating, which turns lime water milky", "k": ["lime water", "co2", "carbon dioxide"] },
+          { "t": "washing soda only loses its water of crystallisation", "k": ["water of crystallisation", "10h2o", "crystallization"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.2 Q.37 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch2-q41", "n": 41,
+        "question": "What are strong and weak acids? In the following list of acids, separate strong acids from weak acids: hydrochloric acid, citric acid, acetic acid, nitric acid, formic acid, sulphuric acid.",
+        "answer": "Strong acids ionise completely in aqueous solution and provide a high concentration of hydronium ions (H3O+); weak acids ionise only partially, so at the same molar concentration they give a much smaller concentration of H3O+ ions. Strong acids: hydrochloric acid, sulphuric acid, nitric acid. Weak acids: citric acid, acetic acid, formic acid.",
+        "points": [
+          { "t": "strong acids ionise completely", "k": ["completely"] },
+          { "t": "weak acids ionise partially", "k": ["partially", "partial"] },
+          { "t": "strong: hydrochloric, sulphuric, nitric", "k": ["hydrochloric", "hcl"] },
+          { "t": "weak: citric, acetic, formic", "k": ["citric", "acetic", "formic"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.2 Q.41 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch2-q42", "n": 42,
+        "question": "When zinc metal is treated with a dilute solution of a strong acid, a gas is evolved which is utilised in the hydrogenation of oil. Name the gas evolved, write the chemical equation of the reaction involved, and also write a test to detect the gas formed.",
+        "answer": "The gas evolved is hydrogen (used in the hydrogenation of oil). Equation: Zn + 2HCl -> ZnCl2 + H2. Test: bring a burning splinter near the mouth of the test tube - the gas burns with a pop sound.",
+        "points": [
+          { "t": "gas is hydrogen", "k": ["hydrogen", "h2"] },
+          { "t": "zinc chloride forms (Zn + 2HCl -> ZnCl2 + H2)", "k": ["zncl2", "zinc chloride"] },
+          { "t": "test: burns with a pop sound", "k": ["pop"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.2 Q.42 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      }
+    ],
+    "ch3": [
+      {
+        "id": "xsa-ch3-q39", "n": 39,
+        "question": "Why should the metal sulphides and carbonates be converted to metal oxides in the process of extraction of metal from them?",
+        "answer": "It is easier to obtain a metal from its oxide than from its sulphides and carbonates, so the sulphide and carbonate ores are first converted to oxides (by roasting and calcination) before reduction.",
+        "points": [
+          { "t": "it is easier to get the metal from its oxide", "k": ["easier"] },
+          { "t": "so ores are converted to oxides first", "k": ["oxide"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.3 Q.39 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch3-q40", "n": 40,
+        "question": "Generally, when metals are treated with mineral acids, hydrogen gas is liberated; but when metals (except Mn and Mg) are treated with HNO3, hydrogen is not liberated. Why?",
+        "answer": "HNO3 is a strong oxidising agent. It oxidises the hydrogen produced to water, so hydrogen gas is not liberated (only Mn and Mg, with very dilute HNO3, are exceptions).",
+        "points": [
+          { "t": "HNO3 is a strong oxidising agent", "k": ["oxidising", "oxidizing"] },
+          { "t": "it oxidises the hydrogen produced to water", "k": ["water", "h2o"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.3 Q.40 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch3-q41", "n": 41,
+        "question": "Compound X and aluminium are used to join railway tracks. (a) Identify the compound X. (b) Name the reaction. (c) Write down its equation.",
+        "answer": "(a) X is iron(III) oxide, Fe2O3. (b) The reaction is the thermite reaction. (c) Fe2O3(s) + 2Al(s) -> 2Fe(l) + Al2O3(s) + heat. The molten iron produced is used to join railway tracks.",
+        "points": [
+          { "t": "X is Fe2O3 (iron(III) oxide)", "k": ["fe2o3", "iron oxide", "ferric oxide"] },
+          { "t": "thermite reaction", "k": ["thermite", "thermit"] },
+          { "t": "molten iron and Al2O3 form", "k": ["al2o3", "aluminium oxide", "molten iron"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.3 Q.41 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch3-q43", "n": 43,
+        "question": "A non-metal X exists in two different forms Y and Z. Y is the hardest natural substance, whereas Z is a good conductor of electricity. Identify X, Y and Z.",
+        "answer": "X is carbon. Y, the hardest natural substance, is diamond. Z, the good conductor of electricity, is graphite.",
+        "points": [
+          { "t": "X is carbon", "k": ["carbon"] },
+          { "t": "Y is diamond", "k": ["diamond"] },
+          { "t": "Z is graphite", "k": ["graphite"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.3 Q.43 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch3-q51", "n": 51,
+        "question": "Give two examples each of metals that are good conductors and poor conductors of heat respectively.",
+        "answer": "Good conductors of heat: silver (Ag) and copper (Cu). Poor conductors of heat: lead (Pb) and mercury (Hg).",
+        "points": [
+          { "t": "good conductors: silver and copper", "k": ["silver", "copper", "ag", "cu"] },
+          { "t": "poor conductors: lead and mercury", "k": ["lead", "mercury", "pb", "hg"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.3 Q.51 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch3-q58", "n": 58,
+        "question": "A solution of CuSO4 was kept in an iron pot. After a few days the iron pot was found to have a number of holes in it. Explain the reason in terms of reactivity and write the equation of the reaction involved.",
+        "answer": "Iron is more reactive than copper, so iron displaces copper from the copper sulphate solution: Fe + CuSO4 -> FeSO4 + Cu. As the iron of the pot slowly dissolves away as FeSO4, holes appear in the pot.",
+        "points": [
+          { "t": "iron is more reactive than copper", "k": ["more reactive"] },
+          { "t": "iron displaces copper from CuSO4", "k": ["displace"] },
+          { "t": "FeSO4 forms (Fe + CuSO4 -> FeSO4 + Cu)", "k": ["feso4", "iron sulphate", "ferrous sulphate"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.3 Q.58 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      }
+    ],
+    "ch4": [
+      {
+        "id": "xsa-ch4-q34", "n": 34,
+        "question": "Why are detergents better cleansing agents than soaps? Explain.",
+        "answer": "Detergents work as cleansing agents in both hard and soft water. The charged ends of detergent molecules do not form insoluble precipitates with the calcium and magnesium ions present in hard water, while soaps form such precipitates (scum) and lose their cleansing action.",
+        "points": [
+          { "t": "detergents work even in hard water", "k": ["hard water"] },
+          { "t": "their charged ends do not form insoluble precipitates", "k": ["precipitate", "scum"] },
+          { "t": "calcium and magnesium ions in hard water are the problem for soaps", "k": ["calcium", "magnesium"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.4 Q.34 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch4-q35", "n": 35,
+        "question": "Name the functional groups present in the following compounds: (a) CH3COCH2CH2CH2CH3 (b) CH3CH2CH2COOH (c) CH3CH2CH2CH2CHO (d) CH3CH2OH",
+        "answer": "(a) Ketone (b) Carboxylic acid (c) Aldehyde (d) Alcohol.",
+        "points": [
+          { "t": "(a) ketone", "k": ["ketone"] },
+          { "t": "(b) carboxylic acid", "k": ["carboxylic"] },
+          { "t": "(c) aldehyde", "k": ["aldehyde"] },
+          { "t": "(d) alcohol", "k": ["alcohol"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.4 Q.35 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch4-q36", "n": 36,
+        "question": "How is ethene prepared from ethanol? Give the reaction involved in it.",
+        "answer": "Ethanol is heated with excess concentrated sulphuric acid at 443 K, which dehydrates it to ethene: CH3CH2OH --conc. H2SO4, 443 K--> CH2=CH2 + H2O.",
+        "points": [
+          { "t": "heat with concentrated sulphuric acid", "k": ["sulphuric", "h2so4"] },
+          { "t": "at 443 K", "k": ["443"] },
+          { "t": "dehydration of ethanol", "k": ["dehydrat"] },
+          { "t": "ethene + water form", "k": ["ethene", "ch2=ch2", "c2h4"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.4 Q.36 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch4-q38", "n": 38,
+        "question": "A gas is evolved when ethanol reacts with sodium. Name the gas evolved and also write the balanced chemical equation of the reaction involved.",
+        "answer": "The gas evolved is hydrogen. 2CH3CH2OH + 2Na -> 2CH3CH2ONa + H2 (sodium ethoxide forms).",
+        "points": [
+          { "t": "gas is hydrogen", "k": ["hydrogen", "h2"] },
+          { "t": "sodium ethoxide forms", "k": ["sodium ethoxide", "ch3ch2ona", "c2h5ona"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.4 Q.38 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch4-q39", "n": 39,
+        "question": "Ethene is formed when ethanol at 443 K is heated with excess of concentrated sulphuric acid. What is the role of sulphuric acid in this reaction? Write the balanced chemical equation of this reaction.",
+        "answer": "Sulphuric acid acts as a dehydrating agent - it removes water from ethanol. CH3CH2OH --conc. H2SO4, 443 K--> CH2=CH2 + H2O.",
+        "points": [
+          { "t": "sulphuric acid is the dehydrating agent", "k": ["dehydrat"] },
+          { "t": "ethene and water form", "k": ["ethene", "ch2=ch2", "c2h4"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.4 Q.39 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      },
+      {
+        "id": "xsa-ch4-q42", "n": 42,
+        "question": "Catenation is the ability of an atom to form bonds with other atoms of the same element. It is exhibited by both carbon and silicon. Compare the ability of catenation of the two elements and give reasons.",
+        "answer": "Carbon shows catenation much more than silicon or any other element. Because of its smaller size, the C-C bonds are strong, while the Si-Si bonds are comparatively weaker because of the larger size of silicon atoms.",
+        "points": [
+          { "t": "carbon shows much more catenation than silicon", "k": ["carbon"] },
+          { "t": "smaller size makes C-C bonds strong", "k": ["strong"] },
+          { "t": "Si-Si bonds are weaker (larger atoms)", "k": ["weaker", "weak"] }
+        ],
+        "source": "NCERT Exemplar Class X Science Ch.4 Q.42 (Short Answer); official answer in NCERT's exemplar answers book (jeep1an.pdf)"
+      }
+    ]
+  }
+}

@@ -197,6 +197,25 @@ const server = http.createServer((req, res) => {
     });
     return;
   }
+  if (req.method === 'GET' && url.pathname === '/api/exemplar/short') {
+    const ex = require('./agents/exemplar');
+    const ch = getChapter(url.searchParams.get('chapter') || 'ch1');
+    const q = ex.short.pick(ch.chapterId, (url.searchParams.get('seen') || '').split(',').slice(0, 40));
+    return send(res, 200, JSON.stringify(q ? { question: ex.short.publicView(q), count: ex.short.list(ch.chapterId).length, note: ex.short.data.note } : { question: null }));
+  }
+  if (req.method === 'POST' && url.pathname === '/api/exemplar/short/grade') {
+    let body = '';
+    req.on('data', (c) => { body += c; if (body.length > 8_000) req.destroy(); });
+    req.on('end', () => {
+      try {
+        const { id, answer } = JSON.parse(body || '{}');
+        const r = require('./agents/exemplar').short.grade(String(id || ''), String(answer || ''));
+        if (!r) return send(res, 400, JSON.stringify({ error: 'Unknown question.' }));
+        send(res, 200, JSON.stringify(r));
+      } catch { send(res, 400, JSON.stringify({ error: 'Bad request.' })); }
+    });
+    return;
+  }
   if (req.method === 'POST' && url.pathname === '/api/feedback') {
     let body = '';
     req.on('data', (c) => { body += c; if (body.length > 1_000) req.destroy(); });

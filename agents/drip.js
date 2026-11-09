@@ -8,6 +8,8 @@
 const memory = require('./memory');
 const formulas = require('./formulas');
 const { getChapter } = require('./chapter');
+// Lazy require: exemplar pulls in its data files only when a weak written question needs it.
+const exemplarShort = () => require('./exemplar').short;
 
 const GAPS_DAYS = [1, 3, 7, 14];
 const MAX_PER_DAY = 2;
@@ -22,8 +24,11 @@ const quiet = (now) => { const h = istHour(now); return h >= 22 || h < 7; };
 // chapter formula cards. Used by dueFor and by the Telegram Show button.
 function cardFor(chapterId, id) {
   if (id.startsWith('q:')) {
-    const q = getChapter(chapterId || 'ch1').allQuestions().find((x) => x.id === id.slice(2));
-    return q ? { prompt: `You found this one hard last time - try it again from memory, no pressure:\n${q.text}`, answer: `Marking points:\n${(q.points || []).map((p) => '- ' + p.text).join('\n')}` } : null;
+    const qid = id.slice(2);
+    const q = getChapter(chapterId || 'ch1').allQuestions().find((x) => x.id === qid);
+    if (q) return { prompt: `You found this one hard last time - try it again from memory, no pressure:\n${q.text}`, answer: `Marking points:\n${(q.points || []).map((p) => '- ' + p.text).join('\n')}` };
+    const x = exemplarShort().find(qid);
+    return x ? { prompt: `You found this written question hard last time - try it again from memory, no pressure:\n${x.question}`, answer: `Official NCERT answer:\n${x.answer}` } : null;
   }
   const f = formulas.byId(id);
   return f ? { prompt: `Quick recall (no pressure): can you write "${f.title}" from memory? Think first, then tap Show.`, answer: `${f.title}\n${f.body}\n[${f.ncert}]` } : null;
@@ -38,7 +43,7 @@ function seedWeakQuestions(rec, items, chapterId, now) {
   const ch = getChapter(chapterId);
   let slot = 0;
   for (const qid of weakIds) {
-    if (ch.allQuestions().some((x) => x.id === qid)) items['q:' + qid] = { stage: 0, due: now + DAY + Math.floor(slot++ / 2) * DAY };
+    if (ch.allQuestions().some((x) => x.id === qid) || exemplarShort().find(qid)) items['q:' + qid] = { stage: 0, due: now + DAY + Math.floor(slot++ / 2) * DAY };
   }
   return slot;
 }
@@ -49,7 +54,7 @@ function addWeak(chatId, qid, now = Date.now()) {
   const r = memory.readRec(chatId);
   if (!r || !r.drip || !r.drip.on || r.drip.items['q:' + qid]) return false;
   const ch = getChapter(r.drip.chapterId || 'ch1');
-  if (!ch.allQuestions().some((x) => x.id === qid)) return false;
+  if (!ch.allQuestions().some((x) => x.id === qid) && !exemplarShort().find(qid)) return false;
   r.drip.items['q:' + qid] = { stage: 0, due: now + DAY };
   memory.writeRec(chatId, r);
   return true;

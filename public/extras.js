@@ -52,16 +52,58 @@
     return w;
   }
   let seen = [];
+  let seenShort = [];
   async function exemplarTab() {
-    const w = el('div'); const d = await get(`/api/exemplar?chapter=${chapter()}&seen=${seen.join(',')}`);
-    if (!d.question) { w.appendChild(el('div', 'ex-note', 'No Exemplar questions for this chapter.')); return w; }
-    const q = d.question; seen = [...seen, q.id].slice(-20);
-    w.appendChild(el('div', 'ex-h', 'Extra practice - NCERT Exemplar (official)')); w.appendChild(el('div', 'ex-q', q.stem));
-    const res = el('div', 'ex-note');
-    Object.entries(q.options).forEach(([k, v]) => { const b = el('button', 'btn ghost small ex-opt', `(${k}) ${v}`); b.onclick = async () => { const r = await post('/api/exemplar/check', { id: q.id, letter: k }); res.textContent = r.correct ? `Correct. (${r.answer}) ${r.answerText}` : `Not this time. Official key: (${r.answer}) ${r.answerText}.`; res.appendChild(el('div', 'ex-meta', r.source)); }; w.appendChild(b); });
-    w.appendChild(res); const next = el('button', 'btn small', 'Another one'); next.onclick = () => show(exemplarTab); w.appendChild(next);
-    w.appendChild(el('div', 'ex-note', 'This is extra practice from the official NCERT Exemplar book, separate from the board-paper "most asked" list.')); w.appendChild(why('testing yourself beats rereading - Roediger & Karpicke 2006.'));
+    const w = el('div');
+    w.appendChild(el('div', 'ex-h', 'Extra practice - NCERT Exemplar (official)'));
+    const mcq = el('button', 'btn small primary', 'Quick MCQ');
+    const written = el('button', 'btn small ghost', 'Written answer');
+    const slot = el('div');
+    mcq.onclick = () => { mcq.className = 'btn small primary'; written.className = 'btn small ghost'; loadMcq(slot); };
+    written.onclick = () => { written.className = 'btn small primary'; mcq.className = 'btn small ghost'; loadShort(slot); };
+    w.append(mcq, written, slot);
+    w.appendChild(el('div', 'ex-note', 'This is extra practice from the official NCERT Exemplar book, separate from the board-paper "most asked" list.'));
+    w.appendChild(why('testing yourself beats rereading - Roediger & Karpicke 2006.'));
+    loadMcq(slot);
     return w;
+  }
+  async function loadMcq(slot) {
+    slot.replaceChildren(el('div', 'ex-note', 'Loading...'));
+    const d = await get(`/api/exemplar?chapter=${chapter()}&seen=${seen.join(',')}`);
+    slot.replaceChildren();
+    if (!d.question) { slot.appendChild(el('div', 'ex-note', 'No Exemplar questions for this chapter.')); return; }
+    const q = d.question; seen = [...seen, q.id].slice(-20);
+    slot.appendChild(el('div', 'ex-q', q.stem));
+    const res = el('div', 'ex-note');
+    Object.entries(q.options).forEach(([k, v]) => { const b = el('button', 'btn ghost small ex-opt', `(${k}) ${v}`); b.onclick = async () => { const r = await post('/api/exemplar/check', { id: q.id, letter: k }); res.textContent = r.correct ? `Correct. (${r.answer}) ${r.answerText}` : `Not this time. Official key: (${r.answer}) ${r.answerText}.`; res.appendChild(el('div', 'ex-meta', r.source)); }; slot.appendChild(b); });
+    slot.appendChild(res);
+    const next = el('button', 'btn small', 'Another one'); next.onclick = () => loadMcq(slot); slot.appendChild(next);
+  }
+  async function loadShort(slot) {
+    slot.replaceChildren(el('div', 'ex-note', 'Loading...'));
+    const d = await get(`/api/exemplar/short?chapter=${chapter()}&seen=${seenShort.join(',')}`);
+    slot.replaceChildren();
+    if (!d.question) { slot.appendChild(el('div', 'ex-note', 'No written questions for this chapter yet.')); return; }
+    const q = d.question; seenShort = [...seenShort, q.id].slice(-20);
+    slot.appendChild(el('div', 'ex-q', `Q.${q.n}. ${q.question}`));
+    const ta = Object.assign(el('textarea', 'ex-write'), { placeholder: 'Write your answer in your own words - point by point, like the board exam.', rows: 5, maxLength: 4000 });
+    const go = el('button', 'btn small primary', 'Check my answer');
+    const out = el('div');
+    go.onclick = async () => {
+      out.replaceChildren(el('div', 'ex-note', 'Checking...'));
+      const r = await post('/api/exemplar/short/grade', { id: q.id, answer: ta.value });
+      out.replaceChildren();
+      if (r.tooShort) { out.appendChild(el('div', 'ex-note', 'That answer is very short - write a sentence or two and I can check it properly.')); return; }
+      if (r.error) { out.appendChild(el('div', 'ex-note', r.error)); return; }
+      out.appendChild(el('div', 'ex-h', `You got ${r.score}/${r.maxScore} points from the official answer`));
+      r.points.forEach((p) => out.appendChild(el('div', 'ex-meta', `${p.status === 'hit' ? '[x]' : '[ ]'} ${p.text}`)));
+      out.appendChild(el('div', 'ex-h', 'Official NCERT answer'));
+      out.appendChild(el('div', 'ex-q', r.answer));
+      out.appendChild(el('div', 'ex-meta', r.source));
+      out.appendChild(el('div', 'ex-note', r.answerNote));
+    };
+    slot.append(ta, go, out);
+    const next = el('button', 'btn small', 'Another one'); next.onclick = () => loadShort(slot); slot.appendChild(next);
   }
   async function formulasTab() {
     const d = await get('/api/formulas?chapter=' + chapter()); const w = el('div');
