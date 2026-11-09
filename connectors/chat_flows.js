@@ -15,6 +15,7 @@ const formulas = require('../agents/formulas');
 const studypath = require('../agents/studypath');
 const quickmode = require('../agents/quickmode');
 const drip = require('../agents/drip');
+const sm = require('../agents/studentmodel');
 const exemplar = require('../agents/exemplar');
 const { getChapter, findQuestion, detectChapter, listChapters } = require('../agents/chapter');
 
@@ -29,6 +30,9 @@ const WELCOME = `Hi! I'm Red Pen, your study buddy - ask me a doubt or let me qu
 /compare <link1> <link2> <your need> - which video suits you
 /videos [topic] - checked video playlist for the active chapter
 /extra - NCERT Exemplar MCQs (extra practice, official answer key)
+/extrawrite - written Exemplar practice, checked point by point against the official NCERT answer
+/model - what I remember about how you learn, and what it changes
+/exam <YYYY-MM-DD> - tell me your exam date once; I re-plan by myself as it gets closer (/exam off stops it)
 /formulas - key equations + memory aids for the chapter
 /path - a study path built for you (not forced)
 /drip on - optional spaced formula reminders (/pause, /stop any time)
@@ -72,8 +76,11 @@ class ChatFlow {
   chapter() { return getChapter(this.chapterId); }
 
   // Beginner gets shorter questions first; repeat-verified PYQs come early.
+  // With memory on, questions the student found hard come back first (student model).
   pickQuestion() {
     const ch = this.chapter();
+    const modelled = sm.weightQuiz(this.chatId, [...ch.pyqs, ...ch.questions]);
+    if (modelled) return modelled;
     const pyqPool = ch.pyqs.filter((q) => q.repeated);
     if (pyqPool.length && Math.random() < 0.6) return pyqPool[Math.floor(Math.random() * pyqPool.length)];
     const pool = [...ch.questions].sort((a, b) =>
@@ -169,6 +176,22 @@ class ChatFlow {
       return { text: 'Memory ON. I will remember which chapters/topics you ask about, which questions you find hard and your video language - not your messages or name. /mydata shows it, /forget deletes it. Auto-deletes after 90 days of not using me, and on the free host it may reset if the server restarts.' };
     }
     if (low === '/mydata') return { text: memory.summaryText(this.chatId) };
+    if (low === '/model') return { text: sm.describe(this.chatId) };
+    if (low.startsWith('/exam')) {
+      const arg = low.split(/\s+/)[1];
+      if (!arg) {
+        const rec = memory.get(this.chatId);
+        if (!rec || !rec.examDate) return { text: 'No exam date set. Tell me once, e.g. /exam 2027-02-20, and I will quietly re-plan as the date gets closer - you do not have to open me. Needs /remember on. /exam off clears it.' };
+        const days = Math.ceil((new Date(rec.examDate + 'T00:00:00+05:30') - Date.now()) / 86400000);
+        return { text: `Exam: ${rec.examDate} (${days} day${days === 1 ? '' : 's'} left). I will send you an updated plan at 14, 7, 3 and 1 days before, based on what you still find hard. /exam off clears it.` };
+      }
+      if (arg === 'off') { this.mem({ type: 'exam', date: null }); return { text: 'Exam date cleared. I will not nudge you about it.' }; }
+      const ok = this.mem({ type: 'exam', date: arg, chatId: this.chatId });
+      if (!ok) return { text: memory.isOn(this.chatId) ? 'That date does not look right - use /exam YYYY-MM-DD, up to about a year ahead.' : 'First send /remember on - I only keep your exam date if I am allowed to remember anything at all.' };
+      const rec = memory.get(this.chatId);
+      const days = Math.ceil((new Date(rec.examDate + 'T00:00:00+05:30') - Date.now()) / 86400000);
+      return { text: `Noted: ${rec.examDate}, ${days} days away. To message you when it gets close I keep your chat id in your memory file (like /drip does). I will re-plan by myself at 14, 7, 3 and 1 days out, using what you find hard. Sleep easy - I have got the watching. /exam off stops it.` };
+    }
     if (low === '/forget') { memory.forget(this.chatId); return { text: 'Done - everything I had saved about you is deleted. Memory is OFF.' }; }
     if (low.startsWith('/findvideo')) {
       const need = t.slice(10).trim().slice(0, 200);
@@ -232,7 +255,10 @@ class ChatFlow {
       this.goals.grade = true;
       this.lastScore = r.score / r.maxScore;
       this.level = this.lastScore < 0.5 ? 'beginner' : 'intermediate';
+      const missingIdx = r.points.map((p, i) => (p.status === 'missing' ? i : -1)).filter((i) => i >= 0);
+      const repeatLine = sm.repeatNote(this.chatId, q.id, missingIdx);
       this.mem(this.lastScore < 0.5 ? { type: 'weak', questionId: q.id } : this.lastScore >= 1 ? { type: 'strong', questionId: q.id } : { type: 'topic', chapter: this.chapterId, topic: 'quiz' });
+      if (missingIdx.length) this.mem({ type: 'missed', questionId: q.id, points: missingIdx });
       const missing = r.points.filter((p) => p.status === 'missing');
       if (missing.length) {
         this.revisionQueue.push({ label: q.text.slice(0, 60), questionId: q.id, due: Date.now() + 10 * 60 * 1000 });
@@ -247,7 +273,7 @@ class ChatFlow {
       else { funLine = 'Baseline set. Ab climb!'; }
       this.best[q.id] = Math.max(prev || 0, r.score);
       return {
-        text: `Examiner says: ${r.score}/${r.maxScore}\n${funLine}\n\n${missed ? 'Missed points:\n' + missed + '\n\n' : ''}${r.notes.join('\n')}\n\nFull-mark answer:\n${r.modelAnswer}${missing.length ? '\n\n(Revision reminder set for ~10 min)' : ''}`,
+        text: `Examiner says: ${r.score}/${r.maxScore}\n${funLine}\n\n${missed ? 'Missed points:\n' + missed + '\n\n' : ''}${r.notes.join('\n')}\n\nFull-mark answer:\n${r.modelAnswer}${missing.length ? '\n\n(Revision reminder set for ~10 min)' : ''}${repeatLine}`,
       };
     }
 

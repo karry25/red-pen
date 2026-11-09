@@ -3,7 +3,7 @@ const fs = require('fs'), os = require('os'), path = require('path');
 async function runFeatureTests(check) {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'rp-feat-'));
   process.env.REDPEN_STORE = dir; process.env.REDPEN_SALT = 'feat-salt';
-  for (const k of Object.keys(require.cache)) if (/agents[\\/](memory|drip|formulas|studypath|quickmode)|connectors[\\/]/.test(k)) delete require.cache[k];
+  for (const k of Object.keys(require.cache)) if (/agents[\\/](memory|drip|formulas|studypath|quickmode|studentmodel|examcount)|connectors[\\/]/.test(k)) delete require.cache[k];
   const formulas = require('../agents/formulas'), drip = require('../agents/drip'), memory = require('../agents/memory');
   const studypath = require('../agents/studypath'), quick = require('../agents/quickmode');
   const { TelegramAdapter } = require('../connectors/telegram');
@@ -113,6 +113,46 @@ async function runFeatureTests(check) {
   const sq = sh.list('ch1').find((q) => bot.sendLog.at(-1).text.includes(q.question.slice(0, 40)));
   await upd({ message: { chat: { id: 703 }, text: sq ? sq.answer : 'x' } });
   check('telegram: /extrawrite grades a written answer against the official answer', !!sq && new RegExp(`You got ${sq.points.length}/${sq.points.length}`).test(bot.sendLog.at(-1).text) && /Official NCERT answer/.test(bot.sendLog.at(-1).text));
+  // F1: student model - remembers how the student learns, auto-applies, stays under their control
+  const sm = require('../agents/studentmodel');
+  await upd({ message: { chat: { id: 710 }, text: '/remember on' } });
+  check('model: off by default, honest about it', /OFF/.test(sm.describe(999)));
+  memory.record(710, { type: 'weak', questionId: 'ch1-q2' });
+  memory.record(710, { type: 'missed', questionId: 'ch1-q2', points: [1, 2] });
+  memory.record(710, { type: 'missed', questionId: 'ch1-q2', points: [1] });
+  memory.record(710, { type: 'lang', lang: 'hinglish' });
+  const desc = sm.describe(710);
+  check('model: describes what it knows and what it changes', /ch1-q2/.test(desc) && /point 2/.test(desc) && /hinglish/.test(desc) && /forget deletes everything/.test(desc));
+  check('model: repeat misses need 2+ misses', sm.repeatMisses(memory.get(710)).length === 1 && sm.repeatMisses(memory.get(710))[0].point === 1);
+  check('model: repeat note is kind and only on a real repeat', /last time too/.test(sm.repeatNote(710, 'ch1-q2', [1])) && sm.repeatNote(710, 'ch1-q2', [0]) === '');
+  const wq = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(() => sm.weightQuiz(710, require('../agents/chapter').getChapter('ch1').allQuestions()));
+  check('model: quiz weighting sometimes returns the weak question, never an alien one', wq.some((q) => q && q.id === 'ch1-q2') && wq.every((q) => !q || q.id.startsWith('ch1-')));
+  check('model: weighting is a no-op with memory off', sm.weightQuiz(999, require('../agents/chapter').getChapter('ch1').allQuestions()) === null);
+  check('model: missed event rejects junk', memory.record(710, { type: 'missed', questionId: 'bad id!', points: [1] }) === false && memory.record(710, { type: 'missed', questionId: 'ch1-q3', points: ['a', 99] }) === true && !memory.get(710).missed['ch1-q3']);
+  check('model: mastering a question clears its missed points', memory.record(710, { type: 'missed', questionId: 'ch1-q5', points: [0] }) && memory.record(710, { type: 'strong', questionId: 'ch1-q5' }) && !memory.get(710).missed['ch1-q5']);
+  await upd({ message: { chat: { id: 710 }, text: '/model' } });
+  check('telegram: /model shows the model and the controls', /ch1-q2/.test(bot.sendLog.at(-1).text) && /\/forget/.test(bot.sendLog.at(-1).text));
+  // F2: agentic exam countdown
+  const examcount = require('../agents/examcount');
+  check('exam: date validation (bad format, past, too far all rejected)', memory.record(710, { type: 'exam', date: 'tomorrow' }) === false && memory.record(710, { type: 'exam', date: '2020-01-01' }) === false && memory.record(710, { type: 'exam', date: '2030-01-01' }) === false);
+  const inDays = (n) => { const d = new Date(Date.now() + n * 86400000 + 12 * 3600000); return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`; };
+  check('exam: valid date stored', memory.record(710, { type: 'exam', date: inDays(6), chatId: 710 }) === true && memory.get(710).examDate === inDays(6));
+  check('exam: daysLeft math', examcount.daysLeft(inDays(6)) === 6);
+  let tickT = Date.now() + 3600000;
+  while (drip.quiet(tickT)) tickT += 3600000;
+  const n1 = examcount.dueNudges(tickT);
+  check('exam: nudge fires at 7-day threshold with re-plan and kind copy', n1.length === 1 && n1[0].days === 6 && /re-planned/.test(n1[0].text) && /\/exam off/.test(n1[0].text) && !/panic|failure|streak/i.test(n1[0].text.split('/exam off')[0].split('Small steps')[0]));
+  check('exam: same threshold does not fire twice', examcount.dueNudges(tickT).length === 0);
+  check('exam: nudges respect quiet hours', examcount.dueNudges(new Date('2027-01-05T00:30:00+05:30').getTime()).every((n) => n.chatId !== 710) || drip.quiet(new Date('2027-01-05T00:30:00+05:30').getTime()));
+  await upd({ message: { chat: { id: 710 }, text: '/exam' } });
+  check('telegram: /exam shows the date and the plan', /days? left/.test(bot.sendLog.at(-1).text));
+  await upd({ message: { chat: { id: 710 }, text: '/exam off' } });
+  check('telegram: /exam off clears date and chat id', !memory.get(710).examDate && !memory.get(710).examChatId);
+  check('exam: cleared date means no nudges', !examcount.dueNudges(tickT).some((n) => n.chatId === 710));
+  memory.record(710, { type: 'exam', date: inDays(2), chatId: 710 });
+  await bot.dripTick(tickT);
+  check('telegram: dripTick also sends due exam nudges', bot.sendLog.some((s) => /to your exam/.test(s.text)));
+  memory.record(710, { type: 'exam', date: null });
   fs.rmSync(dir, { recursive: true, force: true });
 }
 module.exports = { runFeatureTests };

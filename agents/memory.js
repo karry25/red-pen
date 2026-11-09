@@ -67,6 +67,7 @@ function record(chatId, ev) {
       break;
     case 'strong':
       delete rec.weak[ev.questionId];
+      if (rec.missed) delete rec.missed[ev.questionId];
       break;
     case 'lang':
       if (LANGS.has(ev.lang)) rec.lang = ev.lang;
@@ -76,6 +77,30 @@ function record(chatId, ev) {
       break;
     case 'need':
       (ev.keys || []).filter((k) => NEED_KEYS.has(k)).forEach((k) => bump(rec.needs, k, 8));
+      break;
+    case 'missed': {
+      // which marking-point indexes were missed on a question (numbers only, no text)
+      if (!ID_RE.test(String(ev.questionId || ''))) return false;
+      const pts = (ev.points || []).filter((i) => Number.isInteger(i) && i >= 0 && i < 40).slice(0, 12);
+      if (!pts.length) return true; // accepted, nothing worth storing
+      if (!rec.missed) rec.missed = {};
+      if (Object.keys(rec.missed).length > 40 && !rec.missed[ev.questionId]) return false;
+      if (!rec.missed[ev.questionId]) rec.missed[ev.questionId] = {};
+      pts.forEach((i) => bump(rec.missed[ev.questionId], String(i), 20));
+      break;
+    }
+    case 'exam':
+      if (ev.date === null) { delete rec.examDate; delete rec.examChatId; delete rec.examNudges; break; }
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(String(ev.date || ''))) return false;
+      { const d = new Date(ev.date + 'T00:00:00+05:30'); if (isNaN(d) || d.getTime() < Date.now() - 86400000 || d.getTime() > Date.now() + 400 * 86400000) return false; }
+      rec.examDate = ev.date;
+      // kept only so the countdown can message them (disclosed in the /exam reply)
+      if (ev.chatId !== undefined) rec.examChatId = String(ev.chatId);
+      delete rec.examNudges;
+      break;
+    case 'examNudge':
+      if (!rec.examNudges) rec.examNudges = {};
+      if (Number.isInteger(ev.daysLeft) && ev.daysLeft >= 0 && ev.daysLeft <= 400) rec.examNudges[String(ev.daysLeft)] = Date.now();
       break;
     default: return false;
   }
@@ -95,6 +120,7 @@ function summaryText(chatId) {
     `- Topics you asked about: ${top(rec.topics, 8).map(([k, v]) => `${k} x${v}`).join(', ') || 'none yet'}`,
     `- Questions you found hard: ${top(rec.weak, 8).map(([k, v]) => `${k} x${v}`).join(', ') || 'none yet'}`,
     `- What you usually need: ${top(rec.needs, 4).map(([k, v]) => `${k} x${v}`).join(', ') || 'none yet'}`,
+    `- Exam date: ${rec.examDate || 'not set'}`,
     rec.drip && rec.drip.on ? `- Formula reminders: ON${rec.drip.paused ? ' (paused)' : ''} - to send them I also keep your Telegram chat id in this file and the formula ids with next-due dates.` : '- Formula reminders: off',
     `Auto-deleted after 90 days of not using me (about ${days} days left). /forget deletes it right now.`,
     'Heads-up: on the free host this file can disappear if the server restarts.',
@@ -114,5 +140,19 @@ function sweep() {
   } catch { /* no dir yet */ }
   return n;
 }
+// Chats that set an exam date AND allowed countdown messages (examChatId stored).
+function examChats() {
+  const out = [];
+  try {
+    for (const f of fs.readdirSync(DIR)) {
+      if (!/^[0-9a-f]{64}\.json$/.test(f)) continue;
+      try {
+        const r = JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8'));
+        if (r.examDate && r.examChatId !== undefined) out.push(r.examChatId);
+      } catch { /* skip */ }
+    }
+  } catch { /* no store yet */ }
+  return out;
+}
 const readRec = read, writeRec = write;
-module.exports = { readRec, writeRec, enable, forget, isOn, get, record, summaryText, sweep, fileFor, TTL_MS, DIR };
+module.exports = { readRec, writeRec, enable, forget, isOn, get, record, summaryText, sweep, fileFor, examChats, TTL_MS, DIR };

@@ -176,6 +176,7 @@ class TelegramAdapter {
     for (const chatId of drip.activeChats()) {
       for (const p of drip.dueFor(chatId, now)) await this.send(chatId, p.prompt, [[{ text: 'Show answer', data: `drip:show:${p.id}` }], [{ text: 'Pause', data: 'drip:pause' }, { text: 'Stop', data: 'drip:stop' }]]);
     }
+    for (const n of require('../agents/examcount').dueNudges(now)) await this.send(n.chatId, n.text);
   }
 
   async pollOnce() {
