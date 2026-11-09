@@ -1,0 +1,13 @@
+{
+  "name": "redpen",
+  "version": "0.9.0",
+  "private": true,
+  "description": "Red Pen - practise like the examiner. CBSE Class 10 Science (NCERT Ch.1-4). Code for a Billion, Education track.",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/run_all.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

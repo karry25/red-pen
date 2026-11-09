@@ -1,0 +1,17 @@
+# Render free-tier deploy (https://render.com). Free instance: sleeps after 15 min idle,
+# ephemeral disk (per-student memory files can vanish on restart - the app already says so).
+services:
+  - type: web
+    name: redpen
+    runtime: node
+    plan: free
+    buildCommand: ""
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      # Secrets stay OUT of the repo: set these in the Render dashboard, never here.
+      # - GROQ_API_KEY (optional, enables the grounded AI path; app runs fine without)
+      # - TELEGRAM_BOT_TOKEN + TELEGRAM_WEBHOOK_SECRET (optional, enables the bot in webhook mode)
+      # - REDPEN_SALT (optional; random per boot otherwise)
+      - key: NODE_VERSION
+        value: "22"
